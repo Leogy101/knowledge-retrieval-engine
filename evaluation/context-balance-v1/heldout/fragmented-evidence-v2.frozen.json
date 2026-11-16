@@ -1,0 +1,854 @@
+{
+  "fixture_id": "fragmented-evidence-v2-frozen-2031-synthetic",
+  "schema_version": 1,
+  "authorship": {
+    "method": "single-agent synthetic authoring; no retrieval, model API, network, source-code, or prior-corpus access",
+    "independent_human_semantic_judgments": false,
+    "intended_focus": "fragmented evidence, adjoining caveats, nonadjacent facts, and changed chunk boundaries",
+    "all_people_places_events_products_and_private_material_are_synthetic": true
+  },
+  "normalization": "UTF-8; CRLF and CR become LF; outer whitespace stripped; exactly one final LF; 1-based lines include blank lines",
+  "access_policy": {
+    "reader": [
+      "public"
+    ],
+    "owner": [
+      "public",
+      "private"
+    ],
+    "destination_rule": "A source is eligible only when the case destination is listed in source.allowed_destinations.",
+    "state_rule": "revoked and superseded sources are ineligible; case.forbidden_sources additionally identifies explicitly inadmissible distractions.",
+    "permissions_are_source_defined": true
+  },
+  "budget_semantics": {
+    "max_bytes": "UTF-8 bytes of the full delivered context",
+    "max_tokens": "Conservative KRE budget measured as UTF-8 context bytes, not linguistic tokens",
+    "citation_overhead_estimate_bytes": 450,
+    "budget_feasibility": "Validated against exact gold-quote bytes plus one 450-byte packet allowance per gold span; this is a design estimate, not a retrieval result."
+  },
+  "sources": [
+    {
+      "source_id": "trail-current",
+      "text": "# Fern Creek Reserve — Alder closure bulletin\nRevision 7, effective 4–18 May 2031. This is an invented reserve and an invented notice.\n\n## A route, not a loop\nDuring the Alder Footbridge closure, walkers reach the Cedar Overlook by following the signed Mill Road bypass from marker M2 to marker M5. The bypass adds 0.8 km to the outward walk.\n\nThe reserve's name comes from the fern nursery that operated beside the creek before the land became a walking reserve. Foundation stones remain visible from the picnic lawn. Please leave stones in place; moving them makes mowing difficult and can damage the interpreted building outline.\n\n## Reading the signs\nTemporary bypass signs have an amber arrow and the word OVERLOOK. Permanent white posts still mark the original path, including its closed sections. A volunteer may be stationed at the entrance on weekends, but the absence of a volunteer does not cancel a closure notice.\n\nThe visitor shelter contains a drinking-water tap, a noticeboard, and a small map rack. The map rack sometimes holds older brochures for their bird illustrations; those brochures are not closure updates. Mobile reception is patchy beneath the escarpment, so record the gauge reading before leaving the entrance.\n\n## Water condition attached to the bypass\nThe bypass is open only while the creek gauge is below 1.4 m.\n\nAt 1.4 m or above, the Mill Road ford is closed too: turn back at M2; do not substitute the ford for the footbridge.\n\nThe number painted on each stone step belongs to the maintenance inventory. It is unrelated to distance or water depth. Staff use those numbers when reporting a damaged tread, loose handrail, or blocked drain. Visitors can report a problem at the shelter without attempting repairs themselves.\n\n## Completing the walk\nReturn from the overlook using the same Mill Road bypass; the old east-bank spur is fenced for nesting birds and is not an alternative return route.\n\nDogs are allowed on the entrance lawn on leads but are not allowed beyond M2. This restriction protects the nesting area and applies throughout the reserve's current management season. Bicycles stay at the entrance racks; a signed walking bypass is not a cycle route.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/trail-current",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "c4dec0b4f50c7ba4930949a3fe5a5a3ad51760ddbcaa104ae3e1cbd2d6cb0c30"
+    },
+    {
+      "source_id": "trail-walk-card",
+      "text": "# Guided walk card — 12 May 2031\n\nThe ordinary entrance-to-Cedar-Overlook walk is 2.6 km one way. The 12 May 2031, 09:00 entrance-board reading is 1.1 m; the ranger signed this as the reading for today's guided walk.\n\nThe group meets at the entrance shelter at 09:15. Distances describe the walking route, not straight-line separation. The guided group uses the same published closure rules as other visitors.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/trail-walk-card",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "f219e92792d45c037b6afda2e9c20b97cf19b4bffd33749b39845aca998071d7"
+    },
+    {
+      "source_id": "trail-old-map",
+      "text": "# Fern Creek map — 2029 edition\n\nThe Alder Footbridge is open. The east-bank spur makes a convenient loop from Cedar Overlook. The ordinary return walk is 5.2 km.\n\nThis map predates the temporary closure and nesting fence.\n",
+      "collection": "public",
+      "freshness": "stale",
+      "authority": "secondary",
+      "origin": "synthetic://fragmented-evidence-v2/trail-old-map",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "069c958d7eebea1abeb4e3422498c1e523ae3a5ee23d8f24b3745cc9d8dd4bdf"
+    },
+    {
+      "source_id": "trail-history",
+      "text": "# Fern Creek interpretation panel\n\nThe old nursery supplied ferns to town conservatories. Mill Road once carried peat carts; its name survives on the signed walking bypass. This panel explains the landscape but does not establish whether a route is open.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "secondary",
+      "origin": "synthetic://fragmented-evidence-v2/trail-history",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "38cd9ee162d09ab490a16d4ef34f3fefd4201e182811a29467e85399f7a7ec17"
+    },
+    {
+      "source_id": "observatory-camera",
+      "text": "# North Quay Community Observatory: L7 imaging note\nInstrument note 3.2-A, approved for the public training night of 7 February 2032.\n\n## Initial temperature state\nFor an L7 camera running firmware 3.2, start a new dark library after changing the sensor target temperature. Set the target to −10 °C and allow 12 minutes after the displayed temperature first reaches that value.\n\nThe observing desk has a red task lamp and a laminated inventory card. Return the inventory card to its clip so that the next group can see which filters are installed. The large dome handle is unrelated to the camera shutter and should only be moved by the duty guide.\n\nThe demonstration target is a bright emission nebula. Its catalogue name appears on the finder chart, but participants do not need to enter that name into calibration software. Calibration records use the instrument, firmware, temperature and duration rather than a target name.\n\n## Removing thermal signal\nAcquire twelve dark frames at the science exposure duration, with the lens cap fitted.\n\nA shutter-close command alone is insufficient on the L7: its inspection slit leaks light, so the cap is required even when software reports SHUTTER=CLOSED.\n\nThe screen preview stretches faint signal automatically. A dark preview can therefore look surprisingly bright even when its raw values are small. Judge a calibration exposure using the numerical readout and the guide's checklist, not by comparing stretched thumbnails on two different monitors.\n\n## File naming and reuse\nStore the combined master under dark/L7_f32_m10_<seconds>s.fit, replacing <seconds> with the exposure duration as an integer. Do not reuse a master made at −5 °C.\n\n```text\ninstrument = L7\nfirmware = 3.2\ncalibration_type = dark\n```\n\nThe directory also contains flat-field examples from previous lessons. Flat frames correct uneven illumination; their labels should not be copied into the thermal calibration record. The examples remain available to explain the difference between calibration types, not to prescribe this evening's exposure time.\n\nUSB cables are numbered with fabric tags so that guides can report intermittent connectors. Cable numbers are not device serial numbers, and replacing a cable does not by itself require a new dark library. Temperature changes and firmware changes are recorded in the observing log.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/observatory-camera",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "30f1d7f27113bb7a6051f16ebd51e066387373953662fbc2c293e6bf27e064d7"
+    },
+    {
+      "source_id": "observatory-session",
+      "text": "# Public session card — 7 February 2032\n\nTonight's science frames use 90 s exposures. Keep this duration for the dark series; do not apply the older 60 s classroom example.\n\nThe camera is an L7 with firmware 3.2. A guide has just changed its target from −5 °C to −10 °C. The red-light room opens at 19:00.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/observatory-session",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "e3b0b6c877b5e9a1435ee3c99a737efeb8d09ab57ce0b8db7e6e55051c834efe"
+    },
+    {
+      "source_id": "observatory-revoked",
+      "text": "# L7 shutter shortcut — withdrawn handout\n\nUse six 60 s darks with SHUTTER=CLOSED; the lens cap can be left off. Save dark/L7_quick.fit.\n\nWithdrawal notice: this handout was revoked after the inspection slit was documented.\n",
+      "collection": "public",
+      "freshness": "stale",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/observatory-revoked",
+      "state": "revoked",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "89f9b764fa0e90dc7c396e212df6e6ce61bff87534216257033098e3fc50d969"
+    },
+    {
+      "source_id": "importer-contract",
+      "text": "# DrizzleCSV adapter contract, version 4\nThis synthetic contract describes a small weather-station exchange format. Version 4 is current for the demonstration dataset.\n\n## Time semantics\nInterpret an offset-free observed_at value in the site's configured timezone, then convert it to UTC. Never treat an offset-free value as already UTC. An explicit numeric offset in the value overrides the site timezone.\n\nEach CSV file belongs to one station, even when an operator has copied the file into a folder named for a regional campaign. Use the station value from the job configuration. Folder names help a person organize uploads but do not become exported station identifiers.\n\nThe parser accepts a header row in any column order. Column order is useful for spreadsheet readability and does not change field meaning. Files downloaded from the example station include a comments column for maintenance notes, which the export omits. Comments can contain commas when quoted normally.\n\n## Reading semantics\nConvert the literal reading value -9999 to JSON null and set quality to \"missing\".\n\nThe value 0 is a valid measurement and must remain numeric zero; an empty reading cell is a row-validation error, not the -9999 missing-data code.\n\nThe unit selected by a station is documented in its registration record. This adapter does not silently rescale units, round the numeric reading, or append a unit suffix to the JSON number. Downstream chart labels may display units separately. A failed row is reported with its physical CSV line number.\n\n## Output shape\nThe exported object uses these exact keys:\n```json\n{\"observed_at_utc\":\"ISO-8601 Z time\",\"reading\":0,\"quality\":\"measured\",\"station\":\"site code\"}\n```\nFor a nonmissing numeric reading, quality is \"measured\".\n\nThere is no additional confidence field and no wrapper named data. A consuming application may place several exported objects inside its own array, but that application's container is not part of the single-row conversion contract. Preserve the distinction when creating test fixtures or explaining one row to an operator.\n\n## Reproducibility\nRecord the adapter version in the batch manifest, not inside each exported measurement. A manifest can also include the filename and a checksum. Those fields establish batch provenance and should not be copied into an individual measurement object merely because they appear beside it in a log.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/importer-contract",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "2f3d07c33ff343b7280220a1f51f0934d76da4e2bb375a5f3fb318426c2aa70d"
+    },
+    {
+      "source_id": "importer-job",
+      "text": "# DrizzleCSV demonstration job 18\n\nJob configuration:\n```json\n{\"station\":\"RQ2\",\"timezone\":\"UTC+02:00\",\"adapter_version\":4}\n```\nInput rows:\n```csv\nobserved_at,reading\n2031-06-08T10:15:00,-9999\n2031-06-08T10:20:00,0\n```\n\nUTC+02:00 is a fixed offset in this synthetic job; no seasonal-clock rule is needed. The two displayed rows are complete.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/importer-job",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "560a5650784480c6918aa98b3d150d814c628a1c5945bcc80e166aad96281450"
+    },
+    {
+      "source_id": "importer-v3",
+      "text": "# DrizzleCSV version 3 migration scratchpad\n\nTreat a time without an offset as UTC. Collapse both 0 and -9999 to null. The old export used timestamp instead of observed_at_utc.\n\nThis scratchpad describes the retired version 3 behavior.\n",
+      "collection": "public",
+      "freshness": "stale",
+      "authority": "secondary",
+      "origin": "synthetic://fragmented-evidence-v2/importer-v3",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "1171b419ce48c6a8e9081ac5153696d9291c9680f59b20b601cd8d0bae1080b1"
+    },
+    {
+      "source_id": "importer-rationale",
+      "text": "# Why stations preserve zero\n\nA measured zero can distinguish a dry interval from a sensor that did not report. The DrizzleCSV project therefore discusses missingness separately from magnitude. This explanatory note does not specify parser version, output keys, or timezone precedence.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "secondary",
+      "origin": "synthetic://fragmented-evidence-v2/importer-rationale",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "7b7653f92d1ffca32decf0cd7d9ea86a9891ed5230b9da4dfdfcab5a1a3f00cc"
+    },
+    {
+      "source_id": "seed-protocol",
+      "text": "# Marrow Street Seed Library — pea check protocol\nPublic protocol P-6, spring 2031. Blue Lantern is a fictional pea variety used in this example.\n\n## Set up the sample\nFor a Blue Lantern pea viability check, select 20 seeds at random and place them on damp paper in a lidded box at 18–22 °C. Keep the paper damp but do not leave standing water in the box.\n\nUse a pencil to label the box with the variety, lot code, and start date. Ink on a loose paper label can run in the damp chamber. The label helps volunteers keep similar-looking peas apart; the box's shelf position is not an identifier and may change when the room is cleaned.\n\nThe community library also lends planting trays. A tray loan is recorded at the reception desk, separately from the seed lot register. Returning a tray does not close a seed-check record. Volunteers may leave an unfinished record in the green folder for the next shift to complete.\n\n## Score at a consistent time\nCount a seed as germinated only when its root is at least 5 mm long. Record the final count on day 10, not the first day on which any root appears.\n\nA swelling seed is not yet a scored germination. The photo guide shows several stages because visitors often want to understand the process. Only the stage stated in this protocol counts toward the recorded viability result; photographs are illustrative and do not change the timing requirement.\n\n## Keep treatment separate\nDo not nick or soak seeds used for the library's viability check.\n\nNicking and soaking may be appropriate for a separate planting trial, but pretreated seeds cannot be substituted into the untreated viability sample or its recorded percentage.\n\nAfter scoring, place the tested seeds in the compost container. Do not return them to a lending envelope even if a seed has no visible root. The remaining untested lot should stay dry in its labelled jar until the librarian has entered the result and decided whether the lot may be offered.\n\nThe library noticeboard contains growing tips contributed by visitors. Those tips may cover sowing depth, garden spacing, trellises, pests, and harvesting. Such advice can be useful for a planting project but does not replace this sample size, scoring rule, or treatment restriction for a lot check.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/seed-protocol",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "511ccdd7164a2b3e2c1feb85c4943acf689081e1147393de535f4f81913bd7d0"
+    },
+    {
+      "source_id": "seed-lot-card",
+      "text": "# Blue Lantern lot BL-31\n\nLot BL-31 may be offered for lending only if at least 80% of its viability sample germinates. The recorded untreated sample has 15 roots at least 5 mm long on day 10; one additional seed has a 3 mm root.\n\nThe lot was tested with the 20-seed P-6 method. No seeds in this sample were nicked or soaked.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/seed-lot-card",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "de8ebb6387d3d7bd9966075ed6d4831663bc7e41d1392b1a585a370e311bb634"
+    },
+    {
+      "source_id": "seed-tips",
+      "text": "# Visitor's planting tips\n\nSoak Blue Lantern peas overnight, nick a few hard coats, and count every seed that swells. Fifteen of twenty sounds good enough to lend.\n\nThis is a visitor contribution about garden planting, not an authorized viability protocol.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "unreviewed",
+      "origin": "synthetic://fragmented-evidence-v2/seed-tips",
+      "state": "reference_only",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "ee7b85a9d4eb922f0623d9202110f07116b5f8d8df18c89b21f959587adada4b"
+    },
+    {
+      "source_id": "theatre-access",
+      "text": "# Willow Room Theatre — audience access guide\nPublic access edition, November 2031. This fictional theatre has one auditorium and one courtyard entrance.\n\n## Getting into the foyer\nFor step-free entry to the afternoon performance, use the courtyard door on Birch Lane. The main High Street doors lead to six steps before the foyer; the courtyard route reaches the foyer by a level passage.\n\nThe courtyard mural depicts scenes from the building's former life as a furniture workshop. It is visible from the public lane during daylight hours. The mural is a wayfinding landmark, not a separate entrance, and visitors should continue past it to the door marked Audience Access.\n\nTickets can be displayed on a phone or printed on paper. The front-of-house team can also find a booking by its booking name at the desk. The performance programme is sold separately; a programme purchase is not required to use any of the published audience accommodations.\n\n## Assisted listening\nBorrow a neck-loop receiver from the access desk for seats in rows A–F.\n\nThe neck loop works with a hearing aid set to its T-coil program; an ordinary Bluetooth pairing mode will not connect to this system. Headphones are available for visitors without a T-coil aid.\n\nThe auditorium's visual display shows the act number during intervals. It is not a captioning display. Captioned performance dates are listed on their own schedule, and a standard matinee should not be described as captioned merely because the foyer has a screen or the show uses projected scenery.\n\n## End of visit\nReturn borrowed receivers to the access desk before leaving the building. A receiver cannot be left in a seat pocket, because the access team checks and recharges each unit immediately after the audience leaves.\n\nThe access desk normally opens 30 minutes before a performance. A dated performance notice can publish an earlier opening. The general access guide deliberately avoids repeating every special-event time so that the dated notice can remain the authoritative schedule for an individual show.\n\nCoats may be hung on the public rack near the foyer bench. The theatre does not allocate numbered coat-check tags for matinees. Keep medicines, keys, and valuables with you; the rack is convenient but is not staffed storage. Folding walkers can remain in the designated space beside an aisle seat.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/theatre-access",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "6afeb877465e86c3e780674c4c1e98a745bb0dbc5167cd6c519d1f91bfce75ae"
+    },
+    {
+      "source_id": "theatre-matinee",
+      "text": "# Dated audience notice: 16 November matinee\n\nFor the 16 November 2031 matinee, curtain is at 14:00 and the courtyard door and access desk open at 13:15. The usual 13:30 opening is replaced for this performance because the access team is offering receiver familiarization.\n\nThe performance uses the standard neck-loop system for rows A–F. The programme running time is 95 minutes including a short interval.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/theatre-matinee",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "308d029a6f2a48b823a8c769954a518a61e7c05497cab664699b7af9ccce0bab"
+    },
+    {
+      "source_id": "theatre-private-rota",
+      "text": "# Synthetic staff rehearsal rota\n\nInternal draft: courtyard key handoff at 13:40; leave demonstration receivers in row G.\n\nThis invented draft is private staff planning material and is not an audience notice.\n",
+      "collection": "private",
+      "freshness": "current",
+      "authority": "draft",
+      "origin": "synthetic://fragmented-evidence-v2/theatre-private-rota",
+      "state": "active",
+      "allowed_destinations": [
+        "local"
+      ],
+      "sha256": "a0f37f7dab9f9a5966c39262702ba5e26ed663735d8a4116f84da48ec5581d62"
+    },
+    {
+      "source_id": "kiln-load-plan",
+      "text": "# Studio firing plan — C17\nSynthetic private owner notebook. All names, codes, and work described here are invented for this benchmark.\n\n## Selected profile\nFor load C17, select the studio's SLOW-6 profile and program a 20-minute hold at the top temperature. The profile's controlled cooling segment ends at 900 °C.\n\nThe shelves have been brushed and checked for drips. Shelf numbers are maintenance labels; they do not indicate which profile a load should use. The kiln room's wall chart illustrates several firing curves for classes, including profiles that are not appropriate for this particular load.\n\nThe bowls were placed with space around the rims so that no glazed surface touches another piece. The packing sketch is kept in the paper load folder. It helps compare results after firing, but the sketch does not override a written instruction about temperature, holding time, or unloading.\n\n## Unloading condition\nKeep the kiln closed until its display is below 80 °C before unloading C17.\n\nThe earlier 120 °C unloading shortcut applies only to unglazed test tiles; C17 contains glazed bowls and does not qualify for that shortcut.\n\nUse the padded cart when moving cool ware from the kiln room to the inspection bench. The cart's shelf liners were replaced this month. They prevent rims from rubbing during the short trip and are not thermal protection; the cart is not permission to unload a hot load.\n\n## Identification after firing\nMark each C17 box with the firing date and the literal batch label C17-S6-H20. The label records the profile and top hold, not an artist's name or a glaze recipe.\n\nGlaze names are recorded on individual test tabs in the load folder. A public workshop sign may add a special rule for a particular glaze batch. Read a glaze exception together with the current load plan before deciding which pieces may be included in a firing; a shared clay body alone does not settle compatibility.\n\nThe owner uses a weekly notebook page to track studio chores such as cleaning the sink trap, changing cloths, and recycling dry trimmings. Those tasks share a page with firing observations for convenience. They are unrelated to the C17 firing cycle and must not be mistaken for additional programmed segments.\n",
+      "collection": "private",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/kiln-load-plan",
+      "state": "active",
+      "allowed_destinations": [
+        "local"
+      ],
+      "sha256": "139718851057d0eadc822f0c8721247c222021516ed0afce9c66e9b7add23f06"
+    },
+    {
+      "source_id": "kiln-workshop-sign",
+      "text": "# Workshop glaze notice — current\n\nGuest-workshop pieces marked GL-9 must stay out of C17: that glaze batch requires a separate cone-5 firing with no top hold. All other pieces already approved on the C17 load sheet keep the SLOW-6 plan.\n\nGL-9 is an invented studio glaze code. This sign is public so participants can identify the affected workshop work.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/kiln-workshop-sign",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "b40d7b260fedb5c12579eba2aff11b3421710095a95152226e72fbb0a1861cb6"
+    },
+    {
+      "source_id": "kiln-old-plan",
+      "text": "# C17 preliminary firing draft\n\nUse FAST-6 with no top hold. Include GL-9 pieces and unload all work at 120 °C.\n\nDraft replaced by the signed current load plan and current workshop notice.\n",
+      "collection": "private",
+      "freshness": "stale",
+      "authority": "draft",
+      "origin": "synthetic://fragmented-evidence-v2/kiln-old-plan",
+      "state": "superseded",
+      "allowed_destinations": [
+        "local"
+      ],
+      "sha256": "ac260b3976e75bf63921f36b17342fcbebe02fb33bb86df5a8ebd21abb63beda"
+    },
+    {
+      "source_id": "kitchen-service",
+      "text": "# Juniper Hall breakfast — public service information\nCurrent event sheet for 9 June 2031. This fictional event and product code are used only as synthetic evaluation content.\n\n## Listed alternative\nAt the 9 June community breakfast, the sealed oat cups labelled O-4 are the listed option made without peanut ingredients. Hand the cup to the visitor unopened, together with a fresh wrapped spoon.\n\nBreakfast tickets help the volunteers count how many portions to prepare. A ticket is valid for either the standard plate or the listed alternative, subject to availability. Visitors do not need to explain a medical history to exchange a ticket for a sealed cup or ask to see an ingredient label.\n\nThe hall's coffee station uses mugs from the washable cup rack. Bring used mugs to the marked return table rather than to the service counter. The return table is near the exit, and its volunteer clears crockery throughout the event. This arrangement keeps the serving queue moving.\n\n## Shared equipment limitation\nDo not describe any item prepared on the shared toast counter as peanut-free.\n\nThe toaster, tongs, and spreading board are shared with peanut-butter toast; removing a topping or wiping a visible crumb does not turn that service into the sealed-cup option.\n\nVolunteer aprons are colour coded by task: green for ticket collection and blue for serving. Apron colour does not certify a food as free of an ingredient. Ask the serving lead for the current product label when a visitor needs information that is not printed on the event sheet.\n\n## Communicating accurately\nStaff should repeat the event's ingredient and handling information without guaranteeing that a meal is safe for a particular person's allergy. The visitor can read the sealed cup's manufacturer label before deciding whether to accept it.\n\nThe fruit display is decorative as well as functional, and its position may change when the room becomes busy. Location on a separate table should not be presented as evidence of ingredient controls. Only the products and handling steps explicitly listed in this sheet establish the event's stated alternative service.\n\nAfter breakfast, volunteers stack chairs along the west wall before cleaning the floor. The folding-table trolley stays clear of the fire exit during this work. These room arrangements are part of the volunteer timetable and do not extend the food-service window or establish later availability of a menu item.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/kitchen-service",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "03ba8083c64c9d3257d5c4f1e0b48e514f6c22008e6a8069e0c40bac89e0709d"
+    },
+    {
+      "source_id": "kitchen-stock",
+      "text": "# Public menu availability — 9 June\n\nThe O-4 sealed-cup stock for 9 June is 18 cups, reserved at the serving desk rather than on the toast counter. Service runs from 08:30 to 10:00, or until the relevant item runs out.\n\nThe stock notice describes initial quantities, not a live count. The serving lead can confirm remaining cups during the event.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/kitchen-stock",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "b825aa3a705b50278cba21c4b9809d97848fd6799278b82b2bf18fb3b36ad9f9"
+    },
+    {
+      "source_id": "kitchen-withdrawn",
+      "text": "# Withdrawn volunteer shortcut card\n\nA wiped toaster is peanut-free. Offer ordinary toast with no topping as the guaranteed allergy-safe substitute. There are unlimited oat cups on the toast counter.\n\nThis card was withdrawn before the event and must not guide service.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "draft",
+      "origin": "synthetic://fragmented-evidence-v2/kitchen-withdrawn",
+      "state": "revoked",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "759878f11dfcfc964a8b110184f8059ce9f69429f62c7243eebbdb83dc91c848"
+    },
+    {
+      "source_id": "archive-publication",
+      "text": "# Rivermark Archive — public image publication specification\nSpecification W-8, current in July 2031. The archive, accession, and collection in this fixture are fictional.\n\n## Delivery file\nPublish a JPEG derivative whose longest edge is 1600 px and whose embedded metadata contains the public credit line only. Keep the 600 dpi TIFF master in the preservation store; the master is not the web download.\n\nThe preservation workflow includes checking image orientation and comparing the scan with the physical item. That inspection helps catch clipping, reflections, and accidental reversals. It does not establish ownership, publication permission, or the proper public credit; those are separate records in the archive's process.\n\nThe website displays a short caption below each image and an accessible description beside it. A caption may identify the river, season, or approximate date when that information is supported by the catalogue. A description conveys visible content and should not invent a date simply because the website template has a date field.\n\n## Credit text\nFor accession R-42, use the exact public credit: \"Rivermark Archive, R-42; courtesy of the Bellweather Collection.\" Do not substitute the donor's administrative contact record for a public credit.\n\nThe archive occasionally receives multiple images of the same river reach. Staff can compare them for research, but a shared subject does not make their rights or credits interchangeable. A neighbouring accession may have a different collection name, a different restriction, or a separate publication approval date.\n\n## Permission condition\nThe image can be included in the public river-history page only after the Rights Register marks R-42 as cleared for web publication.\n\nA scanning-complete flag confirms capture, not permission; it does not satisfy the rights-clearance requirement.\n\nThe online exhibition uses a pale border around portrait-oriented images to align the gallery tiles. This presentation choice does not change the derivative's maximum pixel edge. Site editors may choose a smaller display size while still uploading the properly prepared derivative described in the delivery section.\n\n## Records retained off the public page\nKeep capture logs and internal handling notes with the accession record according to the archive's retention process. The public page does not need internal scanner identifiers, staff shift notes, or the physical storage shelf code to give a visitor the supported image and its approved credit.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/archive-publication",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "fbeafc6321eab10f13846b3fe2af9691626c9c55bc84f21551a6b3ec19f1bbdf"
+    },
+    {
+      "source_id": "archive-rights-extract",
+      "text": "# Public Rights Register extract\n\nAccession R-42: scanning_complete = true; web_publication = cleared; clearance_date = 2031-07-06. This public extract is the current Rights Register status for the river-history page.\n\nThe approved public credit remains the one in publication specification W-8. No donor contact details belong in this extract.\n",
+      "collection": "public",
+      "freshness": "current",
+      "authority": "primary",
+      "origin": "synthetic://fragmented-evidence-v2/archive-rights-extract",
+      "state": "active",
+      "allowed_destinations": [
+        "local",
+        "public"
+      ],
+      "sha256": "5228130513802472d9ab2040c17ce4e94b21f025d4bda129e57d4d07778b5d66"
+    },
+    {
+      "source_id": "archive-private-notes",
+      "text": "# Synthetic administrative notes for R-42\n\nInternal working credit: Bellweather family file desk, extension 000. Draft export suggestion: publish the full TIFF and leave all scan-log metadata embedded.\n\nAll details here are invented. Source policy permits local owner reference only; this note is not approved for public output.\n",
+      "collection": "private",
+      "freshness": "current",
+      "authority": "draft",
+      "origin": "synthetic://fragmented-evidence-v2/archive-private-notes",
+      "state": "active",
+      "allowed_destinations": [
+        "local"
+      ],
+      "sha256": "53e9cf05866881c807b48459df58b2548e9d2a94ca49ee7baf6ba59218b7672c"
+    }
+  ],
+  "cases": [
+    {
+      "id": "fragmented-01",
+      "query": "For the 12 May guided walk, can we get to Cedar Overlook despite the broken footbridge, what route should we take back, and how far is the full walk? Include the water-level condition that could stop us.",
+      "scope": "reader",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 10000,
+        "max_tokens": 10000,
+        "max_items": 10
+      },
+      "budget_class": "normal",
+      "gold": [
+        {
+          "source_id": "trail-current",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "During the Alder Footbridge closure, walkers reach the Cedar Overlook by following the signed Mill Road bypass from marker M2 to marker M5. The bypass adds 0.8 km to the outward walk."
+        },
+        {
+          "source_id": "trail-current",
+          "line_start": 15,
+          "line_end": 17,
+          "quote": "The bypass is open only while the creek gauge is below 1.4 m.\n\nAt 1.4 m or above, the Mill Road ford is closed too: turn back at M2; do not substitute the ford for the footbridge."
+        },
+        {
+          "source_id": "trail-current",
+          "line_start": 22,
+          "line_end": 22,
+          "quote": "Return from the overlook using the same Mill Road bypass; the old east-bank spur is fenced for nesting birds and is not an alternative return route."
+        },
+        {
+          "source_id": "trail-walk-card",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "The ordinary entrance-to-Cedar-Overlook walk is 2.6 km one way. The 12 May 2031, 09:00 entrance-board reading is 1.1 m; the ranger signed this as the reading for today's guided walk."
+        }
+      ],
+      "forbidden_sources": [
+        "trail-old-map"
+      ],
+      "answer_requirements": [
+        "Today's 1.1 m reading is below the 1.4 m closure threshold.",
+        "Use Mill Road M2–M5 in both directions; the east-bank spur is unavailable.",
+        "Compute 2 × (2.6 + 0.8) = 6.8 km for the round trip.",
+        "At a gauge reading of 1.4 m or above turn back at M2; the ford is also closed."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "trail-current",
+          "trail-walk-card"
+        ],
+        "contextual_sources": [
+          "trail-history"
+        ],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-02",
+      "query": "The guide has changed the L7 temperature for tonight's nebula session. Give the waiting period, dark-frame count and duration, the physical light-blocking step, and the exact master filename.",
+      "scope": "reader",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 4600,
+        "max_tokens": 4600,
+        "max_items": 6
+      },
+      "budget_class": "tight",
+      "gold": [
+        {
+          "source_id": "observatory-camera",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "For an L7 camera running firmware 3.2, start a new dark library after changing the sensor target temperature. Set the target to −10 °C and allow 12 minutes after the displayed temperature first reaches that value."
+        },
+        {
+          "source_id": "observatory-camera",
+          "line_start": 12,
+          "line_end": 14,
+          "quote": "Acquire twelve dark frames at the science exposure duration, with the lens cap fitted.\n\nA shutter-close command alone is insufficient on the L7: its inspection slit leaks light, so the cap is required even when software reports SHUTTER=CLOSED."
+        },
+        {
+          "source_id": "observatory-camera",
+          "line_start": 19,
+          "line_end": 19,
+          "quote": "Store the combined master under dark/L7_f32_m10_<seconds>s.fit, replacing <seconds> with the exposure duration as an integer. Do not reuse a master made at −5 °C."
+        },
+        {
+          "source_id": "observatory-session",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "Tonight's science frames use 90 s exposures. Keep this duration for the dark series; do not apply the older 60 s classroom example."
+        }
+      ],
+      "forbidden_sources": [
+        "observatory-revoked"
+      ],
+      "answer_requirements": [
+        "Wait 12 minutes after the displayed sensor reaches −10 °C.",
+        "Take twelve 90 s dark frames.",
+        "Fit the lens cap even if the shutter reports closed because the inspection slit leaks light.",
+        "Save dark/L7_f32_m10_90s.fit and do not reuse a −5 °C master."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "observatory-camera",
+          "observatory-session"
+        ],
+        "contextual_sources": [],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-03",
+      "query": "Show the two JSON measurement objects that job 18 should emit under the current DrizzleCSV contract. Explain briefly why the second reading is not missing, and use the correct UTC times and field names.",
+      "scope": "reader",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 10000,
+        "max_tokens": 10000,
+        "max_items": 10
+      },
+      "budget_class": "normal",
+      "gold": [
+        {
+          "source_id": "importer-contract",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Interpret an offset-free observed_at value in the site's configured timezone, then convert it to UTC. Never treat an offset-free value as already UTC. An explicit numeric offset in the value overrides the site timezone."
+        },
+        {
+          "source_id": "importer-contract",
+          "line_start": 12,
+          "line_end": 14,
+          "quote": "Convert the literal reading value -9999 to JSON null and set quality to \"missing\".\n\nThe value 0 is a valid measurement and must remain numeric zero; an empty reading cell is a row-validation error, not the -9999 missing-data code."
+        },
+        {
+          "source_id": "importer-contract",
+          "line_start": 19,
+          "line_end": 23,
+          "quote": "The exported object uses these exact keys:\n```json\n{\"observed_at_utc\":\"ISO-8601 Z time\",\"reading\":0,\"quality\":\"measured\",\"station\":\"site code\"}\n```\nFor a nonmissing numeric reading, quality is \"measured\"."
+        },
+        {
+          "source_id": "importer-job",
+          "line_start": 3,
+          "line_end": 12,
+          "quote": "Job configuration:\n```json\n{\"station\":\"RQ2\",\"timezone\":\"UTC+02:00\",\"adapter_version\":4}\n```\nInput rows:\n```csv\nobserved_at,reading\n2031-06-08T10:15:00,-9999\n2031-06-08T10:20:00,0\n```"
+        }
+      ],
+      "forbidden_sources": [
+        "importer-v3"
+      ],
+      "answer_requirements": [
+        "First object: observed_at_utc 2031-06-08T08:15:00Z, reading null, quality missing, station RQ2.",
+        "Second object: observed_at_utc 2031-06-08T08:20:00Z, reading 0, quality measured, station RQ2.",
+        "Use precisely observed_at_utc, reading, quality, and station as the measurement keys.",
+        "Explain that -9999 is the missing code while zero is a valid measurement."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "importer-contract",
+          "importer-job"
+        ],
+        "contextual_sources": [
+          "importer-rationale"
+        ],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-04",
+      "query": "Does lot BL-31 qualify for lending? Show how its result is counted, state the test conditions and deadline, and explain whether soaking or counting the short root would change the official result.",
+      "scope": "reader",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 4600,
+        "max_tokens": 4600,
+        "max_items": 6
+      },
+      "budget_class": "tight",
+      "gold": [
+        {
+          "source_id": "seed-protocol",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "For a Blue Lantern pea viability check, select 20 seeds at random and place them on damp paper in a lidded box at 18–22 °C. Keep the paper damp but do not leave standing water in the box."
+        },
+        {
+          "source_id": "seed-protocol",
+          "line_start": 12,
+          "line_end": 12,
+          "quote": "Count a seed as germinated only when its root is at least 5 mm long. Record the final count on day 10, not the first day on which any root appears."
+        },
+        {
+          "source_id": "seed-protocol",
+          "line_start": 17,
+          "line_end": 19,
+          "quote": "Do not nick or soak seeds used for the library's viability check.\n\nNicking and soaking may be appropriate for a separate planting trial, but pretreated seeds cannot be substituted into the untreated viability sample or its recorded percentage."
+        },
+        {
+          "source_id": "seed-lot-card",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "Lot BL-31 may be offered for lending only if at least 80% of its viability sample germinates. The recorded untreated sample has 15 roots at least 5 mm long on day 10; one additional seed has a 3 mm root."
+        }
+      ],
+      "forbidden_sources": [
+        "seed-tips"
+      ],
+      "answer_requirements": [
+        "Use an untreated random sample of 20 seeds on damp paper at 18–22 °C without standing water.",
+        "Score roots at least 5 mm long on day 10.",
+        "15/20 = 75%, below the 80% requirement, so BL-31 does not qualify.",
+        "Exclude the 3 mm root; soaking or nicking invalidates use as the untreated viability sample."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "seed-lot-card",
+          "seed-protocol"
+        ],
+        "contextual_sources": [],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-05",
+      "query": "For the 16 November matinee, explain how a visitor in row D with a T-coil hearing aid and a wheeled walker should enter, when they can collect a receiver, how to connect it, and where to leave it afterward.",
+      "scope": "reader",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 4600,
+        "max_tokens": 4600,
+        "max_items": 6
+      },
+      "budget_class": "tight",
+      "gold": [
+        {
+          "source_id": "theatre-access",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "For step-free entry to the afternoon performance, use the courtyard door on Birch Lane. The main High Street doors lead to six steps before the foyer; the courtyard route reaches the foyer by a level passage."
+        },
+        {
+          "source_id": "theatre-access",
+          "line_start": 12,
+          "line_end": 14,
+          "quote": "Borrow a neck-loop receiver from the access desk for seats in rows A–F.\n\nThe neck loop works with a hearing aid set to its T-coil program; an ordinary Bluetooth pairing mode will not connect to this system. Headphones are available for visitors without a T-coil aid."
+        },
+        {
+          "source_id": "theatre-access",
+          "line_start": 19,
+          "line_end": 19,
+          "quote": "Return borrowed receivers to the access desk before leaving the building. A receiver cannot be left in a seat pocket, because the access team checks and recharges each unit immediately after the audience leaves."
+        },
+        {
+          "source_id": "theatre-matinee",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "For the 16 November 2031 matinee, curtain is at 14:00 and the courtyard door and access desk open at 13:15. The usual 13:30 opening is replaced for this performance because the access team is offering receiver familiarization."
+        }
+      ],
+      "forbidden_sources": [
+        "theatre-private-rota"
+      ],
+      "answer_requirements": [
+        "Use the step-free courtyard door on Birch Lane, not the stepped High Street route.",
+        "The door and desk open at 13:15 for the 14:00 matinee.",
+        "Row D is covered by rows A–F; borrow a neck loop and select the hearing aid's T-coil program, not Bluetooth.",
+        "Return the receiver to the access desk before leaving."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "theatre-access",
+          "theatre-matinee"
+        ],
+        "contextual_sources": [],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-06",
+      "query": "For my local studio checklist, combine the current C17 plan with the guest-workshop exception: state the profile and top hold, cooling endpoint, unloading threshold, box label, and whether GL-9 pieces go in this load.",
+      "scope": "owner",
+      "purpose": "answer_question",
+      "destination": "local",
+      "budget": {
+        "max_bytes": 10000,
+        "max_tokens": 10000,
+        "max_items": 10
+      },
+      "budget_class": "normal",
+      "gold": [
+        {
+          "source_id": "kiln-load-plan",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "For load C17, select the studio's SLOW-6 profile and program a 20-minute hold at the top temperature. The profile's controlled cooling segment ends at 900 °C."
+        },
+        {
+          "source_id": "kiln-load-plan",
+          "line_start": 12,
+          "line_end": 14,
+          "quote": "Keep the kiln closed until its display is below 80 °C before unloading C17.\n\nThe earlier 120 °C unloading shortcut applies only to unglazed test tiles; C17 contains glazed bowls and does not qualify for that shortcut."
+        },
+        {
+          "source_id": "kiln-load-plan",
+          "line_start": 19,
+          "line_end": 19,
+          "quote": "Mark each C17 box with the firing date and the literal batch label C17-S6-H20. The label records the profile and top hold, not an artist's name or a glaze recipe."
+        },
+        {
+          "source_id": "kiln-workshop-sign",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "Guest-workshop pieces marked GL-9 must stay out of C17: that glaze batch requires a separate cone-5 firing with no top hold. All other pieces already approved on the C17 load sheet keep the SLOW-6 plan."
+        }
+      ],
+      "forbidden_sources": [
+        "kiln-old-plan"
+      ],
+      "answer_requirements": [
+        "Select SLOW-6 and a 20-minute top hold; controlled cooling ends at 900 °C.",
+        "Unload only below 80 °C; the 120 °C shortcut is for unglazed test tiles and does not cover these glazed bowls.",
+        "Label boxes with the firing date and C17-S6-H20.",
+        "Exclude GL-9; it needs a separate cone-5 firing with no top hold."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "kiln-load-plan",
+          "kiln-workshop-sign"
+        ],
+        "contextual_sources": [],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-07",
+      "query": "Write a short public response for a breakfast visitor asking for a no-peanut-ingredients option: say what the event offers, where and when to request it, how it is handed over, and what limitation prevents promising that ordinary toast or the alternative is safe for their allergy.",
+      "scope": "reader",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 4600,
+        "max_tokens": 4600,
+        "max_items": 6
+      },
+      "budget_class": "tight",
+      "gold": [
+        {
+          "source_id": "kitchen-service",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "At the 9 June community breakfast, the sealed oat cups labelled O-4 are the listed option made without peanut ingredients. Hand the cup to the visitor unopened, together with a fresh wrapped spoon."
+        },
+        {
+          "source_id": "kitchen-service",
+          "line_start": 12,
+          "line_end": 14,
+          "quote": "Do not describe any item prepared on the shared toast counter as peanut-free.\n\nThe toaster, tongs, and spreading board are shared with peanut-butter toast; removing a topping or wiping a visible crumb does not turn that service into the sealed-cup option."
+        },
+        {
+          "source_id": "kitchen-service",
+          "line_start": 19,
+          "line_end": 19,
+          "quote": "Staff should repeat the event's ingredient and handling information without guaranteeing that a meal is safe for a particular person's allergy. The visitor can read the sealed cup's manufacturer label before deciding whether to accept it."
+        },
+        {
+          "source_id": "kitchen-stock",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "The O-4 sealed-cup stock for 9 June is 18 cups, reserved at the serving desk rather than on the toast counter. Service runs from 08:30 to 10:00, or until the relevant item runs out."
+        }
+      ],
+      "forbidden_sources": [
+        "kitchen-withdrawn"
+      ],
+      "answer_requirements": [
+        "Offer an unopened O-4 sealed oat cup with a fresh wrapped spoon, and let the visitor inspect its manufacturer label.",
+        "Request at the serving desk during 08:30–10:00, subject to stock; 18 is initial stock, not guaranteed remaining stock.",
+        "Shared toaster, tongs, and board contact peanut-butter toast; removing toppings or wiping crumbs is insufficient.",
+        "Do not guarantee suitability or allergy safety for either the shared-counter food or the alternative."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "kitchen-service",
+          "kitchen-stock"
+        ],
+        "contextual_sources": [],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    },
+    {
+      "id": "fragmented-08",
+      "query": "I own the archive workspace and am preparing the public river-history page. Can R-42 go live now, and what exact image format, size, metadata, and credit should the public page use? Explain why a completed scan alone would not be enough.",
+      "scope": "owner",
+      "purpose": "answer_question",
+      "destination": "public",
+      "budget": {
+        "max_bytes": 10000,
+        "max_tokens": 10000,
+        "max_items": 10
+      },
+      "budget_class": "normal",
+      "gold": [
+        {
+          "source_id": "archive-publication",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Publish a JPEG derivative whose longest edge is 1600 px and whose embedded metadata contains the public credit line only. Keep the 600 dpi TIFF master in the preservation store; the master is not the web download."
+        },
+        {
+          "source_id": "archive-publication",
+          "line_start": 12,
+          "line_end": 12,
+          "quote": "For accession R-42, use the exact public credit: \"Rivermark Archive, R-42; courtesy of the Bellweather Collection.\" Do not substitute the donor's administrative contact record for a public credit."
+        },
+        {
+          "source_id": "archive-publication",
+          "line_start": 17,
+          "line_end": 19,
+          "quote": "The image can be included in the public river-history page only after the Rights Register marks R-42 as cleared for web publication.\n\nA scanning-complete flag confirms capture, not permission; it does not satisfy the rights-clearance requirement."
+        },
+        {
+          "source_id": "archive-rights-extract",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "Accession R-42: scanning_complete = true; web_publication = cleared; clearance_date = 2031-07-06. This public extract is the current Rights Register status for the river-history page."
+        }
+      ],
+      "forbidden_sources": [
+        "archive-private-notes"
+      ],
+      "answer_requirements": [
+        "R-42 can be published because the current Rights Register says web publication is cleared on 2031-07-06.",
+        "Use a JPEG derivative with longest edge 1600 px; retain the 600 dpi TIFF master in the preservation store.",
+        "Embedded metadata contains only the public credit line.",
+        "Use exactly: Rivermark Archive, R-42; courtesy of the Bellweather Collection.",
+        "Scanning complete is a capture milestone, not publication permission; private administrative notes cannot enter this public answer."
+      ],
+      "missing_evidence": [],
+      "relevance": {
+        "gold_sources": [
+          "archive-publication",
+          "archive-rights-extract"
+        ],
+        "contextual_sources": [],
+        "nongold_lines_are_not_automatically_irrelevant": true
+      }
+    }
+  ]
+}

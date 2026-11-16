@@ -1,0 +1,67 @@
+{
+  "contract_version": "0.1",
+  "request_id": "req-fixture",
+  "status": "ok",
+  "context_revision": "0284077e646b43af83a42a506aea337b:1",
+  "generated_at": "2026-11-14T19:07:07.809Z",
+  "scope_fingerprint": "b726a01345918714f238a62736863495a41343c81720b346bbbe0ef46dc57947",
+  "items": [
+    {
+      "citation_id": "E1",
+      "source_id": "release-notes",
+      "revision_id": "r-efbd18599ad94a40b9394addd26dc405",
+      "chunk_id": "c-2",
+      "text": "Validate after rollback.",
+      "content_sha256": "61db4829ff1baefbc0c783825f373b918a3eecae53be7330d41299c9171bf1a4",
+      "locator": {
+        "label": "lines 2-2",
+        "line_start": 2,
+        "line_end": 2
+      },
+      "recorded_at": "2026-11-14T19:07:07.809Z",
+      "authority": "unverified",
+      "origin": "source_evidence",
+      "lifecycle": "active",
+      "freshness": "unknown",
+      "egress": {
+        "restriction": "local_only"
+      }
+    },
+    {
+      "citation_id": "E2",
+      "source_id": "release-notes",
+      "revision_id": "r-efbd18599ad94a40b9394addd26dc405",
+      "chunk_id": "c-1",
+      "text": "Rollback requires restoring the previous snapshot.",
+      "content_sha256": "64a9e47c4e32315d0df0679871e581fb5073c3c1b55ef4e77f94fb9194defdcb",
+      "locator": {
+        "label": "lines 1-1",
+        "line_start": 1,
+        "line_end": 1
+      },
+      "recorded_at": "2026-11-14T19:07:07.809Z",
+      "authority": "unverified",
+      "origin": "source_evidence",
+      "lifecycle": "active",
+      "freshness": "unknown",
+      "egress": {
+        "restriction": "local_only"
+      }
+    }
+  ],
+  "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"release-notes\",\"revision_id\":\"r-efbd18599ad94a40b9394addd26dc405\",\"chunk_id\":\"c-2\",\"text\":\"Validate after rollback.\",\"content_sha256\":\"61db4829ff1baefbc0c783825f373b918a3eecae53be7330d41299c9171bf1a4\",\"locator\":{\"label\":\"lines 2-2\",\"line_start\":2,\"line_end\":2},\"recorded_at\":\"2026-11-14T19:07:07.809Z\",\"authority\":\"unverified\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"unknown\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"release-notes\",\"revision_id\":\"r-efbd18599ad94a40b9394addd26dc405\",\"chunk_id\":\"c-1\",\"text\":\"Rollback requires restoring the previous snapshot.\",\"content_sha256\":\"64a9e47c4e32315d0df0679871e581fb5073c3c1b55ef4e77f94fb9194defdcb\",\"locator\":{\"label\":\"lines 1-1\",\"line_start\":1,\"line_end\":1},\"recorded_at\":\"2026-11-14T19:07:07.809Z\",\"authority\":\"unverified\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"unknown\",\"egress\":{\"restriction\":\"local_only\"}}]",
+  "token_usage": {
+    "estimated_tokens": 965,
+    "counter_kind": "conservative_bytes",
+    "counter_id": "utf8_bytes",
+    "counter_revision": "1",
+    "context_bytes": 965,
+    "includes_citations": true
+  },
+  "coverage": "unknown",
+  "omissions": {},
+  "warnings": [
+    "APPROXIMATE_TOKEN_COUNT"
+  ],
+  "error": null
+}

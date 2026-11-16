@@ -1,0 +1,18 @@
+Knowledge Retrieval Engine (KRE)
+Copyright 2026 Brandon Gordon and KRE contributors.
+
+Original KRE software and documentation are licensed under Apache-2.0.
+The designated authored large-scale synthetic corpus and task text retain
+their existing CC0-1.0 dedication; see LICENSING.md.
+
+Shared companion-project material includes the stdio and quality modules,
+context contract, synthetic interoperability examples and calibration
+documentation identified in THIRD_PARTY_NOTICES.md:
+Governed Capability Broker (GCB)
+Copyright 2026 Brandon Gordon and GCB contributors.
+Licensed under Apache-2.0.
+
+References to OpenClaw, GCB, Python, SQLite, MCP, Ollama and model names describe
+compatibility or measurements, not endorsement. No model weights, provider
+credentials or subscription rights are distributed. Third-party components
+retain their own licenses and attribution.

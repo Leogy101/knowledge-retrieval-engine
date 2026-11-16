@@ -1,0 +1,15 @@
+{
+  "schema": "kre-holdout-freeze/1",
+  "frozen_at": "2026-11-16T13:23:16.574857+00:00",
+  "cases": 16,
+  "documents": 32,
+  "gold_spans": 31,
+  "files": {
+    "fixture.json": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+    "author_fixture.py": "6368d569ca3954a28e77f6f27e394a5aa3fb4f431226123e95a38b0c5ea0c9c6",
+    "evaluate.py": "d53d0be9b99fa11820139e3ef805ff972173d7386c43e7236b54db652a75f81a",
+    "METHODOLOGY.md": "f975e64d527497fffe6996e876366e4bd85414c32b743d7349d70ae4e3e70340"
+  },
+  "retrieval_executed_at_freeze": false,
+  "human_semantic_review": "unknown"
+}

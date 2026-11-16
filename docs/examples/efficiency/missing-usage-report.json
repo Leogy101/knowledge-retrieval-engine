@@ -1,0 +1,1071 @@
+{
+  "format": "efficiency-comparison/1",
+  "source_kind": "synthetic",
+  "identity": {
+    "task_id": "synthetic-lyra-1",
+    "pair_id": "pair-1",
+    "repetition": 1,
+    "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+    "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "corpus_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e"
+  },
+  "system": "kre",
+  "controlled": true,
+  "control_limitations": [],
+  "declared_configuration_differences": {},
+  "quality_preserved": true,
+  "all_request_coverage": false,
+  "rows": [
+    {
+      "metric": "input_tokens",
+      "disabled": 300,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "output_tokens",
+      "disabled": 40,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "cache_read_tokens",
+      "disabled": 80,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "cache_write_tokens",
+      "disabled": 20,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "reasoning_tokens",
+      "disabled": 10,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "total_tokens",
+      "disabled": 340,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "uncached_input_tokens",
+      "disabled": 200,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "provider_reported_total",
+      "disabled": 340,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "synthetic"
+    },
+    {
+      "metric": "model_requests",
+      "disabled": 2,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "observed_request_ledger"
+    },
+    {
+      "metric": "model_input_bytes",
+      "disabled": 2000,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "boundary_measured"
+    },
+    {
+      "metric": "injected_tool_bytes",
+      "disabled": 400,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "boundary_measured"
+    },
+    {
+      "metric": "injected_evidence_bytes",
+      "disabled": 200,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "boundary_measured"
+    },
+    {
+      "metric": "estimated_input_tokens",
+      "disabled": 500,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "local_estimate"
+    },
+    {
+      "metric": "actual_cost",
+      "disabled": 0.004,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "provider_billed"
+    },
+    {
+      "metric": "estimated_cost",
+      "disabled": 0.006,
+      "enabled": null,
+      "change": {
+        "absolute": null,
+        "percent": null,
+        "direction": "unknown"
+      },
+      "comparable": true,
+      "source_kind": "local_estimate"
+    },
+    {
+      "metric": "tool_calls",
+      "disabled": 1,
+      "enabled": 2,
+      "change": {
+        "absolute": 1,
+        "percent": -100.0,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "host_recorded"
+    },
+    {
+      "metric": "tool_response_bytes",
+      "disabled": 200,
+      "enabled": 260,
+      "change": {
+        "absolute": 60,
+        "percent": -30.0,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "boundary_measured"
+    },
+    {
+      "metric": "tool_elapsed_seconds",
+      "disabled": 0.1,
+      "enabled": 0.2,
+      "change": {
+        "absolute": 0.1,
+        "percent": -100.0,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "completion_seconds",
+      "disabled": 2.0,
+      "enabled": 2.5,
+      "change": {
+        "absolute": 0.5,
+        "percent": -25.0,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "retrieval_core_seconds",
+      "disabled": 0.01,
+      "enabled": 0.02,
+      "change": {
+        "absolute": 0.01,
+        "percent": -100.0,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "retrieval_round_trip_seconds",
+      "disabled": 0.1,
+      "enabled": 0.15,
+      "change": {
+        "absolute": 0.04999999999999999,
+        "percent": -49.999999999999986,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "validation_seconds",
+      "disabled": 0,
+      "enabled": 0.05,
+      "change": {
+        "absolute": 0.05,
+        "percent": null,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "routing_seconds",
+      "disabled": 0,
+      "enabled": 0,
+      "change": {
+        "absolute": 0,
+        "percent": null,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "local_cpu_seconds",
+      "disabled": 0.02,
+      "enabled": 0.04,
+      "change": {
+        "absolute": 0.02,
+        "percent": -100.0,
+        "direction": "regression"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "setup_seconds",
+      "disabled": 0.3,
+      "enabled": 0.3,
+      "change": {
+        "absolute": 0.0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "setup_cpu_seconds",
+      "disabled": 0.1,
+      "enabled": 0.1,
+      "change": {
+        "absolute": 0.0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "storage_bytes",
+      "disabled": 4096,
+      "enabled": 4096,
+      "change": {
+        "absolute": 0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "local_measured"
+    },
+    {
+      "metric": "quality_pass",
+      "disabled": 1,
+      "enabled": 1,
+      "change": {
+        "absolute": 0,
+        "percent": 0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "quality_score",
+      "change_unit": "percentage_points"
+    },
+    {
+      "metric": "citation_exactness",
+      "disabled": 1.0,
+      "enabled": 1.0,
+      "change": {
+        "absolute": 0.0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "quality_score",
+      "change_unit": "percentage_points"
+    },
+    {
+      "metric": "citation_support",
+      "disabled": 1.0,
+      "enabled": 1.0,
+      "change": {
+        "absolute": 0.0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "quality_score",
+      "change_unit": "percentage_points"
+    },
+    {
+      "metric": "evidence_recall",
+      "disabled": 1.0,
+      "enabled": 1.0,
+      "change": {
+        "absolute": 0.0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "quality_score",
+      "change_unit": "percentage_points"
+    },
+    {
+      "metric": "evidence_validity",
+      "disabled": 1.0,
+      "enabled": 1.0,
+      "change": {
+        "absolute": 0.0,
+        "percent": 0.0,
+        "direction": "unchanged"
+      },
+      "comparable": true,
+      "source_kind": "quality_score",
+      "change_unit": "percentage_points"
+    }
+  ],
+  "claims": {
+    "total_tokens": "synthetic_only",
+    "actual_cost": "synthetic_only",
+    "estimated_cost": "synthetic_only",
+    "completion_seconds": "synthetic_only"
+  },
+  "disabled": {
+    "format": "efficiency-summary/1",
+    "source_kind": "synthetic",
+    "run_sha256": "f6d20d37b9145f5615e4a6d130d2c83b2c2cb98f27895d782a8931c9207ac9dc",
+    "identity": {
+      "task_id": "synthetic-lyra-1",
+      "pair_id": "pair-1",
+      "repetition": 1,
+      "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+      "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "corpus_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e"
+    },
+    "condition": "disabled",
+    "configuration": {
+      "provider": "fixture",
+      "model": "fixture-model",
+      "model_revision": "revision-1",
+      "reasoning_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "tools": [
+        "read"
+      ],
+      "permissions_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "environment_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "history_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_access_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "retry_policy_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "cache_state": "cold",
+      "warm_state": "warm",
+      "memory_state": "isolated"
+    },
+    "coverage": {
+      "requests": "complete",
+      "auxiliary": "complete",
+      "tools": "complete",
+      "context": "complete"
+    },
+    "outcome": "completed",
+    "answer_sha256": "e61bcda317489cb52b16c27ff80851cc0f1f77f28f425d76396bd4c781774bfa",
+    "observation_sha256": "110d6184af160d660632a07a97b87391140a17e5cc5e924552954689b3d13849",
+    "trial_order": 1,
+    "execution_terminal": true,
+    "main_model_configuration_sha256": "1f30ce71a090c5c6e2dd347de0b001dfd6150fd61efe73e9bc80086c8c545142",
+    "request_configurations": {
+      "1f30ce71a090c5c6e2dd347de0b001dfd6150fd61efe73e9bc80086c8c545142": 2
+    },
+    "unknown_request_configurations": 0,
+    "guidance": null,
+    "metrics": {
+      "input_tokens": {
+        "value": 300,
+        "known_sum": 300,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "output_tokens": {
+        "value": 40,
+        "known_sum": 40,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "cache_read_tokens": {
+        "value": 80,
+        "known_sum": 80,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "cache_write_tokens": {
+        "value": 20,
+        "known_sum": 20,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "reasoning_tokens": {
+        "value": 10,
+        "known_sum": 10,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "total_tokens": {
+        "value": 340,
+        "known_sum": 340,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "uncached_input_tokens": {
+        "value": 200,
+        "known_sum": 200,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "provider_reported_total": {
+        "value": 340,
+        "known_sum": 340,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "synthetic"
+      },
+      "model_requests": {
+        "value": 2,
+        "known_sum": 2,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "observed_request_ledger"
+      },
+      "model_input_bytes": {
+        "value": 2000,
+        "known_sum": 2000,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "boundary_measured"
+      },
+      "injected_tool_bytes": {
+        "value": 400,
+        "known_sum": 400,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "boundary_measured"
+      },
+      "injected_evidence_bytes": {
+        "value": 200,
+        "known_sum": 200,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "boundary_measured"
+      },
+      "estimated_input_tokens": {
+        "value": 500,
+        "known_sum": 500,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "local_estimate"
+      },
+      "actual_cost": {
+        "value": 0.004,
+        "known_sum": 0.004,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "provider_billed"
+      },
+      "estimated_cost": {
+        "value": 0.006,
+        "known_sum": 0.006,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "local_estimate"
+      },
+      "tool_calls": {
+        "value": 1,
+        "known_sum": 1,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "host_recorded"
+      },
+      "tool_response_bytes": {
+        "value": 200,
+        "known_sum": 200,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "boundary_measured"
+      },
+      "tool_elapsed_seconds": {
+        "value": 0.1,
+        "known_sum": 0.1,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "completion_seconds": {
+        "value": 2.0,
+        "known_sum": 2.0,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "retrieval_core_seconds": {
+        "value": 0.01,
+        "known_sum": 0.01,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "retrieval_round_trip_seconds": {
+        "value": 0.1,
+        "known_sum": 0.1,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "validation_seconds": {
+        "value": 0,
+        "known_sum": 0,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "routing_seconds": {
+        "value": 0,
+        "known_sum": 0,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "local_cpu_seconds": {
+        "value": 0.02,
+        "known_sum": 0.02,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "setup_seconds": {
+        "value": 0.3,
+        "known_sum": 0.3,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "setup_cpu_seconds": {
+        "value": 0.1,
+        "known_sum": 0.1,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "storage_bytes": {
+        "value": 4096,
+        "known_sum": 4096,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      }
+    },
+    "cost_bases": {
+      "actual_cost": {
+        "currency": "USD",
+        "basis_sha256": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      "estimated_cost": {
+        "currency": "USD",
+        "basis_sha256": [
+          "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "attempt_outcomes": {
+      "cancelled": 0,
+      "completed": 2,
+      "failed": 0,
+      "incomplete": 0,
+      "started": 0
+    },
+    "observed_retries": 0,
+    "tool_counts": {
+      "read": 1
+    },
+    "limits": [
+      "Completeness is a collector assertion, not discovered by this importer.",
+      "No raw prompts, tool contents, request IDs or exception bodies are exported.",
+      "Context bytes and local token estimates are not provider token consumption."
+    ]
+  },
+  "enabled": {
+    "format": "efficiency-summary/1",
+    "source_kind": "synthetic",
+    "run_sha256": "589ef1237fd3534f4e41eb5c3b8e483f95bf09ec966d6e8c7718bb4c63d0b5a2",
+    "identity": {
+      "task_id": "synthetic-lyra-1",
+      "pair_id": "pair-1",
+      "repetition": 1,
+      "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+      "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "corpus_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e"
+    },
+    "condition": "enabled",
+    "configuration": {
+      "provider": "fixture",
+      "model": "fixture-model",
+      "model_revision": "revision-1",
+      "reasoning_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "tools": [
+        "read",
+        "kre_retrieve",
+        "kre_validate"
+      ],
+      "permissions_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "environment_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "history_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_access_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "retry_policy_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "cache_state": "cold",
+      "warm_state": "warm",
+      "memory_state": "isolated"
+    },
+    "coverage": {
+      "requests": "complete",
+      "auxiliary": "unknown",
+      "tools": "complete",
+      "context": "complete"
+    },
+    "outcome": "completed",
+    "answer_sha256": "e61bcda317489cb52b16c27ff80851cc0f1f77f28f425d76396bd4c781774bfa",
+    "observation_sha256": "9aee853a81cacebd344cedc48c192e4ad820f09a4768bd6863b853998e85efb2",
+    "trial_order": 2,
+    "execution_terminal": true,
+    "main_model_configuration_sha256": "1f30ce71a090c5c6e2dd347de0b001dfd6150fd61efe73e9bc80086c8c545142",
+    "request_configurations": {
+      "1f30ce71a090c5c6e2dd347de0b001dfd6150fd61efe73e9bc80086c8c545142": 2
+    },
+    "unknown_request_configurations": 0,
+    "guidance": null,
+    "metrics": {
+      "input_tokens": {
+        "value": null,
+        "known_sum": 80,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "output_tokens": {
+        "value": null,
+        "known_sum": 20,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "cache_read_tokens": {
+        "value": null,
+        "known_sum": 20,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "cache_write_tokens": {
+        "value": null,
+        "known_sum": 0,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "reasoning_tokens": {
+        "value": null,
+        "known_sum": 5,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "total_tokens": {
+        "value": null,
+        "known_sum": 100,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "uncached_input_tokens": {
+        "value": null,
+        "known_sum": 60,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "provider_reported_total": {
+        "value": null,
+        "known_sum": 100,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "synthetic"
+      },
+      "model_requests": {
+        "value": null,
+        "known_sum": 2,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "observed_request_ledger"
+      },
+      "model_input_bytes": {
+        "value": null,
+        "known_sum": 1400,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "boundary_measured"
+      },
+      "injected_tool_bytes": {
+        "value": null,
+        "known_sum": 400,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "boundary_measured"
+      },
+      "injected_evidence_bytes": {
+        "value": null,
+        "known_sum": 200,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "boundary_measured"
+      },
+      "estimated_input_tokens": {
+        "value": null,
+        "known_sum": 350,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "local_estimate"
+      },
+      "actual_cost": {
+        "value": null,
+        "known_sum": 0.0015,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "provider_billed"
+      },
+      "estimated_cost": {
+        "value": null,
+        "known_sum": 0.002,
+        "known_records": 1,
+        "observed_records": 2,
+        "coverage": "partial",
+        "source_kind": "local_estimate"
+      },
+      "tool_calls": {
+        "value": 2,
+        "known_sum": 2,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "host_recorded"
+      },
+      "tool_response_bytes": {
+        "value": 260,
+        "known_sum": 260,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "boundary_measured"
+      },
+      "tool_elapsed_seconds": {
+        "value": 0.2,
+        "known_sum": 0.2,
+        "known_records": 2,
+        "observed_records": 2,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "completion_seconds": {
+        "value": 2.5,
+        "known_sum": 2.5,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "retrieval_core_seconds": {
+        "value": 0.02,
+        "known_sum": 0.02,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "retrieval_round_trip_seconds": {
+        "value": 0.15,
+        "known_sum": 0.15,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "validation_seconds": {
+        "value": 0.05,
+        "known_sum": 0.05,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "routing_seconds": {
+        "value": 0,
+        "known_sum": 0,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "local_cpu_seconds": {
+        "value": 0.04,
+        "known_sum": 0.04,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "setup_seconds": {
+        "value": 0.3,
+        "known_sum": 0.3,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "setup_cpu_seconds": {
+        "value": 0.1,
+        "known_sum": 0.1,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      },
+      "storage_bytes": {
+        "value": 4096,
+        "known_sum": 4096,
+        "known_records": 1,
+        "observed_records": 1,
+        "coverage": "complete",
+        "source_kind": "local_measured"
+      }
+    },
+    "cost_bases": {
+      "actual_cost": {
+        "currency": "USD",
+        "basis_sha256": [
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      },
+      "estimated_cost": {
+        "currency": "USD",
+        "basis_sha256": [
+          "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        ]
+      }
+    },
+    "attempt_outcomes": {
+      "cancelled": 0,
+      "completed": 1,
+      "failed": 1,
+      "incomplete": 0,
+      "started": 0
+    },
+    "observed_retries": 1,
+    "tool_counts": {
+      "kre_retrieve": 1,
+      "kre_validate": 1
+    },
+    "limits": [
+      "Completeness is a collector assertion, not discovered by this importer.",
+      "No raw prompts, tool contents, request IDs or exception bodies are exported.",
+      "Context bytes and local token estimates are not provider token consumption."
+    ]
+  },
+  "quality_disabled": {
+    "quality_pass": true,
+    "critical_pass": true,
+    "completion_pass": true,
+    "citation_exactness": {
+      "passed": 2,
+      "total": 2,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "citation_support": {
+      "passed": 2,
+      "total": 2,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "evidence_recall": {
+      "passed": 1,
+      "total": 1,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "evidence_validity": {
+      "passed": 1,
+      "total": 1,
+      "unknown": 0,
+      "score": 1.0
+    }
+  },
+  "quality_enabled": {
+    "quality_pass": true,
+    "critical_pass": true,
+    "completion_pass": true,
+    "citation_exactness": {
+      "passed": 2,
+      "total": 2,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "citation_support": {
+      "passed": 2,
+      "total": 2,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "evidence_recall": {
+      "passed": 1,
+      "total": 1,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "evidence_validity": {
+      "passed": 1,
+      "total": 1,
+      "unknown": 0,
+      "score": 1.0
+    }
+  }
+}

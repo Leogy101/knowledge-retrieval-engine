@@ -1,0 +1,408 @@
+{
+  "format": "kre-context-attribution/1",
+  "evidence_kind": "synthetic_offline_public_source_replay",
+  "openclaw_version": "2026.11.1",
+  "ai_version": "2026.11.1",
+  "node_version": "v26.10.0",
+  "no_network_or_live_state": true,
+  "scope": "generic Responses full-history text-only converter and encoded request; fake SDK response",
+  "exclusions": [
+    "native Codex provider request",
+    "actual SDK internals",
+    "Gateway context assembly",
+    "compaction",
+    "server-side continuation",
+    "provider tokenizer",
+    "real model or billing"
+  ],
+  "native_host_final_request_verified": false,
+  "actual_provider_input_tokens": null,
+  "actual_billed_usage": null,
+  "source_files": [
+    {
+      "name": "package.json",
+      "sha256": "0bd1b84babac67876154f4072663d51c1f7fe6ffbc32c9c3bcd4555daab11d71"
+    },
+    {
+      "name": "dist/agent-bundle-mcp-materialize-DFCjlBPG.mjs",
+      "sha256": "51e5cf5ab913f4cf6f2daa73c6df497ef22351746887f6eec59e146c84b39d58"
+    },
+    {
+      "name": "docs/plugins/codex-harness-runtime.md",
+      "sha256": "f3c4319470a487a015c31f471907c0fff9e4817a0b6381fece5e29dd06c81894"
+    },
+    {
+      "name": "docs/plugins/codex-harness-runtime/v1-support-contract.md",
+      "sha256": "d369472ece0cacb62fbf584154c11c40b3535450c9bcb4b71d1bd09fc08b05bf"
+    },
+    {
+      "name": "docs/plugins/codex-harness-reference/dynamic-tools.md",
+      "sha256": "2d17b7f8b44896880b1bd18f8179cc0922d9efd7178170076d3fa9f7f8ec1024"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/openai-responses-ytmKcG9V.mjs",
+      "sha256": "26969e3f5cc5e2b882c42388f05659f614b01c4c15b158ba96c110425840238b"
+    },
+    {
+      "name": "dist/record-coerce-TIsquoVR.mjs",
+      "sha256": "2e10c9bb93d012791f9fa288da1a6c146f4da17214e87dba2ac11059e8d71a9e"
+    },
+    {
+      "name": "dist/stable-stringify-Djn3uxNo.mjs",
+      "sha256": "6c21fa16cc4eff871e22adaf92de038503541e88b3e6e3974660929b80631dd3"
+    },
+    {
+      "name": "dist/mcp-structured-mirror-1Cuz_E2Y.mjs",
+      "sha256": "c37277b2aac3e83aff1ac26456c883cf22bb15c6c731c8ef49c97cd9a357b5d0"
+    },
+    {
+      "name": "dist/mcp-content-BHTPz8cL.mjs",
+      "sha256": "2b1a89732a49aa87c2b9e6bb49622da26c4f5adcc540fc5c86a46f656503d9a3"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/sanitize-unicode-CRGuMONI.mjs",
+      "sha256": "782f53653913c71948cc7708dae1b3e6e3c2d4288cc1ab92b360cc3284fe29ab"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/string-coerce-Cj8sqWHx.mjs",
+      "sha256": "56b0380248322b8a2d0bc76299566bd338b5cdeb1633e31db55487f19538e8de"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "sha256": "a41647e7578b345341856c785d7800d17eae4fb681262ace47ad714cee9d7a16"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/openai-responses-contracts-DCG51Us0.mjs",
+      "sha256": "8f6e7d37fb49d696b23992b8725a412ed5129a49dc42357e5e09d1a5966346b6"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/types-BXd0kI8-.mjs",
+      "sha256": "0c184a175e46ecf5e5509b38db86b9b2a7a5e95478f3257e847d90d699578a81"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/assistant-output-BdFoDBYQ.mjs",
+      "sha256": "f428ff55cf1c27d76a06c167add7e6b952309a622cbdbb35e015134b62adad50"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/simple-options-BdJJbzZk.mjs",
+      "sha256": "91e29f786f0f4366a0349c8a9ddbd25c50ddb545bf779e4e51bd4d1b77a2b85b"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/transport-stream-shared-DdnJGEj0.mjs",
+      "sha256": "ae008ccf3e3432758902a22292cbbe7d8d97f00f80f8dd60c86de777868f2416"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/provider-replay-context-BC23HyZo.mjs",
+      "sha256": "a71219fa80f404d8b2342f4be17ab055546e1e1da224b9576755183ef46a49be"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/openai-responses-endpoint-JbBT8IDv.mjs",
+      "sha256": "8136ebdb7133547711747f824e1558847adfbeee3e5c29612d3ef1e6ba3039ea"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "sha256": "3d641779e4e18a42ab647b3fbb6169b798d8ebddfd3c88632d3c1b1ad0ff0854"
+    },
+    {
+      "name": "node_modules/@openclaw/ai/package.json",
+      "sha256": "6fecdb88d7fe1aa1d0d1a4b396db308c7d21b6756bc7f96bd4c232ec81f44988"
+    }
+  ],
+  "extracted_functions": [
+    {
+      "file": "node_modules/@openclaw/ai/dist/string-coerce-Cj8sqWHx.mjs",
+      "symbol": "normalizeNullableString",
+      "sha256": "65200ce4d80b285c4904c5881ffc0de525d93003f3158a2df744e2c9ef483b16"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/string-coerce-Cj8sqWHx.mjs",
+      "symbol": "normalizeOptionalString",
+      "sha256": "47658fea552bdc2d40d3767d6a72d27dc4e78d174f093a10665c6c692f303136"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/string-coerce-Cj8sqWHx.mjs",
+      "symbol": "normalizeOptionalLowercaseString",
+      "sha256": "bd97322ce877c7aa5eb55f6bd2536851a8d3baab292349155c310a7074d7df07"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/string-coerce-Cj8sqWHx.mjs",
+      "symbol": "normalizeLowercaseStringOrEmpty",
+      "sha256": "d32b7194ea1343a7baed9d643c272cc6c3ffc26e7197b8d3b36a5ade92fb38b9"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "hasMediaPayload",
+      "sha256": "061c81aecc60369c888e073204c0662b3e8f5c3c7736b8bcd618348aa1ffa0b8"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "isImageWithMediaPayload",
+      "sha256": "d01946a8f374f6bc182e299dfb6ec1e99950aa6d15c7f2510c35a0a380755a5c"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "normalizeModelId",
+      "sha256": "c6000f4b6f681ca926994f78f96085ebc8ac4bb9f65f8018f330a0ad4952a4c0"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "normalizeApi",
+      "sha256": "00f76b1493d410f95fa4568a87fcf6ca0bd1465e9498c887016b91c260f0751b"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "resolveReplayModelBoundIdentity",
+      "sha256": "0dcb1713c01e931abb70bf9051e0f0e10e1d2e53ee17de0d82e9eed79aa4b347"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "resolveModelBoundThinkingReplayMode",
+      "sha256": "d6e756c594868500aa121f1c765ea6f84a54698f6ce87189120f107a75fc4257"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "resolveFailedAssistantReplay",
+      "sha256": "5274130e1413dc694fc254e2cb533be605c8f26cb5bbdc127c1099321aae8af1"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "replaceImagesWithPlaceholder",
+      "sha256": "9393c1c92fb37efc1298c6a5504c551654d0eda84372d9e51db1230d7c112876"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "transformAssistant",
+      "sha256": "5ca4f4511e2b2220b6079febe0fab75dc97e3e95e0bbd2fff397f102e57c5472"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "transformMessages",
+      "sha256": "aba1db065a619891e40ebf1a2660bbc9810fb4bb618c09483bcf64e7869249ce"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/host-rCxf5Tjd.mjs",
+      "symbol": "const NON_VISION_USER_IMAGE_PLACEHOLDER",
+      "sha256": "cd0c0dec1149743351df054dc0319c3da0f31d70ebecba0ffafdf385adff0dc7"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-contracts-DCG51Us0.mjs",
+      "symbol": "const OPENAI_RESPONSES_APIS",
+      "sha256": "a4d7f8cf2aac5859f2f96b776447279f90af781cf0a63f260a3096d5077ebb94"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/assistant-output-BdFoDBYQ.mjs",
+      "symbol": "projectUserMediaForTransport",
+      "sha256": "cead39efc84a0ea6d0543368b5eff086f0e3e708e02bea67a0ff784b07c5b639"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/assistant-output-BdFoDBYQ.mjs",
+      "symbol": "transformProviderMessages",
+      "sha256": "91dde56646fccbec81d72aa8f22057b74729eb99880c7421a9ab75730f6a98e2"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/simple-options-BdJJbzZk.mjs",
+      "symbol": "const SYSTEM_PROMPT_CACHE_BOUNDARY",
+      "sha256": "dace94f132e3453f3d3240f182e4e15fa2162b157dab10d64083944fb9987e15"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/simple-options-BdJJbzZk.mjs",
+      "symbol": "const PREPARED_REQUEST_SUFFIX",
+      "sha256": "d72f44f9fbd7e4b2485bd90ae5312395fb77e7ac12517a30270caf172fad11d0"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/simple-options-BdJJbzZk.mjs",
+      "symbol": "const STRUCTURED_TOOL_RESULT_MAX_CHARS",
+      "sha256": "e85747b283fdd1ed304abc88069d86a69301e0a723dc16bfff1cf55fbcc03743"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/simple-options-BdJJbzZk.mjs",
+      "symbol": "const REQUEST_BODY",
+      "sha256": "d624e94e5f369b6c2f3f32dff5f6c146e0921d4b203958cb32f55686617bb3d6"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/transport-stream-shared-DdnJGEj0.mjs",
+      "symbol": "sanitizeTransportPayloadText",
+      "sha256": "a684d63995b59c1c241e79f7fd6f39f81a258eb4e9baf32a12953e9e5027a48d"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/provider-replay-context-BC23HyZo.mjs",
+      "symbol": "hashReplayContextValue",
+      "sha256": "c360d1618d8a16a352c713827290c3f0d08dcf4bdb3264aabd94e38dbe7db703"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/provider-replay-context-BC23HyZo.mjs",
+      "symbol": "buildProviderReplayContext",
+      "sha256": "1a8072dd6c4312bae7b6e580b6feb36314fd7969280bdeeb06ab7e68c1e63b1c"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-endpoint-JbBT8IDv.mjs",
+      "symbol": "supportsNativeOpenAIResponsesEndpoint",
+      "sha256": "84c6b55ceab8d08d275a736010e521730dd59586373b7f2eeb08f147bace8bac"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "buildOpenAIResponsesCompactionReplayPlan",
+      "sha256": "9895b5877a9bc2485a361b7a530f6974cd4f04876ddac4b482abbe6a30a39b5f"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "readResponsesInputReplayState",
+      "sha256": "904f415db679180b9d68c514a733eec00c4ee0b1134e7bfab0824e187314adfc"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "readResponsesInputReplay",
+      "sha256": "d85adcb250300cfce7b4eba733ed0cbb8433ab7d96f696e6e7dfd3043f066fa4"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "createResponsesInputReplay",
+      "sha256": "e20456fe7b38f507415b3133d58ef6d0ad0ef20dba6ab9c56ff3112aaae0a5d9"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "resolveReplayableResponsesMessageId",
+      "sha256": "387709d0cba7bc106b11c924505ad0e1b54b55af315a2939641aa198f7dbb617"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "resolveResponsesInstructionRole",
+      "sha256": "ca3c638dfc5fb1d12a4a56c3c11bb231f286550d44e92ac045d3d46195550c02"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "responsesAssistantTurnKey",
+      "sha256": "465ea8c8f19cec75512e2545be982727963a6ae7cd175a26f1ea3865ad969a51"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "orderResponsesAsyncToolResults",
+      "sha256": "aa34d5be17d1d49cf6a652c10aeeaa9f5177630c36099d9522f21edfd12c9854"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "parseOpenAIResponsesTextSignature",
+      "sha256": "7a4aed327c6a74778e7f38acde5c54d59da309b274d89f6d02de543562083c80"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "normalizeResponsesReplayItemId",
+      "sha256": "3367b8a298ce93c0dd797756d893dc57bdd4a848adee069e5176210be65a241f"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "buildResponsesInputMessage",
+      "sha256": "abc2ec28f42dfd8b62aed23b9cb1dab86cef31058e7f0296cd202cb99653141b"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "convertResponsesMessagesWithStyle",
+      "sha256": "d85a4f4276c832f5e482d825c3ed90ad25a9df152fe85829295e7fb562f78504"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "convertProviderResponsesMessages",
+      "sha256": "7902b9778abfe822014f12d987077ed589ef092a57066a8b9a73dc5210689c9e"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "isAsyncIterable",
+      "sha256": "354f71241ba91c6931453dbec7ea5b61c60fde1090c8a2371b3e825129bc0dfa"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "commitResponsesEncryptedContentAttempt",
+      "sha256": "2ba185d2dcb927c8b7915938a60b6c989eae47562809bb0e7b01c9664c84cc22"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "readResponsesRecoveryEvent",
+      "sha256": "430773e44ce5834fa51153c0be35087306a3d7049c7e9e703f231c26ea564f88"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "createResponsesStreamWithRecovery",
+      "sha256": "e6c439023b0180c178915d00a90d02dec9b0b206f13d572d38014123e458f834"
+    },
+    {
+      "file": "node_modules/@openclaw/ai/dist/openai-responses-shared-CD3Sd1NC.mjs",
+      "symbol": "const responsesInputSource",
+      "sha256": "b3d7835be858c091d3bb258550dfb86f85bd1d0592adb60f691bdd87b5dea63b"
+    }
+  ],
+  "mcp_result_serialized_bytes": 2142,
+  "mcp_text_bytes": 1825,
+  "projected_agent_text_bytes": 1825,
+  "requests": [
+    {
+      "request": 1,
+      "serialized_request_body_bytes": 2561,
+      "serialized_request_input_bytes": 2489,
+      "model_visible_tool_text_bytes": 1825,
+      "model_visible_text_bytes": 1886,
+      "tool_text_local_estimate_tokens": 457,
+      "estimate_method": "ceil(UTF-8 bytes / 4); not a provider tokenizer or billed tokens",
+      "sentinel_occurrences_in_tool_output": 2,
+      "exact_projected_text_preserved": true,
+      "request_sha256": "3dd798baab280734f3e2e5bbea7f8c3505b7ea9fbdcdcb34cda17fbee1df73b3",
+      "synthetic_terminal_usage": {
+        "input_tokens": 1000,
+        "output_tokens": 20,
+        "total_tokens": 1020,
+        "input_tokens_details": {
+          "cached_tokens": 200
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 5
+        }
+      }
+    },
+    {
+      "request": 2,
+      "serialized_request_body_bytes": 2845,
+      "serialized_request_input_bytes": 2773,
+      "model_visible_tool_text_bytes": 1825,
+      "model_visible_text_bytes": 1972,
+      "tool_text_local_estimate_tokens": 457,
+      "estimate_method": "ceil(UTF-8 bytes / 4); not a provider tokenizer or billed tokens",
+      "sentinel_occurrences_in_tool_output": 2,
+      "exact_projected_text_preserved": true,
+      "request_sha256": "6c69e8d1da7da3e841c69bf77d7e3e110545aadeb39c6c8ec29117954cbf6387",
+      "synthetic_terminal_usage": {
+        "input_tokens": 1050,
+        "output_tokens": 30,
+        "total_tokens": 1080,
+        "input_tokens_details": {
+          "cached_tokens": 300
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 7
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "request_count": 2,
+    "transmitted_tool_text_bytes": 3650,
+    "transmitted_sentinel_occurrences": 4,
+    "synthetic_input_tokens": 2050,
+    "synthetic_output_tokens": 50,
+    "synthetic_total_tokens": 2100,
+    "synthetic_cached_tokens_included_in_input": 500,
+    "synthetic_reasoning_tokens_included_in_output": 12,
+    "actual_provider_tokens": null,
+    "actual_billed_charge": null
+  },
+  "warning": "Fake usage numbers verify accounting distinctions; they do not measure duplication token impact or real savings.",
+  "canonical_context_text_bytes": 510,
+  "mcp_jsonrpc_response_bytes_without_newline": 2176,
+  "context_fields_equivalent": true,
+  "validation": {
+    "complete": "current",
+    "without_items": "denied",
+    "without_context_text": "denied",
+    "reconstructed": "current",
+    "revoked": "changed",
+    "required_revoked_error": "REQUIRED_EVIDENCE_MISSING"
+  }
+}

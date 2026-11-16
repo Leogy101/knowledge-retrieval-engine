@@ -1,0 +1,650 @@
+[
+  {
+    "budget": 16000,
+    "id": "LS01",
+    "covered": 3,
+    "required": 3,
+    "bytes": 8443,
+    "native_bytes": 9598,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS02",
+    "covered": 4,
+    "required": 4,
+    "bytes": 14140,
+    "native_bytes": 15793,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS03",
+    "covered": 4,
+    "required": 4,
+    "bytes": 13593,
+    "native_bytes": 15495,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS04",
+    "covered": 3,
+    "required": 3,
+    "bytes": 8443,
+    "native_bytes": 9598,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS05",
+    "covered": 4,
+    "required": 4,
+    "bytes": 13981,
+    "native_bytes": 15891,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS06",
+    "covered": 3,
+    "required": 3,
+    "bytes": 14079,
+    "native_bytes": 15983,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS07",
+    "covered": 3,
+    "required": 3,
+    "bytes": 8443,
+    "native_bytes": 9598,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS08",
+    "covered": 3,
+    "required": 3,
+    "bytes": 13963,
+    "native_bytes": 15378,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS09",
+    "covered": 3,
+    "required": 3,
+    "bytes": 12180,
+    "native_bytes": 14066,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS10",
+    "covered": 2,
+    "required": 2,
+    "bytes": 8443,
+    "native_bytes": 9598,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS11",
+    "covered": 3,
+    "required": 3,
+    "bytes": 12489,
+    "native_bytes": 14386,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS12",
+    "covered": 3,
+    "required": 3,
+    "bytes": 11568,
+    "native_bytes": 13453,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS13",
+    "covered": 1,
+    "required": 1,
+    "bytes": 13023,
+    "native_bytes": 14920,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS14",
+    "covered": 1,
+    "required": 1,
+    "bytes": 12116,
+    "native_bytes": 14011,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS15",
+    "covered": 1,
+    "required": 1,
+    "bytes": 11956,
+    "native_bytes": 13851,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS16",
+    "covered": 0,
+    "required": 0,
+    "bytes": 13736,
+    "native_bytes": 15392,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS17",
+    "covered": 2,
+    "required": 2,
+    "bytes": 11232,
+    "native_bytes": 13144,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS18",
+    "covered": 1,
+    "required": 1,
+    "bytes": 13827,
+    "native_bytes": 15604,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS19",
+    "covered": 2,
+    "required": 2,
+    "bytes": 8443,
+    "native_bytes": 9598,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS20",
+    "covered": 3,
+    "required": 3,
+    "bytes": 11680,
+    "native_bytes": 13584,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS21",
+    "covered": 4,
+    "required": 4,
+    "bytes": 13863,
+    "native_bytes": 15784,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS22",
+    "covered": 3,
+    "required": 3,
+    "bytes": 8443,
+    "native_bytes": 9598,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS23",
+    "covered": 3,
+    "required": 3,
+    "bytes": 14390,
+    "native_bytes": 15806,
+    "error": null
+  },
+  {
+    "budget": 16000,
+    "id": "LS24",
+    "covered": 4,
+    "required": 4,
+    "bytes": 13548,
+    "native_bytes": 15458,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS01",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6850,
+    "native_bytes": 7773,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS02",
+    "covered": 2,
+    "required": 4,
+    "bytes": 7034,
+    "native_bytes": 7978,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS03",
+    "covered": 4,
+    "required": 4,
+    "bytes": 6967,
+    "native_bytes": 7783,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS04",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6600,
+    "native_bytes": 7523,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS05",
+    "covered": 4,
+    "required": 4,
+    "bytes": 6965,
+    "native_bytes": 7905,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS06",
+    "covered": 2,
+    "required": 3,
+    "bytes": 6747,
+    "native_bytes": 7815,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS07",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6771,
+    "native_bytes": 7693,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS08",
+    "covered": 3,
+    "required": 3,
+    "bytes": 7081,
+    "native_bytes": 7904,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS09",
+    "covered": 3,
+    "required": 3,
+    "bytes": 7006,
+    "native_bytes": 7945,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS10",
+    "covered": 2,
+    "required": 2,
+    "bytes": 6626,
+    "native_bytes": 7549,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS11",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6786,
+    "native_bytes": 7966,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS12",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6691,
+    "native_bytes": 7624,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS13",
+    "covered": 1,
+    "required": 1,
+    "bytes": 6156,
+    "native_bytes": 7107,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS14",
+    "covered": 1,
+    "required": 1,
+    "bytes": 6629,
+    "native_bytes": 7928,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS15",
+    "covered": 1,
+    "required": 1,
+    "bytes": 6262,
+    "native_bytes": 7439,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS16",
+    "covered": 0,
+    "required": 0,
+    "bytes": 6925,
+    "native_bytes": 7861,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS17",
+    "covered": 2,
+    "required": 2,
+    "bytes": 6834,
+    "native_bytes": 7778,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS18",
+    "covered": 1,
+    "required": 1,
+    "bytes": 7134,
+    "native_bytes": 7952,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS19",
+    "covered": 2,
+    "required": 2,
+    "bytes": 6737,
+    "native_bytes": 7661,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS20",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6389,
+    "native_bytes": 7704,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS21",
+    "covered": 4,
+    "required": 4,
+    "bytes": 6312,
+    "native_bytes": 7137,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS22",
+    "covered": 3,
+    "required": 3,
+    "bytes": 6720,
+    "native_bytes": 7643,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS23",
+    "covered": 3,
+    "required": 3,
+    "bytes": 7161,
+    "native_bytes": 7984,
+    "error": null
+  },
+  {
+    "budget": 8000,
+    "id": "LS24",
+    "covered": 4,
+    "required": 4,
+    "bytes": 6745,
+    "native_bytes": 7692,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS01",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3352,
+    "native_bytes": 3813,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS02",
+    "covered": 2,
+    "required": 4,
+    "bytes": 3528,
+    "native_bytes": 3999,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS03",
+    "covered": 4,
+    "required": 4,
+    "bytes": 3488,
+    "native_bytes": 3952,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS04",
+    "covered": 2,
+    "required": 3,
+    "bytes": 3375,
+    "native_bytes": 3837,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS05",
+    "covered": 4,
+    "required": 4,
+    "bytes": 3129,
+    "native_bytes": 3598,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS06",
+    "covered": 2,
+    "required": 3,
+    "bytes": 3157,
+    "native_bytes": 3626,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS07",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3300,
+    "native_bytes": 3761,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS08",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3050,
+    "native_bytes": 3401,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS09",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3287,
+    "native_bytes": 3755,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS10",
+    "covered": 2,
+    "required": 2,
+    "bytes": 3324,
+    "native_bytes": 3785,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS11",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3379,
+    "native_bytes": 3849,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS12",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3153,
+    "native_bytes": 3622,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS13",
+    "covered": 1,
+    "required": 1,
+    "bytes": 3215,
+    "native_bytes": 3810,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS14",
+    "covered": 1,
+    "required": 1,
+    "bytes": 3383,
+    "native_bytes": 3973,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS15",
+    "covered": 1,
+    "required": 1,
+    "bytes": 2956,
+    "native_bytes": 3543,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS16",
+    "covered": 0,
+    "required": 0,
+    "bytes": 3472,
+    "native_bytes": 3944,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS17",
+    "covered": 2,
+    "required": 2,
+    "bytes": 3482,
+    "native_bytes": 3947,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS18",
+    "covered": 1,
+    "required": 1,
+    "bytes": 3488,
+    "native_bytes": 3952,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS19",
+    "covered": 2,
+    "required": 2,
+    "bytes": 3331,
+    "native_bytes": 3793,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS20",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3329,
+    "native_bytes": 3799,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS21",
+    "covered": 4,
+    "required": 4,
+    "bytes": 2765,
+    "native_bytes": 3114,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS22",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3521,
+    "native_bytes": 3982,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS23",
+    "covered": 3,
+    "required": 3,
+    "bytes": 3518,
+    "native_bytes": 3987,
+    "error": null
+  },
+  {
+    "budget": 4000,
+    "id": "LS24",
+    "covered": 4,
+    "required": 4,
+    "bytes": 3375,
+    "native_bytes": 3971,
+    "error": null
+  }
+]

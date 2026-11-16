@@ -1,0 +1,40 @@
+{
+  "evaluator_correction": {
+    "change": "Decode JSON context_text and require exact equality with items instead of searching raw multiline item text inside escaped JSON.",
+    "corrected_evaluator_sha256": "65279f5cb0ada3b601e6c6ef452569cdfbc41f645f13ee0ede9f83fbfce59921",
+    "gold_questions_documents_budgets_changed": false,
+    "original_evaluator_sha256": "d53d0be9b99fa11820139e3ef805ff972173d7386c43e7236b54db652a75f81a",
+    "retrieval_reruns_for_rescore": 0,
+    "separate_continuity_setup_retrievals_per_version": 1,
+    "source_span_or_policy_scoring_relaxed": false
+  },
+  "fixture_sha256": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+  "human_semantic_review": "unknown",
+  "inference_calls": 0,
+  "original_algorithm_lock_sha256": "969eeaa8aa298b69cb7f513926fb10a951da037560f328acf3d10f8fd2f3c0f9",
+  "original_freeze_manifest_sha256": "6105ad92720970d5d37ec710fab8d566dfd19f831a3a52ed63814a8e3f01ed3d",
+  "provider_tokens": null,
+  "schema": "kre-alpha-holdout-public-projection/1",
+  "source_results": {
+    "baseline": {
+      "continuity_full_sha256": "baadc603be1213e39173b753386f094edfca37cab33c043faa1c635fe666dd2e",
+      "continuity_public_projection_sha256": "fc5a12f9e98ecb1447df7764bc554b5fd7c3a4150df3f49a957d62f69e912a19",
+      "original_full_result_sha256": "7a7dc05ce04ff04eb18675f4d3f5e9de74c940db2143b8a7b2aeb772f0f14d78",
+      "original_public_projection_sha256": "77ae6d68ce50ed21226f2eece3b4b5790495bf35c07eb49b7694cb8bcd3f59c9",
+      "saved_rescore_full_sha256": "efd899f37d414a511d14f2c9c2a823949b36a55b036f80361f51dbf8d7c8e3f4",
+      "saved_rescore_public_projection_sha256": "18958d5b28aa1b59c16dddbe80ed4e74daf67542aa88bb0afdec207ecbcf5d8f",
+      "source_inventory_sha256": "2685573007ef281f24d437358ac5fcea35f06601bf119f360b9f3e1a53df8f56",
+      "sources_unchanged": true
+    },
+    "candidate": {
+      "continuity_full_sha256": "3144ca14a0d7d03fd2abeee077e626a93540311ecfe99c4b9e96ef6096ff9329",
+      "continuity_public_projection_sha256": "60e7c266568414bd81ee62144ba592e0e116771bb9914c0923be8ebc5f526484",
+      "original_full_result_sha256": "1c39d51f8555c0293ab0d26f74eeff026ffc20d5ec8026142c27acfeaeee2fbc",
+      "original_public_projection_sha256": "ae3aa6bdf80e896610f927f15cd89cb3b71762a5929d0643c153794ff4e92df0",
+      "saved_rescore_full_sha256": "de19ae7a0a5a2a5e2a1e462b8ac1634448a1762a089cf095237363e6fe6b3ab0",
+      "saved_rescore_public_projection_sha256": "5e463df68872c1425f3678974c52977f203fc7c840cb02407adc20b9a7a0bb47",
+      "source_inventory_sha256": "d826a1dc18a0f07bb492112ca343b85d820e7863aedf25abb61c37ec1c3f7445",
+      "sources_unchanged": true
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GCB KRE local context result 0.1 feasibility subset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "request_id",
+    "status",
+    "context_revision",
+    "generated_at",
+    "scope_fingerprint",
+    "items",
+    "context_text",
+    "token_usage",
+    "coverage",
+    "omissions",
+    "warnings",
+    "error"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "0.1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "error"
+      ]
+    },
+    "context_revision": {
+      "type": "string",
+      "maxLength": 128,
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scope_fingerprint": {
+      "type": "string",
+      "maxLength": 128,
+      "minLength": 1
+    },
+    "context_text": {
+      "type": "string",
+      "maxLength": 262144
+    },
+    "coverage": {
+      "enum": [
+        "sufficient",
+        "partial",
+        "unknown"
+      ]
+    },
+    "warnings": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "string",
+        "maxLength": 128
+      }
+    },
+    "omissions": {
+      "type": "object",
+      "maxProperties": 8,
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "token_usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "estimated_tokens",
+        "counter_kind",
+        "counter_id",
+        "counter_revision",
+        "context_bytes",
+        "includes_citations"
+      ],
+      "properties": {
+        "estimated_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counter_kind": {
+          "enum": [
+            "exact",
+            "conservative_bytes"
+          ]
+        },
+        "counter_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 128
+        },
+        "counter_revision": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 128
+        },
+        "context_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 262144
+        },
+        "includes_citations": {
+          "const": true
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "$ref": "#/$defs/item"
+      }
+    },
+    "error": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "code",
+            "message",
+            "retryable"
+          ],
+          "properties": {
+            "code": {
+              "type": "string",
+              "maxLength": 128
+            },
+            "message": {
+              "type": "string",
+              "maxLength": 1024
+            },
+            "retryable": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "error"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "error": {
+            "type": "object"
+          },
+          "items": {
+            "maxItems": 0
+          },
+          "context_text": {
+            "const": ""
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "error": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "citation_id",
+        "source_id",
+        "revision_id",
+        "chunk_id",
+        "text",
+        "content_sha256",
+        "locator",
+        "recorded_at",
+        "authority",
+        "origin",
+        "lifecycle",
+        "freshness",
+        "egress"
+      ],
+      "properties": {
+        "citation_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "revision_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "chunk_id": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 262144
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authority": {
+          "enum": [
+            "authoritative",
+            "unverified"
+          ]
+        },
+        "origin": {
+          "enum": [
+            "source_evidence",
+            "user_assertion",
+            "model_inference"
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "active",
+            "superseded"
+          ]
+        },
+        "freshness": {
+          "enum": [
+            "fresh",
+            "stale",
+            "unknown"
+          ]
+        },
+        "egress": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "restriction"
+          ],
+          "properties": {
+            "restriction": {
+              "enum": [
+                "local_only",
+                "approved_remote"
+              ]
+            }
+          }
+        },
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "line_start",
+            "line_end"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxLength": 2048
+            },
+            "line_start": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "line_end": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

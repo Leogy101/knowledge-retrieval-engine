@@ -1,0 +1,117 @@
+{
+  "fixture_sha256": "40c653a4d5a6f745f18444385cb872450259dd8ca41ad889ab2d4c292845fa2f",
+  "status": "PASS",
+  "retrieval_executed": false,
+  "prior_corpora_or_KRE_code_inspected": false,
+  "independent_human_review": false,
+  "checks": [
+    "unique case/source IDs",
+    "all exact 1-based gold line spans match normalized source text",
+    "source hashes match UTF-8 source text",
+    "all gold sources satisfy case scope and destination",
+    "no gold source is explicitly forbidden/revoked/superseded",
+    "each gold-plus-citation estimate fits both conservative byte budgets",
+    "all cases require evidence from two sources",
+    "eight source documents exceed 1200 UTF-8 bytes and eighteen do not"
+  ],
+  "source_bytes": {
+    "trail-current": 2204,
+    "trail-walk-card": 412,
+    "trail-old-map": 225,
+    "trail-history": 255,
+    "observatory-camera": 2358,
+    "observatory-session": 314,
+    "observatory-revoked": 226,
+    "importer-contract": 2399,
+    "importer-job": 341,
+    "importer-v3": 236,
+    "importer-rationale": 286,
+    "seed-protocol": 2263,
+    "seed-lot-card": 326,
+    "seed-tips": 257,
+    "theatre-access": 2363,
+    "theatre-matinee": 410,
+    "theatre-private-rota": 209,
+    "kiln-load-plan": 2242,
+    "kiln-workshop-sign": 357,
+    "kiln-old-plan": 190,
+    "kitchen-service": 2450,
+    "kitchen-stock": 349,
+    "kitchen-withdrawn": 270,
+    "archive-publication": 2520,
+    "archive-rights-extract": 345,
+    "archive-private-notes": 329
+  },
+  "cases": [
+    {
+      "id": "fragmented-01",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 692,
+      "gold_plus_packet_estimate_bytes": 2492,
+      "budget_bytes": 10000
+    },
+    {
+      "id": "fragmented-02",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 755,
+      "gold_plus_packet_estimate_bytes": 2555,
+      "budget_bytes": 4600
+    },
+    {
+      "id": "fragmented-03",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 835,
+      "gold_plus_packet_estimate_bytes": 2635,
+      "budget_bytes": 10000
+    },
+    {
+      "id": "fragmented-04",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 783,
+      "gold_plus_packet_estimate_bytes": 2583,
+      "budget_bytes": 4600
+    },
+    {
+      "id": "fragmented-05",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 913,
+      "gold_plus_packet_estimate_bytes": 2713,
+      "budget_bytes": 4600
+    },
+    {
+      "id": "fragmented-06",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 742,
+      "gold_plus_packet_estimate_bytes": 2542,
+      "budget_bytes": 10000
+    },
+    {
+      "id": "fragmented-07",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 871,
+      "gold_plus_packet_estimate_bytes": 2671,
+      "budget_bytes": 4600
+    },
+    {
+      "id": "fragmented-08",
+      "gold_spans": 4,
+      "gold_sources": 2,
+      "gold_quote_bytes": 838,
+      "gold_plus_packet_estimate_bytes": 2638,
+      "budget_bytes": 10000
+    }
+  ],
+  "limits": [
+    "Mechanical validation only; no independent human semantic judgments.",
+    "Budget estimates are feasibility checks, not claims about any retriever's packet size or output.",
+    "Nongold paragraphs may be useful context; source-level contextual annotations are explicit and nongold text is not automatically irrelevant.",
+    "No retrieval results or benchmark effectiveness claims exist at freeze time."
+  ]
+}

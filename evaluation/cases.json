@@ -1,0 +1,466 @@
+{
+  "version": "kre-evidence-eval/1",
+  "default_budget": {
+    "max_tokens": 6000,
+    "max_items": 5,
+    "max_bytes": 24000
+  },
+  "scopes": {
+    "public-reader": [
+      "public"
+    ],
+    "private-reader": [
+      "public",
+      "private"
+    ]
+  },
+  "development": [
+    {
+      "id": "D01",
+      "category": "exact",
+      "query": "Falcon extension",
+      "gold": [
+        {
+          "source_id": "dev-contact",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "category": "relevant",
+      "query": "Pine reports fields",
+      "gold": [
+        {
+          "source_id": "dev-format",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "category": "required",
+      "query": "Larch signatures",
+      "gold": [
+        {
+          "source_id": "dev-review",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required": [
+        {
+          "source_id": "dev-review",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "delivered"
+    },
+    {
+      "id": "D04",
+      "category": "freshness",
+      "query": "Cedar draft",
+      "gold": [],
+      "freshness_requirement": "fresh_only"
+    }
+  ],
+  "held_out": [
+    {
+      "id": "H01",
+      "category": "exact",
+      "query": "backup retention",
+      "gold": [
+        {
+          "source_id": "backup-policy",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "category": "exact",
+      "query": "Harbor health port",
+      "gold": [
+        {
+          "source_id": "health-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "category": "paraphrase_no_overlap",
+      "query": "How long are snapshots kept",
+      "gold": [
+        {
+          "source_id": "backup-policy",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "category": "paraphrase_partial_overlap",
+      "query": "restart service after releasing lock",
+      "gold": [
+        {
+          "source_id": "restart-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "category": "relevant_and_irrelevant",
+      "query": "ledger export format",
+      "gold": [
+        {
+          "source_id": "export-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "category": "multiple_sources",
+      "query": "rollout rollback verification",
+      "gold": [
+        {
+          "source_id": "rollout-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "rollback-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "category": "contradictory_structured",
+      "query": "harbor retention_days",
+      "gold": [
+        {
+          "source_id": "structured-primary",
+          "version": "v1",
+          "line_start": 1,
+          "line_end": 3
+        },
+        {
+          "source_id": "structured-assertion",
+          "version": "v1",
+          "line_start": 1,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "category": "unknown_freshness",
+      "query": "Featureflag cohort",
+      "gold": [
+        {
+          "source_id": "feature-note",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "category": "stale_current",
+      "query": "Legacy rotation",
+      "gold": []
+    },
+    {
+      "id": "H10",
+      "category": "stale_historical",
+      "query": "Legacy rotation",
+      "gold": [
+        {
+          "source_id": "legacy-rotation",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "purpose": "historical_evidence"
+    },
+    {
+      "id": "H11",
+      "category": "superseded_current",
+      "query": "release limit",
+      "gold": [
+        {
+          "source_id": "release-limit",
+          "version": "v2",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "H12",
+      "category": "superseded_historical",
+      "query": "release limit",
+      "gold": [
+        {
+          "source_id": "release-limit",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "release-limit",
+          "version": "v2",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "purpose": "historical_evidence"
+    },
+    {
+      "id": "H13",
+      "category": "revoked",
+      "query": "Orion shutdown",
+      "gold": []
+    },
+    {
+      "id": "H14",
+      "category": "private_denied",
+      "query": "Payroll rotation",
+      "gold": []
+    },
+    {
+      "id": "H15",
+      "category": "private_granted",
+      "query": "Payroll rotation",
+      "gold": [
+        {
+          "source_id": "payroll-private",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "scope": "private-reader"
+    },
+    {
+      "id": "H16",
+      "category": "missing",
+      "query": "antimatter beacon",
+      "gold": []
+    },
+    {
+      "id": "H17",
+      "category": "required_multiple_sources",
+      "query": "deployment handoff",
+      "gold": [
+        {
+          "source_id": "rollout-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "rollback-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required": [
+        {
+          "source_id": "rollout-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "rollback-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "delivered"
+    },
+    {
+      "id": "H18",
+      "category": "required_item_budget",
+      "query": "deployment handoff",
+      "gold": [
+        {
+          "source_id": "rollout-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "rollback-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required": [
+        {
+          "source_id": "rollout-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "rollback-guide",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "budget",
+      "budget": {
+        "max_tokens": 6000,
+        "max_items": 1,
+        "max_bytes": 24000
+      }
+    },
+    {
+      "id": "H19",
+      "category": "required_missing",
+      "query": "missing checklist",
+      "gold": [],
+      "required": [
+        {
+          "source_id": "absent-source",
+          "version": "absent",
+          "line_start": 1,
+          "line_end": 1
+        }
+      ],
+      "required_expectation": "unavailable"
+    },
+    {
+      "id": "H20",
+      "category": "required_private",
+      "query": "Payroll rotation",
+      "gold": [],
+      "required": [
+        {
+          "source_id": "payroll-private",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "unavailable"
+    },
+    {
+      "id": "H21",
+      "category": "required_superseded_current",
+      "query": "release limit",
+      "gold": [
+        {
+          "source_id": "release-limit",
+          "version": "v2",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required": [
+        {
+          "source_id": "release-limit",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "unavailable"
+    },
+    {
+      "id": "H22",
+      "category": "required_stale_historical",
+      "query": "historical rotation",
+      "gold": [
+        {
+          "source_id": "legacy-rotation",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "purpose": "historical_evidence",
+      "required": [
+        {
+          "source_id": "legacy-rotation",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "delivered"
+    },
+    {
+      "id": "H23",
+      "category": "fresh_only_unknown",
+      "query": "Featureflag rollout",
+      "gold": [],
+      "freshness_requirement": "fresh_only"
+    },
+    {
+      "id": "H24",
+      "category": "required_byte_budget",
+      "query": "backup retention",
+      "gold": [
+        {
+          "source_id": "backup-policy",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required": [
+        {
+          "source_id": "backup-policy",
+          "version": "v1",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ],
+      "required_expectation": "budget",
+      "budget": {
+        "max_tokens": 80,
+        "max_items": 5,
+        "max_bytes": 80
+      }
+    }
+  ],
+  "metric_policy": {
+    "gold_unit": "One declared source/version/line span; a returned excerpt covers it only if the entire span is present with an exact citation. No chunk-ID-derived gold.",
+    "empty_gold": "Recall/precision denominators that are zero are null, not perfect scores. Empty-gold negative controls remain explicit.",
+    "quality_thresholds": "No pass/fail relevance target. Correctness/privacy/budget failures are reported separately.",
+    "baseline": "Unique query-token overlap ranking over the same eligible stored chunks, with the same required refs, candidate ceiling, item/byte budgets, citation formatting and greedy packing.",
+    "size_comparison": "Report only for positive-gold cases where both systems deliver all labeled evidence and all required refs; no generated-answer or token-saving claim."
+  }
+}

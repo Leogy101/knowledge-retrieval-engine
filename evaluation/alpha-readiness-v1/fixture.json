@@ -1,0 +1,1201 @@
+{
+  "suite_id": "kre-independent-alpha-holdout-v1",
+  "fixture_version": 1,
+  "authoring_date": "2026-11-16",
+  "semantic_review": "unknown",
+  "cases": [
+    {
+      "id": "H01",
+      "category": "long_fragmented",
+      "question": "How should staff handle a winter loan return: reserve arrival space, wait before opening, obtain release, and file the signed record?",
+      "documents": [
+        {
+          "id": "museum-handbook",
+          "title": "Windlass Museum winter loan handling",
+          "text": "# Windlass Museum: winter loan handling\n\nThis handbook accompanies the travelling collection of small brass instruments. It covers the return journey from visiting schools to the museum store. The cases are reusable, and all packing material remains the museum's property. The purpose of the procedure is to keep the instruments stable while making the handover legible to staff who did not attend the visit. A teacher's signature acknowledges the number of cases received; it does not transfer responsibility for conservation decisions.\n\n## Return appointment\n\nFor a winter loan return, book the covered loading bay at least two working days before the van arrives.\nThe visitor entrance cannot accept wheeled cases during public opening hours. The bay diary is maintained on paper at reception because volunteers rotate between the desk and galleries. Staff should copy the booked time onto the journey envelope. If the driver arrives early, the van remains in the marked waiting area until the receiving pair are ready. An unused booking is crossed out so the next shift can distinguish a cancellation from an overlooked arrival.\n\n## Exterior examination\n\nLook at each closed case before moving it off the trolley. Scuffs already shown in the departure photographs do not count as new damage. Record the case number beside any fresh dent, broken seal or wet patch, then photograph the affected side against the measuring card. A water mark is a reason to call the conservator even when the latch still works. Do not use solvent or a hair dryer on the case; the foam liner can retain moisture that is invisible from outside.\n\n## Settling period\n\nKeep returned winter loan cases sealed in the acclimatisation room for eighteen hours before opening them.\nUse the shelving on the interior wall, away from the sink and external door. Set the arrival card upright so that the next shift can read the release time without touching the case. The room's wall clock is the shared time reference. If a power cut makes the temperature log unavailable, leave the cases closed and add a note to the shift book. Conservation staff will decide whether a longer settling period is necessary after the room conditions are restored.\n\n## Paperwork and accessories\n\nThe journey envelope contains the collection checklist, a padded pouch for loose labels, the school receipt and the departure photographs. Count the removable stands separately from the instruments; a stand left behind at a school should not be described as a missing collection object. Place clean cotton ties back in the side pocket. Used tissue goes in the conservation waste tray so that fragments can be checked before disposal. The reusable route card stays with the van driver for the final depot return.\n\n## Opening authority\n\nOnly the collections technician may release a winter loan case for opening after the settling period.\nThe receiving volunteer records the technician's initials on the arrival card. A school contact cannot waive this step, even when another class needs the instruments the next morning. A delay must be communicated to the education desk before a replacement session is offered. Staff should avoid promising access to a specific object until the post-return examination has been completed. The education desk can lend the photographic teaching pack while the physical collection remains unavailable.\n\n## Condition record\n\nOnce released, open one case at a time on the padded examination table. Compare the instrument with its departure photographs, checking feet, hinges and raised decoration before handling the smaller parts. Copy observations in plain language and avoid guessing how a mark occurred. The conservator assigns condition codes later. An unchanged object still needs a dated entry because the absence of a new observation is otherwise indistinguishable from a missed examination.\n\n## Final filing\n\nFile the signed winter loan return sheet in the blue acquisitions cabinet, drawer four.\nThe digital image folder is an additional working copy and does not replace the signed sheet. Put photographs in date order, with the case number at the beginning of each filename. The registrar checks the filing list at the end of the week and reconciles any missing signatures with the receiving pair. Spare blank forms belong in the stationery cupboard, not among the completed records. This separation prevents an unfilled sheet being mistaken for a documented return.\n\n## End of shift\n\nMove empty trolleys back to the bay only after all collection cases are on the assigned shelves. Check that the exterior door is latched and that the examination lamps are off. Leave one clear handover note naming any case still waiting for conservation advice. The following shift should be able to identify outstanding work without reconstructing a conversation. Routine replenishment of tissue, gloves and pencils can wait until the collection has been secured.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 4939,
+          "sha256": "4c66684641febc7798b394271208bad5a6396ad32316edada285ff08876270db"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h01-a",
+          "source_id": "museum-handbook",
+          "quote": "For a winter loan return, book the covered loading bay at least two working days before the van arrives.",
+          "reason": "Arrival booking and lead time",
+          "char_start": 562,
+          "char_end": 666,
+          "line_start": 7,
+          "line_end": 7,
+          "sha256": "7fb4d670a014a6ff9c50332c57ebbe7682dbb48e10d2869cad662c07bf6e1341"
+        },
+        {
+          "id": "h01-b",
+          "source_id": "museum-handbook",
+          "quote": "Keep returned winter loan cases sealed in the acclimatisation room for eighteen hours before opening them.",
+          "reason": "Waiting period and location",
+          "char_start": 1647,
+          "char_end": 1753,
+          "line_start": 16,
+          "line_end": 16,
+          "sha256": "235876aa9037667ec47430ee09608acb2ed1e39d580ff2b12edfa82a361a2153"
+        },
+        {
+          "id": "h01-c",
+          "source_id": "museum-handbook",
+          "quote": "Only the collections technician may release a winter loan case for opening after the settling period.",
+          "reason": "Release authority",
+          "char_start": 2782,
+          "char_end": 2883,
+          "line_start": 25,
+          "line_end": 25,
+          "sha256": "52545417015faf458c4cb4f184102df60a4752960d669b7c9c26f1719cb825da"
+        },
+        {
+          "id": "h01-d",
+          "source_id": "museum-handbook",
+          "quote": "File the signed winter loan return sheet in the blue acquisitions cabinet, drawer four.",
+          "reason": "Record destination",
+          "char_start": 3895,
+          "char_end": 3982,
+          "line_start": 34,
+          "line_end": 34,
+          "sha256": "92d49a7ddd7838936c845bb3d14ba6caf0169b6aaa20d916d8d95da8ae351f63"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 11000,
+          "max_items": 12,
+          "max_bytes": 11000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "museum-handbook"
+      ]
+    },
+    {
+      "id": "H02",
+      "category": "cross_source",
+      "question": "For Saturday's mobile pantry stop, where is the van placed, who performs the chilled-food check, and what time ends voucher collection?",
+      "documents": [
+        {
+          "id": "pantry-site",
+          "title": "Saturday mobile pantry site note",
+          "text": "# Saturday mobile pantry site note\n\nPark the Saturday mobile pantry van beside the east basketball gate, leaving the pedestrian ramp clear.\nThe school has reserved two cones for the turning area. Drivers should collect them from the caretaker's porch and return them after unloading. The west gate is for the sports club and must remain available throughout the morning.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 371,
+          "sha256": "8308ca726eda9f64ee7bfa620b7bd68a2a5b85c7951ce5cb788e289d3fb4b7ef"
+        },
+        {
+          "id": "pantry-shift",
+          "title": "Saturday mobile pantry rota",
+          "text": "# Saturday mobile pantry rota\n\nMara Chen performs the chilled-food temperature check before the first crate leaves the Saturday van.\nFelix handles table assembly and puts the empty boxes under the canopy. Rotating volunteers should sign the attendance sheet before taking a station. Late arrivals report to the queue marshal, who can assign relief duties without interrupting food handling.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 391,
+          "sha256": "4fa00228eeadc737201e3aadc6628a02b68176e332eef69272f101ee3a04734b"
+        },
+        {
+          "id": "pantry-vouchers",
+          "title": "Voucher desk instructions",
+          "text": "# Voucher desk instructions\n\nVoucher collection for the Saturday mobile pantry ends at 11:20 a.m.\nPeople already holding a voucher may remain in the distribution queue after the desk closes. Unused vouchers are counted into the envelope with the date written on the flap. The count measures issued places, not the number of household members receiving food.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 358,
+          "sha256": "245d7526d2080869c22ebe00fe4dbf9a68627e2812b5ade81702097eb3740c39"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h02-a",
+          "source_id": "pantry-site",
+          "quote": "Park the Saturday mobile pantry van beside the east basketball gate, leaving the pedestrian ramp clear.",
+          "reason": "Van placement",
+          "char_start": 36,
+          "char_end": 139,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "d22a0938aac6d9a08498e83a23d734d54eaae72fefc41a18a10d6eeb945a333b"
+        },
+        {
+          "id": "h02-b",
+          "source_id": "pantry-shift",
+          "quote": "Mara Chen performs the chilled-food temperature check before the first crate leaves the Saturday van.",
+          "reason": "Responsible person",
+          "char_start": 31,
+          "char_end": 132,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "451eee7ed7a83aa066e94d098735dcb7ec6dcac7526be8f24f861ec50b7e40c4"
+        },
+        {
+          "id": "h02-c",
+          "source_id": "pantry-vouchers",
+          "quote": "Voucher collection for the Saturday mobile pantry ends at 11:20 a.m.",
+          "reason": "Voucher deadline",
+          "char_start": 29,
+          "char_end": 97,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "7c638cbe48d55bf4a8a290d11a6bc8679350e2d9294b9690caa1af9ebb6bf933"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 6000,
+          "max_items": 12,
+          "max_bytes": 6000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "pantry-shift",
+        "pantry-site",
+        "pantry-vouchers"
+      ]
+    },
+    {
+      "id": "H03",
+      "category": "current_and_obsolete",
+      "question": "What are the current reed-bed sensor checks: rinse fluid, stabilisation interval, and the place to record a rejected reading?",
+      "documents": [
+        {
+          "id": "sensor-current",
+          "title": "Reed-bed sensor field card",
+          "text": "# Reed-bed sensor field card\n\nThis card applies to the small optical probe used at the reed-bed boardwalk. Record the visit date before opening the transport tube. The spare batteries live in a separate dry pouch, and neither the batteries nor the probe should be left in direct sun while the field kit is being assembled. The boardwalk can become slippery after the morning irrigation cycle, so put the open case on the raised bench.\n\n## Cleaning\n\nRinse the reed-bed sensor face with distilled water before lowering it into the sampling cup.\nDo not wipe the optical window with the cotton towel used for the outside of the case. Grit on a towel can scratch the window even when the instrument still appears to give stable readings. Keep the rinse bottle upright and replace its cap immediately. If the clean water has been exhausted, postpone the reading rather than borrowing an unlabelled bottle from the maintenance shed.\n\n## Measurement\n\nAllow the reed-bed sensor reading to stabilise for ninety seconds after immersion.\nHold the cable loosely so that movement at the boardwalk rail does not drag the probe against the cup. The displayed number may settle earlier, but the common interval makes visits comparable. A passing bird or a shadow across the cup does not require restarting the interval. Visible bubbles on the optical face do require a fresh placement and a new interval.\n\n## Rejected measurements\n\nEnter each rejected reed-bed sensor reading in the amber field ledger with the reason for rejection.\nThe electronic table contains only accepted measurements. Keeping rejected observations in the paper ledger prevents a gap from being interpreted as a missed visit. Never overwrite an earlier rejected number with the repeat measurement. Draw a single line through a transcription error and initial it so that the original entry remains readable during the monthly review.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 1888,
+          "sha256": "1f7f5a0f344db78359f0f3e0af5f62058ba7ac055dc9225d3be1862de361aa4a"
+        },
+        {
+          "id": "sensor-old",
+          "title": "Retired reed-bed quick card",
+          "text": "# Retired reed-bed quick card\n\nThe reed-bed sensor was once rinsed with tap water and read after thirty seconds. Rejected values were erased from the sheet.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "superseded",
+          "utf8_bytes": 157,
+          "sha256": "37385188ed81e8cff1d6c1d0381cdd04c5f63481be233866ea99df362a5494f8"
+        },
+        {
+          "id": "sensor-withdrawn",
+          "title": "Withdrawn vendor advice",
+          "text": "# Withdrawn vendor advice\n\nReed-bed sensor readings require no stabilisation. Wipe the window with abrasive paper to remove stains.\n",
+          "collection": "shared",
+          "authority": "unverified",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "revoked",
+          "utf8_bytes": 132,
+          "sha256": "eb9534839732ee1eba50d6b1f3640e419e9c45d17bfbdc6441b354c9b4c0886c"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h03-a",
+          "source_id": "sensor-current",
+          "quote": "Rinse the reed-bed sensor face with distilled water before lowering it into the sampling cup.",
+          "reason": "Rinse fluid",
+          "char_start": 449,
+          "char_end": 542,
+          "line_start": 7,
+          "line_end": 7,
+          "sha256": "a31f4cfd04c2257f7c03c02db6dce8e79a3f83bc04631b337e2b6f889047319d"
+        },
+        {
+          "id": "h03-b",
+          "source_id": "sensor-current",
+          "quote": "Allow the reed-bed sensor reading to stabilise for ninety seconds after immersion.",
+          "reason": "Interval",
+          "char_start": 943,
+          "char_end": 1025,
+          "line_start": 12,
+          "line_end": 12,
+          "sha256": "14df30c367310bb87e4f93dd2b2e807a0a257d2ed51470b6d92966718218f610"
+        },
+        {
+          "id": "h03-c",
+          "source_id": "sensor-current",
+          "quote": "Enter each rejected reed-bed sensor reading in the amber field ledger with the reason for rejection.",
+          "reason": "Rejected-reading record",
+          "char_start": 1415,
+          "char_end": 1515,
+          "line_start": 17,
+          "line_end": 17,
+          "sha256": "6b980eb040c9ce8c3a782c4811b7b3165d7cd20beaa2b17e43637b7df8f905e0"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 11000,
+          "max_items": 12,
+          "max_bytes": 11000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [
+        "sensor-old",
+        "sensor-withdrawn"
+      ],
+      "expected_sources": [
+        "sensor-current"
+      ]
+    },
+    {
+      "id": "H04",
+      "category": "fragmented_procedure",
+      "question": "Before the map cabinet move, what should be removed, how are the drawers secured, and who signs the delivery check?",
+      "documents": [
+        {
+          "id": "map-move",
+          "title": "Map cabinet relocation brief",
+          "text": "# Map cabinet relocation brief\n\nThe archive is moving its flat map cabinet to the new reading room during the scheduled floor repair. The cabinet will travel on the service lift, with a porter ahead of the trolley to keep the route clear. This is a furniture move and does not change the catalogue location of individual maps until the receiving check has finished. Researchers should be directed to the temporary digital terminal during the closure.\n\n## Preparing contents\n\nRemove every map and loose divider from the cabinet before the move begins.\nLay maps flat in the numbered transit trays. A tray may contain several folders only when all their catalogue numbers remain visible at the top edge. The archive assistant checks the tray list against the drawer inventory while the porter prepares the trolley. Work from the top drawer down so that the unloaded cabinet remains stable. Keep the emptied dividers together in a separate sleeve.\n\n## Securing the furniture\n\nSecure the empty map cabinet drawers with the two woven straps stored in the porter cupboard.\nAdhesive tape is unsuitable because it can pull the surface finish away when removed. Place a clean felt square under each buckle and tighten only enough to prevent a drawer sliding. The cabinet must remain upright on the trolley. The lift attendant checks the route before the team enters the corridor, including the turn beside the drinking fountain.\n\n## Receiving check\n\nThe duty archivist signs the map cabinet delivery check after counting the transit trays.\nThe porter records any fresh marks on the cabinet separately from the archive's map condition notes. Do not return the contents until the cabinet is standing level and the drawers open without rubbing. Refit the dividers in their original sequence, then check the catalogue numbers from the tray list. Once the final drawer is complete, remove the temporary closure notice from the reading-room desk.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 1931,
+          "sha256": "cd86d0560bccc249c13249c05d565ef0c3ccc6d384d2e67dd5a1121c32afff58"
+        },
+        {
+          "id": "map-digital",
+          "title": "Digital map terminal",
+          "text": "# Digital map terminal\n\nThe temporary map terminal starts in catalogue view. Visitors may print a location slip at the enquiry desk, but full-size map printing is unavailable while the reading room floor is repaired.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 217,
+          "sha256": "0272f7100e5eae5b6baba8841ab1094f293c0d83eeca9c74ffef709d2f388a5c"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h04-a",
+          "source_id": "map-move",
+          "quote": "Remove every map and loose divider from the cabinet before the move begins.",
+          "reason": "Contents removed",
+          "char_start": 475,
+          "char_end": 550,
+          "line_start": 7,
+          "line_end": 7,
+          "sha256": "edc6aa6f012fee56ec5a3bd4f1f69b2613f33323973544d2d1072dac287b2972"
+        },
+        {
+          "id": "h04-b",
+          "source_id": "map-move",
+          "quote": "Secure the empty map cabinet drawers with the two woven straps stored in the porter cupboard.",
+          "reason": "Drawer restraint",
+          "char_start": 972,
+          "char_end": 1065,
+          "line_start": 12,
+          "line_end": 12,
+          "sha256": "4daf8decd3da935f170f78fb1bed94487bff2978bf0eafb5b2fe604734e7fa28"
+        },
+        {
+          "id": "h04-c",
+          "source_id": "map-move",
+          "quote": "The duty archivist signs the map cabinet delivery check after counting the transit trays.",
+          "reason": "Signatory and check",
+          "char_start": 1440,
+          "char_end": 1529,
+          "line_start": 17,
+          "line_end": 17,
+          "sha256": "bdc1d3ddca76e9909a50a7b01c2b2ae4cc63c5f979b7759cb3837c75b1912d4d"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 11000,
+          "max_items": 12,
+          "max_bytes": 11000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "map-move"
+      ]
+    },
+    {
+      "id": "H05",
+      "category": "long_access_plan",
+      "question": "Summarise the spoken-history evening's step-free entry, hearing-receiver collection, quiet-room location, and access-problem contact.",
+      "documents": [
+        {
+          "id": "event-access",
+          "title": "Canal Hall spoken-history evening",
+          "text": "# Canal Hall spoken-history evening: access and front-of-house guide\n\nThe spoken-history evening brings together former boatyard workers, their families and local students. Doors open before the exhibition walk so that visitors can choose seats and become familiar with the room. The access arrangements below are part of the event plan, not optional additions to be improvised once a visitor asks for help. Volunteers should know which colleague can resolve a problem while keeping the reception desk attended.\n\n## Arrival route\n\nVisitors using the step-free entrance should enter Canal Hall through the courtyard door on Mill Lane.\nThe door opens into a short level corridor beside the cloakroom. Keep the stack of spare chairs out of that corridor, even when it is raining and the courtyard is quiet. A volunteer should check the outside sign at the start of the shift because delivery vehicles sometimes obscure it. The public staircase on the canal side remains available to visitors who prefer that route, but signs must never direct everyone there by default.\n\n## Reception\n\nThe desk has printed programmes in large type and a box of ordinary programmes. Offer the large-type copy alongside the standard version without asking a visitor to explain why they want it. Programme stock should be counted after the room settles, not while a queue is waiting. Tickets are checked by name; the organiser has already warned that two households share a surname, so staff must also confirm the number of places on the booking.\n\n## Listening support\n\nCollect a hearing receiver from the sound desk by showing the numbered ticket stub; no identity document is required.\nThe sound technician will demonstrate the volume dial using the pre-event test recording. Used earpieces go in the labelled tray after the event, while the receiver bodies return to their charging slots. Visitors who bring their own compatible headset may use it. If a receiver stops working during a talk, the aisle volunteer carries a replacement over rather than asking the listener to leave and join the reception queue.\n\n## Seating\n\nTwo front-row places have been left without fixed chairs so that visitors can choose how to sit with their companions. Do not use this space to store camera cases or folded coats. Other aisle seats are reserved until the first talk starts; after that, the front-of-house lead may release them if they are not needed. Keep one ordinary chair near the exhibition entrance for anyone who needs a rest while looking at the photographs.\n\n## Quiet space\n\nThe quiet room is the small pottery studio opposite the courtyard corridor, and its door remains unlocked throughout the evening.\nThe studio lights have been dimmed and a jug of water is on the worktable. It is not a second performance room, so do not relay the talks over a loudspeaker there. A visitor may leave and return without explaining their reason. Volunteers should check the room discreetly between talks and make sure the route back to the hall remains clear. Children using the space should stay with their accompanying adult.\n\n## Speaker preparation\n\nSpeakers have been asked to name the people in photographs and describe the details they discuss. The lectern microphone should remain at the same distance from each speaker's mouth. The chair will repeat questions from the audience before inviting an answer, even if the person asking believes they spoke loudly enough. Short breaks between talks allow listeners to change seats or replace equipment without missing the beginning of a story.\n\n## Problems during the event\n\nDirect unresolved access problems to front-of-house lead Noor Iqbal, who wears a green lanyard.\nThe lead can adjust seating, arrange a quieter conversation or contact the building caretaker. Volunteers should describe the practical obstacle instead of guessing a visitor's diagnosis. Record any equipment failure on the desk sheet before the shift ends, including what was tried and whether the visitor received an alternative. Private details belong only in a direct conversation with the lead, not in a general incident note.\n\n## Closing the building\n\nWhen the audience has left, count receivers against the numbered charging spaces and return spare programmes to the crate. Inspect the courtyard corridor before moving chairs back from the store. The caretaker locks the external door only after the front-of-house lead confirms that the quiet room and toilets are empty. Leave the guide on the desk for the morning team, together with a short note about any sign or piece of equipment that needs attention.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 4602,
+          "sha256": "154a45be8eefd348546fe831bae7d110cffbb8bacce1cf2806ecefbd1da83afc"
+        },
+        {
+          "id": "event-menu",
+          "title": "Canal Hall refreshments",
+          "text": "# Canal Hall refreshments\n\nTea is served from the kitchen hatch between talks. Cups remain inside the building. The refreshments team should put the reusable jugs back on the drying rack before leaving.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 203,
+          "sha256": "8fdd873b7c127e1e1136e84f2ec742bb457db9e485bce31248e595de929a9312"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h05-a",
+          "source_id": "event-access",
+          "quote": "Visitors using the step-free entrance should enter Canal Hall through the courtyard door on Mill Lane.",
+          "reason": "Entrance route",
+          "char_start": 531,
+          "char_end": 633,
+          "line_start": 7,
+          "line_end": 7,
+          "sha256": "7fb9e46887e829df567be1dbdafa855f8d3cb04eea3dcaff60f61d79d0c5a681"
+        },
+        {
+          "id": "h05-b",
+          "source_id": "event-access",
+          "quote": "Collect a hearing receiver from the sound desk by showing the numbered ticket stub; no identity document is required.",
+          "reason": "Receiver collection",
+          "char_start": 1547,
+          "char_end": 1664,
+          "line_start": 16,
+          "line_end": 16,
+          "sha256": "9b182fa8b146f46ae5a58b0eb831692428d985f910a346d7e6883bd565bba264"
+        },
+        {
+          "id": "h05-c",
+          "source_id": "event-access",
+          "quote": "The quiet room is the small pottery studio opposite the courtyard corridor, and its door remains unlocked throughout the evening.",
+          "reason": "Quiet room",
+          "char_start": 2552,
+          "char_end": 2681,
+          "line_start": 25,
+          "line_end": 25,
+          "sha256": "416735fe3f289c8ba381ab8ddab80734b8a280614394d615b784a630b518e6ed"
+        },
+        {
+          "id": "h05-d",
+          "source_id": "event-access",
+          "quote": "Direct unresolved access problems to front-of-house lead Noor Iqbal, who wears a green lanyard.",
+          "reason": "Escalation contact",
+          "char_start": 3591,
+          "char_end": 3686,
+          "line_start": 34,
+          "line_end": 34,
+          "sha256": "5be3958d5fb18771a20db93c707b62a538632f69cda2172c9feed198a5d0fa5b"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 13000,
+          "max_items": 12,
+          "max_bytes": 13000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "event-access"
+      ]
+    },
+    {
+      "id": "H06",
+      "category": "hard_paraphrase",
+      "question": "What lets a courier establish that the recipient personally accepted the parcel?",
+      "documents": [
+        {
+          "id": "delivery-proof",
+          "title": "Handover evidence",
+          "text": "# Handover evidence\n\nA signed acknowledgment from the addressee is the sole admissible confirmation of receipt. A doorstep photograph or a neighbour's initials cannot substitute for that acknowledgment. Retain the original slip with the dispatch register.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 256,
+          "sha256": "87a463a9590c3b21d7093d6760b658e45c3f89512a629f3e712f78c7bc3c62dc"
+        },
+        {
+          "id": "courier-parking",
+          "title": "Courier parcel access",
+          "text": "# Courier parcel access\n\nA courier carrying a parcel may park in the loading space for ten minutes. The recipient parking area is reserved for visitors with appointments. Staff personally check the loading-space sign each morning.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 231,
+          "sha256": "2e645307ed87a3cf51bdf0fc3c9b1bbc544c430f96e16fbbb588c8aa25edf2e4"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h06-a",
+          "source_id": "delivery-proof",
+          "quote": "A signed acknowledgment from the addressee is the sole admissible confirmation of receipt.",
+          "reason": "Direct synonym-only support",
+          "char_start": 21,
+          "char_end": 111,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "5b87c87726050b7c0e7682e58fef3dfe4b30ecb820e9420ef2644b803b997e51"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 4000,
+          "max_items": 12,
+          "max_bytes": 4000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "delivery-proof"
+      ]
+    },
+    {
+      "id": "H07",
+      "category": "unresolved_conflict",
+      "question": "What opening time is recorded for the Monday seed exchange, and do the two issued notices agree?",
+      "documents": [
+        {
+          "id": "seed-board",
+          "title": "Seed exchange noticeboard sheet",
+          "text": "# Seed exchange noticeboard sheet\n\nThe Monday seed exchange opens at 8:45 a.m. in the glasshouse foyer. This notice was approved by the allotment committee on 6 March. Volunteers should bring their own mug for the tea table.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 225,
+          "sha256": "105cc614dddc2b49d123318993ba2051510ac583d968ee02449989511a3f32bf"
+        },
+        {
+          "id": "seed-letter",
+          "title": "Seed exchange member letter",
+          "text": "# Seed exchange member letter\n\nThe Monday seed exchange opens at 9:15 a.m. in the glasshouse foyer. This letter was approved by the allotment committee on 6 March. Tables are grouped by vegetable family, with flower seeds near the door.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 237,
+          "sha256": "0a816ad4af8f9d69b98fc8f83cce92c2b342a3c8207ef86528929282180128b9"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h07-a",
+          "source_id": "seed-board",
+          "quote": "The Monday seed exchange opens at 8:45 a.m. in the glasshouse foyer.",
+          "reason": "First issued time",
+          "char_start": 35,
+          "char_end": 103,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "8d585f53663f98ea0b6d3f972dcb849b72fe3523a53dc5cd607b439500bb0480"
+        },
+        {
+          "id": "h07-b",
+          "source_id": "seed-letter",
+          "quote": "The Monday seed exchange opens at 9:15 a.m. in the glasshouse foyer.",
+          "reason": "Conflicting issued time",
+          "char_start": 31,
+          "char_end": 99,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "9447aff31887c88e5477c802e167d6657f41170c76b9cb8b4cfc02764522457b"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 4000,
+          "max_items": 12,
+          "max_bytes": 4000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "seed-board",
+        "seed-letter"
+      ]
+    },
+    {
+      "id": "H08",
+      "category": "short_unicode",
+      "question": "Where should café staff leave the repaired grinder key?",
+      "documents": [
+        {
+          "id": "cafe-key",
+          "title": "Café grinder handover",
+          "text": "# Café grinder handover\n\nLeave the repaired grinder key in the rôle-labelled tin marked “Équipe du matin” beneath the till. The spare key stays with the café manager.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 175,
+          "sha256": "b9fe432f886b5239700178e2fea5281e1871d78ccf509dff03dac2616cfcc3cc"
+        },
+        {
+          "id": "cafe-clean",
+          "title": "Café closing note",
+          "text": "# Café closing note\n\nThe grinder hopper is emptied into the compost caddy at closing. Leave the counter dry and put the cleaning brush beside the sink.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 153,
+          "sha256": "df76e8819437351a3899cddd080b80e7bb6f36e5f0eb2f396dbd7f761f023016"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h08-a",
+          "source_id": "cafe-key",
+          "quote": "Leave the repaired grinder key in the rôle-labelled tin marked “Équipe du matin” beneath the till.",
+          "reason": "Exact location with non-ASCII bytes",
+          "char_start": 25,
+          "char_end": 123,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "423e6240a68557ebccf01cfa3cc8e200ba5d706a5666965c27241afa4117dfd5"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 3000,
+          "max_items": 12,
+          "max_bytes": 3000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "cafe-key"
+      ]
+    },
+    {
+      "id": "H09",
+      "category": "missing_evidence",
+      "question": "Who is authorised to approve an overnight extension for the community telescope loan?",
+      "documents": [
+        {
+          "id": "telescope-care",
+          "title": "Community telescope loan care",
+          "text": "# Community telescope loan care\n\nKeep the community telescope in its padded case while travelling. Return the eyepiece caps with the instrument and report condensation on the lens. The desk records the scheduled return date on a yellow card.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 242,
+          "sha256": "3e645d915749d08249a8f04fa22f81efdd94894e7b4c1308799acc89c2b59f05"
+        },
+        {
+          "id": "telescope-night",
+          "title": "Community telescope evening session",
+          "text": "# Community telescope evening session\n\nThe astronomy club's overnight observing event uses its own instruments. Community telescope loan paperwork is stored separately from event attendance sheets. Staff approve room bookings through the ordinary calendar.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 257,
+          "sha256": "f83f74850c246164113dc0a647315f4dd7af7f3ab66fe1dc3aca38388f6ad1ac"
+        }
+      ],
+      "gold": [],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 4000,
+          "max_items": 12,
+          "max_bytes": 4000
+        }
+      },
+      "expectation": {
+        "kind": "missing"
+      },
+      "forbidden_sources": [],
+      "expected_sources": []
+    },
+    {
+      "id": "H10",
+      "category": "private_scope",
+      "question": "Which number should a public visitor call about the weaving workshop?",
+      "documents": [
+        {
+          "id": "weaving-public",
+          "title": "Weaving workshop visitor card",
+          "text": "# Weaving workshop visitor card\n\nPublic visitors with weaving workshop questions should call the reception number 020 7946 0128. Reception can confirm access times and the materials list.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 188,
+          "sha256": "7e1c8d78f90a63471d37027d6d1e4dcf102a7f06273a205f457520cfa3599b89"
+        },
+        {
+          "id": "weaving-private",
+          "title": "Weaving workshop staff contingency",
+          "text": "# Weaving workshop staff contingency\n\nWeaving workshop staff must call the private emergency line 020 7946 0991 if the tutor is absent. This line must not appear in visitor information.\n",
+          "collection": "private",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 186,
+          "sha256": "bd12e7fce2d8a5678ad5ba025621ebb7f6080fa356683ae04cf7dc98d94639fa"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h10-a",
+          "source_id": "weaving-public",
+          "quote": "Public visitors with weaving workshop questions should call the reception number 020 7946 0128.",
+          "reason": "Public contact",
+          "char_start": 33,
+          "char_end": 128,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "6918c2fe921d8b6f5881a49b7ad02ff885b2fe16172293d25ecf8494931ef22d"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 4000,
+          "max_items": 12,
+          "max_bytes": 4000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [
+        "weaving-private"
+      ],
+      "expected_sources": [
+        "weaving-public"
+      ]
+    },
+    {
+      "id": "H11",
+      "category": "local_only_egress",
+      "question": "What is the combination recorded for the restoration cage?",
+      "documents": [
+        {
+          "id": "cage-local",
+          "title": "Restoration cage combination",
+          "text": "# Restoration cage combination\n\nThe restoration cage combination is 42-17-68. Keep this note in the local workshop records and do not include it in a remotely processed response.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 179,
+          "sha256": "3d120a3b5244f45fe62d90f2d82b7f3ad083eed2687b45ad65a67865a2de8eb1"
+        }
+      ],
+      "gold": [],
+      "request": {
+        "destination": "approved_remote",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 4000,
+          "max_items": 12,
+          "max_bytes": 4000
+        }
+      },
+      "expectation": {
+        "kind": "policy"
+      },
+      "forbidden_sources": [
+        "cage-local"
+      ],
+      "expected_sources": []
+    },
+    {
+      "id": "H12",
+      "category": "caller_required_fit",
+      "question": "Prepare the mobile darkroom start-up evidence packet.",
+      "documents": [
+        {
+          "id": "darkroom-water",
+          "title": "Mobile darkroom water",
+          "text": "# Mobile darkroom water\n\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 189,
+          "sha256": "a3f211f3aaf5cd6486757e1483c2186b2f8095ca4ab59cbc049bf14bcef3d8bf"
+        },
+        {
+          "id": "darkroom-light",
+          "title": "Mobile darkroom light check",
+          "text": "# Mobile darkroom light check\n\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 206,
+          "sha256": "5338f8ed315be8d47cf41ed4ce64d55a4b0a525c4e0c08e760917d7857077fcf"
+        },
+        {
+          "id": "darkroom-stock",
+          "title": "Mobile darkroom stock",
+          "text": "# Mobile darkroom stock\n\nCount the paper sheets after the session and write the remaining total on the packet. Store opened packets in the sealed cupboard.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 156,
+          "sha256": "8b64b899861e8f7876aa998eeb5b31158b408975f26c2e621123dc73da3309b7"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h12-a",
+          "source_id": "darkroom-water",
+          "quote": "Fill the mobile darkroom rinse tank with twelve litres of clean water before the session.",
+          "reason": "Declared required water evidence",
+          "char_start": 25,
+          "char_end": 114,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "82a682f375ac2bb7738730d5e1552e92aad937703ab30950b1167aee8c847483"
+        },
+        {
+          "id": "h12-b",
+          "source_id": "darkroom-light",
+          "quote": "Test the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box.",
+          "reason": "Declared required light evidence",
+          "char_start": 31,
+          "char_end": 140,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "7edb815ff9c4aaeef5f1dac8abfc210a86712c913664fc960630e5f6e8db1269"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 6000,
+          "max_items": 12,
+          "max_bytes": 6000
+        }
+      },
+      "expectation": {
+        "kind": "required_fit"
+      },
+      "forbidden_sources": [],
+      "required_gold_ids": [
+        "h12-a",
+        "h12-b"
+      ],
+      "expected_sources": [
+        "darkroom-light",
+        "darkroom-water"
+      ]
+    },
+    {
+      "id": "H13",
+      "category": "caller_required_tight",
+      "question": "Prepare the ceramic kiln handover evidence packet.",
+      "documents": [
+        {
+          "id": "kiln-handover",
+          "title": "Ceramic kiln handover",
+          "text": "# Ceramic kiln handover\n\nThe evening kiln operator must leave the firing log, witness-cone photograph, controller printout and shelf diagram together in the red handover wallet before signing out. The morning operator checks all four records before opening the kiln. A missing record is reported to the studio manager; memory of the firing does not replace the written handover. Keep unrelated class attendance sheets out of the wallet so that the technical records can be checked without searching through participant details.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 528,
+          "sha256": "780f2b51a5f234f123bd10207f135a5fa998f20f14cd2fe0fc6d6dea7dd431ec"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h13-a",
+          "source_id": "kiln-handover",
+          "quote": "The evening kiln operator must leave the firing log, witness-cone photograph, controller printout and shelf diagram together in the red handover wallet before signing out.",
+          "reason": "Declared required handover",
+          "char_start": 25,
+          "char_end": 196,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "aaef83b2a7c31161841005c868d334b612b84aaff9c6aec482e9ef47c6797ca8"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 300,
+          "max_items": 2,
+          "max_bytes": 300
+        }
+      },
+      "expectation": {
+        "kind": "required_budget"
+      },
+      "forbidden_sources": [],
+      "required_gold_ids": [
+        "h13-a"
+      ],
+      "expected_sources": [
+        "kiln-handover"
+      ]
+    },
+    {
+      "id": "H14",
+      "category": "checkpoint_resume",
+      "question": "What instruction should the boat shed volunteer retain for the morning launch checklist?",
+      "documents": [
+        {
+          "id": "boat-launch",
+          "title": "Morning launch checklist",
+          "text": "# Morning launch checklist\n\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 219,
+          "sha256": "92675fe735740ace73a868fd40585545a5f4b6328f1998b698cf961ccb3f9b0a"
+        },
+        {
+          "id": "boat-evening",
+          "title": "Evening boat shed",
+          "text": "# Evening boat shed\n\nThe evening key holder closes the upper window and returns the trolley to the dry rack. The radio remains on its charger overnight.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 153,
+          "sha256": "5402a56277c98fa0a5987d0ebfe75aed0d40bc67f10d7fff7a56348659e968a5"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h14-a",
+          "source_id": "boat-launch",
+          "quote": "Before the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board.",
+          "reason": "Fact checkpointed then invalidated",
+          "char_start": 28,
+          "char_end": 168,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "306269378270373f7bd0cd8805d2e4acaf329f9a8026d1db23114bcc6e9bf555"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 4000,
+          "max_items": 12,
+          "max_bytes": 4000
+        }
+      },
+      "expectation": {
+        "kind": "checkpoint"
+      },
+      "forbidden_sources": [],
+      "continuity": {
+        "source_id": "boat-launch",
+        "action": "revoke",
+        "independent_assertion": "Keep the volunteer briefing to one page."
+      },
+      "expected_sources": [
+        "boat-launch"
+      ]
+    },
+    {
+      "id": "H15",
+      "category": "historical_lifecycle",
+      "question": "What did the superseded orchard ladder instruction require, and what does its active replacement require?",
+      "documents": [
+        {
+          "id": "orchard-old",
+          "title": "Superseded orchard ladder instruction",
+          "text": "# Superseded orchard ladder instruction\n\nThe orchard ladder instruction required one volunteer to carry each ladder from the store. This version is superseded and retained only for the incident review.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "superseded",
+          "utf8_bytes": 202,
+          "sha256": "f51aa90b101e38873605517e60af0f59e902c590e33c78de2da3a6825f6c86f6"
+        },
+        {
+          "id": "orchard-current",
+          "title": "Current orchard ladder instruction",
+          "text": "# Current orchard ladder instruction\n\nThe orchard ladder instruction now requires two volunteers to carry each ladder from the store. The shift leader assigns pairs before unlocking the equipment room.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 202,
+          "sha256": "4811969574a55b4c1bc4ad2387f15464388db30b42f2d20a52d144b62634ba96"
+        },
+        {
+          "id": "orchard-revoked",
+          "title": "Revoked orchard ladder tip",
+          "text": "# Revoked orchard ladder tip\n\nThe orchard ladder instruction permits dragging ladders behind a moving cart.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "revoked",
+          "utf8_bytes": 108,
+          "sha256": "4437ce57135c0ef2673e7c7ed0b0f4cca95a9a093292c92404fe78efc7512ee7"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h15-a",
+          "source_id": "orchard-old",
+          "quote": "The orchard ladder instruction required one volunteer to carry each ladder from the store.",
+          "reason": "Historical requirement",
+          "char_start": 41,
+          "char_end": 131,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "d6ca90ad05ec19e3b831aa09d8b7387959556080973c845dda15d7684568e082"
+        },
+        {
+          "id": "h15-b",
+          "source_id": "orchard-current",
+          "quote": "The orchard ladder instruction now requires two volunteers to carry each ladder from the store.",
+          "reason": "Current replacement",
+          "char_start": 38,
+          "char_end": 133,
+          "line_start": 3,
+          "line_end": 3,
+          "sha256": "25a99022376dcaac0e95d5ed922b5fe328296ecbc045457bed7fd517021af930"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "historical_evidence",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 5000,
+          "max_items": 12,
+          "max_bytes": 5000
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [
+        "orchard-revoked"
+      ],
+      "expected_sources": [
+        "orchard-current",
+        "orchard-old"
+      ]
+    },
+    {
+      "id": "H16",
+      "category": "ordinary_tight_budget",
+      "question": "What three checks are required for the travelling puppet booth: floor, ballast, and public clearance?",
+      "documents": [
+        {
+          "id": "puppet-booth",
+          "title": "Travelling puppet booth setup",
+          "text": "# Travelling puppet booth setup\n\n## Floor\n\nThe travelling puppet booth requires a level floor with no loose mat beneath its feet.\nWalk the proposed footprint before taking the fabric panels out of their bag. A doorway threshold can tilt one corner even when the surrounding surface appears flat. Ask the host to clear a different position if a stable footprint is unavailable; folding paper under a foot is not an approved adjustment. Keep the packing bag outside the performance area so that a late arrival cannot trip over it.\n\n## Ballast\n\nAttach one sealed ten-kilogram ballast bag to each rear foot of the travelling puppet booth.\nThe bags remain attached until the fabric panels have been removed at the end of the show. Inspect the loops for fraying before clipping them in place and lay the excess strap inside the footprint. A volunteer should stay beside the frame while the second bag is fitted. Never substitute an audience member's bag for the labelled ballast supplied with the booth.\n\n## Clearance\n\nMaintain a clear public aisle at least one metre wide along the travelling puppet booth's left side.\nMeasure the aisle after the audience chairs have been set out, because chair legs can narrow the route without changing the position of the booth. Keep the prop trunk behind the backdrop. During the show, the door volunteer redirects anyone who tries to stand in the aisle and checks that pushchairs have not rolled into the marked space. Remove the floor tape when packing away.\n",
+          "collection": "shared",
+          "authority": "authoritative",
+          "origin": "source_evidence",
+          "freshness": "fresh",
+          "egress": "local_only",
+          "lifecycle": "active",
+          "utf8_bytes": 1494,
+          "sha256": "38ff6ac6f9c3a9401d50cba1ceccf4871d8438648563552a2f2808f594e1571b"
+        }
+      ],
+      "gold": [
+        {
+          "id": "h16-a",
+          "source_id": "puppet-booth",
+          "quote": "The travelling puppet booth requires a level floor with no loose mat beneath its feet.",
+          "reason": "Floor requirement",
+          "char_start": 43,
+          "char_end": 129,
+          "line_start": 5,
+          "line_end": 5,
+          "sha256": "e054f9425c6a862b1a6e48bb00df87b4ecc552bb0a2e28b2a4f2cfb8b748a171"
+        },
+        {
+          "id": "h16-b",
+          "source_id": "puppet-booth",
+          "quote": "Attach one sealed ten-kilogram ballast bag to each rear foot of the travelling puppet booth.",
+          "reason": "Ballast requirement",
+          "char_start": 542,
+          "char_end": 634,
+          "line_start": 10,
+          "line_end": 10,
+          "sha256": "803845c92e1ee2e7f1f2872a3659c4fb6ec2aaf70f28a630df43dfa5cf4bd04e"
+        },
+        {
+          "id": "h16-c",
+          "source_id": "puppet-booth",
+          "quote": "Maintain a clear public aisle at least one metre wide along the travelling puppet booth's left side.",
+          "reason": "Clearance requirement",
+          "char_start": 1013,
+          "char_end": 1113,
+          "line_start": 15,
+          "line_end": 15,
+          "sha256": "3598af083e45a4790448f6afcebc970ce96e7fa6822d2e8b8aae910d3c777b3b"
+        }
+      ],
+      "request": {
+        "destination": "local_only",
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown",
+        "budget": {
+          "max_tokens": 700,
+          "max_items": 3,
+          "max_bytes": 700
+        }
+      },
+      "expectation": {
+        "kind": "retrieve"
+      },
+      "forbidden_sources": [],
+      "expected_sources": [
+        "puppet-booth"
+      ]
+    }
+  ]
+}

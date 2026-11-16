@@ -1,0 +1,21 @@
+{
+  "format": "kre-simple-alternatives-lock/1",
+  "frozen_at_utc": "2026-11-15T14:56:00.100447+00:00",
+  "inference_calls": 0,
+  "known_native_budgets": [
+    16000,
+    8000,
+    4000
+  ],
+  "max_items": 16,
+  "warm_repetitions": 5,
+  "variant_count": 3,
+  "parameter_search": false,
+  "gold_in_selection": false,
+  "files": {
+    "legacy_ingestion.py": "22ad4e3472bc715117ab17abf60c2af9ecafd5d0e9cdfa84c3b6826dfac0cb59",
+    "accepted_ingestion.py": "16dd33a740fcc60980020646f5444d06000079cbb74aeeba1d51ec21f703d6b1",
+    "variants.py": "8e4a1132d77c18229c139685ecb48ed5ed70267016f3bcac2e65aea1531d255d",
+    "run_known.py": "673ca081c2f764ebce320b63d91a3bca0d015229c3727eb94c1f46b3636e0f25"
+  }
+}

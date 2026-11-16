@@ -1,0 +1,350 @@
+{
+  "fixture_sha256": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+  "full_private_artifact_sha256": "3144ca14a0d7d03fd2abeee077e626a93540311ecfe99c4b9e96ef6096ff9329",
+  "ordinary_retrieval_rescore": false,
+  "purpose": "Separate continuity control after disclosed evaluator implementation defect",
+  "result": {
+    "case_id": "H14",
+    "category": "checkpoint_resume",
+    "continuity": {
+      "after": {
+        "card": {
+          "constraints": [
+            {
+              "origin": "user_assertion",
+              "refs": [],
+              "text": "Keep the volunteer briefing to one page."
+            }
+          ],
+          "decisions": [],
+          "next_actions": [
+            {
+              "origin": "user_assertion",
+              "refs": [],
+              "text": "Check the current guidance before briefing."
+            }
+          ],
+          "objective": {
+            "origin": "user_assertion",
+            "refs": [],
+            "text": "Prepare the morning volunteer briefing."
+          },
+          "questions": [
+            {
+              "origin": "user_assertion",
+              "refs": [],
+              "text": "Which entries still need confirmation?"
+            }
+          ]
+        },
+        "card_sha256": "efac394dc97c06c4265881ab6a2ce646b68ba926b2804c050ed0eb6ad14a9457",
+        "context_revision": "aea1a2d3f89b32a0e145cfcb56c73866:4",
+        "evidence": [],
+        "invalidated": [
+          {
+            "index": 0,
+            "reason": "evidence_unavailable",
+            "section": "decisions"
+          }
+        ],
+        "recorded_at": "2026-11-16T13:25:05.887Z",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "partial",
+        "task_id": "morning-briefing",
+        "task_version": "kre-task/1",
+        "warnings": [
+          "USER_ASSERTIONS_AND_MODEL_INFERENCES_ARE_UNVERIFIED",
+          "SNAPSHOT_ONLY_REVALIDATE_BEFORE_USE"
+        ]
+      },
+      "before": {
+        "card": {
+          "constraints": [
+            {
+              "origin": "user_assertion",
+              "refs": [],
+              "text": "Keep the volunteer briefing to one page."
+            }
+          ],
+          "decisions": [
+            {
+              "origin": "source_evidence",
+              "refs": [
+                {
+                  "chunk_id": "c-1",
+                  "content_sha256": "a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a",
+                  "revision_id": "r-e0a9e1e329a547be9a2315bc936cc2df",
+                  "source_id": "boat-launch"
+                }
+              ],
+              "text": "# Morning launch checklist\n\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate."
+            }
+          ],
+          "next_actions": [
+            {
+              "origin": "user_assertion",
+              "refs": [],
+              "text": "Check the current guidance before briefing."
+            }
+          ],
+          "objective": {
+            "origin": "user_assertion",
+            "refs": [],
+            "text": "Prepare the morning volunteer briefing."
+          },
+          "questions": [
+            {
+              "origin": "user_assertion",
+              "refs": [],
+              "text": "Which entries still need confirmation?"
+            }
+          ]
+        },
+        "card_sha256": "efac394dc97c06c4265881ab6a2ce646b68ba926b2804c050ed0eb6ad14a9457",
+        "context_revision": "aea1a2d3f89b32a0e145cfcb56c73866:3",
+        "evidence": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:25:05.884Z",
+            "revision_id": "r-e0a9e1e329a547be9a2315bc936cc2df",
+            "source_id": "boat-launch",
+            "text": "# Morning launch checklist\n\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate."
+          }
+        ],
+        "invalidated": [],
+        "recorded_at": "2026-11-16T13:25:05.887Z",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "task_id": "morning-briefing",
+        "task_version": "kre-task/1",
+        "warnings": [
+          "USER_ASSERTIONS_AND_MODEL_INFERENCES_ARE_UNVERIFIED",
+          "SNAPSHOT_ONLY_REVALIDATE_BEFORE_USE"
+        ]
+      },
+      "before_supported": true,
+      "card": {
+        "constraints": [
+          {
+            "origin": "user_assertion",
+            "refs": [],
+            "text": "Keep the volunteer briefing to one page."
+          }
+        ],
+        "decisions": [
+          {
+            "origin": "source_evidence",
+            "refs": [
+              {
+                "chunk_id": "c-1",
+                "content_sha256": "a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a",
+                "revision_id": "r-e0a9e1e329a547be9a2315bc936cc2df",
+                "source_id": "boat-launch"
+              }
+            ],
+            "text": "# Morning launch checklist\n\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate."
+          }
+        ],
+        "next_actions": [
+          {
+            "origin": "user_assertion",
+            "refs": [],
+            "text": "Check the current guidance before briefing."
+          }
+        ],
+        "objective": {
+          "origin": "user_assertion",
+          "refs": [],
+          "text": "Prepare the morning volunteer briefing."
+        },
+        "questions": [
+          {
+            "origin": "user_assertion",
+            "refs": [],
+            "text": "Which entries still need confirmation?"
+          }
+        ]
+      },
+      "checkpoint_latency_ms": 2.530833,
+      "checkpoint_result": {
+        "card_sha256": "efac394dc97c06c4265881ab6a2ce646b68ba926b2804c050ed0eb6ad14a9457",
+        "changed": true,
+        "context_revision": "aea1a2d3f89b32a0e145cfcb56c73866:3",
+        "status": "checkpointed",
+        "task_id": "morning-briefing",
+        "task_version": "kre-task/1"
+      },
+      "dependent_removed": true,
+      "independent_assertion_retained": true,
+      "invalidation_visible": true,
+      "pass": true,
+      "previous_context_validation": "changed",
+      "resume_after_latency_ms": 0.091292,
+      "resume_before_latency_ms": 0.168416
+    },
+    "expected_behavior_pass": true,
+    "gold_spans_expected": 1,
+    "kind": "checkpoint",
+    "metrics": {
+      "budget_errors": [],
+      "citation_errors": [],
+      "complete_evidence": true,
+      "coverage_label": "unknown",
+      "covered_spans": 1,
+      "error_code": null,
+      "estimated_tokens": 1264,
+      "evidence_recall": 1.0,
+      "exact_citations": 2,
+      "expected_sources": [
+        "boat-launch"
+      ],
+      "gold_spans": 1,
+      "items": 2,
+      "policy_errors": [],
+      "relevant_returned_sources": 1,
+      "rendered_context_bytes": 1264,
+      "returned_source_count": 2,
+      "returned_sources": [
+        "boat-evening",
+        "boat-launch"
+      ],
+      "serialized_response_bytes": 3191,
+      "snapshot_validation": "current",
+      "source_precision": 0.5,
+      "span_results": [
+        {
+          "covered": true,
+          "id": "h14-a"
+        }
+      ],
+      "status": "ok",
+      "tight_budget_failure": false,
+      "token_counter_kind": "conservative_bytes",
+      "unsupported_context_for_missing_question": false,
+      "unsupported_sufficiency_claim": false
+    },
+    "request": {
+      "access_scope_ref": "reader",
+      "budget": {
+        "max_bytes": 4000,
+        "max_items": 12,
+        "max_tokens": 4000
+      },
+      "contract_version": "0.1",
+      "destination": "local_only",
+      "freshness_requirement": "allow_unknown",
+      "purpose": "current_answer",
+      "query": "What instruction should the boat shed volunteer retain for the morning launch checklist?",
+      "request_id": "holdout-H14"
+    },
+    "response": {
+      "context_revision": "aea1a2d3f89b32a0e145cfcb56c73866:2",
+      "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"boat-launch\",\"revision_id\":\"r-e0a9e1e329a547be9a2315bc936cc2df\",\"chunk_id\":\"c-1\",\"text\":\"# Morning launch checklist\\n\\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate.\",\"content_sha256\":\"a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:25:05.884Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"boat-evening\",\"revision_id\":\"r-ef504ea1aa5f4568ae1ec9ced52d0c7b\",\"chunk_id\":\"c-2\",\"text\":\"# Evening boat shed\\n\\nThe evening key holder closes the upper window and returns the trolley to the dry rack. The radio remains on its charger overnight.\",\"content_sha256\":\"2a1e9749d4872a6ff15e9639854d12110c9295d70d05fb1f17d5f1e8aadc5343\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:25:05.884Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+      "contract_version": "0.1",
+      "coverage": "unknown",
+      "error": null,
+      "generated_at": "2026-11-16T13:25:05.885Z",
+      "items": [
+        {
+          "authority": "authoritative",
+          "chunk_id": "c-1",
+          "citation_id": "E1",
+          "content_sha256": "a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a",
+          "egress": {
+            "restriction": "local_only"
+          },
+          "freshness": "fresh",
+          "lifecycle": "active",
+          "locator": {
+            "label": "lines 1-3",
+            "line_end": 3,
+            "line_start": 1
+          },
+          "origin": "source_evidence",
+          "recorded_at": "2026-11-16T13:25:05.884Z",
+          "revision_id": "r-e0a9e1e329a547be9a2315bc936cc2df",
+          "source_id": "boat-launch",
+          "text": "# Morning launch checklist\n\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate."
+        },
+        {
+          "authority": "authoritative",
+          "chunk_id": "c-2",
+          "citation_id": "E2",
+          "content_sha256": "2a1e9749d4872a6ff15e9639854d12110c9295d70d05fb1f17d5f1e8aadc5343",
+          "egress": {
+            "restriction": "local_only"
+          },
+          "freshness": "fresh",
+          "lifecycle": "active",
+          "locator": {
+            "label": "lines 1-3",
+            "line_end": 3,
+            "line_start": 1
+          },
+          "origin": "source_evidence",
+          "recorded_at": "2026-11-16T13:25:05.884Z",
+          "revision_id": "r-ef504ea1aa5f4568ae1ec9ced52d0c7b",
+          "source_id": "boat-evening",
+          "text": "# Evening boat shed\n\nThe evening key holder closes the upper window and returns the trolley to the dry rack. The radio remains on its charger overnight."
+        }
+      ],
+      "omissions": {},
+      "request_id": "holdout-H14",
+      "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+      "status": "ok",
+      "token_usage": {
+        "context_bytes": 1264,
+        "counter_id": "utf8_bytes",
+        "counter_kind": "conservative_bytes",
+        "counter_revision": "1",
+        "estimated_tokens": 1264,
+        "includes_citations": true
+      },
+      "warnings": [
+        "APPROXIMATE_TOKEN_COUNT"
+      ]
+    },
+    "retrieval_latency_ms": 0.40775,
+    "revision_ids": {
+      "boat-evening": "r-ef504ea1aa5f4568ae1ec9ced52d0c7b",
+      "boat-launch": "r-e0a9e1e329a547be9a2315bc936cc2df"
+    },
+    "setup_ms": 2.558958
+  },
+  "setup_retrieval_calls": 1,
+  "source_inventory": {
+    "files": {
+      "src/kre/__init__.py": "d702d5755498cdb4a526b085846123c55b701095106f962a1bf2164f924f97dc",
+      "src/kre/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/kre/_stdio.py": "f53c401daea52b19a0e5926e780d99ca14f8c52d0157c1a214562b43302ae0a4",
+      "src/kre/cli.py": "33df604d003a8dd5055ba371ff707eef81e84fe4931753c402e6de0ab6fa99c5",
+      "src/kre/continuity.py": "93b3e37feb34c0dfd2877a3ac83134dfb3c7f7654f70e742c388d3fd39cb7192",
+      "src/kre/demo.py": "90bde8157148452fc063dade037e06853b74a832dcb7829d6744e69ef6a585f1",
+      "src/kre/efficiency.py": "d4cc42f3fb6a035a24f9300ffb5e949924a92c5cb8857bc644cede4d32b311b2",
+      "src/kre/ingestion.py": "16dd33a740fcc60980020646f5444d06000079cbb74aeeba1d51ec21f703d6b1",
+      "src/kre/mcp.py": "46da2520e30a6f4ce8dafb30b8d197ae787a81c78aaa71761915a7cc570401dc",
+      "src/kre/output_validation.py": "2304f536531b51f6fb9bed87824ece475732e4f42b34520be544865c5c2fc8d2",
+      "src/kre/quality.py": "e5da203b46f39ede6bfd3e8069434fda2757d48c3ec0e2181baf4bc59a2180be",
+      "src/kre/sample_data/release.md": "d7b81ad204cfc7d4eb238ace79bee1ed8e750a0fdd54ec5be22e6ee609b93fd3",
+      "src/kre/store.py": "df5f633740c304b4492b6c743533ed88f465e81b8a87046abef9533dfae454fb"
+    },
+    "sha256": "d826a1dc18a0f07bb492112ca343b85d820e7863aedf25abb61c37ec1c3f7445"
+  },
+  "source_unchanged": true,
+  "worker_returncode": 0,
+  "worker_stderr": ""
+}

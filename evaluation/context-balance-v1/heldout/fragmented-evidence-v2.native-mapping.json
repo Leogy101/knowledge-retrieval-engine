@@ -1,0 +1,97 @@
+{
+  "artifact": "fragmented-evidence-v2 author intent and native metadata mapping",
+  "frozen_fixture_sha256": "40c653a4d5a6f745f18444385cb872450259dd8ca41ad889ab2d4c292845fa2f",
+  "status": "pre-first-retrieval schema mapping; original fixture remains unchanged",
+  "basis": "Native enum values supplied by root; author intent from fixture author. No KRE code, algorithm variants, retrieval output, or prior corpora inspected.",
+  "preserve_exactly": [
+    "source text",
+    "source IDs",
+    "source text hashes",
+    "case IDs",
+    "queries",
+    "gold quotes and line spans",
+    "budgets",
+    "answer requirements",
+    "missing evidence",
+    "original forbidden_sources lists"
+  ],
+  "equivalent_value_mappings": {
+    "source.freshness": {
+      "current": "fresh",
+      "stale": "stale"
+    },
+    "source.authority": {
+      "primary": "authoritative",
+      "secondary": "unverified",
+      "draft": "unverified",
+      "unreviewed": "unverified"
+    },
+    "source.origin": {
+      "all original synthetic:// URIs": "source_evidence"
+    },
+    "source.state": {
+      "active": "active",
+      "revoked": "revoked",
+      "superseded": "superseded"
+    },
+    "case.purpose": {
+      "answer_question": "current_answer"
+    },
+    "case.destination": {
+      "public": "approved_remote",
+      "local": "local_only"
+    },
+    "source.allowed_destinations elements": {
+      "public": "approved_remote",
+      "local": "local_only"
+    }
+  },
+  "provenance_uri_rule": "Retain the original synthetic URI in adapter provenance if supported, or in a sidecar; it is source identity provenance, not a native evidence-origin enum.",
+  "source_authority_intent": "Primary documents were authored as authoritative for their stated subject. Secondary explanations, drafts, and visitor contributions were not authored as authoritative. Authority does not override freshness, lifecycle state, collection access, or destination policy.",
+  "unsupported_intent": [
+    {
+      "source_id": "seed-tips",
+      "case_id": "fragmented-04",
+      "original_metadata": {
+        "state": "reference_only",
+        "authority": "unreviewed",
+        "freshness": "current"
+      },
+      "author_intended_native_metadata": {
+        "state": "active",
+        "authority": "unverified",
+        "freshness": "fresh"
+      },
+      "reason": "This is an active public visitor contribution about planting, not an authorized viability protocol. The author did not intend revocation, supersession, private access, or a public-destination restriction.",
+      "mapping_class": "author clarification of unsupported state; not a pure enum synonym",
+      "original_expected_exclusion": "Preserve the original forbidden_sources entry in the frozen record; its expression as a native policy exclusion is unsupported and unadjudicated.",
+      "evaluation_decision": {
+        "native_policy_expected_exclusion": "unknown",
+        "include_in_binary_policy_exclusion_pass_fail": false,
+        "report_if_returned": "descriptive observation, not a native policy violation",
+        "do_not_invent": [
+          "revocation",
+          "supersession",
+          "private collection",
+          "destination prohibition",
+          "global unverified-source prohibition"
+        ],
+        "gold_and_answer_coverage": "May evaluate unchanged exact gold and answer requirements; distinguish these from the unknown policy-exclusion assertion.",
+        "policy_summary": "Report policy-exclusion checks only for supported assertions and identify this omission explicitly; a clean policy subtotal must not claim all eight original case expectations were adjudicated."
+      }
+    }
+  ],
+  "other_exclusion_intents": {
+    "trail-old-map": "Stale guidance contradicted by the current closure; map as stale/active/unverified. Do not invent revocation or access restrictions.",
+    "importer-v3": "Retired version guidance; map as stale/active/unverified. Do not invent revocation or access restrictions.",
+    "observatory-revoked": "Explicitly revoked document.",
+    "theatre-private-rota": "Private source, outside reader collection access and approved_remote destination.",
+    "kiln-old-plan": "Explicitly superseded document.",
+    "kitchen-withdrawn": "Explicitly revoked document.",
+    "archive-private-notes": "Owner collection access is allowed, but source destination policy allows local_only, not approved_remote."
+  },
+  "native_policy_fidelity": "An original forbidden list is an evaluation annotation, not permission metadata to be injected into the retrieval engine. Derive actual access and lifecycle eligibility only from source metadata and native policy. If any native current_answer freshness rule does not make stale documents inadmissible, mark that particular policy assertion unsupported rather than fabricating a restriction.",
+  "retrieval_executed_by_author": false,
+  "fixture_rewritten": false,
+  "independent_human_semantic_judgments": false
+}

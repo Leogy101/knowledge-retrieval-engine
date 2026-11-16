@@ -1,0 +1,1609 @@
+{
+  "format": "kre-large-tasks/1",
+  "synthetic": true,
+  "authoring_mode": "independent synthetic authoring before retrieval evaluation",
+  "tasks": [
+    {
+      "id": "LS01",
+      "category": "multi_document",
+      "scope": "compact",
+      "question": "The Harbor rehearsal is ready to ship. What must be recorded before deployment, what must be checked after a rollback, and who may reopen public traffic?",
+      "expected_status": "answered",
+      "reference_answer": "Record the immutable snapshot identifier and SHA-256 checksum before deployment. After rollback reconcile the order ledger and probe /ready twice thirty seconds apart; any mismatch keeps traffic closed. The duty steward authorizes reopening public traffic.",
+      "required_facts": [
+        {
+          "id": "LS01-f1",
+          "text": "Record the immutable snapshot identifier and SHA-256 checksum before deployment."
+        },
+        {
+          "id": "LS01-f2",
+          "text": "After rollback reconcile the order ledger and probe /ready twice thirty seconds apart; any mismatch keeps traffic closed."
+        },
+        {
+          "id": "LS01-f3",
+          "text": "The duty steward authorizes reopening public traffic."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "harbor-backup",
+          "source_sha256": "078712a8cd6c3115b578cd4228e94e6d1d3bb411a25a4cc295605057f8be7308",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Before deployment, the operator records the immutable snapshot identifier and its SHA-256 checksum in the release card."
+        },
+        {
+          "source_id": "harbor-backup",
+          "source_sha256": "078712a8cd6c3115b578cd4228e94e6d1d3bb411a25a4cc295605057f8be7308",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "After rollback, reconcile the order ledger against the snapshot and probe /ready twice, thirty seconds apart. Any mismatch keeps traffic closed."
+        },
+        {
+          "source_id": "harbor-access",
+          "source_sha256": "28dbf9b6f5e3bd18cb4ceced3f24208705c875706adda277618bcd6e30c7b043",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Only the duty steward can authorize public traffic. A release-reader token cannot substitute for that authorization."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS02",
+      "category": "multi_document",
+      "scope": "large",
+      "question": "A Meridian uploader received 202, but the observation is absent from the public listing. Explain what has and has not been established, what gates remain, and where the operator should look next.",
+      "expected_status": "answered",
+      "reference_answer": "HTTP 202 establishes durable queue admission, not publication. Publication requires validated calibration provenance and station consent; unresolved checks keep the observation in review. Check /receipts/{receipt_id} for the distinct publication state.",
+      "required_facts": [
+        {
+          "id": "LS02-f1",
+          "text": "HTTP 202 establishes durable queue admission, not publication."
+        },
+        {
+          "id": "LS02-f2",
+          "text": "Publication requires validated calibration provenance and station consent; unresolved checks keep the observation in review."
+        },
+        {
+          "id": "LS02-f3",
+          "text": "Check /receipts/{receipt_id} for the distinct publication state."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-admission",
+          "source_sha256": "cef3e7f233847e9c2e86bbc707d98fbc059c67f86c669df18d3e803ee455eac4",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "An HTTP 202 receipt means the envelope is durably queued, not that the observation has been published."
+        },
+        {
+          "source_id": "meridian-publication",
+          "source_sha256": "61c4f59af9af66c7e979977b41ec0de31bea4c65b3027cd673f25e0c73ca607c",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A queued observation becomes publishable only after calibration provenance and station consent both validate. Publication is asynchronous and can lag admission."
+        },
+        {
+          "source_id": "meridian-publication",
+          "source_sha256": "61c4f59af9af66c7e979977b41ec0de31bea4c65b3027cd673f25e0c73ca607c",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "If either calibration provenance or consent is unresolved, retain the observation in the review queue. Queue acceptance does not waive either requirement."
+        },
+        {
+          "source_id": "meridian-receipt",
+          "source_sha256": "ec34eec10437d60b3d8ba4526389d11e595b056c53ab17656b88d739ef9a2761",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Operators check /receipts/{receipt_id} for the publication state. The accepted, review_pending, published and rejected states are distinct."
+        }
+      ],
+      "forbidden_claims": [
+        "A 202 receipt proves that the observation is public."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS03",
+      "category": "multi_document",
+      "scope": "large",
+      "question": "A disconnected station loses power after the registry acknowledges a key change but before signing switches. Describe how to resume safely, whether the overlap clock resets, and how older buffered observations should be treated.",
+      "expected_status": "answered",
+      "reference_answer": "Compare station and registry fingerprints, resume the signing switch once, and preserve the original forty-eight-hour overlap deadline. Unreconciled fingerprints require stopping uploads and registry-steward resolution; the clock does not restart. Preserve buffered event times; observations older than seventy-two hours require curator review.",
+      "required_facts": [
+        {
+          "id": "LS03-f1",
+          "text": "Compare station and registry fingerprints, resume the signing switch once, and preserve the original forty-eight-hour overlap deadline."
+        },
+        {
+          "id": "LS03-f2",
+          "text": "Unreconciled fingerprints require stopping uploads and registry-steward resolution; the clock does not restart."
+        },
+        {
+          "id": "LS03-f3",
+          "text": "Preserve buffered event times; observations older than seventy-two hours require curator review."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-rotation-recovery",
+          "source_sha256": "49bb7be88f32b5b44061e190fbcb16a735c016d2f8725a71d571571b6fca9ee1",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "If power fails after registry acknowledgement but before the station switches signing, compare the station fingerprint with the registry, resume the switch once, and preserve the original forty-eight-hour overlap deadline."
+        },
+        {
+          "source_id": "meridian-rotation-recovery",
+          "source_sha256": "49bb7be88f32b5b44061e190fbcb16a735c016d2f8725a71d571571b6fca9ee1",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "If the fingerprints cannot be reconciled, stop uploads and ask the registry steward to resolve the mismatch. Do not restart the overlap clock."
+        },
+        {
+          "source_id": "meridian-offline",
+          "source_sha256": "b27532135f0ff87027a6ef4a97addd246da5c0b686e56bc8e62e3e8161db521e",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Buffered observations older than seventy-two hours require curator review; the uploader must not relabel them as newly observed."
+        },
+        {
+          "source_id": "meridian-offline",
+          "source_sha256": "b27532135f0ff87027a6ef4a97addd246da5c0b686e56bc8e62e3e8161db521e",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A station may buffer observations locally for seventy-two hours. When it reconnects, it preserves the original event time and uploads in event_id order within each station."
+        }
+      ],
+      "forbidden_claims": [
+        "Power failure restarts the overlap clock."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS04",
+      "category": "three_passages",
+      "scope": "compact",
+      "question": "Prepare the Harbor rehearsal handoff: identify the window and overrun rule, the temporary role and lifetime, and the availability reporting denominator.",
+      "expected_status": "answered",
+      "reference_answer": "The window is Tuesday 02:00–02:20 UTC; missing it requires a new release card rather than an operator extension. The rehearsal role is release-reader for two hours and cannot publish or delete release cards or audit events. Availability is 99.5% over twenty-eight days, including planned maintenance.",
+      "required_facts": [
+        {
+          "id": "LS04-f1",
+          "text": "The window is Tuesday 02:00–02:20 UTC; missing it requires a new release card rather than an operator extension."
+        },
+        {
+          "id": "LS04-f2",
+          "text": "The rehearsal role is release-reader for two hours and cannot publish or delete release cards or audit events."
+        },
+        {
+          "id": "LS04-f3",
+          "text": "Availability is 99.5% over twenty-eight days, including planned maintenance."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "harbor-release",
+          "source_sha256": "373eaf63767d73afdd61c69274a3586648dc5903a2ac9a7d75877087cf246e63",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "The planned maintenance window is Tuesday 02:00–02:20 UTC. A missed window requires a new release card; operators may not extend it themselves."
+        },
+        {
+          "source_id": "harbor-access",
+          "source_sha256": "28dbf9b6f5e3bd18cb4ceced3f24208705c875706adda277618bcd6e30c7b043",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A rehearsal operator receives the release-reader role for two hours. The role permits reading release cards and audit events; it cannot publish or delete them."
+        },
+        {
+          "source_id": "harbor-slo",
+          "source_sha256": "7b323ebacdfe90388f12f63f287fa5e4b6576d8c247e73abf6d981210d1da979",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "The training availability objective is 99.5% over a rolling twenty-eight-day interval. Planned maintenance is included in that denominator."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS05",
+      "category": "three_passages",
+      "scope": "large",
+      "question": "A researcher asks for a Meridian bundle by email and assumes that removing the link deletes all evidence. State the export prerequisites, permitted delivery channel, bundle lifetime, audit lifetime and recall limitation.",
+      "expected_status": "answered",
+      "reference_answer": "Require a purpose code, active project consent and curator-approved column manifest. Deliver through the authenticated project portal; email carries only the receipt identifier. The bundle link expires after seven days; audit manifests remain one hundred eighty days. Disabling a link cannot erase copies already downloaded.",
+      "required_facts": [
+        {
+          "id": "LS05-f1",
+          "text": "Require a purpose code, active project consent and curator-approved column manifest."
+        },
+        {
+          "id": "LS05-f2",
+          "text": "Deliver through the authenticated project portal; email carries only the receipt identifier."
+        },
+        {
+          "id": "LS05-f3",
+          "text": "The bundle link expires after seven days; audit manifests remain one hundred eighty days."
+        },
+        {
+          "id": "LS05-f4",
+          "text": "Disabling a link cannot erase copies already downloaded."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-export",
+          "source_sha256": "1cb77c9a7f335b4e4914a2b1ed5f0c47130b3a4ac6f249d3a11fe8549cf499d7",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A research export requires a recorded purpose code, an active project consent grant and a curator-approved column manifest."
+        },
+        {
+          "source_id": "meridian-export-transport",
+          "source_sha256": "50d42a9d3d64d1e69f9ccf45100f9f1d147dc2224a209493a255856d64f28eac",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Approved research bundles are delivered by the authenticated project portal. Email carries only the receipt identifier, never a bundle attachment or a bearer download link."
+        },
+        {
+          "source_id": "meridian-export-retention",
+          "source_sha256": "fa12c7393f160d7d47e619de1a337431f87fe0728cb0c835d8d32569af6df7cc",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Research export bundles expire after seven days. At expiry the download link is disabled; the audit manifest remains for one hundred eighty days."
+        },
+        {
+          "source_id": "meridian-export-retention",
+          "source_sha256": "fa12c7393f160d7d47e619de1a337431f87fe0728cb0c835d8d32569af6df7cc",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Disabling an export link does not erase copies that a recipient already downloaded. Recall notices name the immutable bundle identifier."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts.",
+      "evidence_groups": [
+        {
+          "id": "LS05-e1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-export",
+                  "source_sha256": "1cb77c9a7f335b4e4914a2b1ed5f0c47130b3a4ac6f249d3a11fe8549cf499d7",
+                  "line_start": 5,
+                  "line_end": 5,
+                  "quote": "A research export requires a recorded purpose code, an active project consent grant and a curator-approved column manifest."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "LS05-e2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-export-transport",
+                  "source_sha256": "50d42a9d3d64d1e69f9ccf45100f9f1d147dc2224a209493a255856d64f28eac",
+                  "line_start": 5,
+                  "line_end": 5,
+                  "quote": "Approved research bundles are delivered by the authenticated project portal. Email carries only the receipt identifier, never a bundle attachment or a bearer download link."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "LS05-e3",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-export-retention",
+                  "source_sha256": "fa12c7393f160d7d47e619de1a337431f87fe0728cb0c835d8d32569af6df7cc",
+                  "line_start": 5,
+                  "line_end": 5,
+                  "quote": "Research export bundles expire after seven days. At expiry the download link is disabled; the audit manifest remains for one hundred eighty days."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "LS05-e4",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-export-retention",
+                  "source_sha256": "fa12c7393f160d7d47e619de1a337431f87fe0728cb0c835d8d32569af6df7cc",
+                  "line_start": 7,
+                  "line_end": 7,
+                  "quote": "Disabling an export link does not erase copies that a recipient already downloaded. Recall notices name the immutable bundle identifier."
+                }
+              ]
+            },
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-manual-archive",
+                  "source_sha256": "a788b33eb90c7f90fc3ab398a4873d0695ae583faf0887c9c90912848de7ea06",
+                  "line_start": 331,
+                  "line_end": 331,
+                  "quote": "A recalled export keeps its audit manifest for one hundred eighty days even after its download link is disabled. A recall cannot erase a recipient’s previously downloaded copy."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LS06",
+      "category": "three_passages",
+      "scope": "large",
+      "question": "An operator sees an accepted receipt during a queue drain. Combine the admission contract, drain manual and publication policy to explain the status, the response to new work and the remaining release conditions.",
+      "expected_status": "answered",
+      "reference_answer": "The accepted receipt remains durably queued and queryable during draining. New admission returns HTTP 429 with Retry-After: 90 during a queue drain. Acceptance does not mean publication; calibration provenance and consent still must validate.",
+      "required_facts": [
+        {
+          "id": "LS06-f1",
+          "text": "The accepted receipt remains durably queued and queryable during draining."
+        },
+        {
+          "id": "LS06-f2",
+          "text": "New admission returns HTTP 429 with Retry-After: 90 during a queue drain."
+        },
+        {
+          "id": "LS06-f3",
+          "text": "Acceptance does not mean publication; calibration provenance and consent still must validate."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-admission",
+          "source_sha256": "cef3e7f233847e9c2e86bbc707d98fbc059c67f86c669df18d3e803ee455eac4",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "An HTTP 202 receipt means the envelope is durably queued, not that the observation has been published."
+        },
+        {
+          "source_id": "meridian-manual-queue",
+          "source_sha256": "e2afb279e226fe167949ba6dcc865ae57650d3d3957722c8431830d23d806393",
+          "line_start": 349,
+          "line_end": 349,
+          "quote": "During a queue drain, admission returns HTTP 429 with Retry-After: 90. Already accepted receipts remain queryable, and draining does not revoke their durable-queue status."
+        },
+        {
+          "source_id": "meridian-publication",
+          "source_sha256": "61c4f59af9af66c7e979977b41ec0de31bea4c65b3027cd673f25e0c73ca607c",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A queued observation becomes publishable only after calibration provenance and station consent both validate. Publication is asynchronous and can lag admission."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS07",
+      "category": "conflict",
+      "scope": "compact",
+      "question": "Two Harbor records disagree about keeping audit events: a later note says fourteen days and a signed decision says ninety. What retention should the operator apply, and why does the later timestamp not decide?",
+      "expected_status": "answered",
+      "reference_answer": "Apply ninety-day retention to both successful and rejected requests under ratified H-12. The fourteen-day proposal is unapproved and unsigned. Only a later ratified custodian decision explicitly replacing H-12 changes the controlling rule.",
+      "required_facts": [
+        {
+          "id": "LS07-f1",
+          "text": "Apply ninety-day retention to both successful and rejected requests under ratified H-12."
+        },
+        {
+          "id": "LS07-f2",
+          "text": "The fourteen-day proposal is unapproved and unsigned."
+        },
+        {
+          "id": "LS07-f3",
+          "text": "Only a later ratified custodian decision explicitly replacing H-12 changes the controlling rule."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "harbor-retention",
+          "source_sha256": "dab3ce01b17b9e57593c4fdc91cf9220a2dd8efb5affc0f1b6faefa21bee7c43",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Decision H-12, ratified by the records custodian, retains audit events for ninety days. This rule applies to successful and rejected requests."
+        },
+        {
+          "source_id": "harbor-retention",
+          "source_sha256": "dab3ce01b17b9e57593c4fdc91cf9220a2dd8efb5affc0f1b6faefa21bee7c43",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "H-12 remains controlling until a later ratified custodian decision explicitly replaces it. A newer planning note is not an approved policy change."
+        },
+        {
+          "source_id": "harbor-cost-note",
+          "source_sha256": "27ab501568321ad63aaa00c0ae0f3d2925b5c582807b3725486576c0bc01dd35",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A later-dated engineering cost note proposes reducing audit retention to fourteen days. It is an unapproved estimate and has no records-custodian signature."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS08",
+      "category": "conflict",
+      "scope": "large",
+      "question": "A new dashboard memo calls for coastal measurements every ten seconds, while the field decision says sixty. What is the ordinary interval, when can it be shortened, and which record controls?",
+      "expected_status": "answered",
+      "reference_answer": "Ordinary coastal sampling remains sixty seconds under ratified M-27. A signed incident directive may shorten the interval to ten seconds. The newer unsigned dashboard memo is experimental and cannot amend fleet duty cycles.",
+      "required_facts": [
+        {
+          "id": "LS08-f1",
+          "text": "Ordinary coastal sampling remains sixty seconds under ratified M-27."
+        },
+        {
+          "id": "LS08-f2",
+          "text": "A signed incident directive may shorten the interval to ten seconds."
+        },
+        {
+          "id": "LS08-f3",
+          "text": "The newer unsigned dashboard memo is experimental and cannot amend fleet duty cycles."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-sampling-decision",
+          "source_sha256": "24d4e26c7ef09b92bd483fbd9a679916a57e040665d979a3ebb12287fc843140",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Decision M-27 sets the coastal station sampling interval to sixty seconds during ordinary operation. Only a signed incident directive may shorten it to ten seconds."
+        },
+        {
+          "source_id": "meridian-sampling-decision",
+          "source_sha256": "24d4e26c7ef09b92bd483fbd9a679916a57e040665d979a3ebb12287fc843140",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "M-27 is the ratified field-governance decision. The experimental dashboard and unsigned field notes cannot change station duty cycles."
+        },
+        {
+          "source_id": "meridian-dashboard-note",
+          "source_sha256": "a5bc1e385c64ff736a82ef73b2236c5a0cac09ccd7e52f5a000b524168199477",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "The newer dashboard memo describes a ten-second coastal sampling interval as the desired default. It is unsigned experimental guidance, pending field-governance review."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS09",
+      "category": "conflict",
+      "scope": "large",
+      "question": "The modem vendor advertises thirty envelopes per satellite burst, but the approved fleet decision mentions twelve envelopes. Can an operator raise the batch size on that basis? Explain the authority and the safe action.",
+      "expected_status": "answered",
+      "reference_answer": "The approved satellite maximum is twelve envelopes. The operator may split a batch but cannot raise the maximum. The thirty-envelope vendor lab capability is informational; only a replacement ratified M-series decision changes fleet policy.",
+      "required_facts": [
+        {
+          "id": "LS09-f1",
+          "text": "The approved satellite maximum is twelve envelopes."
+        },
+        {
+          "id": "LS09-f2",
+          "text": "The operator may split a batch but cannot raise the maximum."
+        },
+        {
+          "id": "LS09-f3",
+          "text": "The thirty-envelope vendor lab capability is informational; only a replacement ratified M-series decision changes fleet policy."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-uplink-decision",
+          "source_sha256": "8398abe810751e91bf91eedea9355380faeda925eefe9b415a586e15e2c42fad",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Ratified decision M-31 requires satellite uplink batches of at most twelve envelopes. An operator may split a batch; the operator may not raise the maximum."
+        },
+        {
+          "source_id": "meridian-uplink-decision",
+          "source_sha256": "8398abe810751e91bf91eedea9355380faeda925eefe9b415a586e15e2c42fad",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Only a replacement ratified M-series decision can alter the twelve-envelope satellite maximum. Vendor capability sheets describe hardware potential, not an approved fleet configuration."
+        },
+        {
+          "source_id": "meridian-vendor-uplink",
+          "source_sha256": "97b0f0c5743bd5e57132858e918149b9786da525d5defcac53f20314743d2aa4",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "A newer vendor evaluation says the modem can carry thirty envelopes in one satellite burst under ideal laboratory conditions. The evaluation is informational and has not been ratified as fleet policy."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS10",
+      "category": "superseded",
+      "scope": "compact",
+      "question": "A copied Harbor R6 checklist says one successful readiness probe is enough to reopen traffic. Give the current rollback checks and release authorization; do not revive the retired shortcut.",
+      "expected_status": "answered",
+      "reference_answer": "Current rollback requires order-ledger reconciliation and two /ready probes thirty seconds apart. A mismatch keeps traffic closed. The duty steward signs the release card before public traffic opens.",
+      "required_facts": [
+        {
+          "id": "LS10-f1",
+          "text": "Current rollback requires order-ledger reconciliation and two /ready probes thirty seconds apart."
+        },
+        {
+          "id": "LS10-f2",
+          "text": "A mismatch keeps traffic closed."
+        },
+        {
+          "id": "LS10-f3",
+          "text": "The duty steward signs the release card before public traffic opens."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "harbor-backup",
+          "source_sha256": "078712a8cd6c3115b578cd4228e94e6d1d3bb411a25a4cc295605057f8be7308",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "After rollback, reconcile the order ledger against the snapshot and probe /ready twice, thirty seconds apart. Any mismatch keeps traffic closed."
+        },
+        {
+          "source_id": "harbor-release",
+          "source_sha256": "373eaf63767d73afdd61c69274a3586648dc5903a2ac9a7d75877087cf246e63",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Harbor release R7 may open public traffic only after the replay ledger is reconciled and the duty steward signs the release card."
+        }
+      ],
+      "forbidden_claims": [
+        "One readiness response is sufficient."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS11",
+      "category": "superseded",
+      "scope": "large",
+      "question": "A handoff cites Meridian rollout revision 4 and its five-minute heartbeat check. What sequence should the next engineer use now, and what happens if the shadow comparison disagrees?",
+      "expected_status": "answered",
+      "reference_answer": "Use current revision 5: thirty-minute shadow ingest, checksum reconciliation, then curator approval before public traffic. A shadow mismatch requires rollback to the last approved build and preservation of mismatch receipt identifiers. The signed release decision explicitly replaces revision 4.",
+      "required_facts": [
+        {
+          "id": "LS11-f1",
+          "text": "Use current revision 5: thirty-minute shadow ingest, checksum reconciliation, then curator approval before public traffic."
+        },
+        {
+          "id": "LS11-f2",
+          "text": "A shadow mismatch requires rollback to the last approved build and preservation of mismatch receipt identifiers."
+        },
+        {
+          "id": "LS11-f3",
+          "text": "The signed release decision explicitly replaces revision 4."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-rollout-current",
+          "source_sha256": "276403ae6d1c8edbcb84046836011f53a7788d8a85605af4bb8910cfa64cf4f6",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Revision 5 requires a shadow-ingest comparison for thirty minutes, then checksum reconciliation, then curator approval before public traffic is enabled."
+        },
+        {
+          "source_id": "meridian-rollout-current",
+          "source_sha256": "276403ae6d1c8edbcb84046836011f53a7788d8a85605af4bb8910cfa64cf4f6",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "A mismatch during shadow ingest requires rollback to the last approved build. Save the mismatch receipt identifiers; do not discard them to make the comparison pass."
+        },
+        {
+          "source_id": "meridian-rollout-current",
+          "source_sha256": "276403ae6d1c8edbcb84046836011f53a7788d8a85605af4bb8910cfa64cf4f6",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "Revision 5 explicitly replaces revision 4. The version number alone is not the authority: the signed release decision adopts this sequence."
+        }
+      ],
+      "forbidden_claims": [
+        "A five-minute heartbeat check authorizes public traffic."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS12",
+      "category": "superseded",
+      "scope": "large",
+      "question": "A restored copy of Meridian retention revision 2 says to delete everything after ninety days. What lifetimes apply now to raw training observations and public summaries, and does deleting one authorize deleting the other?",
+      "expected_status": "answered",
+      "reference_answer": "Current revision 3 retains raw training observations for thirty days and public summaries for three hundred sixty-five days. Deleting raw observations does not authorize deleting summaries. Ratified R-8 replaced revision 2; a restored copy timestamp does not restore its authority.",
+      "required_facts": [
+        {
+          "id": "LS12-f1",
+          "text": "Current revision 3 retains raw training observations for thirty days and public summaries for three hundred sixty-five days."
+        },
+        {
+          "id": "LS12-f2",
+          "text": "Deleting raw observations does not authorize deleting summaries."
+        },
+        {
+          "id": "LS12-f3",
+          "text": "Ratified R-8 replaced revision 2; a restored copy timestamp does not restore its authority."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-retention-current",
+          "source_sha256": "c58d30cb9a00be3df5f9ec93359bdc6ec3781952bb7c1c898aecb51ec3b695a6",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Current revision 3 retains raw training observations for thirty days and derived public summaries for three hundred sixty-five days."
+        },
+        {
+          "source_id": "meridian-retention-current",
+          "source_sha256": "c58d30cb9a00be3df5f9ec93359bdc6ec3781952bb7c1c898aecb51ec3b695a6",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "A raw-observation deletion does not authorize deleting its public summary. The summary follows its own retention clock."
+        },
+        {
+          "source_id": "meridian-retention-current",
+          "source_sha256": "c58d30cb9a00be3df5f9ec93359bdc6ec3781952bb7c1c898aecb51ec3b695a6",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "Ratified records decision R-8 replaces revision 2 with revision 3. Timestamps on exported copies do not change the controlling revision."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS13",
+      "category": "buried_manual",
+      "scope": "large",
+      "question": "A Meridian sensor heartbeat looks healthy after a lightning warning. Is that enough to plug the head back in? Give the waiting period and prerequisite physical check.",
+      "expected_status": "answered",
+      "reference_answer": "A healthy heartbeat alone is insufficient to reconnect after a lightning alarm. Isolate the sensor head for forty-five minutes and inspect the surge cartridge before reconnection.",
+      "required_facts": [
+        {
+          "id": "LS13-f1",
+          "text": "A healthy heartbeat alone is insufficient to reconnect after a lightning alarm."
+        },
+        {
+          "id": "LS13-f2",
+          "text": "Isolate the sensor head for forty-five minutes and inspect the surge cartridge before reconnection."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-manual-sensor",
+          "source_sha256": "74dd76f7f86fa6ab263cd47d8527a5dba9ac05c0a3eb70a40d1299816383864a",
+          "line_start": 331,
+          "line_end": 331,
+          "quote": "After a lightning alarm, isolate the sensor head for forty-five minutes and inspect the surge cartridge before reconnecting it. A clear heartbeat alone is insufficient to reconnect."
+        }
+      ],
+      "forbidden_claims": [
+        "A clear heartbeat alone authorizes reconnection."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS14",
+      "category": "buried_manual",
+      "scope": "large",
+      "question": "During a Meridian drain window, what should a new admission request receive, how long should it wait, and what remains available for an already accepted receipt?",
+      "expected_status": "answered",
+      "reference_answer": "New admission receives HTTP 429 with Retry-After: 90. Already accepted receipts remain queryable and retain durable-queue status.",
+      "required_facts": [
+        {
+          "id": "LS14-f1",
+          "text": "New admission receives HTTP 429 with Retry-After: 90."
+        },
+        {
+          "id": "LS14-f2",
+          "text": "Already accepted receipts remain queryable and retain durable-queue status."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-manual-queue",
+          "source_sha256": "e2afb279e226fe167949ba6dcc865ae57650d3d3957722c8431830d23d806393",
+          "line_start": 349,
+          "line_end": 349,
+          "quote": "During a queue drain, admission returns HTTP 429 with Retry-After: 90. Already accepted receipts remain queryable, and draining does not revoke their durable-queue status."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS15",
+      "category": "buried_manual",
+      "scope": "large",
+      "question": "An operator recalls a Meridian export and disables its link. What record must survive and for how long, and can this operation erase a copy the researcher already downloaded?",
+      "expected_status": "answered",
+      "reference_answer": "Keep the recalled export audit manifest for one hundred eighty days. Link disablement does not erase the recipient’s previously downloaded copy.",
+      "required_facts": [
+        {
+          "id": "LS15-f1",
+          "text": "Keep the recalled export audit manifest for one hundred eighty days."
+        },
+        {
+          "id": "LS15-f2",
+          "text": "Link disablement does not erase the recipient’s previously downloaded copy."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-manual-archive",
+          "source_sha256": "a788b33eb90c7f90fc3ab398a4873d0695ae583faf0887c9c90912848de7ea06",
+          "line_start": 331,
+          "line_end": 331,
+          "quote": "A recalled export keeps its audit manifest for one hundred eighty days even after its download link is disabled. A recall cannot erase a recipient’s previously downloaded copy."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts.",
+      "evidence_groups": [
+        {
+          "id": "LS15-e1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-manual-archive",
+                  "source_sha256": "a788b33eb90c7f90fc3ab398a4873d0695ae583faf0887c9c90912848de7ea06",
+                  "line_start": 331,
+                  "line_end": 331,
+                  "quote": "A recalled export keeps its audit manifest for one hundred eighty days even after its download link is disabled. A recall cannot erase a recipient’s previously downloaded copy."
+                }
+              ]
+            },
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-export-retention",
+                  "source_sha256": "fa12c7393f160d7d47e619de1a337431f87fe0728cb0c835d8d32569af6df7cc",
+                  "line_start": 5,
+                  "line_end": 5,
+                  "quote": "Research export bundles expire after seven days. At expiry the download link is disabled; the audit manifest remains for one hundred eighty days."
+                },
+                {
+                  "source_id": "meridian-export-retention",
+                  "source_sha256": "fa12c7393f160d7d47e619de1a337431f87fe0728cb0c835d8d32569af6df7cc",
+                  "line_start": 7,
+                  "line_end": 7,
+                  "quote": "Disabling an export link does not erase copies that a recipient already downloaded. Recall notices name the immutable bundle identifier."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LS16",
+      "category": "insufficient",
+      "scope": "large",
+      "question": "What is Meridian’s current production p95 admission latency, measured this week? Give the value only if the collection establishes that window and environment.",
+      "expected_status": "insufficient_evidence",
+      "reference_answer": "The current production p95 admission latency for this week is not established by eligible evidence.",
+      "required_facts": [
+        {
+          "id": "LS16-f1",
+          "text": "The current production p95 admission latency for this week is not established by eligible evidence."
+        }
+      ],
+      "required_evidence": [],
+      "forbidden_claims": [
+        "Current production p95 latency is 84 milliseconds."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS17",
+      "category": "insufficient",
+      "scope": "large",
+      "question": "Calculate Meridian’s actual monthly satellite communications bill from these documents, in currency units. If a necessary price or volume is missing, identify the gap rather than inventing a charge.",
+      "expected_status": "insufficient_evidence",
+      "reference_answer": "The actual monthly satellite bill cannot be calculated from the collection. Contracted prices and measured monthly transmission volume are absent.",
+      "required_facts": [
+        {
+          "id": "LS17-f1",
+          "text": "The actual monthly satellite bill cannot be calculated from the collection."
+        },
+        {
+          "id": "LS17-f2",
+          "text": "Contracted prices and measured monthly transmission volume are absent."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-cost-boundary",
+          "source_sha256": "4a30eeae3275cd936b6df4da0a9481a6f1a1442438668d40c300644615316811",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "This collection contains no contracted satellite price, invoice, current currency conversion rate or monetary price per envelope. Hardware counts cannot establish a monthly communications bill."
+        },
+        {
+          "source_id": "meridian-cost-boundary",
+          "source_sha256": "4a30eeae3275cd936b6df4da0a9481a6f1a1442438668d40c300644615316811",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "A cost estimate requires a separately supplied price schedule and measured transmission volume; neither is present here."
+        }
+      ],
+      "forbidden_claims": [
+        "A numeric actual monthly bill is established."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS18",
+      "category": "insufficient",
+      "scope": "large",
+      "question": "A technician needs the production station-signing recovery code. What is its value in this collection? Do not infer a secret from example identifiers or look elsewhere.",
+      "expected_status": "insufficient_evidence",
+      "reference_answer": "No production station-signing recovery-code value is present. Only public identifiers and synthetic placeholders are documented; guessing is not justified.",
+      "required_facts": [
+        {
+          "id": "LS18-f1",
+          "text": "No production station-signing recovery-code value is present."
+        },
+        {
+          "id": "LS18-f2",
+          "text": "Only public identifiers and synthetic placeholders are documented; guessing is not justified."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-secrets-boundary",
+          "source_sha256": "0280f3be0233f6481d0c2eacb5657176662542f53d020989405496664d9531d5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Production signing secrets, bearer tokens and recovery codes are intentionally absent. Examples contain public identifiers and synthetic placeholders only."
+        }
+      ],
+      "forbidden_claims": [
+        "Any invented recovery-code value."
+      ],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS19",
+      "category": "code_config",
+      "scope": "compact",
+      "question": "Interpret the Harbor HTTP client example precisely: what is the timeout in seconds, how many total transmissions are configured, and what JSON type and value must X-Training have?",
+      "expected_status": "answered",
+      "reference_answer": "The timeout is 2.5 seconds, from 2500 milliseconds. There is one initial transmission and zero additional retry attempts. X-Training is the string \"true\", not the boolean true.",
+      "required_facts": [
+        {
+          "id": "LS19-f1",
+          "text": "The timeout is 2.5 seconds, from 2500 milliseconds."
+        },
+        {
+          "id": "LS19-f2",
+          "text": "There is one initial transmission and zero additional retry attempts."
+        },
+        {
+          "id": "LS19-f3",
+          "text": "X-Training is the string \"true\", not the boolean true."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "harbor-client",
+          "source_sha256": "476c42909894293acd89f7b66be443a0df9b2c2ff875e9d3dcf56bd5fad5a65a",
+          "line_start": 5,
+          "line_end": 7,
+          "quote": "```json\n{\"timeout_ms\": 2500, \"retry\": {\"attempts\": 0}, \"headers\": {\"X-Training\": \"true\"}}\n```"
+        },
+        {
+          "source_id": "harbor-client",
+          "source_sha256": "476c42909894293acd89f7b66be443a0df9b2c2ff875e9d3dcf56bd5fad5a65a",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "timeout_ms is an integer in milliseconds. retry.attempts counts additional attempts, not the initial request. X-Training is the literal string \"true\", not a JSON boolean."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS20",
+      "category": "code_config",
+      "scope": "large",
+      "question": "A Meridian satellite client proposes max_envelopes=13, flush_ms=750 and additional_attempts=0. Is the configuration accepted, what remains effective if it fails, and what do the retry and ordering fields mean?",
+      "expected_status": "answered",
+      "reference_answer": "Reject max_envelopes=13 because the inclusive maximum is twelve. Validation is atomic, so the prior effective configuration remains unchanged. Zero additional_attempts permits only the initial transmission; station_then_event orders by station_id then event_id, not arrival time.",
+      "required_facts": [
+        {
+          "id": "LS20-f1",
+          "text": "Reject max_envelopes=13 because the inclusive maximum is twelve."
+        },
+        {
+          "id": "LS20-f2",
+          "text": "Validation is atomic, so the prior effective configuration remains unchanged."
+        },
+        {
+          "id": "LS20-f3",
+          "text": "Zero additional_attempts permits only the initial transmission; station_then_event orders by station_id then event_id, not arrival time."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-config-validation",
+          "source_sha256": "78a061ec80aa77d13b94c3b0d23bd3936b8fc7613b8b2f1bb5ae6aa5e92da3d6",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Reject a batch configuration if max_envelopes is outside 1 through 12 inclusive, flush_ms is not a positive integer, or additional_attempts is not zero for this benchmark profile."
+        },
+        {
+          "source_id": "meridian-config-validation",
+          "source_sha256": "78a061ec80aa77d13b94c3b0d23bd3936b8fc7613b8b2f1bb5ae6aa5e92da3d6",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Validation is atomic: an invalid configuration leaves the prior effective configuration unchanged. A validation error is not a partially applied update."
+        },
+        {
+          "source_id": "meridian-batch-config",
+          "source_sha256": "fdc7c30bc91843e3eb0616667727cf24c1983fd1fb19f4b393a5199db4da5c71",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "flush_ms is an integer number of milliseconds. additional_attempts excludes the first transmission. station_then_event orders first by station_id and then by event_id; it does not reorder by arrival time."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts."
+    },
+    {
+      "id": "LS21",
+      "category": "code_config",
+      "scope": "large",
+      "question": "Without executing code, trace decode_frame on 4d 46 00 03 61 62 63 00 00 and then on that sequence with its final byte removed. State the payload or error and whether success proves checksum validity.",
+      "expected_status": "answered",
+      "reference_answer": "The nine-byte frame declares a three-byte payload and returns 61 62 63. Removing the final byte produces an eight-byte frame and raises \"length mismatch\". Successful length validation does not verify the marker or checksum.",
+      "required_facts": [
+        {
+          "id": "LS21-f1",
+          "text": "The nine-byte frame declares a three-byte payload and returns 61 62 63."
+        },
+        {
+          "id": "LS21-f2",
+          "text": "Removing the final byte produces an eight-byte frame and raises \"length mismatch\"."
+        },
+        {
+          "id": "LS21-f3",
+          "text": "Successful length validation does not verify the marker or checksum."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-parser-code",
+          "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+          "line_start": 5,
+          "line_end": 13,
+          "quote": "```python\ndef decode_frame(blob):\n    if len(blob) < 6:\n        raise ValueError(\"short frame\")\n    payload_len = int.from_bytes(blob[2:4], \"big\")\n    if len(blob) != payload_len + 6:\n        raise ValueError(\"length mismatch\")\n    return blob[4:4 + payload_len]\n```"
+        },
+        {
+          "source_id": "meridian-parser-code",
+          "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+          "line_start": 15,
+          "line_end": 15,
+          "quote": "A frame contains a two-byte marker, a two-byte unsigned big-endian payload length, the payload and a two-byte checksum. The shown function checks length only; it does not verify the marker or checksum."
+        },
+        {
+          "source_id": "meridian-parser-tests",
+          "source_sha256": "f234501257a0dd4d02ff40c2845381619c982e245975eb46d3eba79cf4b00b12",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "The byte sequence 4d 46 00 03 61 62 63 00 00 has total length nine and declares a three-byte payload. decode_frame returns the bytes 61 62 63 for this example."
+        },
+        {
+          "source_id": "meridian-parser-tests",
+          "source_sha256": "f234501257a0dd4d02ff40c2845381619c982e245975eb46d3eba79cf4b00b12",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Removing the final byte leaves total length eight while the declared payload remains three; the function raises \"length mismatch\"."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values.",
+        "Explain the documented code without executing it."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts.",
+      "evidence_groups": [
+        {
+          "id": "LS21-e1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 5,
+                  "line_end": 13,
+                  "quote": "```python\ndef decode_frame(blob):\n    if len(blob) < 6:\n        raise ValueError(\"short frame\")\n    payload_len = int.from_bytes(blob[2:4], \"big\")\n    if len(blob) != payload_len + 6:\n        raise ValueError(\"length mismatch\")\n    return blob[4:4 + payload_len]\n```"
+                }
+              ]
+            },
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-tests",
+                  "source_sha256": "f234501257a0dd4d02ff40c2845381619c982e245975eb46d3eba79cf4b00b12",
+                  "line_start": 5,
+                  "line_end": 5,
+                  "quote": "The byte sequence 4d 46 00 03 61 62 63 00 00 has total length nine and declares a three-byte payload. decode_frame returns the bytes 61 62 63 for this example."
+                },
+                {
+                  "source_id": "meridian-parser-tests",
+                  "source_sha256": "f234501257a0dd4d02ff40c2845381619c982e245975eb46d3eba79cf4b00b12",
+                  "line_start": 7,
+                  "line_end": 7,
+                  "quote": "Removing the final byte leaves total length eight while the declared payload remains three; the function raises \"length mismatch\"."
+                },
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 15,
+                  "line_end": 15,
+                  "quote": "A frame contains a two-byte marker, a two-byte unsigned big-endian payload length, the payload and a two-byte checksum. The shown function checks length only; it does not verify the marker or checksum."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "LS21-e2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 15,
+                  "line_end": 15,
+                  "quote": "A frame contains a two-byte marker, a two-byte unsigned big-endian payload length, the payload and a two-byte checksum. The shown function checks length only; it does not verify the marker or checksum."
+                }
+              ]
+            },
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 5,
+                  "line_end": 13,
+                  "quote": "```python\ndef decode_frame(blob):\n    if len(blob) < 6:\n        raise ValueError(\"short frame\")\n    payload_len = int.from_bytes(blob[2:4], \"big\")\n    if len(blob) != payload_len + 6:\n        raise ValueError(\"length mismatch\")\n    return blob[4:4 + payload_len]\n```"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "LS21-e3",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-tests",
+                  "source_sha256": "f234501257a0dd4d02ff40c2845381619c982e245975eb46d3eba79cf4b00b12",
+                  "line_start": 5,
+                  "line_end": 5,
+                  "quote": "The byte sequence 4d 46 00 03 61 62 63 00 00 has total length nine and declares a three-byte payload. decode_frame returns the bytes 61 62 63 for this example."
+                }
+              ]
+            },
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 5,
+                  "line_end": 13,
+                  "quote": "```python\ndef decode_frame(blob):\n    if len(blob) < 6:\n        raise ValueError(\"short frame\")\n    payload_len = int.from_bytes(blob[2:4], \"big\")\n    if len(blob) != payload_len + 6:\n        raise ValueError(\"length mismatch\")\n    return blob[4:4 + payload_len]\n```"
+                },
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 15,
+                  "line_end": 15,
+                  "quote": "A frame contains a two-byte marker, a two-byte unsigned big-endian payload length, the payload and a two-byte checksum. The shown function checks length only; it does not verify the marker or checksum."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "LS21-e4",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-tests",
+                  "source_sha256": "f234501257a0dd4d02ff40c2845381619c982e245975eb46d3eba79cf4b00b12",
+                  "line_start": 7,
+                  "line_end": 7,
+                  "quote": "Removing the final byte leaves total length eight while the declared payload remains three; the function raises \"length mismatch\"."
+                }
+              ]
+            },
+            {
+              "spans": [
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 5,
+                  "line_end": 13,
+                  "quote": "```python\ndef decode_frame(blob):\n    if len(blob) < 6:\n        raise ValueError(\"short frame\")\n    payload_len = int.from_bytes(blob[2:4], \"big\")\n    if len(blob) != payload_len + 6:\n        raise ValueError(\"length mismatch\")\n    return blob[4:4 + payload_len]\n```"
+                },
+                {
+                  "source_id": "meridian-parser-code",
+                  "source_sha256": "ef4a9155db8c2aeb30ddeae3c29e184c03268b46b552f80238695b20a67c4dbd",
+                  "line_start": 15,
+                  "line_end": 15,
+                  "quote": "A frame contains a two-byte marker, a two-byte unsigned big-endian payload length, the payload and a two-byte checksum. The shown function checks length only; it does not verify the marker or checksum."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LS22",
+      "category": "continuation",
+      "scope": "compact",
+      "question": "Resume the supplied Harbor checkpoint after W4 is withdrawn. Preserve the user constraints, identify the decision that must be discarded, and state the safe next action without executing it.",
+      "expected_status": "answered",
+      "reference_answer": "Preserve the objective and constraints: review only, no deployment and no permission changes. The source-dependent window decision is suppressed because its supporting reference was revoked; leave that decision unresolved without reconstructing removed prose. A missed window requires a new release card; the next action is to request steward review of a new card, not to extend the window.",
+      "required_facts": [
+        {
+          "id": "LS22-f1",
+          "text": "Preserve the objective and constraints: review only, no deployment and no permission changes."
+        },
+        {
+          "id": "LS22-f2",
+          "text": "The source-dependent window decision is suppressed because its supporting reference was revoked; leave that decision unresolved without reconstructing removed prose."
+        },
+        {
+          "id": "LS22-f3",
+          "text": "A missed window requires a new release card; the next action is to request steward review of a new card, not to extend the window."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "harbor-checkpoint",
+          "source_sha256": "8eaf9c498178a68433ee490cbd2bef24d19022ab6480151d924bbe6ea98ae04f",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "On resume, remove an assertion when its supporting reference is revoked or superseded. Preserve unrelated user constraints and mark the affected decision unresolved; do not silently substitute a different decision."
+        },
+        {
+          "source_id": "harbor-release",
+          "source_sha256": "373eaf63767d73afdd61c69274a3586648dc5903a2ac9a7d75877087cf246e63",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "The planned maintenance window is Tuesday 02:00–02:20 UTC. A missed window requires a new release card; operators may not extend it themselves."
+        },
+        {
+          "source_id": "harbor-release",
+          "source_sha256": "373eaf63767d73afdd61c69274a3586648dc5903a2ac9a7d75877087cf246e63",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Harbor release R7 may open public traffic only after the replay ledger is reconciled and the duty steward signs the release card."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values.",
+        "Preserve review only, no deployment and no permission changes."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts.",
+      "checkpoint": {
+        "objective": "Review a reversible Harbor release plan.",
+        "constraints": [
+          "Review only.",
+          "No deployment.",
+          "No permission changes."
+        ],
+        "decisions": [
+          {
+            "text": "Extend the maintenance window by ten minutes.",
+            "evidence": [
+              {
+                "source_id": "harbor-retired-waiver",
+                "source_sha256": "a9e741f09d95408701b4639059f8c41aaa1ac284b1aee287126543a6c3c09167",
+                "line_start": 5,
+                "line_end": 5,
+                "quote": "Waiver W4 previously allowed extending the maintenance window by ten minutes."
+              }
+            ]
+          }
+        ],
+        "unresolved_questions": [
+          "Can the current window be extended?"
+        ],
+        "next_actions": [
+          "Verify the window policy and ask the steward for the next authorized step."
+        ],
+        "lifecycle_transition": {
+          "source_id": "harbor-retired-waiver",
+          "from": "active",
+          "to": "revoked"
+        },
+        "stages": [
+          "Checkpoint captured before lifecycle transition.",
+          "Apply the stated source transition in an isolated benchmark snapshot.",
+          "Resume from the frozen card against the final corpus."
+        ],
+        "scope_limit": "One inference after deterministic checkpoint preparation/resume. This does not test model-generated multi-turn summaries or a second model turn."
+      }
+    },
+    {
+      "id": "LS23",
+      "category": "continuation",
+      "scope": "large",
+      "question": "Continue the Meridian paused relay review from its checkpoint after rollout revision 4 is superseded. Preserve all constraints and the selected build, replace no decision silently, and report the current sequence and approving role.",
+      "expected_status": "answered",
+      "reference_answer": "Preserve build cedar-17 and constraints: no deployment, credential access, network call or configuration write. The source-dependent rollout decision is suppressed because its supporting reference was superseded; leave that decision unresolved without reconstructing removed prose. Current revision 5 requires thirty-minute shadow ingest, checksum reconciliation and curator approval; record this as current evidence without executing rollout.",
+      "required_facts": [
+        {
+          "id": "LS23-f1",
+          "text": "Preserve build cedar-17 and constraints: no deployment, credential access, network call or configuration write."
+        },
+        {
+          "id": "LS23-f2",
+          "text": "The source-dependent rollout decision is suppressed because its supporting reference was superseded; leave that decision unresolved without reconstructing removed prose."
+        },
+        {
+          "id": "LS23-f3",
+          "text": "Current revision 5 requires thirty-minute shadow ingest, checksum reconciliation and curator approval; record this as current evidence without executing rollout."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-continuity",
+          "source_sha256": "23e9d4fc0a81bcbbb4064ae1fad52b99b341ea90401329171aad57e7bb99da3e",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Resume validates references against the current corpus. Revoke or supersede one dependency and suppress the dependent source-derived decision, while retaining unrelated user constraints and marking the decision unresolved."
+        },
+        {
+          "source_id": "meridian-checkpoint-release",
+          "source_sha256": "5e4f0d8915929661cfa34f8d70bae366ddeec0e3d3fd5f1b87095e4c41a6dde0",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "For the paused relay review, preserve these user constraints: no deployment, no credential access, no network call and no configuration write. The selected release candidate is build cedar-17."
+        },
+        {
+          "source_id": "meridian-rollout-current",
+          "source_sha256": "276403ae6d1c8edbcb84046836011f53a7788d8a85605af4bb8910cfa64cf4f6",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Revision 5 requires a shadow-ingest comparison for thirty minutes, then checksum reconciliation, then curator approval before public traffic is enabled."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values.",
+        "Preserve build cedar-17; no deployment, credential access, network call or configuration write."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts.",
+      "checkpoint": {
+        "objective": "Review the paused relay release candidate.",
+        "constraints": [
+          "No deployment.",
+          "No credential access.",
+          "No network call.",
+          "No configuration write.",
+          "Selected build cedar-17."
+        ],
+        "decisions": [
+          {
+            "text": "Open traffic after a five-minute heartbeat check.",
+            "evidence": [
+              {
+                "source_id": "meridian-rollout-old",
+                "source_sha256": "baa8afc6e81ed4e674f5dbfecfbd5940a80dcc66f684af89340bc02e71ea5332",
+                "line_start": 5,
+                "line_end": 5,
+                "quote": "Revision 4 enabled public traffic after a five-minute heartbeat check. It did not require shadow ingest or curator approval."
+              }
+            ]
+          }
+        ],
+        "unresolved_questions": [
+          "What current sequence and approving role are required?"
+        ],
+        "next_actions": [
+          "Check current release evidence and record the approval prerequisite."
+        ],
+        "lifecycle_transition": {
+          "source_id": "meridian-rollout-old",
+          "from": "active",
+          "to": "superseded"
+        },
+        "stages": [
+          "Checkpoint captured before lifecycle transition.",
+          "Apply the stated source transition in an isolated benchmark snapshot.",
+          "Resume from the frozen card against the final corpus."
+        ],
+        "scope_limit": "One inference after deterministic checkpoint preparation/resume. This does not test model-generated multi-turn summaries or a second model turn."
+      }
+    },
+    {
+      "id": "LS24",
+      "category": "continuation",
+      "scope": "large",
+      "question": "Resume the research-export checkpoint after waiver E-9 is revoked. Keep the user’s delivery objective and constraints, identify the obsolete decision, and describe the currently documented delivery and acknowledgement without sending anything.",
+      "expected_status": "answered",
+      "reference_answer": "Preserve the objective of reviewing research-bundle delivery and the constraints: no export, no email and no permission changes. The source-dependent delivery decision is suppressed because its supporting reference was revoked; leave delivery unresolved pending review without reconstructing removed prose. Current delivery uses the authenticated project portal; email may carry only the receipt identifier. Recipient acknowledgement records bundle checksum and project account; an email delivery receipt is insufficient.",
+      "required_facts": [
+        {
+          "id": "LS24-f1",
+          "text": "Preserve the objective of reviewing research-bundle delivery and the constraints: no export, no email and no permission changes."
+        },
+        {
+          "id": "LS24-f2",
+          "text": "The source-dependent delivery decision is suppressed because its supporting reference was revoked; leave delivery unresolved pending review without reconstructing removed prose."
+        },
+        {
+          "id": "LS24-f3",
+          "text": "Current delivery uses the authenticated project portal; email may carry only the receipt identifier."
+        },
+        {
+          "id": "LS24-f4",
+          "text": "Recipient acknowledgement records bundle checksum and project account; an email delivery receipt is insufficient."
+        }
+      ],
+      "required_evidence": [
+        {
+          "source_id": "meridian-continuity",
+          "source_sha256": "23e9d4fc0a81bcbbb4064ae1fad52b99b341ea90401329171aad57e7bb99da3e",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "Resume validates references against the current corpus. Revoke or supersede one dependency and suppress the dependent source-derived decision, while retaining unrelated user constraints and marking the decision unresolved."
+        },
+        {
+          "source_id": "meridian-continuity",
+          "source_sha256": "23e9d4fc0a81bcbbb4064ae1fad52b99b341ea90401329171aad57e7bb99da3e",
+          "line_start": 9,
+          "line_end": 9,
+          "quote": "Resuming a checkpoint does not authorize deployment, data export or a permission change. A proposed next action remains a proposal until separately approved."
+        },
+        {
+          "source_id": "meridian-export-transport",
+          "source_sha256": "50d42a9d3d64d1e69f9ccf45100f9f1d147dc2224a209493a255856d64f28eac",
+          "line_start": 5,
+          "line_end": 5,
+          "quote": "Approved research bundles are delivered by the authenticated project portal. Email carries only the receipt identifier, never a bundle attachment or a bearer download link."
+        },
+        {
+          "source_id": "meridian-export-transport",
+          "source_sha256": "50d42a9d3d64d1e69f9ccf45100f9f1d147dc2224a209493a255856d64f28eac",
+          "line_start": 7,
+          "line_end": 7,
+          "quote": "A recipient acknowledgement records the bundle checksum and the project account. An email-delivery receipt does not establish bundle acceptance."
+        }
+      ],
+      "forbidden_claims": [],
+      "constraints": [
+        "Use only eligible records in the declared collection. Do not invent missing operational values.",
+        "Preserve no export, no email and no permission changes."
+      ],
+      "evidence_policy": {
+        "purpose": "current_answer",
+        "freshness_requirement": "allow_unknown"
+      },
+      "authoring_notes": "Authored before KRE evaluation; gold and reference answers must never enter inference prompts.",
+      "checkpoint": {
+        "objective": "Review a research-bundle delivery plan.",
+        "constraints": [
+          "No export.",
+          "No email.",
+          "No permission changes."
+        ],
+        "decisions": [
+          {
+            "text": "Email the research bundle as an attachment.",
+            "evidence": [
+              {
+                "source_id": "meridian-waiver-revoked",
+                "source_sha256": "ea097306e4b10775cdb2ea40fa7fb12261a3215e2a5daae255e1ac5be47010e5",
+                "line_start": 5,
+                "line_end": 5,
+                "quote": "Waiver E-9 previously allowed one research bundle to be emailed as an attachment."
+              }
+            ]
+          }
+        ],
+        "unresolved_questions": [
+          "Which delivery channel and acknowledgement are currently permitted?"
+        ],
+        "next_actions": [
+          "Review the current transport contract and propose a delivery decision."
+        ],
+        "lifecycle_transition": {
+          "source_id": "meridian-waiver-revoked",
+          "from": "active",
+          "to": "revoked"
+        },
+        "stages": [
+          "Checkpoint captured before lifecycle transition.",
+          "Apply the stated source transition in an isolated benchmark snapshot.",
+          "Resume from the frozen card against the final corpus."
+        ],
+        "scope_limit": "One inference after deterministic checkpoint preparation/resume. This does not test model-generated multi-turn summaries or a second model turn."
+      }
+    }
+  ]
+}

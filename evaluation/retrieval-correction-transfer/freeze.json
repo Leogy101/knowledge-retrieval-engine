@@ -1,0 +1,6 @@
+{
+  "format": "kre-transfer-freeze/1",
+  "frozen_at_utc": "2026-11-15T04:23:47.021854+00:00",
+  "fixture_sha256": "7bc67084236ada1f63b7685999ad223e8e55c39e2f7cfe4d140e419f1c1b3d5b",
+  "provenance": "Independent synthetic transfer questions frozen before inspecting the retrieval correction. No model inference. Gold spans never passed to retrieval. First run is held out; after inspection these cases become regressions."
+}

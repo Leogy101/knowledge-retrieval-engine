@@ -1,0 +1,142 @@
+diff --git a/src/kre/store.py b/src/kre/store.py
+index 6030989..4eb0387 100644
+--- a/src/kre/store.py
++++ b/src/kre/store.py
+@@ -371,7 +371,7 @@ class Store:
+     def _item(row: sqlite3.Row, citation: str) -> dict:
+         return {
+             "citation_id": citation, "source_id": row["source_id"], "revision_id": row["revision_id"],
+-            "chunk_id": f"c-{row['id']}", "text": row["text"], "content_sha256": _hash(row["text"]),
++            "chunk_id": row["ref_id"] if "ref_id" in row.keys() else f"c-{row['id']}", "text": row["text"], "content_sha256": _hash(row["text"]),
+             "locator": {"label": f"lines {row['line_start']}-{row['line_end']}", "line_start": row["line_start"], "line_end": row["line_end"]},
+             "recorded_at": row["recorded_at"], "authority": row["authority"], "origin": row["origin"],
+             "lifecycle": row["lifecycle"], "freshness": row["freshness"], "egress": {"restriction": row["egress"]},
+@@ -405,15 +405,60 @@ class Store:
+         except sqlite3.OperationalError:
+             return self._response(request, code="INDEX_UNAVAILABLE")
+ 
+-    def _ref_row(self, ref):
++    def _reference_row(self, source, revision, chunk):
++        """Resolve an immutable stored chunk or bounded contiguous window."""
++        window = re.fullmatch(r"w-([1-9][0-9]*)-([1-9][0-9]*)", chunk)
++        key = int(window[1]) if window else chunk.removeprefix("c-")
+         row = self.db.execute("""SELECT c.*,r.source_id,r.recorded_at,r.lifecycle,
+             s.authority,s.origin,s.freshness,s.egress,s.collection,s.state
+             FROM chunks c JOIN revisions r ON r.revision_id=c.revision_id
+             JOIN sources s ON s.source_id=r.source_id
+-            WHERE s.source_id=? AND r.revision_id=? AND ('c-'||c.id)=?""",
+-            (ref["source_id"], ref["revision_id"], ref["chunk_id"])).fetchone()
++            WHERE s.source_id=? AND r.revision_id=? AND c.id=?""",
++            (source, revision, key)).fetchone()
++        if not row or (not window and chunk != f"c-{row['id']}"):
++            return None
++        if not window:
++            return row
++        last = self.db.execute("SELECT * FROM chunks WHERE revision_id=? AND id=?",
++                               (revision, int(window[2]))).fetchone()
++        if not last or last["line_start"] <= row["line_start"]:
++            return None
++        rows = self.db.execute("SELECT * FROM chunks WHERE revision_id=? AND line_start BETWEEN ? AND ? ORDER BY line_start",
++                               (revision, row["line_start"], last["line_start"])).fetchall()
++        if not 2 <= len(rows) <= 3:
++            return None
++        text = self.db.execute("SELECT text FROM revisions WHERE revision_id=?", (revision,)).fetchone()[0]
++        excerpt = "\n".join(text.split("\n")[row["line_start"]-1:last["line_end"]])
++        if len(excerpt.encode("utf-8")) > 1200:
++            return None
++        return dict(row, ref_id=chunk, text=excerpt, line_end=last["line_end"])
++
++    def _ref_row(self, ref):
++        row = self._reference_row(ref["source_id"], ref["revision_id"], ref["chunk_id"])
+         return row if row and _hash(row["text"]) == ref["content_sha256"] else None
+ 
++    def _neighbor_window(self, seed, covered):
++        """At most immediate neighbors, bounded by the existing chunk target.
++
++        This does not infer semantic completeness or change stored chunks.
++        """
++        neighbors = []
++        for direction, order in (("<", "DESC"), (">", "ASC")):
++            row = self.db.execute("SELECT * FROM chunks WHERE revision_id=? AND line_start " + direction +
++                                  " ? ORDER BY line_start " + order + " LIMIT 1",
++                                  (seed["revision_id"], seed["line_start"])).fetchone()
++            if row and row["id"] not in covered:
++                neighbors.append(row)
++        selected = [seed]
++        result = seed
++        for neighbor in neighbors:
++            trial = sorted([*selected, neighbor], key=lambda row: row["line_start"])
++            window = self._reference_row(seed["source_id"], seed["revision_id"],
++                                         f"w-{trial[0]['id']}-{trial[-1]['id']}")
++            if window:
++                result, selected = window, trial
++        return result, {row["id"] for row in selected}
++
+     def _eligible_ref(self, ref, request):
+         row = self._ref_row(ref)
+         if not row or row["collection"] not in self.scopes[request["access_scope_ref"]] or row["state"] != "active":
+@@ -504,6 +549,7 @@ class Store:
+                 return self._response(request, code="BUDGET_TOO_SMALL")
+             response["items"] = mandatory
+             required_ids = {row["id"] for row in required_rows}
++            covered_ids = set(required_ids)
+             # Keep immutable chunks and citation accounting unchanged. Defer a
+             # heading only when an eligible same-revision body candidate covers
+             # its query words; drop it only if that body actually fits the pack.
+@@ -513,19 +559,25 @@ class Store:
+             ordered_rows = [row for row in rows if row["id"] not in deferred_ids] + deferred
+             omitted = item_omitted = 0
+             for row in ordered_rows:
+-                if row["id"] in required_ids:
++                if row["id"] in covered_ids:
+                     continue
+                 if self._heading_covered(row, response["items"], query_words):
+                     continue
+                 if len(response["items"]) >= request["budget"]["max_items"]:
+                     item_omitted += 1
+                     continue
+-                item = self._item(row, f"E{len(response['items']) + 1}")
++                expanded, represented = self._neighbor_window(row, covered_ids)
++                item = self._item(expanded, f"E{len(response['items']) + 1}")
+                 candidate = self._render([*response["items"], item])
++                if len(candidate.encode("utf-8")) > allowance and expanded is not row:
++                    omitted += 1
++                    item, represented = self._item(row, f"E{len(response['items']) + 1}"), {row["id"]}
++                    candidate = self._render([*response["items"], item])
+                 if len(candidate.encode("utf-8")) > allowance:
+                     omitted += 1
+                     continue
+                 response["items"].append(item)
++                covered_ids.update(represented)
+             if not response["items"] and rows:
+                 return self._response(request, code="BUDGET_TOO_SMALL")
+             response["context_text"] = self._render(response["items"])
+@@ -582,10 +634,7 @@ class Store:
+             for item in items:
+                 if not isinstance(item, dict) or not all(_identifier(item.get(k)) for k in ("source_id", "revision_id", "chunk_id", "citation_id")):
+                     return "denied"
+-                row = self.db.execute("""SELECT c.*,r.source_id,r.recorded_at,r.lifecycle,s.authority,s.origin,s.freshness,s.egress,s.collection,s.state
+-                    FROM chunks c JOIN revisions r ON r.revision_id=c.revision_id JOIN sources s ON s.source_id=r.source_id
+-                    WHERE ('c-' || c.id)=? AND r.revision_id=? AND r.source_id=?""",
+-                    (item.get("chunk_id"), item.get("revision_id"), item.get("source_id"))).fetchone()
++                row = self._reference_row(item["source_id"], item["revision_id"], item["chunk_id"])
+                 if not row or row["collection"] not in self.scopes[scope_ref] or row["state"] != "active" or row["lifecycle"] not in {"active", "superseded"}:
+                     return "denied"
+                 if destination == "approved_remote" and row["egress"] != "approved_remote":
+@@ -613,12 +662,10 @@ class Store:
+     def _live_refs(self, refs: list, scope_ref: str) -> list:
+         live = []
+         for source, revision, chunk in refs:
+-            row = self.db.execute("""SELECT s.collection FROM chunks c JOIN revisions r ON r.revision_id=c.revision_id
+-                JOIN sources s ON s.source_id=r.source_id WHERE s.source_id=? AND r.revision_id=?
+-                AND ('c-'||c.id)=? AND s.state='active' AND r.lifecycle='active' AND s.freshness!='stale'""",
+-                (source,revision,chunk)).fetchone()
+-            if row and row["collection"] in self.scopes[scope_ref]:
+-                live.append((source,revision,chunk))
++            row = self._reference_row(source, revision, chunk)
++            if (row and row["collection"] in self.scopes[scope_ref] and row["state"] == "active"
++                    and row["lifecycle"] == "active" and row["freshness"] != "stale"):
++                live.append((source, revision, chunk))
+         return live
+ 
+     def resume_refs(self, task_id: str, *, scope_ref: str) -> list:

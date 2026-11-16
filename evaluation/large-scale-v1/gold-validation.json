@@ -1,0 +1,88 @@
+{
+  "documents": 72,
+  "tasks": 24,
+  "required_facts": 67,
+  "required_evidence_spans": 63,
+  "distinct_required_spans": 54,
+  "gold_span_checks_passed": true,
+  "checkpoint_reference_checks_passed": 3,
+  "states": {
+    "active": 66,
+    "superseded": 3,
+    "revoked": 3
+  },
+  "freshness": {
+    "fresh": 68,
+    "stale": 2,
+    "unknown": 2
+  },
+  "origins": {
+    "source_evidence": 70,
+    "model_inference": 2
+  },
+  "words": 68022,
+  "manuals": [
+    {
+      "id": "meridian-manual-sensor",
+      "bytes": 69429
+    },
+    {
+      "id": "meridian-manual-queue",
+      "bytes": 69112
+    },
+    {
+      "id": "meridian-manual-archive",
+      "bytes": 69172
+    },
+    {
+      "id": "meridian-manual-network",
+      "bytes": 69072
+    },
+    {
+      "id": "meridian-manual-calibration",
+      "bytes": 69537
+    },
+    {
+      "id": "meridian-manual-recovery",
+      "bytes": 69055
+    }
+  ],
+  "buried_positions": [
+    {
+      "source_id": "meridian-manual-sensor",
+      "source_sha256": "74dd76f7f86fa6ab263cd47d8527a5dba9ac05c0a3eb70a40d1299816383864a",
+      "line_start": 331,
+      "line_end": 331,
+      "quote": "After a lightning alarm, isolate the sensor head for forty-five minutes and inspect the surge cartridge before reconnecting it. A clear heartbeat alone is insufficient to reconnect.",
+      "document_lines": 404
+    },
+    {
+      "source_id": "meridian-manual-queue",
+      "source_sha256": "e2afb279e226fe167949ba6dcc865ae57650d3d3957722c8431830d23d806393",
+      "line_start": 349,
+      "line_end": 349,
+      "quote": "During a queue drain, admission returns HTTP 429 with Retry-After: 90. Already accepted receipts remain queryable, and draining does not revoke their durable-queue status.",
+      "document_lines": 404
+    },
+    {
+      "source_id": "meridian-manual-archive",
+      "source_sha256": "a788b33eb90c7f90fc3ab398a4873d0695ae583faf0887c9c90912848de7ea06",
+      "line_start": 331,
+      "line_end": 331,
+      "quote": "A recalled export keeps its audit manifest for one hundred eighty days even after its download link is disabled. A recall cannot erase a recipient\u2019s previously downloaded copy.",
+      "document_lines": 404
+    }
+  ],
+  "current_answer_gold_eligible": true,
+  "final_manifest_hashes": {
+    "corpus.json": "1ee8ef5e1edc545062d546a0b6cfe4aaf40c06176f157bf4ffb104d3a629a3ab",
+    "tasks.json": "c19890f1eada2d47bc847bbe527aec2cc58095f250f4981074c6c1034b28841d",
+    "build_fixture.py": "c7f931d23679a4243f80c4f61cc9e168715524d68f445b547cc8e9c362cc5cba"
+  },
+  "alternative_tasks": [
+    "LS05",
+    "LS15",
+    "LS21"
+  ],
+  "alternative_span_occurrences_validated": 20
+}

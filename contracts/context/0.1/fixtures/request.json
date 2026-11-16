@@ -1,0 +1,13 @@
+{
+  "contract_version": "0.1",
+  "request_id": "req-fixture",
+  "query": "rollback",
+  "access_scope_ref": "demo-read",
+  "destination": "local_only",
+  "purpose": "current_answer",
+  "budget": {
+    "max_tokens": 3000,
+    "max_items": 4,
+    "max_bytes": 8000
+  }
+}

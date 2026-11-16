@@ -1,0 +1,7 @@
+{
+  "kind": "synthetic",
+  "prompt": "Using the supplied fictional Lyra document, state retention_days and whether deletion without owner approval is allowed. Preserve both facts and cite the source.",
+  "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+  "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e",
+  "review_attestations": "Synthetic expected-value fixtures; no real independent human review or model execution asserted."
+}

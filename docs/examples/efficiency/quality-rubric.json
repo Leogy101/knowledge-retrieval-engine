@@ -1,0 +1,48 @@
+{
+  "format": "task-quality-rubric/1",
+  "task_id": "synthetic-lyra-1",
+  "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+  "criteria": [
+    {
+      "id": "retention",
+      "category": "facts",
+      "critical": true,
+      "method": "exact",
+      "path": [
+        "retention_days"
+      ],
+      "expected": 14
+    },
+    {
+      "id": "approval",
+      "category": "constraints",
+      "critical": true,
+      "method": "exact",
+      "path": [
+        "delete_without_approval"
+      ],
+      "expected": false
+    }
+  ],
+  "sources": {
+    "lyra-note": {
+      "sha256": "b4f30eae941aa69650e6f35ed7910c50cada3a28b073b8dba5b93eda1fc01763",
+      "eligible": true
+    }
+  },
+  "citations": {
+    "require_any": true,
+    "required_claims": [
+      "retention",
+      "approval"
+    ]
+  },
+  "required_evidence": [
+    {
+      "source_id": "lyra-note",
+      "source_sha256": "b4f30eae941aa69650e6f35ed7910c50cada3a28b073b8dba5b93eda1fc01763",
+      "line_start": 1,
+      "line_end": 2
+    }
+  ]
+}

@@ -1,0 +1,3286 @@
+{
+  "aggregate": {
+    "all_cases_diagnostic_only": {
+      "budget_error_events": 0,
+      "cases": 16,
+      "citation_error_items": 37,
+      "complete_positive_cases": 0,
+      "covered_spans": 0,
+      "estimated_tokens": 37547,
+      "evidence_recall": 0.0,
+      "exact_citations": 8,
+      "execution_errors": 0,
+      "expected_behavior_passes": 3,
+      "gold_spans": 31,
+      "items": 45,
+      "policy_error_events": 0,
+      "positive_cases": 14,
+      "relevant_returned_source_incidences": 17,
+      "rendered_context_bytes": 37547,
+      "retrieval_latency_ms_median": 0.257563,
+      "retrieval_latency_ms_p95_nearest_rank": 1.199625,
+      "returned_source_incidences": 24,
+      "serialized_response_bytes": 86767,
+      "source_precision": 0.7083333333333334,
+      "tight_budget_failures": 2
+    },
+    "declared_required_references": {
+      "budget_error_events": 0,
+      "cases": 2,
+      "citation_error_items": 3,
+      "complete_positive_cases": 0,
+      "covered_spans": 0,
+      "estimated_tokens": 1896,
+      "evidence_recall": 0.0,
+      "exact_citations": 0,
+      "execution_errors": 0,
+      "expected_behavior_passes": 1,
+      "gold_spans": 3,
+      "items": 3,
+      "policy_error_events": 0,
+      "positive_cases": 2,
+      "relevant_returned_source_incidences": 2,
+      "rendered_context_bytes": 1896,
+      "retrieval_latency_ms_median": 0.22327049999999998,
+      "retrieval_latency_ms_p95_nearest_rank": 0.289833,
+      "returned_source_incidences": 3,
+      "serialized_response_bytes": 5171,
+      "source_precision": 0.6666666666666666,
+      "tight_budget_failures": 1
+    },
+    "generated_answer_quality": "not_measured",
+    "human_semantic_review": "unknown",
+    "inference_calls": 0,
+    "network_calls": 0,
+    "ordinary": {
+      "budget_error_events": 0,
+      "cases": 14,
+      "citation_error_items": 34,
+      "complete_positive_cases": 0,
+      "covered_spans": 0,
+      "estimated_tokens": 35651,
+      "evidence_recall": 0.0,
+      "exact_citations": 8,
+      "execution_errors": 0,
+      "expected_behavior_passes": 2,
+      "gold_spans": 28,
+      "items": 42,
+      "policy_error_events": 0,
+      "positive_cases": 12,
+      "relevant_returned_source_incidences": 15,
+      "rendered_context_bytes": 35651,
+      "retrieval_latency_ms_median": 0.257563,
+      "retrieval_latency_ms_p95_nearest_rank": 1.199625,
+      "returned_source_incidences": 21,
+      "serialized_response_bytes": 81596,
+      "source_precision": 0.7142857142857143,
+      "tight_budget_failures": 1
+    },
+    "ordinary_positive": {
+      "budget_error_events": 0,
+      "cases": 12,
+      "citation_error_items": 32,
+      "complete_positive_cases": 0,
+      "covered_spans": 0,
+      "estimated_tokens": 34254,
+      "evidence_recall": 0.0,
+      "exact_citations": 8,
+      "execution_errors": 0,
+      "expected_behavior_passes": 0,
+      "gold_spans": 28,
+      "items": 40,
+      "policy_error_events": 0,
+      "positive_cases": 12,
+      "relevant_returned_source_incidences": 15,
+      "rendered_context_bytes": 34254,
+      "retrieval_latency_ms_median": 0.295584,
+      "retrieval_latency_ms_p95_nearest_rank": 1.199625,
+      "returned_source_incidences": 19,
+      "serialized_response_bytes": 77483,
+      "source_precision": 0.7894736842105263,
+      "tight_budget_failures": 1
+    },
+    "policy_missing_controls": {
+      "budget_error_events": 0,
+      "cases": 2,
+      "citation_error_items": 2,
+      "complete_positive_cases": 0,
+      "covered_spans": 0,
+      "estimated_tokens": 1397,
+      "evidence_recall": null,
+      "exact_citations": 0,
+      "execution_errors": 0,
+      "expected_behavior_passes": 2,
+      "gold_spans": 0,
+      "items": 2,
+      "policy_error_events": 0,
+      "positive_cases": 0,
+      "relevant_returned_source_incidences": 0,
+      "rendered_context_bytes": 1397,
+      "retrieval_latency_ms_median": 0.1709585,
+      "retrieval_latency_ms_p95_nearest_rank": 0.196709,
+      "returned_source_incidences": 2,
+      "serialized_response_bytes": 4113,
+      "source_precision": 0.0,
+      "tight_budget_failures": 0
+    },
+    "provider_tokens": null
+  },
+  "algorithm_lock_sha256": "969eeaa8aa298b69cb7f513926fb10a951da037560f328acf3d10f8fd2f3c0f9",
+  "fixture_sha256": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+  "full_original_artifact_sha256": "1c39d51f8555c0293ab0d26f74eeff026ffc20d5ec8026142c27acfeaeee2fbc",
+  "label": "candidate",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "results": [
+    {
+      "case_id": "H01",
+      "category": "long_fragmented",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 4,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "museum-handbook"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "museum-handbook"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 2,
+            "source_id": "museum-handbook"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 3,
+            "source_id": "museum-handbook"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 6,
+            "source_id": "museum-handbook"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 9024,
+        "evidence_recall": 0.0,
+        "exact_citations": 4,
+        "expected_sources": [
+          "museum-handbook"
+        ],
+        "gold_spans": 4,
+        "items": 9,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 9024,
+        "returned_source_count": 1,
+        "returned_sources": [
+          "museum-handbook"
+        ],
+        "serialized_response_bytes": 19149,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h01-a"
+          },
+          {
+            "covered": false,
+            "id": "h01-b"
+          },
+          {
+            "covered": false,
+            "id": "h01-c"
+          },
+          {
+            "covered": false,
+            "id": "h01-d"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 11000,
+          "max_items": 12,
+          "max_tokens": 11000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "How should staff handle a winter loan return: reserve arrival space, wait before opening, obtain release, and file the signed record?",
+        "request_id": "holdout-H01"
+      },
+      "response": {
+        "context_revision": "5c684d225d449dc065f9f5e0447a0111:1",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"w-15-17\",\"text\":\"## Final filing\\n\\nFile the signed winter loan return sheet in the blue acquisitions cabinet, drawer four.\\nThe digital image folder is an additional working copy and does not replace the signed sheet. Put photographs in date order, with the case number at the beginning of each filename. The registrar checks the filing list at the end of the week and reconciles any missing signatures with the receiving pair. Spare blank forms belong in the stationery cupboard, not among the completed records. This separation prevents an unfilled sheet being mistaken for a documented return.\\n\\n## End of shift\",\"content_sha256\":\"8a3dda4e60fe373f838d7efdd190ad98202817a5464ec8e50d85f57979ed2d9b\",\"locator\":{\"label\":\"lines 32-37\",\"line_start\":32,\"line_end\":37},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"w-11-13\",\"text\":\"## Opening authority\\n\\nOnly the collections technician may release a winter loan case for opening after the settling period.\\nThe receiving volunteer records the technician's initials on the arrival card. A school contact cannot waive this step, even when another class needs the instruments the next morning. A delay must be communicated to the education desk before a replacement session is offered. Staff should avoid promising access to a specific object until the post-return examination has been completed. The education desk can lend the photographic teaching pack while the physical collection remains unavailable.\\n\\n## Condition record\",\"content_sha256\":\"8fceca4d2ebc7bdf4015bf057b82adcb6cd9b4dffc8518c587909d63df8a4761\",\"locator\":{\"label\":\"lines 23-28\",\"line_start\":23,\"line_end\":28},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"w-7-9\",\"text\":\"## Settling period\\n\\nKeep returned winter loan cases sealed in the acclimatisation room for eighteen hours before opening them.\\nUse the shelving on the interior wall, away from the sink and external door. Set the arrival card upright so that the next shift can read the release time without touching the case. The room's wall clock is the shared time reference. If a power cut makes the temperature log unavailable, leave the cases closed and add a note to the shift book. Conservation staff will decide whether a longer settling period is necessary after the room conditions are restored.\\n\\n## Paperwork and accessories\",\"content_sha256\":\"814a2b6151b4c4173bb30615a7c53ed094bb81462474094c5557c4743965221f\",\"locator\":{\"label\":\"lines 14-19\",\"line_start\":14,\"line_end\":19},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E4\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"w-3-5\",\"text\":\"## Return appointment\\n\\nFor a winter loan return, book the covered loading bay at least two working days before the van arrives.\\nThe visitor entrance cannot accept wheeled cases during public opening hours. The bay diary is maintained on paper at reception because volunteers rotate between the desk and galleries. Staff should copy the booked time onto the journey envelope. If the driver arrives early, the van remains in the marked waiting area until the receiving pair are ready. An unused booking is crossed out so the next shift can distinguish a cancellation from an overlooked arrival.\\n\\n## Exterior examination\",\"content_sha256\":\"c7f35f9dce3a4b589b5e23961f78730ff4146dcc288db9f7c2dcdc4db5fbf627\",\"locator\":{\"label\":\"lines 5-10\",\"line_start\":5,\"line_end\":10},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E5\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"c-18\",\"text\":\"Move empty trolleys back to the bay only after all collection cases are on the assigned shelves. Check that the exterior door is latched and that the examination lamps are off. Leave one clear handover note naming any case still waiting for conservation advice. The following shift should be able to identify outstanding work without reconstructing a conversation. Routine replenishment of tissue, gloves and pencils can wait until the collection has been secured.\",\"content_sha256\":\"7dc89090de8594213c16bb925581c0f929ed0cbbb7482f870244495b23ba637b\",\"locator\":{\"label\":\"lines 39-39\",\"line_start\":39,\"line_end\":39},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E6\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"c-6\",\"text\":\"Look at each closed case before moving it off the trolley. Scuffs already shown in the departure photographs do not count as new damage. Record the case number beside any fresh dent, broken seal or wet patch, then photograph the affected side against the measuring card. A water mark is a reason to call the conservator even when the latch still works. Do not use solvent or a hair dryer on the case; the foam liner can retain moisture that is invisible from outside.\",\"content_sha256\":\"06ea08cac1067fa4c1687d22acf5c355bc49d7b40584238cb6af0edd7a740563\",\"locator\":{\"label\":\"lines 12-12\",\"line_start\":12,\"line_end\":12},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E7\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"w-1-2\",\"text\":\"# Windlass Museum: winter loan handling\\n\\nThis handbook accompanies the travelling collection of small brass instruments. It covers the return journey from visiting schools to the museum store. The cases are reusable, and all packing material remains the museum's property. The purpose of the procedure is to keep the instruments stable while making the handover legible to staff who did not attend the visit. A teacher's signature acknowledges the number of cases received; it does not transfer responsibility for conservation decisions.\",\"content_sha256\":\"df3d84561e38db36b6ed1155e9dcaa2223449fc1bc4098761e0e62c6146446e2\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E8\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"c-10\",\"text\":\"The journey envelope contains the collection checklist, a padded pouch for loose labels, the school receipt and the departure photographs. Count the removable stands separately from the instruments; a stand left behind at a school should not be described as a missing collection object. Place clean cotton ties back in the side pocket. Used tissue goes in the conservation waste tray so that fragments can be checked before disposal. The reusable route card stays with the van driver for the final depot return.\",\"content_sha256\":\"987e51c451dfcd0740d369ead5d5a56cf91799c922eda72021a73e38a5b18194\",\"locator\":{\"label\":\"lines 21-21\",\"line_start\":21,\"line_end\":21},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E9\",\"source_id\":\"museum-handbook\",\"revision_id\":\"r-d15e8f0ded4b41a39fddc5b9e4313bfb\",\"chunk_id\":\"c-14\",\"text\":\"Once released, open one case at a time on the padded examination table. Compare the instrument with its departure photographs, checking feet, hinges and raised decoration before handling the smaller parts. Copy observations in plain language and avoid guessing how a mark occurred. The conservator assigns condition codes later. An unchanged object still needs a dated entry because the absence of a new observation is otherwise indistinguishable from a missed examination.\",\"content_sha256\":\"5e718e5cde07cbc2ea77b8b7d9cfe04001689ca01df66357dd01b58cd89cd2a9\",\"locator\":{\"label\":\"lines 30-30\",\"line_start\":30,\"line_end\":30},\"recorded_at\":\"2026-11-16T13:23:29.196Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.196Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-15-17",
+            "citation_id": "E1",
+            "content_sha256": "8a3dda4e60fe373f838d7efdd190ad98202817a5464ec8e50d85f57979ed2d9b",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 32-37",
+              "line_end": 37,
+              "line_start": 32
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "## Final filing\n\nFile the signed winter loan return sheet in the blue acquisitions cabinet, drawer four.\nThe digital image folder is an additional working copy and does not replace the signed sheet. Put photographs in date order, with the case number at the beginning of each filename. The registrar checks the filing list at the end of the week and reconciles any missing signatures with the receiving pair. Spare blank forms belong in the stationery cupboard, not among the completed records. This separation prevents an unfilled sheet being mistaken for a documented return.\n\n## End of shift"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-11-13",
+            "citation_id": "E2",
+            "content_sha256": "8fceca4d2ebc7bdf4015bf057b82adcb6cd9b4dffc8518c587909d63df8a4761",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 23-28",
+              "line_end": 28,
+              "line_start": 23
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "## Opening authority\n\nOnly the collections technician may release a winter loan case for opening after the settling period.\nThe receiving volunteer records the technician's initials on the arrival card. A school contact cannot waive this step, even when another class needs the instruments the next morning. A delay must be communicated to the education desk before a replacement session is offered. Staff should avoid promising access to a specific object until the post-return examination has been completed. The education desk can lend the photographic teaching pack while the physical collection remains unavailable.\n\n## Condition record"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-7-9",
+            "citation_id": "E3",
+            "content_sha256": "814a2b6151b4c4173bb30615a7c53ed094bb81462474094c5557c4743965221f",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 14-19",
+              "line_end": 19,
+              "line_start": 14
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "## Settling period\n\nKeep returned winter loan cases sealed in the acclimatisation room for eighteen hours before opening them.\nUse the shelving on the interior wall, away from the sink and external door. Set the arrival card upright so that the next shift can read the release time without touching the case. The room's wall clock is the shared time reference. If a power cut makes the temperature log unavailable, leave the cases closed and add a note to the shift book. Conservation staff will decide whether a longer settling period is necessary after the room conditions are restored.\n\n## Paperwork and accessories"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-3-5",
+            "citation_id": "E4",
+            "content_sha256": "c7f35f9dce3a4b589b5e23961f78730ff4146dcc288db9f7c2dcdc4db5fbf627",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 5-10",
+              "line_end": 10,
+              "line_start": 5
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "## Return appointment\n\nFor a winter loan return, book the covered loading bay at least two working days before the van arrives.\nThe visitor entrance cannot accept wheeled cases during public opening hours. The bay diary is maintained on paper at reception because volunteers rotate between the desk and galleries. Staff should copy the booked time onto the journey envelope. If the driver arrives early, the van remains in the marked waiting area until the receiving pair are ready. An unused booking is crossed out so the next shift can distinguish a cancellation from an overlooked arrival.\n\n## Exterior examination"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-18",
+            "citation_id": "E5",
+            "content_sha256": "7dc89090de8594213c16bb925581c0f929ed0cbbb7482f870244495b23ba637b",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 39-39",
+              "line_end": 39,
+              "line_start": 39
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "Move empty trolleys back to the bay only after all collection cases are on the assigned shelves. Check that the exterior door is latched and that the examination lamps are off. Leave one clear handover note naming any case still waiting for conservation advice. The following shift should be able to identify outstanding work without reconstructing a conversation. Routine replenishment of tissue, gloves and pencils can wait until the collection has been secured."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-6",
+            "citation_id": "E6",
+            "content_sha256": "06ea08cac1067fa4c1687d22acf5c355bc49d7b40584238cb6af0edd7a740563",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 12-12",
+              "line_end": 12,
+              "line_start": 12
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "Look at each closed case before moving it off the trolley. Scuffs already shown in the departure photographs do not count as new damage. Record the case number beside any fresh dent, broken seal or wet patch, then photograph the affected side against the measuring card. A water mark is a reason to call the conservator even when the latch still works. Do not use solvent or a hair dryer on the case; the foam liner can retain moisture that is invisible from outside."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-1-2",
+            "citation_id": "E7",
+            "content_sha256": "df3d84561e38db36b6ed1155e9dcaa2223449fc1bc4098761e0e62c6146446e2",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "# Windlass Museum: winter loan handling\n\nThis handbook accompanies the travelling collection of small brass instruments. It covers the return journey from visiting schools to the museum store. The cases are reusable, and all packing material remains the museum's property. The purpose of the procedure is to keep the instruments stable while making the handover legible to staff who did not attend the visit. A teacher's signature acknowledges the number of cases received; it does not transfer responsibility for conservation decisions."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-10",
+            "citation_id": "E8",
+            "content_sha256": "987e51c451dfcd0740d369ead5d5a56cf91799c922eda72021a73e38a5b18194",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 21-21",
+              "line_end": 21,
+              "line_start": 21
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "The journey envelope contains the collection checklist, a padded pouch for loose labels, the school receipt and the departure photographs. Count the removable stands separately from the instruments; a stand left behind at a school should not be described as a missing collection object. Place clean cotton ties back in the side pocket. Used tissue goes in the conservation waste tray so that fragments can be checked before disposal. The reusable route card stays with the van driver for the final depot return."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-14",
+            "citation_id": "E9",
+            "content_sha256": "5e718e5cde07cbc2ea77b8b7d9cfe04001689ca01df66357dd01b58cd89cd2a9",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 30-30",
+              "line_end": 30,
+              "line_start": 30
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.196Z",
+            "revision_id": "r-d15e8f0ded4b41a39fddc5b9e4313bfb",
+            "source_id": "museum-handbook",
+            "text": "Once released, open one case at a time on the padded examination table. Compare the instrument with its departure photographs, checking feet, hinges and raised decoration before handling the smaller parts. Copy observations in plain language and avoid guessing how a mark occurred. The conservator assigns condition codes later. An unchanged object still needs a dated entry because the absence of a new observation is otherwise indistinguishable from a missed examination."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H01",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 9024,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 9024,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 1.199625,
+      "revision_ids": {
+        "museum-handbook": "r-d15e8f0ded4b41a39fddc5b9e4313bfb"
+      },
+      "setup_ms": 2.039167
+    },
+    {
+      "case_id": "H02",
+      "category": "cross_source",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 3,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "pantry-vouchers"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "pantry-shift"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 2,
+            "source_id": "pantry-site"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 2464,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "pantry-shift",
+          "pantry-site",
+          "pantry-vouchers"
+        ],
+        "gold_spans": 3,
+        "items": 3,
+        "policy_errors": [],
+        "relevant_returned_sources": 3,
+        "rendered_context_bytes": 2464,
+        "returned_source_count": 3,
+        "returned_sources": [
+          "pantry-shift",
+          "pantry-site",
+          "pantry-vouchers"
+        ],
+        "serialized_response_bytes": 5656,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h02-a"
+          },
+          {
+            "covered": false,
+            "id": "h02-b"
+          },
+          {
+            "covered": false,
+            "id": "h02-c"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 6000,
+          "max_items": 12,
+          "max_tokens": 6000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "For Saturday's mobile pantry stop, where is the van placed, who performs the chilled-food check, and what time ends voucher collection?",
+        "request_id": "holdout-H02"
+      },
+      "response": {
+        "context_revision": "325c613ed2a8bcc3bb1f99e8fd533088:3",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"pantry-vouchers\",\"revision_id\":\"r-44bee9ebb34d476283521fc3a0ff7ede\",\"chunk_id\":\"c-3\",\"text\":\"# Voucher desk instructions\\n\\nVoucher collection for the Saturday mobile pantry ends at 11:20 a.m.\\nPeople already holding a voucher may remain in the distribution queue after the desk closes. Unused vouchers are counted into the envelope with the date written on the flap. The count measures issued places, not the number of household members receiving food.\",\"content_sha256\":\"d116c91e1678f677f528757068d4673e4e8117942a87039826a90d568bb7571a\",\"locator\":{\"label\":\"lines 1-4\",\"line_start\":1,\"line_end\":4},\"recorded_at\":\"2026-11-16T13:23:29.200Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"pantry-shift\",\"revision_id\":\"r-c8e91434797342018b0248821e1af3cd\",\"chunk_id\":\"c-2\",\"text\":\"# Saturday mobile pantry rota\\n\\nMara Chen performs the chilled-food temperature check before the first crate leaves the Saturday van.\\nFelix handles table assembly and puts the empty boxes under the canopy. Rotating volunteers should sign the attendance sheet before taking a station. Late arrivals report to the queue marshal, who can assign relief duties without interrupting food handling.\",\"content_sha256\":\"5b29f889f69a33b1d7a47706dac90aa661164e557226248232f0aac94b2aa9ce\",\"locator\":{\"label\":\"lines 1-4\",\"line_start\":1,\"line_end\":4},\"recorded_at\":\"2026-11-16T13:23:29.199Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"pantry-site\",\"revision_id\":\"r-aaaa092d48544145ad13bdb6d854b97e\",\"chunk_id\":\"c-1\",\"text\":\"# Saturday mobile pantry site note\\n\\nPark the Saturday mobile pantry van beside the east basketball gate, leaving the pedestrian ramp clear.\\nThe school has reserved two cones for the turning area. Drivers should collect them from the caretaker's porch and return them after unloading. The west gate is for the sports club and must remain available throughout the morning.\",\"content_sha256\":\"cd3a9e98d4254c34ae2d2334ba95e6bc929ea4eb38d82f88cedc27aaf89f3c29\",\"locator\":{\"label\":\"lines 1-4\",\"line_start\":1,\"line_end\":4},\"recorded_at\":\"2026-11-16T13:23:29.199Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.200Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-3",
+            "citation_id": "E1",
+            "content_sha256": "d116c91e1678f677f528757068d4673e4e8117942a87039826a90d568bb7571a",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-4",
+              "line_end": 4,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.200Z",
+            "revision_id": "r-44bee9ebb34d476283521fc3a0ff7ede",
+            "source_id": "pantry-vouchers",
+            "text": "# Voucher desk instructions\n\nVoucher collection for the Saturday mobile pantry ends at 11:20 a.m.\nPeople already holding a voucher may remain in the distribution queue after the desk closes. Unused vouchers are counted into the envelope with the date written on the flap. The count measures issued places, not the number of household members receiving food."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E2",
+            "content_sha256": "5b29f889f69a33b1d7a47706dac90aa661164e557226248232f0aac94b2aa9ce",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-4",
+              "line_end": 4,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.199Z",
+            "revision_id": "r-c8e91434797342018b0248821e1af3cd",
+            "source_id": "pantry-shift",
+            "text": "# Saturday mobile pantry rota\n\nMara Chen performs the chilled-food temperature check before the first crate leaves the Saturday van.\nFelix handles table assembly and puts the empty boxes under the canopy. Rotating volunteers should sign the attendance sheet before taking a station. Late arrivals report to the queue marshal, who can assign relief duties without interrupting food handling."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E3",
+            "content_sha256": "cd3a9e98d4254c34ae2d2334ba95e6bc929ea4eb38d82f88cedc27aaf89f3c29",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-4",
+              "line_end": 4,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.199Z",
+            "revision_id": "r-aaaa092d48544145ad13bdb6d854b97e",
+            "source_id": "pantry-site",
+            "text": "# Saturday mobile pantry site note\n\nPark the Saturday mobile pantry van beside the east basketball gate, leaving the pedestrian ramp clear.\nThe school has reserved two cones for the turning area. Drivers should collect them from the caretaker's porch and return them after unloading. The west gate is for the sports club and must remain available throughout the morning."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H02",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 2464,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 2464,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.327459,
+      "revision_ids": {
+        "pantry-shift": "r-c8e91434797342018b0248821e1af3cd",
+        "pantry-site": "r-aaaa092d48544145ad13bdb6d854b97e",
+        "pantry-vouchers": "r-44bee9ebb34d476283521fc3a0ff7ede"
+      },
+      "setup_ms": 1.948333
+    },
+    {
+      "case_id": "H03",
+      "category": "current_and_obsolete",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 3,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "sensor-current"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "sensor-current"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 2,
+            "source_id": "sensor-current"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 3,
+            "source_id": "sensor-current"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 3695,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "sensor-current"
+        ],
+        "gold_spans": 3,
+        "items": 4,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 3695,
+        "returned_source_count": 1,
+        "returned_sources": [
+          "sensor-current"
+        ],
+        "serialized_response_bytes": 8180,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h03-a"
+          },
+          {
+            "covered": false,
+            "id": "h03-b"
+          },
+          {
+            "covered": false,
+            "id": "h03-c"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 11000,
+          "max_items": 12,
+          "max_tokens": 11000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "What are the current reed-bed sensor checks: rinse fluid, stabilisation interval, and the place to record a rejected reading?",
+        "request_id": "holdout-H03"
+      },
+      "response": {
+        "context_revision": "00865edabfb271c4ccf6f0a38318684d:5",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"sensor-current\",\"revision_id\":\"r-975113eecef94796b4e7532effcaa5cc\",\"chunk_id\":\"w-5-7\",\"text\":\"## Measurement\\n\\nAllow the reed-bed sensor reading to stabilise for ninety seconds after immersion.\\nHold the cable loosely so that movement at the boardwalk rail does not drag the probe against the cup. The displayed number may settle earlier, but the common interval makes visits comparable. A passing bird or a shadow across the cup does not require restarting the interval. Visible bubbles on the optical face do require a fresh placement and a new interval.\\n\\n## Rejected measurements\",\"content_sha256\":\"c48733eec834d4ed5533635b6b203368bac68649e0cfdc513020fc92a5bd102b\",\"locator\":{\"label\":\"lines 10-15\",\"line_start\":10,\"line_end\":15},\"recorded_at\":\"2026-11-16T13:23:29.202Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"sensor-current\",\"revision_id\":\"r-975113eecef94796b4e7532effcaa5cc\",\"chunk_id\":\"w-3-4\",\"text\":\"## Cleaning\\n\\nRinse the reed-bed sensor face with distilled water before lowering it into the sampling cup.\\nDo not wipe the optical window with the cotton towel used for the outside of the case. Grit on a towel can scratch the window even when the instrument still appears to give stable readings. Keep the rinse bottle upright and replace its cap immediately. If the clean water has been exhausted, postpone the reading rather than borrowing an unlabelled bottle from the maintenance shed.\",\"content_sha256\":\"605b90f011a2e76f938154234ba51ced8cd69dc4fea55ffa966a038d336f213c\",\"locator\":{\"label\":\"lines 5-8\",\"line_start\":5,\"line_end\":8},\"recorded_at\":\"2026-11-16T13:23:29.202Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"sensor-current\",\"revision_id\":\"r-975113eecef94796b4e7532effcaa5cc\",\"chunk_id\":\"w-1-2\",\"text\":\"# Reed-bed sensor field card\\n\\nThis card applies to the small optical probe used at the reed-bed boardwalk. Record the visit date before opening the transport tube. The spare batteries live in a separate dry pouch, and neither the batteries nor the probe should be left in direct sun while the field kit is being assembled. The boardwalk can become slippery after the morning irrigation cycle, so put the open case on the raised bench.\",\"content_sha256\":\"9b6402d6117f57bbe755002a4f078d9ae1acba1747aef898b7ccb438f9fee5d6\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.202Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E4\",\"source_id\":\"sensor-current\",\"revision_id\":\"r-975113eecef94796b4e7532effcaa5cc\",\"chunk_id\":\"c-8\",\"text\":\"Enter each rejected reed-bed sensor reading in the amber field ledger with the reason for rejection.\\nThe electronic table contains only accepted measurements. Keeping rejected observations in the paper ledger prevents a gap from being interpreted as a missed visit. Never overwrite an earlier rejected number with the repeat measurement. Draw a single line through a transcription error and initial it so that the original entry remains readable during the monthly review.\",\"content_sha256\":\"c40667b79566a1e17174f30a50fb135b643a35bc8c258fb0d3c543a3c46c5517\",\"locator\":{\"label\":\"lines 17-18\",\"line_start\":17,\"line_end\":18},\"recorded_at\":\"2026-11-16T13:23:29.202Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.206Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-5-7",
+            "citation_id": "E1",
+            "content_sha256": "c48733eec834d4ed5533635b6b203368bac68649e0cfdc513020fc92a5bd102b",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 10-15",
+              "line_end": 15,
+              "line_start": 10
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.202Z",
+            "revision_id": "r-975113eecef94796b4e7532effcaa5cc",
+            "source_id": "sensor-current",
+            "text": "## Measurement\n\nAllow the reed-bed sensor reading to stabilise for ninety seconds after immersion.\nHold the cable loosely so that movement at the boardwalk rail does not drag the probe against the cup. The displayed number may settle earlier, but the common interval makes visits comparable. A passing bird or a shadow across the cup does not require restarting the interval. Visible bubbles on the optical face do require a fresh placement and a new interval.\n\n## Rejected measurements"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-3-4",
+            "citation_id": "E2",
+            "content_sha256": "605b90f011a2e76f938154234ba51ced8cd69dc4fea55ffa966a038d336f213c",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 5-8",
+              "line_end": 8,
+              "line_start": 5
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.202Z",
+            "revision_id": "r-975113eecef94796b4e7532effcaa5cc",
+            "source_id": "sensor-current",
+            "text": "## Cleaning\n\nRinse the reed-bed sensor face with distilled water before lowering it into the sampling cup.\nDo not wipe the optical window with the cotton towel used for the outside of the case. Grit on a towel can scratch the window even when the instrument still appears to give stable readings. Keep the rinse bottle upright and replace its cap immediately. If the clean water has been exhausted, postpone the reading rather than borrowing an unlabelled bottle from the maintenance shed."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-1-2",
+            "citation_id": "E3",
+            "content_sha256": "9b6402d6117f57bbe755002a4f078d9ae1acba1747aef898b7ccb438f9fee5d6",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.202Z",
+            "revision_id": "r-975113eecef94796b4e7532effcaa5cc",
+            "source_id": "sensor-current",
+            "text": "# Reed-bed sensor field card\n\nThis card applies to the small optical probe used at the reed-bed boardwalk. Record the visit date before opening the transport tube. The spare batteries live in a separate dry pouch, and neither the batteries nor the probe should be left in direct sun while the field kit is being assembled. The boardwalk can become slippery after the morning irrigation cycle, so put the open case on the raised bench."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-8",
+            "citation_id": "E4",
+            "content_sha256": "c40667b79566a1e17174f30a50fb135b643a35bc8c258fb0d3c543a3c46c5517",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 17-18",
+              "line_end": 18,
+              "line_start": 17
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.202Z",
+            "revision_id": "r-975113eecef94796b4e7532effcaa5cc",
+            "source_id": "sensor-current",
+            "text": "Enter each rejected reed-bed sensor reading in the amber field ledger with the reason for rejection.\nThe electronic table contains only accepted measurements. Keeping rejected observations in the paper ledger prevents a gap from being interpreted as a missed visit. Never overwrite an earlier rejected number with the repeat measurement. Draw a single line through a transcription error and initial it so that the original entry remains readable during the monthly review."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H03",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 3695,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 3695,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.602083,
+      "revision_ids": {
+        "sensor-current": "r-975113eecef94796b4e7532effcaa5cc",
+        "sensor-old": "r-94ae98a818bf4e6b9a76ec344924b454",
+        "sensor-withdrawn": "r-73e34318a61b4f5a9dd1088f7bf72066"
+      },
+      "setup_ms": 4.983458
+    },
+    {
+      "case_id": "H04",
+      "category": "fragmented_procedure",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 3,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "map-move"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "map-move"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 2,
+            "source_id": "map-move"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 3,
+            "source_id": "map-move"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 4,
+            "source_id": "map-digital"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 4378,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "map-move"
+        ],
+        "gold_spans": 3,
+        "items": 5,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 4378,
+        "returned_source_count": 2,
+        "returned_sources": [
+          "map-digital",
+          "map-move"
+        ],
+        "serialized_response_bytes": 9608,
+        "snapshot_validation": "current",
+        "source_precision": 0.5,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h04-a"
+          },
+          {
+            "covered": false,
+            "id": "h04-b"
+          },
+          {
+            "covered": false,
+            "id": "h04-c"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 11000,
+          "max_items": 12,
+          "max_tokens": 11000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Before the map cabinet move, what should be removed, how are the drawers secured, and who signs the delivery check?",
+        "request_id": "holdout-H04"
+      },
+      "response": {
+        "context_revision": "a579150bcec2a43b2f0f2c891bbc2d42:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"map-move\",\"revision_id\":\"r-cfd35791610f40f18d8a0aa8214273b5\",\"chunk_id\":\"w-7-8\",\"text\":\"## Receiving check\\n\\nThe duty archivist signs the map cabinet delivery check after counting the transit trays.\\nThe porter records any fresh marks on the cabinet separately from the archive's map condition notes. Do not return the contents until the cabinet is standing level and the drawers open without rubbing. Refit the dividers in their original sequence, then check the catalogue numbers from the tray list. Once the final drawer is complete, remove the temporary closure notice from the reading-room desk.\",\"content_sha256\":\"c10d19f527736c34574b840880e242e530a8e5885e75ecd27bf3f426465d384d\",\"locator\":{\"label\":\"lines 15-18\",\"line_start\":15,\"line_end\":18},\"recorded_at\":\"2026-11-16T13:23:29.207Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"map-move\",\"revision_id\":\"r-cfd35791610f40f18d8a0aa8214273b5\",\"chunk_id\":\"w-5-6\",\"text\":\"## Securing the furniture\\n\\nSecure the empty map cabinet drawers with the two woven straps stored in the porter cupboard.\\nAdhesive tape is unsuitable because it can pull the surface finish away when removed. Place a clean felt square under each buckle and tighten only enough to prevent a drawer sliding. The cabinet must remain upright on the trolley. The lift attendant checks the route before the team enters the corridor, including the turn beside the drinking fountain.\",\"content_sha256\":\"56fb2aefcbfa6edf1fcae782bb7be8cfe492a77566bd9f26f9270037a5d71309\",\"locator\":{\"label\":\"lines 10-13\",\"line_start\":10,\"line_end\":13},\"recorded_at\":\"2026-11-16T13:23:29.207Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"map-move\",\"revision_id\":\"r-cfd35791610f40f18d8a0aa8214273b5\",\"chunk_id\":\"w-3-4\",\"text\":\"## Preparing contents\\n\\nRemove every map and loose divider from the cabinet before the move begins.\\nLay maps flat in the numbered transit trays. A tray may contain several folders only when all their catalogue numbers remain visible at the top edge. The archive assistant checks the tray list against the drawer inventory while the porter prepares the trolley. Work from the top drawer down so that the unloaded cabinet remains stable. Keep the emptied dividers together in a separate sleeve.\",\"content_sha256\":\"6b46cb563dbc30346e527b9e7f042f461e8e135aae0a38ac1daf686aef28921c\",\"locator\":{\"label\":\"lines 5-8\",\"line_start\":5,\"line_end\":8},\"recorded_at\":\"2026-11-16T13:23:29.207Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E4\",\"source_id\":\"map-move\",\"revision_id\":\"r-cfd35791610f40f18d8a0aa8214273b5\",\"chunk_id\":\"w-1-2\",\"text\":\"# Map cabinet relocation brief\\n\\nThe archive is moving its flat map cabinet to the new reading room during the scheduled floor repair. The cabinet will travel on the service lift, with a porter ahead of the trolley to keep the route clear. This is a furniture move and does not change the catalogue location of individual maps until the receiving check has finished. Researchers should be directed to the temporary digital terminal during the closure.\",\"content_sha256\":\"78256d5452e9c8a698b90df8e480e013cbb6962d957b4b21ad12e14bc9e90dfb\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.207Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E5\",\"source_id\":\"map-digital\",\"revision_id\":\"r-405ec44d85e24b1bbad748bcce4ca23b\",\"chunk_id\":\"c-9\",\"text\":\"# Digital map terminal\\n\\nThe temporary map terminal starts in catalogue view. Visitors may print a location slip at the enquiry desk, but full-size map printing is unavailable while the reading room floor is repaired.\",\"content_sha256\":\"89a404488ae35e0e41cce9fb127105c2b025150e09e1b9c0f728f244ea84c4b9\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.208Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.208Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-7-8",
+            "citation_id": "E1",
+            "content_sha256": "c10d19f527736c34574b840880e242e530a8e5885e75ecd27bf3f426465d384d",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 15-18",
+              "line_end": 18,
+              "line_start": 15
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.207Z",
+            "revision_id": "r-cfd35791610f40f18d8a0aa8214273b5",
+            "source_id": "map-move",
+            "text": "## Receiving check\n\nThe duty archivist signs the map cabinet delivery check after counting the transit trays.\nThe porter records any fresh marks on the cabinet separately from the archive's map condition notes. Do not return the contents until the cabinet is standing level and the drawers open without rubbing. Refit the dividers in their original sequence, then check the catalogue numbers from the tray list. Once the final drawer is complete, remove the temporary closure notice from the reading-room desk."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-5-6",
+            "citation_id": "E2",
+            "content_sha256": "56fb2aefcbfa6edf1fcae782bb7be8cfe492a77566bd9f26f9270037a5d71309",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 10-13",
+              "line_end": 13,
+              "line_start": 10
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.207Z",
+            "revision_id": "r-cfd35791610f40f18d8a0aa8214273b5",
+            "source_id": "map-move",
+            "text": "## Securing the furniture\n\nSecure the empty map cabinet drawers with the two woven straps stored in the porter cupboard.\nAdhesive tape is unsuitable because it can pull the surface finish away when removed. Place a clean felt square under each buckle and tighten only enough to prevent a drawer sliding. The cabinet must remain upright on the trolley. The lift attendant checks the route before the team enters the corridor, including the turn beside the drinking fountain."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-3-4",
+            "citation_id": "E3",
+            "content_sha256": "6b46cb563dbc30346e527b9e7f042f461e8e135aae0a38ac1daf686aef28921c",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 5-8",
+              "line_end": 8,
+              "line_start": 5
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.207Z",
+            "revision_id": "r-cfd35791610f40f18d8a0aa8214273b5",
+            "source_id": "map-move",
+            "text": "## Preparing contents\n\nRemove every map and loose divider from the cabinet before the move begins.\nLay maps flat in the numbered transit trays. A tray may contain several folders only when all their catalogue numbers remain visible at the top edge. The archive assistant checks the tray list against the drawer inventory while the porter prepares the trolley. Work from the top drawer down so that the unloaded cabinet remains stable. Keep the emptied dividers together in a separate sleeve."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-1-2",
+            "citation_id": "E4",
+            "content_sha256": "78256d5452e9c8a698b90df8e480e013cbb6962d957b4b21ad12e14bc9e90dfb",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.207Z",
+            "revision_id": "r-cfd35791610f40f18d8a0aa8214273b5",
+            "source_id": "map-move",
+            "text": "# Map cabinet relocation brief\n\nThe archive is moving its flat map cabinet to the new reading room during the scheduled floor repair. The cabinet will travel on the service lift, with a porter ahead of the trolley to keep the route clear. This is a furniture move and does not change the catalogue location of individual maps until the receiving check has finished. Researchers should be directed to the temporary digital terminal during the closure."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-9",
+            "citation_id": "E5",
+            "content_sha256": "89a404488ae35e0e41cce9fb127105c2b025150e09e1b9c0f728f244ea84c4b9",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.208Z",
+            "revision_id": "r-405ec44d85e24b1bbad748bcce4ca23b",
+            "source_id": "map-digital",
+            "text": "# Digital map terminal\n\nThe temporary map terminal starts in catalogue view. Visitors may print a location slip at the enquiry desk, but full-size map printing is unavailable while the reading room floor is repaired."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H04",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 4378,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 4378,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.499375,
+      "revision_ids": {
+        "map-digital": "r-405ec44d85e24b1bbad748bcce4ca23b",
+        "map-move": "r-cfd35791610f40f18d8a0aa8214273b5"
+      },
+      "setup_ms": 1.571333
+    },
+    {
+      "case_id": "H05",
+      "category": "long_access_plan",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 4,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "event-access"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "event-access"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 2,
+            "source_id": "event-access"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 3,
+            "source_id": "event-access"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 4,
+            "source_id": "event-access"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 7779,
+        "evidence_recall": 0.0,
+        "exact_citations": 3,
+        "expected_sources": [
+          "event-access"
+        ],
+        "gold_spans": 4,
+        "items": 8,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 7779,
+        "returned_source_count": 1,
+        "returned_sources": [
+          "event-access"
+        ],
+        "serialized_response_bytes": 16599,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h05-a"
+          },
+          {
+            "covered": false,
+            "id": "h05-b"
+          },
+          {
+            "covered": false,
+            "id": "h05-c"
+          },
+          {
+            "covered": false,
+            "id": "h05-d"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 13000,
+          "max_items": 12,
+          "max_tokens": 13000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Summarise the spoken-history evening's step-free entry, hearing-receiver collection, quiet-room location, and access-problem contact.",
+        "request_id": "holdout-H05"
+      },
+      "response": {
+        "context_revision": "0feb3c835f8a62f159ed645ee575e336:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"w-1-3\",\"text\":\"# Canal Hall spoken-history evening: access and front-of-house guide\\n\\nThe spoken-history evening brings together former boatyard workers, their families and local students. Doors open before the exhibition walk so that visitors can choose seats and become familiar with the room. The access arrangements below are part of the event plan, not optional additions to be improvised once a visitor asks for help. Volunteers should know which colleague can resolve a problem while keeping the reception desk attended.\\n\\n## Arrival route\",\"content_sha256\":\"8722a54062d5e4a86c103fabb973020809dcd99985b99584e3672d24ae20cef1\",\"locator\":{\"label\":\"lines 1-5\",\"line_start\":1,\"line_end\":5},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"w-7-9\",\"text\":\"## Listening support\\n\\nCollect a hearing receiver from the sound desk by showing the numbered ticket stub; no identity document is required.\\nThe sound technician will demonstrate the volume dial using the pre-event test recording. Used earpieces go in the labelled tray after the event, while the receiver bodies return to their charging slots. Visitors who bring their own compatible headset may use it. If a receiver stops working during a talk, the aisle volunteer carries a replacement over rather than asking the listener to leave and join the reception queue.\\n\\n## Seating\",\"content_sha256\":\"9806065c3ad27d63742599991cc856e991a6eeac8129cf369a3e3fc3be82a510\",\"locator\":{\"label\":\"lines 14-19\",\"line_start\":14,\"line_end\":19},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"w-15-17\",\"text\":\"## Problems during the event\\n\\nDirect unresolved access problems to front-of-house lead Noor Iqbal, who wears a green lanyard.\\nThe lead can adjust seating, arrange a quieter conversation or contact the building caretaker. Volunteers should describe the practical obstacle instead of guessing a visitor's diagnosis. Record any equipment failure on the desk sheet before the shift ends, including what was tried and whether the visitor received an alternative. Private details belong only in a direct conversation with the lead, not in a general incident note.\\n\\n## Closing the building\",\"content_sha256\":\"7211066942deea070cbf881f9e5ebbd41d660136f784ba8816004bdd20813d72\",\"locator\":{\"label\":\"lines 32-37\",\"line_start\":32,\"line_end\":37},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E4\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"w-4-5\",\"text\":\"Visitors using the step-free entrance should enter Canal Hall through the courtyard door on Mill Lane.\\nThe door opens into a short level corridor beside the cloakroom. Keep the stack of spare chairs out of that corridor, even when it is raining and the courtyard is quiet. A volunteer should check the outside sign at the start of the shift because delivery vehicles sometimes obscure it. The public staircase on the canal side remains available to visitors who prefer that route, but signs must never direct everyone there by default.\\n\\n## Reception\",\"content_sha256\":\"abc49be80f707e1e33a015012f5462fd53fc99644b41ab5f398e74bf7cf05e7a\",\"locator\":{\"label\":\"lines 7-10\",\"line_start\":7,\"line_end\":10},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E5\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"w-11-13\",\"text\":\"## Quiet space\\n\\nThe quiet room is the small pottery studio opposite the courtyard corridor, and its door remains unlocked throughout the evening.\\nThe studio lights have been dimmed and a jug of water is on the worktable. It is not a second performance room, so do not relay the talks over a loudspeaker there. A visitor may leave and return without explaining their reason. Volunteers should check the room discreetly between talks and make sure the route back to the hall remains clear. Children using the space should stay with their accompanying adult.\\n\\n## Speaker preparation\",\"content_sha256\":\"e66cfc979cdc4f68094ea8ef7b12afacd34a6364529daa69d3137585c6ccfa4c\",\"locator\":{\"label\":\"lines 23-28\",\"line_start\":23,\"line_end\":28},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E6\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"c-18\",\"text\":\"When the audience has left, count receivers against the numbered charging spaces and return spare programmes to the crate. Inspect the courtyard corridor before moving chairs back from the store. The caretaker locks the external door only after the front-of-house lead confirms that the quiet room and toilets are empty. Leave the guide on the desk for the morning team, together with a short note about any sign or piece of equipment that needs attention.\",\"content_sha256\":\"559cfda14f20734be9426888bf39a16ed376585cc30b22b6c70b64a02bd0cd49\",\"locator\":{\"label\":\"lines 39-39\",\"line_start\":39,\"line_end\":39},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E7\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"c-14\",\"text\":\"Speakers have been asked to name the people in photographs and describe the details they discuss. The lectern microphone should remain at the same distance from each speaker's mouth. The chair will repeat questions from the audience before inviting an answer, even if the person asking believes they spoke loudly enough. Short breaks between talks allow listeners to change seats or replace equipment without missing the beginning of a story.\",\"content_sha256\":\"84cd0f51f8b2304d8b0034f805b8f0b4786efb7780e380e66cbc6a0d828d0d89\",\"locator\":{\"label\":\"lines 30-30\",\"line_start\":30,\"line_end\":30},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E8\",\"source_id\":\"event-access\",\"revision_id\":\"r-05984f0d0eda48909e84172e861db05d\",\"chunk_id\":\"c-6\",\"text\":\"The desk has printed programmes in large type and a box of ordinary programmes. Offer the large-type copy alongside the standard version without asking a visitor to explain why they want it. Programme stock should be counted after the room settles, not while a queue is waiting. Tickets are checked by name; the organiser has already warned that two households share a surname, so staff must also confirm the number of places on the booking.\",\"content_sha256\":\"4c1b74a68b932dd97e3be446ff32e4a78e512bfe5900228adc31106c78b0a3a3\",\"locator\":{\"label\":\"lines 12-12\",\"line_start\":12,\"line_end\":12},\"recorded_at\":\"2026-11-16T13:23:29.210Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.210Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-1-3",
+            "citation_id": "E1",
+            "content_sha256": "8722a54062d5e4a86c103fabb973020809dcd99985b99584e3672d24ae20cef1",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-5",
+              "line_end": 5,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "# Canal Hall spoken-history evening: access and front-of-house guide\n\nThe spoken-history evening brings together former boatyard workers, their families and local students. Doors open before the exhibition walk so that visitors can choose seats and become familiar with the room. The access arrangements below are part of the event plan, not optional additions to be improvised once a visitor asks for help. Volunteers should know which colleague can resolve a problem while keeping the reception desk attended.\n\n## Arrival route"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-7-9",
+            "citation_id": "E2",
+            "content_sha256": "9806065c3ad27d63742599991cc856e991a6eeac8129cf369a3e3fc3be82a510",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 14-19",
+              "line_end": 19,
+              "line_start": 14
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "## Listening support\n\nCollect a hearing receiver from the sound desk by showing the numbered ticket stub; no identity document is required.\nThe sound technician will demonstrate the volume dial using the pre-event test recording. Used earpieces go in the labelled tray after the event, while the receiver bodies return to their charging slots. Visitors who bring their own compatible headset may use it. If a receiver stops working during a talk, the aisle volunteer carries a replacement over rather than asking the listener to leave and join the reception queue.\n\n## Seating"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-15-17",
+            "citation_id": "E3",
+            "content_sha256": "7211066942deea070cbf881f9e5ebbd41d660136f784ba8816004bdd20813d72",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 32-37",
+              "line_end": 37,
+              "line_start": 32
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "## Problems during the event\n\nDirect unresolved access problems to front-of-house lead Noor Iqbal, who wears a green lanyard.\nThe lead can adjust seating, arrange a quieter conversation or contact the building caretaker. Volunteers should describe the practical obstacle instead of guessing a visitor's diagnosis. Record any equipment failure on the desk sheet before the shift ends, including what was tried and whether the visitor received an alternative. Private details belong only in a direct conversation with the lead, not in a general incident note.\n\n## Closing the building"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-4-5",
+            "citation_id": "E4",
+            "content_sha256": "abc49be80f707e1e33a015012f5462fd53fc99644b41ab5f398e74bf7cf05e7a",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 7-10",
+              "line_end": 10,
+              "line_start": 7
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "Visitors using the step-free entrance should enter Canal Hall through the courtyard door on Mill Lane.\nThe door opens into a short level corridor beside the cloakroom. Keep the stack of spare chairs out of that corridor, even when it is raining and the courtyard is quiet. A volunteer should check the outside sign at the start of the shift because delivery vehicles sometimes obscure it. The public staircase on the canal side remains available to visitors who prefer that route, but signs must never direct everyone there by default.\n\n## Reception"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "w-11-13",
+            "citation_id": "E5",
+            "content_sha256": "e66cfc979cdc4f68094ea8ef7b12afacd34a6364529daa69d3137585c6ccfa4c",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 23-28",
+              "line_end": 28,
+              "line_start": 23
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "## Quiet space\n\nThe quiet room is the small pottery studio opposite the courtyard corridor, and its door remains unlocked throughout the evening.\nThe studio lights have been dimmed and a jug of water is on the worktable. It is not a second performance room, so do not relay the talks over a loudspeaker there. A visitor may leave and return without explaining their reason. Volunteers should check the room discreetly between talks and make sure the route back to the hall remains clear. Children using the space should stay with their accompanying adult.\n\n## Speaker preparation"
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-18",
+            "citation_id": "E6",
+            "content_sha256": "559cfda14f20734be9426888bf39a16ed376585cc30b22b6c70b64a02bd0cd49",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 39-39",
+              "line_end": 39,
+              "line_start": 39
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "When the audience has left, count receivers against the numbered charging spaces and return spare programmes to the crate. Inspect the courtyard corridor before moving chairs back from the store. The caretaker locks the external door only after the front-of-house lead confirms that the quiet room and toilets are empty. Leave the guide on the desk for the morning team, together with a short note about any sign or piece of equipment that needs attention."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-14",
+            "citation_id": "E7",
+            "content_sha256": "84cd0f51f8b2304d8b0034f805b8f0b4786efb7780e380e66cbc6a0d828d0d89",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 30-30",
+              "line_end": 30,
+              "line_start": 30
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "Speakers have been asked to name the people in photographs and describe the details they discuss. The lectern microphone should remain at the same distance from each speaker's mouth. The chair will repeat questions from the audience before inviting an answer, even if the person asking believes they spoke loudly enough. Short breaks between talks allow listeners to change seats or replace equipment without missing the beginning of a story."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-6",
+            "citation_id": "E8",
+            "content_sha256": "4c1b74a68b932dd97e3be446ff32e4a78e512bfe5900228adc31106c78b0a3a3",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 12-12",
+              "line_end": 12,
+              "line_start": 12
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.210Z",
+            "revision_id": "r-05984f0d0eda48909e84172e861db05d",
+            "source_id": "event-access",
+            "text": "The desk has printed programmes in large type and a box of ordinary programmes. Offer the large-type copy alongside the standard version without asking a visitor to explain why they want it. Programme stock should be counted after the room settles, not while a queue is waiting. Tickets are checked by name; the organiser has already warned that two households share a surname, so staff must also confirm the number of places on the booking."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H05",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 7779,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 7779,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.814167,
+      "revision_ids": {
+        "event-access": "r-05984f0d0eda48909e84172e861db05d",
+        "event-menu": "r-1abeb83e17a342719f352f3aa57f5f67"
+      },
+      "setup_ms": 1.70375
+    },
+    {
+      "case_id": "H06",
+      "category": "hard_paraphrase",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 1,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "courier-parking"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 681,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "delivery-proof"
+        ],
+        "gold_spans": 1,
+        "items": 1,
+        "policy_errors": [],
+        "relevant_returned_sources": 0,
+        "rendered_context_bytes": 681,
+        "returned_source_count": 1,
+        "returned_sources": [
+          "courier-parking"
+        ],
+        "serialized_response_bytes": 1961,
+        "snapshot_validation": "current",
+        "source_precision": 0.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h06-a"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 4000,
+          "max_items": 12,
+          "max_tokens": 4000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "What lets a courier establish that the recipient personally accepted the parcel?",
+        "request_id": "holdout-H06"
+      },
+      "response": {
+        "context_revision": "fdf224b7a8473f594e9e411e7f9971f7:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"courier-parking\",\"revision_id\":\"r-1ed19cc27aa5430b8898778478935ae1\",\"chunk_id\":\"c-2\",\"text\":\"# Courier parcel access\\n\\nA courier carrying a parcel may park in the loading space for ten minutes. The recipient parking area is reserved for visitors with appointments. Staff personally check the loading-space sign each morning.\",\"content_sha256\":\"33bb0592f4989865ab703d9681c344a9eec86f34bbfd94d20301c695cd7e38fd\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.213Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.213Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E1",
+            "content_sha256": "33bb0592f4989865ab703d9681c344a9eec86f34bbfd94d20301c695cd7e38fd",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.213Z",
+            "revision_id": "r-1ed19cc27aa5430b8898778478935ae1",
+            "source_id": "courier-parking",
+            "text": "# Courier parcel access\n\nA courier carrying a parcel may park in the loading space for ten minutes. The recipient parking area is reserved for visitors with appointments. Staff personally check the loading-space sign each morning."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H06",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 681,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 681,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.1815,
+      "revision_ids": {
+        "courier-parking": "r-1ed19cc27aa5430b8898778478935ae1",
+        "delivery-proof": "r-eab5c9def6e1407bb03862e6d9dc31c0"
+      },
+      "setup_ms": 1.387292
+    },
+    {
+      "case_id": "H07",
+      "category": "unresolved_conflict",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 2,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "seed-board"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "seed-letter"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 1352,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "seed-board",
+          "seed-letter"
+        ],
+        "gold_spans": 2,
+        "items": 2,
+        "policy_errors": [],
+        "relevant_returned_sources": 2,
+        "rendered_context_bytes": 1352,
+        "returned_source_count": 2,
+        "returned_sources": [
+          "seed-board",
+          "seed-letter"
+        ],
+        "serialized_response_bytes": 3367,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h07-a"
+          },
+          {
+            "covered": false,
+            "id": "h07-b"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 4000,
+          "max_items": 12,
+          "max_tokens": 4000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "What opening time is recorded for the Monday seed exchange, and do the two issued notices agree?",
+        "request_id": "holdout-H07"
+      },
+      "response": {
+        "context_revision": "267a332e3b685f7c07104f72870c0832:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"seed-board\",\"revision_id\":\"r-074b1cdaffdf499f85568ea130a94c3c\",\"chunk_id\":\"c-1\",\"text\":\"# Seed exchange noticeboard sheet\\n\\nThe Monday seed exchange opens at 8:45 a.m. in the glasshouse foyer. This notice was approved by the allotment committee on 6 March. Volunteers should bring their own mug for the tea table.\",\"content_sha256\":\"17a64f2d06dfba165e1c86df9abfc28c4f8b33d92ba6ef6329854842fdf2e664\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.214Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"seed-letter\",\"revision_id\":\"r-977f241fd4754f07bf64ade8105cfbc1\",\"chunk_id\":\"c-2\",\"text\":\"# Seed exchange member letter\\n\\nThe Monday seed exchange opens at 9:15 a.m. in the glasshouse foyer. This letter was approved by the allotment committee on 6 March. Tables are grouped by vegetable family, with flower seeds near the door.\",\"content_sha256\":\"674bcbbff996b2278efae170790a3389ea169896d4e43a120f553aae18ce4e44\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.215Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.215Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "17a64f2d06dfba165e1c86df9abfc28c4f8b33d92ba6ef6329854842fdf2e664",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.214Z",
+            "revision_id": "r-074b1cdaffdf499f85568ea130a94c3c",
+            "source_id": "seed-board",
+            "text": "# Seed exchange noticeboard sheet\n\nThe Monday seed exchange opens at 8:45 a.m. in the glasshouse foyer. This notice was approved by the allotment committee on 6 March. Volunteers should bring their own mug for the tea table."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E2",
+            "content_sha256": "674bcbbff996b2278efae170790a3389ea169896d4e43a120f553aae18ce4e44",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.215Z",
+            "revision_id": "r-977f241fd4754f07bf64ade8105cfbc1",
+            "source_id": "seed-letter",
+            "text": "# Seed exchange member letter\n\nThe Monday seed exchange opens at 9:15 a.m. in the glasshouse foyer. This letter was approved by the allotment committee on 6 March. Tables are grouped by vegetable family, with flower seeds near the door."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H07",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 1352,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 1352,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.209667,
+      "revision_ids": {
+        "seed-board": "r-074b1cdaffdf499f85568ea130a94c3c",
+        "seed-letter": "r-977f241fd4754f07bf64ade8105cfbc1"
+      },
+      "setup_ms": 1.562125
+    },
+    {
+      "case_id": "H08",
+      "category": "short_unicode",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 1,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "cafe-key"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "cafe-clean"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 1215,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "cafe-key"
+        ],
+        "gold_spans": 1,
+        "items": 2,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 1215,
+        "returned_source_count": 2,
+        "returned_sources": [
+          "cafe-clean",
+          "cafe-key"
+        ],
+        "serialized_response_bytes": 3093,
+        "snapshot_validation": "current",
+        "source_precision": 0.5,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h08-a"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 3000,
+          "max_items": 12,
+          "max_tokens": 3000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Where should café staff leave the repaired grinder key?",
+        "request_id": "holdout-H08"
+      },
+      "response": {
+        "context_revision": "9eacdf642781c56308318972042b1d55:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"cafe-key\",\"revision_id\":\"r-49faa9c59b114b4286da4d8eb749914e\",\"chunk_id\":\"c-1\",\"text\":\"# Café grinder handover\\n\\nLeave the repaired grinder key in the rôle-labelled tin marked “Équipe du matin” beneath the till. The spare key stays with the café manager.\",\"content_sha256\":\"ebf767cd7ec0f8cd5163e2611e85b745f8a6cdff285fbcd8a9f1b5e24436bb94\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.216Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"cafe-clean\",\"revision_id\":\"r-0802fc449a0b49f3ab2d894d9967f54b\",\"chunk_id\":\"c-2\",\"text\":\"# Café closing note\\n\\nThe grinder hopper is emptied into the compost caddy at closing. Leave the counter dry and put the cleaning brush beside the sink.\",\"content_sha256\":\"c8ae04624623595b1d71e103f3d1c2a4c0fa31329e60090c3d4c68a9b93d72d2\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.216Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.217Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "ebf767cd7ec0f8cd5163e2611e85b745f8a6cdff285fbcd8a9f1b5e24436bb94",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.216Z",
+            "revision_id": "r-49faa9c59b114b4286da4d8eb749914e",
+            "source_id": "cafe-key",
+            "text": "# Café grinder handover\n\nLeave the repaired grinder key in the rôle-labelled tin marked “Équipe du matin” beneath the till. The spare key stays with the café manager."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E2",
+            "content_sha256": "c8ae04624623595b1d71e103f3d1c2a4c0fa31329e60090c3d4c68a9b93d72d2",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.216Z",
+            "revision_id": "r-0802fc449a0b49f3ab2d894d9967f54b",
+            "source_id": "cafe-clean",
+            "text": "# Café closing note\n\nThe grinder hopper is emptied into the compost caddy at closing. Leave the counter dry and put the cleaning brush beside the sink."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H08",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 1215,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 1215,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.203875,
+      "revision_ids": {
+        "cafe-clean": "r-0802fc449a0b49f3ab2d894d9967f54b",
+        "cafe-key": "r-49faa9c59b114b4286da4d8eb749914e"
+      },
+      "setup_ms": 1.383375
+    },
+    {
+      "case_id": "H09",
+      "category": "missing_evidence",
+      "expected_behavior_pass": true,
+      "gold_spans_expected": 0,
+      "kind": "missing",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "telescope-night"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "telescope-care"
+          }
+        ],
+        "complete_evidence": null,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 1397,
+        "evidence_recall": null,
+        "exact_citations": 0,
+        "expected_sources": [],
+        "gold_spans": 0,
+        "items": 2,
+        "policy_errors": [],
+        "relevant_returned_sources": 0,
+        "rendered_context_bytes": 1397,
+        "returned_source_count": 2,
+        "returned_sources": [
+          "telescope-care",
+          "telescope-night"
+        ],
+        "serialized_response_bytes": 3457,
+        "snapshot_validation": "current",
+        "source_precision": 0.0,
+        "span_results": [],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": true,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 4000,
+          "max_items": 12,
+          "max_tokens": 4000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Who is authorised to approve an overnight extension for the community telescope loan?",
+        "request_id": "holdout-H09"
+      },
+      "response": {
+        "context_revision": "9b0a04f59ada87d66ebd9258a1bcce31:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"telescope-night\",\"revision_id\":\"r-5bf0fb9dce144a61a7aa52fdbd7cbd80\",\"chunk_id\":\"c-2\",\"text\":\"# Community telescope evening session\\n\\nThe astronomy club's overnight observing event uses its own instruments. Community telescope loan paperwork is stored separately from event attendance sheets. Staff approve room bookings through the ordinary calendar.\",\"content_sha256\":\"c649870a5ec96db4c93a683383f5ae882341f7571c5c3acb4dc1cb7d087fc10a\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.218Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"telescope-care\",\"revision_id\":\"r-72f63030d8c64b10adc00a1d02dd6409\",\"chunk_id\":\"c-1\",\"text\":\"# Community telescope loan care\\n\\nKeep the community telescope in its padded case while travelling. Return the eyepiece caps with the instrument and report condensation on the lens. The desk records the scheduled return date on a yellow card.\",\"content_sha256\":\"7b7b9b55f582e75e37634b629cd0797995329bd69e7a9185b4f434a52bfb3332\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.218Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.218Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E1",
+            "content_sha256": "c649870a5ec96db4c93a683383f5ae882341f7571c5c3acb4dc1cb7d087fc10a",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.218Z",
+            "revision_id": "r-5bf0fb9dce144a61a7aa52fdbd7cbd80",
+            "source_id": "telescope-night",
+            "text": "# Community telescope evening session\n\nThe astronomy club's overnight observing event uses its own instruments. Community telescope loan paperwork is stored separately from event attendance sheets. Staff approve room bookings through the ordinary calendar."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E2",
+            "content_sha256": "7b7b9b55f582e75e37634b629cd0797995329bd69e7a9185b4f434a52bfb3332",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.218Z",
+            "revision_id": "r-72f63030d8c64b10adc00a1d02dd6409",
+            "source_id": "telescope-care",
+            "text": "# Community telescope loan care\n\nKeep the community telescope in its padded case while travelling. Return the eyepiece caps with the instrument and report condensation on the lens. The desk records the scheduled return date on a yellow card."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H09",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 1397,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 1397,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.196709,
+      "revision_ids": {
+        "telescope-care": "r-72f63030d8c64b10adc00a1d02dd6409",
+        "telescope-night": "r-5bf0fb9dce144a61a7aa52fdbd7cbd80"
+      },
+      "setup_ms": 1.339083
+    },
+    {
+      "case_id": "H10",
+      "category": "private_scope",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 1,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "weaving-public"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 637,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "weaving-public"
+        ],
+        "gold_spans": 1,
+        "items": 1,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 637,
+        "returned_source_count": 1,
+        "returned_sources": [
+          "weaving-public"
+        ],
+        "serialized_response_bytes": 1873,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h10-a"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 4000,
+          "max_items": 12,
+          "max_tokens": 4000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Which number should a public visitor call about the weaving workshop?",
+        "request_id": "holdout-H10"
+      },
+      "response": {
+        "context_revision": "edf25f50d03d20bcbf51839cb43c28a1:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"weaving-public\",\"revision_id\":\"r-db58952a314a49eda2cf57a49cc7334c\",\"chunk_id\":\"c-1\",\"text\":\"# Weaving workshop visitor card\\n\\nPublic visitors with weaving workshop questions should call the reception number 020 7946 0128. Reception can confirm access times and the materials list.\",\"content_sha256\":\"0cc7c3720b3af3e02ff9b681cb9af1b3496204a8b0971c85a28f700a31e5ab8e\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.219Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.221Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "0cc7c3720b3af3e02ff9b681cb9af1b3496204a8b0971c85a28f700a31e5ab8e",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.219Z",
+            "revision_id": "r-db58952a314a49eda2cf57a49cc7334c",
+            "source_id": "weaving-public",
+            "text": "# Weaving workshop visitor card\n\nPublic visitors with weaving workshop questions should call the reception number 020 7946 0128. Reception can confirm access times and the materials list."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H10",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 637,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 637,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.251417,
+      "revision_ids": {
+        "weaving-private": "r-a7701b88af5f47a2aed6d763d3af25e3",
+        "weaving-public": "r-db58952a314a49eda2cf57a49cc7334c"
+      },
+      "setup_ms": 2.200584
+    },
+    {
+      "case_id": "H11",
+      "category": "local_only_egress",
+      "expected_behavior_pass": true,
+      "gold_spans_expected": 0,
+      "kind": "policy",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [],
+        "complete_evidence": null,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": "DESTINATION_DENIED",
+        "estimated_tokens": 0,
+        "evidence_recall": null,
+        "exact_citations": 0,
+        "expected_sources": [],
+        "gold_spans": 0,
+        "items": 0,
+        "policy_errors": [],
+        "relevant_returned_sources": 0,
+        "rendered_context_bytes": 0,
+        "returned_source_count": 0,
+        "returned_sources": [],
+        "serialized_response_bytes": 656,
+        "snapshot_validation": "denied",
+        "source_precision": null,
+        "span_results": [],
+        "status": "error",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 4000,
+          "max_items": 12,
+          "max_tokens": 4000
+        },
+        "contract_version": "0.1",
+        "destination": "approved_remote",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "What is the combination recorded for the restoration cage?",
+        "request_id": "holdout-H11"
+      },
+      "response": {
+        "context_revision": "c82a0d7fdef3b1cab978e33844be0369:1",
+        "context_text": "",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": {
+          "code": "DESTINATION_DENIED",
+          "message": "Request unavailable or outside the supported context contract.",
+          "retryable": false
+        },
+        "generated_at": "2026-11-16T13:23:29.223Z",
+        "items": [],
+        "omissions": {},
+        "request_id": "holdout-H11",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "error",
+        "token_usage": {
+          "context_bytes": 0,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 0,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.145208,
+      "revision_ids": {
+        "cage-local": "r-ccb2199dbfc346d08d361d48153e1a55"
+      },
+      "setup_ms": 1.240542
+    },
+    {
+      "case_id": "H12",
+      "category": "caller_required_fit",
+      "declared_reference_bootstrap": [
+        {
+          "gold_id": "h12-a",
+          "latency_ms": 0.2135,
+          "request": {
+            "access_scope_ref": "reader",
+            "budget": {
+              "max_bytes": 262144,
+              "max_items": 32,
+              "max_tokens": 32768
+            },
+            "contract_version": "0.1",
+            "destination": "local_only",
+            "freshness_requirement": "allow_unknown",
+            "purpose": "current_answer",
+            "query": "Fill the mobile darkroom rinse tank with twelve litres of clean water before the session.",
+            "request_id": "holdout-H12-declared-h12-a",
+            "source_ids": [
+              "darkroom-water"
+            ]
+          },
+          "response": {
+            "context_revision": "33e65c16cbc6e493207fe2b54ab0f440:3",
+            "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"darkroom-water\",\"revision_id\":\"r-6ac23479a047461aa92b803670365483\",\"chunk_id\":\"c-1\",\"text\":\"# Mobile darkroom water\\n\\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf.\",\"content_sha256\":\"886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+            "contract_version": "0.1",
+            "coverage": "unknown",
+            "error": null,
+            "generated_at": "2026-11-16T13:23:29.225Z",
+            "items": [
+              {
+                "authority": "authoritative",
+                "chunk_id": "c-1",
+                "citation_id": "E1",
+                "content_sha256": "886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292",
+                "egress": {
+                  "restriction": "local_only"
+                },
+                "freshness": "fresh",
+                "lifecycle": "active",
+                "locator": {
+                  "label": "lines 1-3",
+                  "line_end": 3,
+                  "line_start": 1
+                },
+                "origin": "source_evidence",
+                "recorded_at": "2026-11-16T13:23:29.224Z",
+                "revision_id": "r-6ac23479a047461aa92b803670365483",
+                "source_id": "darkroom-water",
+                "text": "# Mobile darkroom water\n\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf."
+              }
+            ],
+            "omissions": {},
+            "request_id": "holdout-H12-declared-h12-a",
+            "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+            "status": "ok",
+            "token_usage": {
+              "context_bytes": 638,
+              "counter_id": "utf8_bytes",
+              "counter_kind": "conservative_bytes",
+              "counter_revision": "1",
+              "estimated_tokens": 638,
+              "includes_citations": true
+            },
+            "warnings": [
+              "APPROXIMATE_TOKEN_COUNT"
+            ]
+          }
+        },
+        {
+          "gold_id": "h12-b",
+          "latency_ms": 0.155,
+          "request": {
+            "access_scope_ref": "reader",
+            "budget": {
+              "max_bytes": 262144,
+              "max_items": 32,
+              "max_tokens": 32768
+            },
+            "contract_version": "0.1",
+            "destination": "local_only",
+            "freshness_requirement": "allow_unknown",
+            "purpose": "current_answer",
+            "query": "Test the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box.",
+            "request_id": "holdout-H12-declared-h12-b",
+            "source_ids": [
+              "darkroom-light"
+            ]
+          },
+          "response": {
+            "context_revision": "33e65c16cbc6e493207fe2b54ab0f440:3",
+            "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"darkroom-light\",\"revision_id\":\"r-9b47149d33f04f209bb0940c4b8d80d2\",\"chunk_id\":\"c-2\",\"text\":\"# Mobile darkroom light check\\n\\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison.\",\"content_sha256\":\"1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+            "contract_version": "0.1",
+            "coverage": "unknown",
+            "error": null,
+            "generated_at": "2026-11-16T13:23:29.226Z",
+            "items": [
+              {
+                "authority": "authoritative",
+                "chunk_id": "c-2",
+                "citation_id": "E1",
+                "content_sha256": "1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6",
+                "egress": {
+                  "restriction": "local_only"
+                },
+                "freshness": "fresh",
+                "lifecycle": "active",
+                "locator": {
+                  "label": "lines 1-3",
+                  "line_end": 3,
+                  "line_start": 1
+                },
+                "origin": "source_evidence",
+                "recorded_at": "2026-11-16T13:23:29.224Z",
+                "revision_id": "r-9b47149d33f04f209bb0940c4b8d80d2",
+                "source_id": "darkroom-light",
+                "text": "# Mobile darkroom light check\n\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison."
+              }
+            ],
+            "omissions": {},
+            "request_id": "holdout-H12-declared-h12-b",
+            "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+            "status": "ok",
+            "token_usage": {
+              "context_bytes": 655,
+              "counter_id": "utf8_bytes",
+              "counter_kind": "conservative_bytes",
+              "counter_revision": "1",
+              "estimated_tokens": 655,
+              "includes_citations": true
+            },
+            "warnings": [
+              "APPROXIMATE_TOKEN_COUNT"
+            ]
+          }
+        }
+      ],
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 2,
+      "kind": "required_fit",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "darkroom-water"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "darkroom-light"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 2,
+            "source_id": "darkroom-stock"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 1896,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "darkroom-light",
+          "darkroom-water"
+        ],
+        "gold_spans": 2,
+        "items": 3,
+        "policy_errors": [],
+        "relevant_returned_sources": 2,
+        "rendered_context_bytes": 1896,
+        "returned_source_count": 3,
+        "returned_sources": [
+          "darkroom-light",
+          "darkroom-stock",
+          "darkroom-water"
+        ],
+        "serialized_response_bytes": 4517,
+        "snapshot_validation": "current",
+        "source_precision": 0.6666666666666666,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h12-a"
+          },
+          {
+            "covered": false,
+            "id": "h12-b"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 6000,
+          "max_items": 12,
+          "max_tokens": 6000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Prepare the mobile darkroom start-up evidence packet.",
+        "request_id": "holdout-H12"
+      },
+      "required_refs": [
+        {
+          "chunk_id": "c-1",
+          "content_sha256": "886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292",
+          "revision_id": "r-6ac23479a047461aa92b803670365483",
+          "source_id": "darkroom-water"
+        },
+        {
+          "chunk_id": "c-2",
+          "content_sha256": "1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6",
+          "revision_id": "r-9b47149d33f04f209bb0940c4b8d80d2",
+          "source_id": "darkroom-light"
+        }
+      ],
+      "required_wrapper": {
+        "context": {
+          "context_revision": "33e65c16cbc6e493207fe2b54ab0f440:3",
+          "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"darkroom-water\",\"revision_id\":\"r-6ac23479a047461aa92b803670365483\",\"chunk_id\":\"c-1\",\"text\":\"# Mobile darkroom water\\n\\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf.\",\"content_sha256\":\"886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"darkroom-light\",\"revision_id\":\"r-9b47149d33f04f209bb0940c4b8d80d2\",\"chunk_id\":\"c-2\",\"text\":\"# Mobile darkroom light check\\n\\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison.\",\"content_sha256\":\"1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"darkroom-stock\",\"revision_id\":\"r-7f95968a2ed94fdeb8307d826192168b\",\"chunk_id\":\"c-3\",\"text\":\"# Mobile darkroom stock\\n\\nCount the paper sheets after the session and write the remaining total on the packet. Store opened packets in the sealed cupboard.\",\"content_sha256\":\"2e37f85ee727c3e180c932078cd03e2f0cec4118b95d0ed6a9db85275e8fb39d\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+          "contract_version": "0.1",
+          "coverage": "unknown",
+          "error": null,
+          "generated_at": "2026-11-16T13:23:29.226Z",
+          "items": [
+            {
+              "authority": "authoritative",
+              "chunk_id": "c-1",
+              "citation_id": "E1",
+              "content_sha256": "886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292",
+              "egress": {
+                "restriction": "local_only"
+              },
+              "freshness": "fresh",
+              "lifecycle": "active",
+              "locator": {
+                "label": "lines 1-3",
+                "line_end": 3,
+                "line_start": 1
+              },
+              "origin": "source_evidence",
+              "recorded_at": "2026-11-16T13:23:29.224Z",
+              "revision_id": "r-6ac23479a047461aa92b803670365483",
+              "source_id": "darkroom-water",
+              "text": "# Mobile darkroom water\n\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf."
+            },
+            {
+              "authority": "authoritative",
+              "chunk_id": "c-2",
+              "citation_id": "E2",
+              "content_sha256": "1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6",
+              "egress": {
+                "restriction": "local_only"
+              },
+              "freshness": "fresh",
+              "lifecycle": "active",
+              "locator": {
+                "label": "lines 1-3",
+                "line_end": 3,
+                "line_start": 1
+              },
+              "origin": "source_evidence",
+              "recorded_at": "2026-11-16T13:23:29.224Z",
+              "revision_id": "r-9b47149d33f04f209bb0940c4b8d80d2",
+              "source_id": "darkroom-light",
+              "text": "# Mobile darkroom light check\n\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison."
+            },
+            {
+              "authority": "authoritative",
+              "chunk_id": "c-3",
+              "citation_id": "E3",
+              "content_sha256": "2e37f85ee727c3e180c932078cd03e2f0cec4118b95d0ed6a9db85275e8fb39d",
+              "egress": {
+                "restriction": "local_only"
+              },
+              "freshness": "fresh",
+              "lifecycle": "active",
+              "locator": {
+                "label": "lines 1-3",
+                "line_end": 3,
+                "line_start": 1
+              },
+              "origin": "source_evidence",
+              "recorded_at": "2026-11-16T13:23:29.224Z",
+              "revision_id": "r-7f95968a2ed94fdeb8307d826192168b",
+              "source_id": "darkroom-stock",
+              "text": "# Mobile darkroom stock\n\nCount the paper sheets after the session and write the remaining total on the packet. Store opened packets in the sealed cupboard."
+            }
+          ],
+          "omissions": {},
+          "request_id": "holdout-H12",
+          "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+          "status": "ok",
+          "token_usage": {
+            "context_bytes": 1896,
+            "counter_id": "utf8_bytes",
+            "counter_kind": "conservative_bytes",
+            "counter_revision": "1",
+            "estimated_tokens": 1896,
+            "includes_citations": true
+          },
+          "warnings": [
+            "APPROXIMATE_TOKEN_COUNT"
+          ]
+        },
+        "error": null,
+        "required": {
+          "delivered": [
+            {
+              "chunk_id": "c-1",
+              "content_sha256": "886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292",
+              "revision_id": "r-6ac23479a047461aa92b803670365483",
+              "source_id": "darkroom-water"
+            },
+            {
+              "chunk_id": "c-2",
+              "content_sha256": "1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6",
+              "revision_id": "r-9b47149d33f04f209bb0940c4b8d80d2",
+              "source_id": "darkroom-light"
+            }
+          ],
+          "missing": [],
+          "requested": [
+            {
+              "chunk_id": "c-1",
+              "content_sha256": "886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292",
+              "revision_id": "r-6ac23479a047461aa92b803670365483",
+              "source_id": "darkroom-water"
+            },
+            {
+              "chunk_id": "c-2",
+              "content_sha256": "1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6",
+              "revision_id": "r-9b47149d33f04f209bb0940c4b8d80d2",
+              "source_id": "darkroom-light"
+            }
+          ]
+        },
+        "status": "ok",
+        "wrapper_version": "kre-required/1"
+      },
+      "response": {
+        "context_revision": "33e65c16cbc6e493207fe2b54ab0f440:3",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"darkroom-water\",\"revision_id\":\"r-6ac23479a047461aa92b803670365483\",\"chunk_id\":\"c-1\",\"text\":\"# Mobile darkroom water\\n\\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf.\",\"content_sha256\":\"886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"darkroom-light\",\"revision_id\":\"r-9b47149d33f04f209bb0940c4b8d80d2\",\"chunk_id\":\"c-2\",\"text\":\"# Mobile darkroom light check\\n\\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison.\",\"content_sha256\":\"1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E3\",\"source_id\":\"darkroom-stock\",\"revision_id\":\"r-7f95968a2ed94fdeb8307d826192168b\",\"chunk_id\":\"c-3\",\"text\":\"# Mobile darkroom stock\\n\\nCount the paper sheets after the session and write the remaining total on the packet. Store opened packets in the sealed cupboard.\",\"content_sha256\":\"2e37f85ee727c3e180c932078cd03e2f0cec4118b95d0ed6a9db85275e8fb39d\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.224Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.226Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "886f0e86a9f2af625f2c70e4c77f1cafe6c97bfe266250fdd3e685ef6345f292",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.224Z",
+            "revision_id": "r-6ac23479a047461aa92b803670365483",
+            "source_id": "darkroom-water",
+            "text": "# Mobile darkroom water\n\nFill the mobile darkroom rinse tank with twelve litres of clean water before the session. Check the drain hose for a kink before placing the tank on the low shelf."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E2",
+            "content_sha256": "1f881b2c4616e282f45e00211412e5cb5b8dc3696cb39336b7969e4672f912a6",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.224Z",
+            "revision_id": "r-9b47149d33f04f209bb0940c4b8d80d2",
+            "source_id": "darkroom-light",
+            "text": "# Mobile darkroom light check\n\nTest the mobile darkroom safelight with a covered scrap sheet for three minutes before opening the paper box. Keep the exposed test beside the untouched scrap for comparison."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-3",
+            "citation_id": "E3",
+            "content_sha256": "2e37f85ee727c3e180c932078cd03e2f0cec4118b95d0ed6a9db85275e8fb39d",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.224Z",
+            "revision_id": "r-7f95968a2ed94fdeb8307d826192168b",
+            "source_id": "darkroom-stock",
+            "text": "# Mobile darkroom stock\n\nCount the paper sheets after the session and write the remaining total on the packet. Store opened packets in the sealed cupboard."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H12",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 1896,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 1896,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.289833,
+      "revision_ids": {
+        "darkroom-light": "r-9b47149d33f04f209bb0940c4b8d80d2",
+        "darkroom-stock": "r-7f95968a2ed94fdeb8307d826192168b",
+        "darkroom-water": "r-6ac23479a047461aa92b803670365483"
+      },
+      "setup_ms": 2.611541
+    },
+    {
+      "case_id": "H13",
+      "category": "caller_required_tight",
+      "declared_reference_bootstrap": [
+        {
+          "gold_id": "h13-a",
+          "latency_ms": 0.222375,
+          "request": {
+            "access_scope_ref": "reader",
+            "budget": {
+              "max_bytes": 262144,
+              "max_items": 32,
+              "max_tokens": 32768
+            },
+            "contract_version": "0.1",
+            "destination": "local_only",
+            "freshness_requirement": "allow_unknown",
+            "purpose": "current_answer",
+            "query": "The evening kiln operator must leave the firing log, witness-cone photograph, controller printout and shelf diagram together in the red handover wallet before signing out.",
+            "request_id": "holdout-H13-declared-h13-a",
+            "source_ids": [
+              "kiln-handover"
+            ]
+          },
+          "response": {
+            "context_revision": "e0218687b42b4b0bb5599918ffab54a6:1",
+            "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"kiln-handover\",\"revision_id\":\"r-0a011a2937f94d6e8b91cceb5886a165\",\"chunk_id\":\"c-1\",\"text\":\"# Ceramic kiln handover\\n\\nThe evening kiln operator must leave the firing log, witness-cone photograph, controller printout and shelf diagram together in the red handover wallet before signing out. The morning operator checks all four records before opening the kiln. A missing record is reported to the studio manager; memory of the firing does not replace the written handover. Keep unrelated class attendance sheets out of the wallet so that the technical records can be checked without searching through participant details.\",\"content_sha256\":\"1ad9d32a9f4d769878059354db5514d33d6783d4b1fd3bf0b22e11e7736f2fcd\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.227Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+            "contract_version": "0.1",
+            "coverage": "unknown",
+            "error": null,
+            "generated_at": "2026-11-16T13:23:29.227Z",
+            "items": [
+              {
+                "authority": "authoritative",
+                "chunk_id": "c-1",
+                "citation_id": "E1",
+                "content_sha256": "1ad9d32a9f4d769878059354db5514d33d6783d4b1fd3bf0b22e11e7736f2fcd",
+                "egress": {
+                  "restriction": "local_only"
+                },
+                "freshness": "fresh",
+                "lifecycle": "active",
+                "locator": {
+                  "label": "lines 1-3",
+                  "line_end": 3,
+                  "line_start": 1
+                },
+                "origin": "source_evidence",
+                "recorded_at": "2026-11-16T13:23:29.227Z",
+                "revision_id": "r-0a011a2937f94d6e8b91cceb5886a165",
+                "source_id": "kiln-handover",
+                "text": "# Ceramic kiln handover\n\nThe evening kiln operator must leave the firing log, witness-cone photograph, controller printout and shelf diagram together in the red handover wallet before signing out. The morning operator checks all four records before opening the kiln. A missing record is reported to the studio manager; memory of the firing does not replace the written handover. Keep unrelated class attendance sheets out of the wallet so that the technical records can be checked without searching through participant details."
+              }
+            ],
+            "omissions": {},
+            "request_id": "holdout-H13-declared-h13-a",
+            "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+            "status": "ok",
+            "token_usage": {
+              "context_bytes": 976,
+              "counter_id": "utf8_bytes",
+              "counter_kind": "conservative_bytes",
+              "counter_revision": "1",
+              "estimated_tokens": 976,
+              "includes_citations": true
+            },
+            "warnings": [
+              "APPROXIMATE_TOKEN_COUNT"
+            ]
+          }
+        }
+      ],
+      "expected_behavior_pass": true,
+      "gold_spans_expected": 1,
+      "kind": "required_budget",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": "BUDGET_TOO_SMALL",
+        "estimated_tokens": 0,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "kiln-handover"
+        ],
+        "gold_spans": 1,
+        "items": 0,
+        "policy_errors": [],
+        "relevant_returned_sources": 0,
+        "rendered_context_bytes": 0,
+        "returned_source_count": 0,
+        "returned_sources": [],
+        "serialized_response_bytes": 654,
+        "snapshot_validation": "denied",
+        "source_precision": null,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h13-a"
+          }
+        ],
+        "status": "error",
+        "tight_budget_failure": true,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 300,
+          "max_items": 2,
+          "max_tokens": 300
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "Prepare the ceramic kiln handover evidence packet.",
+        "request_id": "holdout-H13"
+      },
+      "required_refs": [
+        {
+          "chunk_id": "c-1",
+          "content_sha256": "1ad9d32a9f4d769878059354db5514d33d6783d4b1fd3bf0b22e11e7736f2fcd",
+          "revision_id": "r-0a011a2937f94d6e8b91cceb5886a165",
+          "source_id": "kiln-handover"
+        }
+      ],
+      "required_wrapper": {
+        "context": {
+          "context_revision": "e0218687b42b4b0bb5599918ffab54a6:1",
+          "context_text": "",
+          "contract_version": "0.1",
+          "coverage": "unknown",
+          "error": {
+            "code": "BUDGET_TOO_SMALL",
+            "message": "Request unavailable or outside the supported context contract.",
+            "retryable": false
+          },
+          "generated_at": "2026-11-16T13:23:29.228Z",
+          "items": [],
+          "omissions": {},
+          "request_id": "holdout-H13",
+          "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+          "status": "error",
+          "token_usage": {
+            "context_bytes": 0,
+            "counter_id": "utf8_bytes",
+            "counter_kind": "conservative_bytes",
+            "counter_revision": "1",
+            "estimated_tokens": 0,
+            "includes_citations": true
+          },
+          "warnings": [
+            "APPROXIMATE_TOKEN_COUNT"
+          ]
+        },
+        "error": {
+          "code": "BUDGET_TOO_SMALL",
+          "message": "Request unavailable or outside the supported context contract.",
+          "retryable": false
+        },
+        "required": {
+          "delivered": [],
+          "missing": [
+            {
+              "reason": "budget",
+              "ref": {
+                "chunk_id": "c-1",
+                "content_sha256": "1ad9d32a9f4d769878059354db5514d33d6783d4b1fd3bf0b22e11e7736f2fcd",
+                "revision_id": "r-0a011a2937f94d6e8b91cceb5886a165",
+                "source_id": "kiln-handover"
+              }
+            }
+          ],
+          "requested": [
+            {
+              "chunk_id": "c-1",
+              "content_sha256": "1ad9d32a9f4d769878059354db5514d33d6783d4b1fd3bf0b22e11e7736f2fcd",
+              "revision_id": "r-0a011a2937f94d6e8b91cceb5886a165",
+              "source_id": "kiln-handover"
+            }
+          ]
+        },
+        "status": "error",
+        "wrapper_version": "kre-required/1"
+      },
+      "response": {
+        "context_revision": "e0218687b42b4b0bb5599918ffab54a6:1",
+        "context_text": "",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": {
+          "code": "BUDGET_TOO_SMALL",
+          "message": "Request unavailable or outside the supported context contract.",
+          "retryable": false
+        },
+        "generated_at": "2026-11-16T13:23:29.228Z",
+        "items": [],
+        "omissions": {},
+        "request_id": "holdout-H13",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "error",
+        "token_usage": {
+          "context_bytes": 0,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 0,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.156708,
+      "revision_ids": {
+        "kiln-handover": "r-0a011a2937f94d6e8b91cceb5886a165"
+      },
+      "setup_ms": 1.027959
+    },
+    {
+      "case_id": "H14",
+      "category": "checkpoint_resume",
+      "continuity": {
+        "pass": false,
+        "setup_failure": "required_initial_evidence_not_retrieved"
+      },
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 1,
+      "kind": "checkpoint",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "boat-launch"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "boat-evening"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 1264,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "boat-launch"
+        ],
+        "gold_spans": 1,
+        "items": 2,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 1264,
+        "returned_source_count": 2,
+        "returned_sources": [
+          "boat-evening",
+          "boat-launch"
+        ],
+        "serialized_response_bytes": 3191,
+        "snapshot_validation": "current",
+        "source_precision": 0.5,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h14-a"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 4000,
+          "max_items": 12,
+          "max_tokens": 4000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "What instruction should the boat shed volunteer retain for the morning launch checklist?",
+        "request_id": "holdout-H14"
+      },
+      "response": {
+        "context_revision": "27b6c9a134c0ece37f4583d10d758cdc:2",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"boat-launch\",\"revision_id\":\"r-64588d7121664e8f9322fcff6dd0fead\",\"chunk_id\":\"c-1\",\"text\":\"# Morning launch checklist\\n\\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate.\",\"content_sha256\":\"a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.230Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"boat-evening\",\"revision_id\":\"r-7329131ffb004286a338eb8c56c82fde\",\"chunk_id\":\"c-2\",\"text\":\"# Evening boat shed\\n\\nThe evening key holder closes the upper window and returns the trolley to the dry rack. The radio remains on its charger overnight.\",\"content_sha256\":\"2a1e9749d4872a6ff15e9639854d12110c9295d70d05fb1f17d5f1e8aadc5343\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.230Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.231Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "a92501bd351ca7663b66d17166b89877befb78a288031447237bd5d445b4aa1a",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.230Z",
+            "revision_id": "r-64588d7121664e8f9322fcff6dd0fead",
+            "source_id": "boat-launch",
+            "text": "# Morning launch checklist\n\nBefore the morning launch, the boat shed volunteer checks that each lifejacket has an intact buckle and records the count on the pier board. A damaged jacket goes in the marked repair crate."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E2",
+            "content_sha256": "2a1e9749d4872a6ff15e9639854d12110c9295d70d05fb1f17d5f1e8aadc5343",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.230Z",
+            "revision_id": "r-7329131ffb004286a338eb8c56c82fde",
+            "source_id": "boat-evening",
+            "text": "# Evening boat shed\n\nThe evening key holder closes the upper window and returns the trolley to the dry rack. The radio remains on its charger overnight."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H14",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 1264,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 1264,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.263709,
+      "revision_ids": {
+        "boat-evening": "r-7329131ffb004286a338eb8c56c82fde",
+        "boat-launch": "r-64588d7121664e8f9322fcff6dd0fead"
+      },
+      "setup_ms": 2.898209
+    },
+    {
+      "case_id": "H15",
+      "category": "historical_lifecycle",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 2,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 0,
+            "source_id": "orchard-old"
+          },
+          {
+            "errors": [
+              "item_text_not_rendered"
+            ],
+            "item": 1,
+            "source_id": "orchard-current"
+          }
+        ],
+        "complete_evidence": false,
+        "coverage_label": "unknown",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 1303,
+        "evidence_recall": 0.0,
+        "exact_citations": 0,
+        "expected_sources": [
+          "orchard-current",
+          "orchard-old"
+        ],
+        "gold_spans": 2,
+        "items": 2,
+        "policy_errors": [],
+        "relevant_returned_sources": 2,
+        "rendered_context_bytes": 1303,
+        "returned_source_count": 2,
+        "returned_sources": [
+          "orchard-current",
+          "orchard-old"
+        ],
+        "serialized_response_bytes": 3269,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h15-a"
+          },
+          {
+            "covered": false,
+            "id": "h15-b"
+          }
+        ],
+        "status": "ok",
+        "tight_budget_failure": false,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 5000,
+          "max_items": 12,
+          "max_tokens": 5000
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "historical_evidence",
+        "query": "What did the superseded orchard ladder instruction require, and what does its active replacement require?",
+        "request_id": "holdout-H15"
+      },
+      "response": {
+        "context_revision": "de5a8c62efd501ada6caf025bd4a9550:5",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"orchard-old\",\"revision_id\":\"r-b09e8b54e69b435faa569251dd5b4e21\",\"chunk_id\":\"c-1\",\"text\":\"# Superseded orchard ladder instruction\\n\\nThe orchard ladder instruction required one volunteer to carry each ladder from the store. This version is superseded and retained only for the incident review.\",\"content_sha256\":\"a928324fc4d4f13d5e19a247528803a2dd34c782aef9892b649006d331bee50d\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.232Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"superseded\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}},{\"citation_id\":\"E2\",\"source_id\":\"orchard-current\",\"revision_id\":\"r-c60a2e33dfb34f6db207a92a2bccdb79\",\"chunk_id\":\"c-2\",\"text\":\"# Current orchard ladder instruction\\n\\nThe orchard ladder instruction now requires two volunteers to carry each ladder from the store. The shift leader assigns pairs before unlocking the equipment room.\",\"content_sha256\":\"76e3355d383e3fc221f52d8c1654b2b7a82888bfd1ed5581bbdd4e68fa3d0015\",\"locator\":{\"label\":\"lines 1-3\",\"line_start\":1,\"line_end\":3},\"recorded_at\":\"2026-11-16T13:23:29.233Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "unknown",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.234Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-1",
+            "citation_id": "E1",
+            "content_sha256": "a928324fc4d4f13d5e19a247528803a2dd34c782aef9892b649006d331bee50d",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "superseded",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.232Z",
+            "revision_id": "r-b09e8b54e69b435faa569251dd5b4e21",
+            "source_id": "orchard-old",
+            "text": "# Superseded orchard ladder instruction\n\nThe orchard ladder instruction required one volunteer to carry each ladder from the store. This version is superseded and retained only for the incident review."
+          },
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-2",
+            "citation_id": "E2",
+            "content_sha256": "76e3355d383e3fc221f52d8c1654b2b7a82888bfd1ed5581bbdd4e68fa3d0015",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 1-3",
+              "line_end": 3,
+              "line_start": 1
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.233Z",
+            "revision_id": "r-c60a2e33dfb34f6db207a92a2bccdb79",
+            "source_id": "orchard-current",
+            "text": "# Current orchard ladder instruction\n\nThe orchard ladder instruction now requires two volunteers to carry each ladder from the store. The shift leader assigns pairs before unlocking the equipment room."
+          }
+        ],
+        "omissions": {},
+        "request_id": "holdout-H15",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "ok",
+        "token_usage": {
+          "context_bytes": 1303,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 1303,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.231458,
+      "revision_ids": {
+        "orchard-current": "r-c60a2e33dfb34f6db207a92a2bccdb79",
+        "orchard-old": "r-b09e8b54e69b435faa569251dd5b4e21",
+        "orchard-revoked": "r-a3b02e342fd24430a6a1e25a83fb0c1d"
+      },
+      "setup_ms": 2.701875
+    },
+    {
+      "case_id": "H16",
+      "category": "ordinary_tight_budget",
+      "expected_behavior_pass": false,
+      "gold_spans_expected": 3,
+      "kind": "retrieve",
+      "metrics": {
+        "budget_errors": [],
+        "citation_errors": [],
+        "complete_evidence": false,
+        "coverage_label": "partial",
+        "covered_spans": 0,
+        "error_code": null,
+        "estimated_tokens": 462,
+        "evidence_recall": 0.0,
+        "exact_citations": 1,
+        "expected_sources": [
+          "puppet-booth"
+        ],
+        "gold_spans": 3,
+        "items": 1,
+        "policy_errors": [],
+        "relevant_returned_sources": 1,
+        "rendered_context_bytes": 462,
+        "returned_source_count": 1,
+        "returned_sources": [
+          "puppet-booth"
+        ],
+        "serialized_response_bytes": 1537,
+        "snapshot_validation": "current",
+        "source_precision": 1.0,
+        "span_results": [
+          {
+            "covered": false,
+            "id": "h16-a"
+          },
+          {
+            "covered": false,
+            "id": "h16-b"
+          },
+          {
+            "covered": false,
+            "id": "h16-c"
+          }
+        ],
+        "status": "partial",
+        "tight_budget_failure": true,
+        "token_counter_kind": "conservative_bytes",
+        "unsupported_context_for_missing_question": false,
+        "unsupported_sufficiency_claim": false
+      },
+      "request": {
+        "access_scope_ref": "reader",
+        "budget": {
+          "max_bytes": 700,
+          "max_items": 3,
+          "max_tokens": 700
+        },
+        "contract_version": "0.1",
+        "destination": "local_only",
+        "freshness_requirement": "allow_unknown",
+        "purpose": "current_answer",
+        "query": "What three checks are required for the travelling puppet booth: floor, ballast, and public clearance?",
+        "request_id": "holdout-H16"
+      },
+      "response": {
+        "context_revision": "af5550b0e8a2160cdca92a092f912ba5:1",
+        "context_text": "[{\"citation_id\":\"E1\",\"source_id\":\"puppet-booth\",\"revision_id\":\"r-0d847a8fbd414343911e3641d67c6eeb\",\"chunk_id\":\"c-6\",\"text\":\"## Clearance\",\"content_sha256\":\"8218589960232deae6b121cedd254d7f1f11809c8c68b1fa4c10c33a321d4c46\",\"locator\":{\"label\":\"lines 13-13\",\"line_start\":13,\"line_end\":13},\"recorded_at\":\"2026-11-16T13:23:29.235Z\",\"authority\":\"authoritative\",\"origin\":\"source_evidence\",\"lifecycle\":\"active\",\"freshness\":\"fresh\",\"egress\":{\"restriction\":\"local_only\"}}]",
+        "contract_version": "0.1",
+        "coverage": "partial",
+        "error": null,
+        "generated_at": "2026-11-16T13:23:29.235Z",
+        "items": [
+          {
+            "authority": "authoritative",
+            "chunk_id": "c-6",
+            "citation_id": "E1",
+            "content_sha256": "8218589960232deae6b121cedd254d7f1f11809c8c68b1fa4c10c33a321d4c46",
+            "egress": {
+              "restriction": "local_only"
+            },
+            "freshness": "fresh",
+            "lifecycle": "active",
+            "locator": {
+              "label": "lines 13-13",
+              "line_end": 13,
+              "line_start": 13
+            },
+            "origin": "source_evidence",
+            "recorded_at": "2026-11-16T13:23:29.235Z",
+            "revision_id": "r-0d847a8fbd414343911e3641d67c6eeb",
+            "source_id": "puppet-booth",
+            "text": "## Clearance"
+          }
+        ],
+        "omissions": {
+          "budget": 12
+        },
+        "request_id": "holdout-H16",
+        "scope_fingerprint": "fa53d3ca22de094c34413aeed6077b82577b9dd89c4167e2eecebc2eb17f93d3",
+        "status": "partial",
+        "token_usage": {
+          "context_bytes": 462,
+          "counter_id": "utf8_bytes",
+          "counter_kind": "conservative_bytes",
+          "counter_revision": "1",
+          "estimated_tokens": 462,
+          "includes_citations": true
+        },
+        "warnings": [
+          "APPROXIMATE_TOKEN_COUNT"
+        ]
+      },
+      "retrieval_latency_ms": 0.665667,
+      "revision_ids": {
+        "puppet-booth": "r-0d847a8fbd414343911e3641d67c6eeb"
+      },
+      "setup_ms": 1.078875
+    }
+  ],
+  "source_inventory": {
+    "files": {
+      "src/kre/__init__.py": "d702d5755498cdb4a526b085846123c55b701095106f962a1bf2164f924f97dc",
+      "src/kre/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/kre/_stdio.py": "f53c401daea52b19a0e5926e780d99ca14f8c52d0157c1a214562b43302ae0a4",
+      "src/kre/cli.py": "33df604d003a8dd5055ba371ff707eef81e84fe4931753c402e6de0ab6fa99c5",
+      "src/kre/continuity.py": "93b3e37feb34c0dfd2877a3ac83134dfb3c7f7654f70e742c388d3fd39cb7192",
+      "src/kre/demo.py": "90bde8157148452fc063dade037e06853b74a832dcb7829d6744e69ef6a585f1",
+      "src/kre/efficiency.py": "d4cc42f3fb6a035a24f9300ffb5e949924a92c5cb8857bc644cede4d32b311b2",
+      "src/kre/ingestion.py": "16dd33a740fcc60980020646f5444d06000079cbb74aeeba1d51ec21f703d6b1",
+      "src/kre/mcp.py": "46da2520e30a6f4ce8dafb30b8d197ae787a81c78aaa71761915a7cc570401dc",
+      "src/kre/output_validation.py": "2304f536531b51f6fb9bed87824ece475732e4f42b34520be544865c5c2fc8d2",
+      "src/kre/quality.py": "e5da203b46f39ede6bfd3e8069434fda2757d48c3ec0e2181baf4bc59a2180be",
+      "src/kre/sample_data/release.md": "d7b81ad204cfc7d4eb238ace79bee1ed8e750a0fdd54ec5be22e6ee609b93fd3",
+      "src/kre/store.py": "df5f633740c304b4492b6c743533ed88f465e81b8a87046abef9533dfae454fb"
+    },
+    "sha256": "d826a1dc18a0f07bb492112ca343b85d820e7863aedf25abb61c37ec1c3f7445"
+  },
+  "source_unchanged": true,
+  "warning": "Original metrics include a rendering-check implementation defect; use the saved-output rescore for valid counts.",
+  "worker_elapsed_ms": 91.597084,
+  "worker_returncode": 0
+}

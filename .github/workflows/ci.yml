@@ -1,0 +1,130 @@
+name: Offline verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: offline-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  PYTHONUTF8: '1'
+  PYTHONDONTWRITEBYTECODE: '1'
+
+jobs:
+  posix:
+    name: Full offline suite (${{ matrix.os }}, Python ${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install independently
+        run: python -m pip install --no-deps .
+      - name: Verify installed version and FTS5
+        run: |
+          python -I -c "import importlib.metadata, kre, sqlite3; assert kre.__version__ == importlib.metadata.version('knowledge-retrieval-engine'); c=sqlite3.connect(':memory:'); c.execute('CREATE VIRTUAL TABLE t USING fts5(text)'); print(kre.__version__, sqlite3.sqlite_version)"
+      - name: Complete public regression suite, including negative paths
+        run: python -m unittest discover -s tests -v
+      - name: Installed offline demonstrations
+        working-directory: ${{ runner.temp }}
+        run: |
+          python -I -m kre --db demo.sqlite3 demo
+          python -I -m kre --db continuity.sqlite3 demo-k2 --json
+      - name: Ordinary developer lifecycle and MCP walkthrough
+        run: python -I scripts/verify_user_workflow.py
+      - name: Verify uninstall
+        run: |
+          python -m pip uninstall -y knowledge-retrieval-engine
+          python -I -c "import importlib.util; assert importlib.util.find_spec('kre') is None"
+
+  windows-core:
+    name: Portable core only (Windows, Python ${{ matrix.python }})
+    runs-on: windows-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install independent portable core
+        run: python -m pip install --no-deps .
+      - name: Portable core, MCP and negative paths (no POSIX ingestion)
+        run: |
+          python -m unittest discover -s tests -p test_regressions.py -v
+          python -m unittest discover -s tests -p test_k2.py -v
+          python -m unittest discover -s tests -p test_mcp.py -v
+          python -m unittest discover -s tests -p test_mcp_duplication.py -v
+          python -m unittest discover -s tests -p test_efficiency.py -v
+          python -m unittest discover -s tests -p test_quality.py -v
+          python -m unittest discover -s tests -p test_output_validation.py -v
+          python -m unittest discover -s tests -p test_measure_cli.py -v
+          python -m unittest discover -s tests -p test_heading_packing.py -v
+          python -m unittest discover -s tests -p test_small_sources.py -v
+      - name: Explicitly verify unsupported file ingestion fails closed
+        run: |
+          python -I -c "from pathlib import Path; from tempfile import TemporaryDirectory; from kre.ingestion import read_permitted_file, IngestError; import sys; d=TemporaryDirectory(); p=Path(d.name); f=p/'example.txt'; f.write_text('synthetic'); exec('try:\n read_permitted_file(f,[(p,p)])\nexcept IngestError as e:\n assert str(e)==\"Safe descriptor-relative ingestion is unavailable on this platform\"\nelse:\n raise AssertionError(\"Windows unexpectedly accepted protected file ingestion\")'); d.cleanup()"
+      - name: Installed text-only continuity demonstration
+        working-directory: ${{ runner.temp }}
+        run: python -I -m kre --db continuity.sqlite3 demo-k2 --json
+      - name: Verify uninstall
+        run: |
+          python -m pip uninstall -y knowledge-retrieval-engine
+          python -I -c "import importlib.util; assert importlib.util.find_spec('kre') is None"
+
+  package:
+    name: Build and install release candidate artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - name: Reviewed public source integrity and privacy signatures
+        run: python scripts/release_check.py
+      - name: Build wheel and source distribution
+        run: |
+          python -m pip install build
+          python -m build
+          python scripts/normalize_sdist.py dist/*.tar.gz
+      - name: Install wheel without companion packages
+        run: python -m pip install --no-deps dist/*.whl
+      - name: Installed wheel smoke test
+        working-directory: ${{ runner.temp }}
+        run: |
+          python -I -m kre --version
+          python -I -m kre --db wheel-demo.sqlite3 demo
+          python -I -m kre --db wheel-continuity.sqlite3 demo-k2 --json
+      - name: Install source distribution and verify independent import
+        run: |
+          python -m pip uninstall -y knowledge-retrieval-engine
+          python -m pip install --no-deps dist/*.tar.gz
+          python -I -c "import kre; print(kre.__version__)"

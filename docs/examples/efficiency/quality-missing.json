@@ -1,0 +1,41 @@
+{
+  "format": "task-quality-observation/1",
+  "task_id": "synthetic-lyra-1",
+  "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+  "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e",
+  "completion": "completed",
+  "answer": {
+    "delete_without_approval": false
+  },
+  "citations": [
+    {
+      "source_id": "lyra-note",
+      "source_sha256": "b4f30eae941aa69650e6f35ed7910c50cada3a28b073b8dba5b93eda1fc01763",
+      "line_start": 2,
+      "line_end": 2,
+      "quote": "The owner must approve deletion.",
+      "claim_id": "approval"
+    }
+  ],
+  "evidence": [
+    {
+      "source_id": "lyra-note",
+      "source_sha256": "b4f30eae941aa69650e6f35ed7910c50cada3a28b073b8dba5b93eda1fc01763",
+      "line_start": 1,
+      "line_end": 2
+    }
+  ],
+  "errors": 0,
+  "recovery": "not_needed",
+  "unnecessary_information": 0,
+  "citation_reviews": [
+    {
+      "citation_index": 0,
+      "citation_sha256": "66b3ac111ec7cb7e6a016486c3d4cb4074d47f9b0aad6a14536e3029f9ad221e",
+      "answer_sha256": "3c21038bef20de12cc20390844555d7c93521449b65fa4f5348ab5a2d42a686c",
+      "verdict": true,
+      "independent": true,
+      "reviewer_ref": "synthetic-review-fixture"
+    }
+  ]
+}

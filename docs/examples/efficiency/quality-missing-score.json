@@ -1,0 +1,78 @@
+{
+  "format": "quality-score/1",
+  "scorer_version": "typed-review-1",
+  "task_id": "synthetic-lyra-1",
+  "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+  "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e",
+  "answer_sha256": "3c21038bef20de12cc20390844555d7c93521449b65fa4f5348ab5a2d42a686c",
+  "observation_sha256": "fbbb2d85878381d36a967405fbc0cf426c5088504a1b3b72a9d0eb28e608a179",
+  "completion_pass": true,
+  "critical_pass": false,
+  "quality_pass": false,
+  "criteria": {
+    "constraints": {
+      "passed": 1,
+      "total": 1,
+      "unknown": 0,
+      "score": 1.0
+    },
+    "correctness": {
+      "passed": 0,
+      "total": 0,
+      "unknown": 0,
+      "score": null
+    },
+    "facts": {
+      "passed": 0,
+      "total": 1,
+      "unknown": 0,
+      "score": 0.0
+    },
+    "missing_evidence": {
+      "passed": 0,
+      "total": 0,
+      "unknown": 0,
+      "score": null
+    },
+    "recovery": {
+      "passed": 0,
+      "total": 0,
+      "unknown": 0,
+      "score": null
+    },
+    "unnecessary_information": {
+      "passed": 0,
+      "total": 0,
+      "unknown": 0,
+      "score": null
+    }
+  },
+  "citation_exactness": {
+    "passed": 1,
+    "total": 1,
+    "unknown": 0,
+    "score": 1.0
+  },
+  "citation_support": {
+    "passed": 1,
+    "total": 1,
+    "unknown": 0,
+    "score": 1.0
+  },
+  "evidence_recall": {
+    "passed": 1,
+    "total": 1,
+    "unknown": 0,
+    "score": 1.0
+  },
+  "evidence_validity": {
+    "passed": 1,
+    "total": 1,
+    "unknown": 0,
+    "score": 1.0
+  },
+  "unnecessary_information": 0,
+  "errors": 0,
+  "recovery": "not_needed",
+  "review_basis": "Exact typed values or supplied independent review attestations; no semantic model judge."
+}

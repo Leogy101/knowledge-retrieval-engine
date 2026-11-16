@@ -1,0 +1,53 @@
+{
+  "source_kind": "synthetic",
+  "no_model_calls": true,
+  "purpose": "Known arithmetic and quality regression verification, not performance evidence.",
+  "billed_cost_fields": "Fictional provider-billed receipts; no real charge, provider or price inference.",
+  "local_measurement_fields": "Assigned fixture numbers, not timed executions.",
+  "reports": {
+    "paired": {
+      "source_kind": "synthetic",
+      "quality_preserved": true,
+      "all_request_coverage": true,
+      "claims": {
+        "total_tokens": "synthetic_only",
+        "actual_cost": "synthetic_only",
+        "estimated_cost": "synthetic_only",
+        "completion_seconds": "synthetic_only"
+      }
+    },
+    "quality-regression": {
+      "source_kind": "synthetic",
+      "quality_preserved": false,
+      "all_request_coverage": true,
+      "claims": {
+        "total_tokens": "synthetic_only",
+        "actual_cost": "synthetic_only",
+        "estimated_cost": "synthetic_only",
+        "completion_seconds": "synthetic_only"
+      }
+    },
+    "missing-usage": {
+      "source_kind": "synthetic",
+      "quality_preserved": true,
+      "all_request_coverage": false,
+      "claims": {
+        "total_tokens": "synthetic_only",
+        "actual_cost": "synthetic_only",
+        "estimated_cost": "synthetic_only",
+        "completion_seconds": "synthetic_only"
+      }
+    },
+    "gcb-preview": {
+      "source_kind": "synthetic",
+      "quality_preserved": true,
+      "all_request_coverage": true,
+      "claims": {
+        "total_tokens": "synthetic_only",
+        "actual_cost": "synthetic_only",
+        "estimated_cost": "synthetic_only",
+        "completion_seconds": "synthetic_only"
+      }
+    }
+  }
+}

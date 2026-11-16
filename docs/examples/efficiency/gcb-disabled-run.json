@@ -1,0 +1,146 @@
+{
+  "format": "efficiency-run/1",
+  "source_kind": "synthetic",
+  "condition": "disabled",
+  "identity": {
+    "task_id": "synthetic-lyra-1",
+    "pair_id": "pair-1",
+    "repetition": 1,
+    "task_sha256": "153701e956f59beced949ca80f378525d0acaffc49487d88f4c48a0b8e18daac",
+    "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "corpus_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "rubric_sha256": "f9b05a00c0e0f0244086e7b1fc750653e2f1fa30bf4c4b5de5eedd21f67d8f0e"
+  },
+  "answer_sha256": "e61bcda317489cb52b16c27ff80851cc0f1f77f28f425d76396bd4c781774bfa",
+  "observation_sha256": "110d6184af160d660632a07a97b87391140a17e5cc5e924552954689b3d13849",
+  "trial_order": 1,
+  "comparison": {
+    "system": "gcb",
+    "allowed_differences": [
+      "model",
+      "model_revision",
+      "reasoning_sha256"
+    ]
+  },
+  "configuration": {
+    "provider": "fixture",
+    "model": "fixture-model",
+    "model_revision": "revision-1",
+    "reasoning_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tools": [
+      "read"
+    ],
+    "permissions_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "environment_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "history_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "source_access_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "retry_policy_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "cache_state": "cold",
+    "warm_state": "warm",
+    "memory_state": "isolated"
+  },
+  "coverage": {
+    "requests": "complete",
+    "auxiliary": "complete",
+    "tools": "complete",
+    "context": "complete"
+  },
+  "requests": [
+    {
+      "id": "first",
+      "state": "completed",
+      "retry_of": null,
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 20,
+        "cache_read_tokens": 40,
+        "cache_write_tokens": 10,
+        "reasoning_tokens": 5,
+        "total_tokens": 170,
+        "input_semantics": "excludes_cache",
+        "output_semantics": "includes_reasoning",
+        "source_kind": "synthetic",
+        "provenance_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "configuration_sha256": "1f30ce71a090c5c6e2dd347de0b001dfd6150fd61efe73e9bc80086c8c545142",
+      "context": {
+        "model_input_bytes": 1000,
+        "injected_tool_bytes": 200,
+        "injected_evidence_bytes": 100,
+        "estimated_input_tokens": 250,
+        "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "actual_cost": {
+        "amount": 0.002,
+        "currency": "USD",
+        "source_kind": "provider_billed",
+        "basis_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "estimated_cost": {
+        "amount": 0.003,
+        "currency": "USD",
+        "source_kind": "estimated",
+        "basis_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    },
+    {
+      "id": "second",
+      "state": "completed",
+      "retry_of": null,
+      "usage": {
+        "input_tokens": 100,
+        "output_tokens": 20,
+        "cache_read_tokens": 40,
+        "cache_write_tokens": 10,
+        "reasoning_tokens": 5,
+        "total_tokens": 170,
+        "input_semantics": "excludes_cache",
+        "output_semantics": "includes_reasoning",
+        "source_kind": "synthetic",
+        "provenance_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "configuration_sha256": "1f30ce71a090c5c6e2dd347de0b001dfd6150fd61efe73e9bc80086c8c545142",
+      "context": {
+        "model_input_bytes": 1000,
+        "injected_tool_bytes": 200,
+        "injected_evidence_bytes": 100,
+        "estimated_input_tokens": 250,
+        "input_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "actual_cost": {
+        "amount": 0.002,
+        "currency": "USD",
+        "source_kind": "provider_billed",
+        "basis_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "estimated_cost": {
+        "amount": 0.003,
+        "currency": "USD",
+        "source_kind": "estimated",
+        "basis_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "tool-1",
+      "name": "read",
+      "state": "completed",
+      "response_bytes": 200,
+      "response_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "elapsed_seconds": 0.1
+    }
+  ],
+  "measurements": {
+    "completion_seconds": 2.0,
+    "retrieval_core_seconds": 0.01,
+    "retrieval_round_trip_seconds": 0.1,
+    "validation_seconds": 0,
+    "routing_seconds": 0,
+    "local_cpu_seconds": 0.02,
+    "setup_seconds": 0.3,
+    "setup_cpu_seconds": 0.1,
+    "storage_bytes": 4096
+  },
+  "outcome": "completed"
+}

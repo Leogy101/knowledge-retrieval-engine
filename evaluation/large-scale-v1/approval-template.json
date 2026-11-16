@@ -1,0 +1,6 @@
+{
+  "status": "pending",
+  "execution_freeze_sha256": "0ab921ca03228a08b6c7445d902051e81dcd5f34e644fa82810f7447ca56f49d",
+  "maximum_content_calls": 96,
+  "quiet_window_confirmed": false
+}

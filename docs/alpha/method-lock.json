@@ -1,0 +1,14 @@
+{
+  "baseline": "8318473",
+  "method": "bounded-neighbor-windows-v1",
+  "locked_before_holdout_evaluation": true,
+  "rules": [
+    "Keep ingestion, global lexical source discovery, BM25 order, destination guard and current budgets unchanged.",
+    "For each lexical seed in existing order, consider at most its immediate preceding and following stored chunks in the same revision, preceding first, if not already represented.",
+    "Use exact contiguous source text including blank separators, never more than the existing 1200-byte normal chunk target for expansion. A larger original seed remains intact.",
+    "Return one immutable revision-bound window reference for each expanded span; retain old chunk references and validate every window against stored boundaries and source text.",
+    "Do not repeat any represented chunk. If an expanded window cannot fit remaining bytes, try the original seed, preserving explicit budget omissions.",
+    "No query-specific vocabulary, gold-derived settings, threshold sweeps, global full-document fallback, model calls or shared contract changes."
+  ],
+  "decision": "Evaluate once on existing suites and independently frozen cases. Reject for unacceptable regression; no subsequent tuning against held-out cases."
+}

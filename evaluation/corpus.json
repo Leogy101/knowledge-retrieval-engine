@@ -1,0 +1,246 @@
+{
+  "version": "kre-evidence-eval/1",
+  "synthetic": true,
+  "description": "Fictional Harbor operations notes; labels are source/version/line spans, independent of chunk IDs. No generated answers.",
+  "sources": [
+    {
+      "source_id": "backup-policy",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Backup policy\n\nBackup retention is fourteen days.\n\nBackups are encrypted before transfer.\n"
+        }
+      ],
+      "authority": "authoritative",
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "health-guide",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Harbor health guide\n\nHarbor health listens on port 8042.\n\nReadiness requires a writable spool.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "restart-guide",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Restart procedure\n\nRelease the lease, then restart the worker.\n\nRecord the restart in the maintenance journal.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "export-guide",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Ledger export\n\nLedger exports use tab-separated UTF-8 records.\n\nThe final row contains a checksum.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "export-advert",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Image gallery\n\nExport ledger artwork as a large poster.\n\nThis design note does not specify the ledger data format.\n"
+        }
+      ]
+    },
+    {
+      "source_id": "rollout-guide",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Rollout\n\nBefore rollout, save the previous deployment manifest.\n\nVerify the health endpoint after deployment.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "rollback-guide",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Rollback\n\nRollback restores the previous manifest and restarts the service.\n\nVerify service health before closing the rollback.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "structured-primary",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "service = harbor\nretention_days = 14\nauthority_record = approved-policy\n"
+        }
+      ],
+      "authority": "authoritative",
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "structured-assertion",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "service = harbor\nretention_days = 30\nauthority_record = unconfirmed-proposal\n"
+        }
+      ],
+      "origin": "user_assertion",
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "feature-note",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Featureflag\n\nFeatureflag rollout begins with the blue cohort.\n"
+        }
+      ],
+      "freshness": "unknown"
+    },
+    {
+      "source_id": "legacy-rotation",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Legacy rotation\n\nLegacy rotation uses the amber schedule.\n"
+        }
+      ],
+      "freshness": "fresh",
+      "policy_updates": {
+        "freshness": "stale"
+      }
+    },
+    {
+      "source_id": "release-limit",
+      "collection": "public",
+      "freshness": "fresh",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Release limit\n\nThe release limit is four concurrent workers.\n"
+        },
+        {
+          "label": "v2",
+          "text": "# Release limit\n\nThe release limit is eight concurrent workers.\n"
+        }
+      ]
+    },
+    {
+      "source_id": "orion-retired",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Orion\n\nOrion shutdown requires the violet lever.\n"
+        }
+      ],
+      "lifecycle_action": "revoke"
+    },
+    {
+      "source_id": "payroll-private",
+      "collection": "private",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Payroll\n\nPayroll rotation uses the quartz schedule.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "irrelevant-garden",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Garden\n\nThe garden planting calendar favors marigolds.\n"
+        }
+      ]
+    },
+    {
+      "source_id": "irrelevant-travel",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Travel\n\nNorthbound ferries leave at dawn.\n"
+        }
+      ]
+    },
+    {
+      "source_id": "derived-note",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Derived note\n\nA model inferred that Harbor backups should last forty days.\n"
+        }
+      ],
+      "origin": "model_inference",
+      "freshness": "unknown"
+    },
+    {
+      "source_id": "dev-contact",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Contacts\n\nFalcon oncall uses extension 312.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "dev-format",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Format\n\nPine reports use comma separated fields.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "dev-review",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Review\n\nLarch review requires two signatures.\n"
+        }
+      ],
+      "freshness": "fresh"
+    },
+    {
+      "source_id": "dev-draft",
+      "collection": "public",
+      "versions": [
+        {
+          "label": "v1",
+          "text": "# Draft\n\nCedar draft is awaiting approval.\n"
+        }
+      ],
+      "freshness": "unknown"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "format": "kre-transfer-evidence/1",
+  "synthetic": true,
+  "budget": {
+    "max_tokens": 8000,
+    "max_bytes": 8000,
+    "max_items": 5
+  },
+  "sources": [
+    {
+      "source_id": "library-guide",
+      "collection": "public",
+      "freshness": "fresh",
+      "text": "# Alder library handbook\n\nThe Alder library kiosk offers catalog lookup and loan renewal by default. Neither operation creates catalog records.\n\nCatalog record creation uses the librarian console. The catalog steward reviews every new record before publication.\n\nOptional reservation alerts notify readers when a book returns. Alerts do not change loan renewal policy.\n"
+    },
+    {
+      "source_id": "release-guide",
+      "collection": "public",
+      "freshness": "fresh",
+      "text": "# Cobalt release procedure\n\nBefore a Cobalt deployment, save the database snapshot and record its checksum. The release operator owns this prerequisite.\n\nCobalt deployment logs are kept in the release archive for thirty days.\n"
+    },
+    {
+      "source_id": "recovery-guide",
+      "collection": "public",
+      "freshness": "fresh",
+      "text": "# Cobalt recovery checks\n\nAfter a Cobalt rollback, verify the health endpoint and reconcile the order count. A failed check blocks reopening traffic.\n\nRecovery drills use a disposable training database and do not publish customer orders.\n"
+    },
+    {
+      "source_id": "records-guide",
+      "collection": "public",
+      "freshness": "fresh",
+      "text": "# Juniper records policy\n\nJuniper audit records are retained for ninety days. This duration applies to both approved and rejected requests.\n\nThe records custodian approves Juniper audit record deletion. Project operators cannot authorize deletion themselves.\n"
+    },
+    {
+      "source_id": "workshop-notes",
+      "collection": "public",
+      "freshness": "unknown",
+      "text": "# Workshop questions\n\nWhich room does the workshop use by default, and can guests enter after closing? If not, identify the documented booking interface at reception.\n\nBefore a demonstration, record the name of the speaker. After the demonstration, return chairs to the storage room.\n\nNew readers can ask how the library is organized, where the books are, and which notices have been posted.\n"
+    },
+    {
+      "source_id": "private-audit",
+      "collection": "private",
+      "freshness": "fresh",
+      "text": "# Private register\n\nThe secretmarker access phrase is never public. Juniper audit records in this private exercise are retained for eleven days.\n"
+    }
+  ],
+  "cases": [
+    {
+      "id": "T01",
+      "query": "Which operations does the Alder library kiosk offer by default, and can those operations create catalog records? If not, identify the documented record creation interface.",
+      "gold": [
+        {
+          "source_id": "library-guide",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "library-guide",
+          "line_start": 5,
+          "line_end": 5
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "query": "What must the release operator save before a Cobalt deployment, and which checks are required after a Cobalt rollback before traffic reopens?",
+      "gold": [
+        {
+          "source_id": "release-guide",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "recovery-guide",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "query": "How long are Juniper audit records retained, and who approves their deletion? Can project operators authorize this themselves?",
+      "gold": [
+        {
+          "source_id": "records-guide",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "source_id": "records-guide",
+          "line_start": 5,
+          "line_end": 5
+        }
+      ]
+    }
+  ]
+}

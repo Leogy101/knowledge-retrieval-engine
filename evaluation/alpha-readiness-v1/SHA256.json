@@ -1,0 +1,25 @@
+{
+  "files": {
+    "METHODOLOGY.md": "ae5e3373185646060aa74b32ffeea7f13d97e0e19e083da8ea9776971b3cff1c",
+    "REPORT.md": "c8be32b33bc60a20e1bafe46a233dc5bbcb3a03e93dd998771cfd87196434e94",
+    "baseline-continuity.json": "fc5a12f9e98ecb1447df7764bc554b5fd7c3a4150df3f49a957d62f69e912a19",
+    "baseline-original-results.json": "77ae6d68ce50ed21226f2eece3b4b5790495bf35c07eb49b7694cb8bcd3f59c9",
+    "baseline-results.json": "18958d5b28aa1b59c16dddbe80ed4e74daf67542aa88bb0afdec207ecbcf5d8f",
+    "candidate-continuity.json": "60e7c266568414bd81ee62144ba592e0e116771bb9914c0923be8ebc5f526484",
+    "candidate-original-results.json": "ae3aa6bdf80e896610f927f15cd89cb3b71762a5929d0643c153794ff4e92df0",
+    "candidate-results.json": "5e463df68872c1425f3678974c52977f203fc7c840cb02407adc20b9a7a0bb47",
+    "evaluate.py": "65279f5cb0ada3b601e6c6ef452569cdfbc41f645f13ee0ede9f83fbfce59921",
+    "fixture.json": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+    "freeze-manifest.json": "48f576f3f1ce6e913500c7d8d7ca3ec8d7052bf097fde07ac5a288a23be3284c",
+    "method-lock.json": "00bde0baae97bd7a63ac2f4f0d09653332525d7c6fd32d83419951d72419e902",
+    "original-freeze/METHODOLOGY.md": "f975e64d527497fffe6996e876366e4bd85414c32b743d7349d70ae4e3e70340",
+    "original-freeze/author_fixture.py": "6368d569ca3954a28e77f6f27e394a5aa3fb4f431226123e95a38b0c5ea0c9c6",
+    "original-freeze/evaluate.py": "d53d0be9b99fa11820139e3ef805ff972173d7386c43e7236b54db652a75f81a",
+    "original-freeze/fixture.json": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+    "original-freeze/freeze-manifest.json": "6105ad92720970d5d37ec710fab8d566dfd19f831a3a52ed63814a8e3f01ed3d",
+    "provenance.json": "eef147e33a60ba842fbd8ae44f8c5ac28c986ac780a0e650217d2cbf21a05979",
+    "regression-test.log": "0a525db0eb1e844ddcc14bed1380e72fa22e168606f9a87b965e2e7c4cb8fc2c",
+    "test_holdout.py": "9b4a3d654dbc8ecd0656637187c2cc4b1aa60972fa26ef0a15fc7633e343a421"
+  },
+  "schema": "kre-holdout-public-sha256/1"
+}

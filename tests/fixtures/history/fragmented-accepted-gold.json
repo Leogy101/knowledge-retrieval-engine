@@ -1,0 +1,246 @@
+{
+  "format": "kre-public-gold-projection/1",
+  "source_sha256": "7bbbeeba4a40b95b90e26f86f4e339cc4d4519329db4eb9566277083d249bb74",
+  "cases": [
+    {
+      "case_id": "fragmented-01",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "trail-current",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": true
+        },
+        {
+          "source_id": "trail-current",
+          "line_start": 15,
+          "line_end": 17,
+          "covered": false
+        },
+        {
+          "source_id": "trail-current",
+          "line_start": 22,
+          "line_end": 22,
+          "covered": true
+        },
+        {
+          "source_id": "trail-walk-card",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-02",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "observatory-camera",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": true
+        },
+        {
+          "source_id": "observatory-camera",
+          "line_start": 12,
+          "line_end": 14,
+          "covered": false
+        },
+        {
+          "source_id": "observatory-camera",
+          "line_start": 19,
+          "line_end": 19,
+          "covered": true
+        },
+        {
+          "source_id": "observatory-session",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-03",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "importer-contract",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": false
+        },
+        {
+          "source_id": "importer-contract",
+          "line_start": 12,
+          "line_end": 14,
+          "covered": false
+        },
+        {
+          "source_id": "importer-contract",
+          "line_start": 19,
+          "line_end": 23,
+          "covered": true
+        },
+        {
+          "source_id": "importer-job",
+          "line_start": 3,
+          "line_end": 12,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-04",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "seed-protocol",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": false
+        },
+        {
+          "source_id": "seed-protocol",
+          "line_start": 12,
+          "line_end": 12,
+          "covered": true
+        },
+        {
+          "source_id": "seed-protocol",
+          "line_start": 17,
+          "line_end": 19,
+          "covered": false
+        },
+        {
+          "source_id": "seed-lot-card",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-05",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "theatre-access",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": false
+        },
+        {
+          "source_id": "theatre-access",
+          "line_start": 12,
+          "line_end": 14,
+          "covered": false
+        },
+        {
+          "source_id": "theatre-access",
+          "line_start": 19,
+          "line_end": 19,
+          "covered": false
+        },
+        {
+          "source_id": "theatre-matinee",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-06",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "kiln-load-plan",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": true
+        },
+        {
+          "source_id": "kiln-load-plan",
+          "line_start": 12,
+          "line_end": 14,
+          "covered": false
+        },
+        {
+          "source_id": "kiln-load-plan",
+          "line_start": 19,
+          "line_end": 19,
+          "covered": true
+        },
+        {
+          "source_id": "kiln-workshop-sign",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-07",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "kitchen-service",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": true
+        },
+        {
+          "source_id": "kitchen-service",
+          "line_start": 12,
+          "line_end": 14,
+          "covered": false
+        },
+        {
+          "source_id": "kitchen-service",
+          "line_start": 19,
+          "line_end": 19,
+          "covered": true
+        },
+        {
+          "source_id": "kitchen-stock",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "case_id": "fragmented-08",
+      "variant": "accepted_89f115c",
+      "gold": [
+        {
+          "source_id": "archive-publication",
+          "line_start": 5,
+          "line_end": 5,
+          "covered": false
+        },
+        {
+          "source_id": "archive-publication",
+          "line_start": 12,
+          "line_end": 12,
+          "covered": false
+        },
+        {
+          "source_id": "archive-publication",
+          "line_start": 17,
+          "line_end": 19,
+          "covered": false
+        },
+        {
+          "source_id": "archive-rights-extract",
+          "line_start": 3,
+          "line_end": 3,
+          "covered": false
+        }
+      ]
+    }
+  ]
+}

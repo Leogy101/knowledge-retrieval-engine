@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "validation_kind": "data_only_no_retrieval",
+  "validated_at_utc": "2026-11-15T14:29:02Z",
+  "fixture_sha256": "60c1d649cf1175e73b96407a3c13e444f95564d9eeccfc678fecb6e36548a582",
+  "source_count": 37,
+  "case_count": 8,
+  "gold_span_count": 20,
+  "shortest_source_characters": 91,
+  "longest_source_characters": 3304,
+  "sources_over_2000_characters": 5,
+  "compact_budget_checks": [
+    {
+      "case_id": "transfer-08-compact-alignment",
+      "gold_source_count": 2,
+      "whole_source_utf8_bytes": 360,
+      "lexical_token_proxy": 67,
+      "runtime_tokenizer_used": false
+    }
+  ],
+  "notes": [
+    "Gold span checks use exact source text and one-based inclusive lines.",
+    "No Store, gateway, model, HTTP, or retrieval code was imported or executed.",
+    "The compact case lexical token proxy is not a product tokenizer guarantee."
+  ]
+}

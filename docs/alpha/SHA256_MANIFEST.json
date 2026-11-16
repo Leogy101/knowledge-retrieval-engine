@@ -1,0 +1,9 @@
+{
+  "RETRIEVAL_DECISION.md": "4065b6458cc28833cc15bf5afef0d7fa0ad6da6a0c1bac838e70abdba0022f6a",
+  "method-lock.json": "969eeaa8aa298b69cb7f513926fb10a951da037560f328acf3d10f8fd2f3c0f9",
+  "rejected-known-results.json": "0de522d7c39e6abc19af5c98c328e99d30f3a6b47c13fee7a18bb552fe7e6a90",
+  "rejected-neighbor-windows.patch": "fe39f29917350013e980ad7bec02890b7d9e2aefb78856ea88cc2840823be5c6",
+  "rejected-tight-results.json": "c845167557355d85e6a3c0b2e6c0f6e8f4cb92d8e34a5ad89e70088478875ae5",
+  "retained-known-results.json": "06e9b60ee2eb02126c4697467c2ae7d761ea3cd77c0c7729d3d1aaf9ac88860f",
+  "retained-tight-results.json": "367db855087ee0c368421f4f55386b88bdd406533da1f2687154d911dce74bda"
+}

@@ -1,0 +1,12 @@
+{
+  "version": "kre-evidence-eval-freeze/1",
+  "frozen_at_utc": "2026-11-14T19:53:49.072679+00:00",
+  "timing": "Frozen before evaluator execution or implementation tuning against held-out outcomes.",
+  "files": {
+    "corpus.json": "855c5cb45dc38b576ab4e9e5221274ea78b9e812f71c8a124112b8c0b5589336",
+    "cases.json": "711d9ab884e12c95327a9e91e00a95707b886d8837e110f98b61773807933b7b"
+  },
+  "development_cases": 4,
+  "held_out_cases": 24,
+  "policy": "Do not edit held-out labels/queries in response to results. A genuine fixture defect requires a new version and an explicit change record; retain original results."
+}

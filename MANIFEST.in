@@ -1,0 +1,18 @@
+include README.md CHANGELOG.md SECURITY.md CONTRIBUTING.md
+include LICENSE NOTICE LICENSING.md THIRD_PARTY_NOTICES.md
+recursive-include LICENSES *.txt
+recursive-include src/kre/sample_data *.md *.txt
+include PUBLIC_TEST_SCOPE.md
+recursive-include tests *.py *.sql *.json *.txt *.md *.mjs
+recursive-include scripts *.py
+recursive-include contracts *.json *.md *.sha256
+recursive-include evaluation *.py *.json *.md *.txt *.sha256 SHA256SUMS
+recursive-include docs *.md *.json *.svg *.png *.patch
+prune build
+prune dist
+prune .git
+global-exclude __pycache__ *.pyc *.sqlite3
+include .gitignore PUBLIC_SOURCE_SHA256.json
+recursive-include .github *.yml
+recursive-include docs *.py *.mjs *.sha256
+recursive-include evaluation *.log

@@ -1,0 +1,64 @@
+{
+  "format": "kre-large-benchmark-protocol/1",
+  "status": "prepared_not_authorized",
+  "task_count": 24,
+  "content_call_ceiling": 96,
+  "repeatability_extra_calls": 0,
+  "complete_document_scopes": [
+    "compact"
+  ],
+  "selection_budget": {
+    "max_bytes": 16000,
+    "max_items": 16
+  },
+  "chat_template_reserve": 2048,
+  "options": {
+    "num_ctx": 32768,
+    "num_predict": 1536,
+    "temperature": 0
+  },
+  "think": false,
+  "stream": false,
+  "native_format": "omitted",
+  "truncate": false,
+  "shift": false,
+  "order_seed": 20261115,
+  "models": [
+    {
+      "id": "A",
+      "name": "qwen3.5:9b",
+      "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "arm_deadline_seconds": 120,
+      "minimum_free_memory_percent": 30,
+      "format": "gguf",
+      "runner": "ggml",
+      "quantization": "Q4_K_M"
+    },
+    {
+      "id": "B",
+      "name": "qwen3.6:35b-a3b",
+      "digest": "0ce5ff81f9ffdf89dd8192ca7b5d34cefd8996a875b3aaaaafaf5c4813569eba",
+      "arm_deadline_seconds": 180,
+      "minimum_free_memory_percent": 65,
+      "format": "safetensors",
+      "runner": "mlx",
+      "quantization": "nvfp4"
+    }
+  ],
+  "minimum_loaded_free_memory_percent": 15,
+  "cleanup_deadline_seconds": 10,
+  "cumulative_arm_limit_seconds": 14400,
+  "campaign_wall_limit_seconds": 16200,
+  "maximum_empty_lifecycle_calls": 192,
+  "maximum_attempts_per_arm": 1,
+  "automatic_retries": 0,
+  "repairs": 0,
+  "baseline": "complete eligible documents for compact; independent FTS5/BM25 20-line windows stride15 for large",
+  "context_admission": "UTF-8 message bytes plus1536 output allowance plus2048 template reserve <=32768. Conservative admission check, not native tokenizer measurement. No truncation.",
+  "large_scope_fit": "457462 bytes and about67K words exceeds conservative configured32K admission profile. Exact full-corpus native token count is unmeasured; no claim it cannot fit the advertised262144 model maximum.",
+  "presentation": "Same JSON source packets in both arms; preserve immutable source hashes, exact source spans, lifecycle, freshness, authority and origin. KRE native packing remains unchanged and may allocate less text than baseline under its richer internal serialization.",
+  "quality": "Strict JSON/schema, exact spans/quotes, evidencecoverage plus independent blinded human review; unknown semantics never passed.",
+  "continuation": "Frozen user checkpoint, deterministic lifecycle update and resume before a single generation per arm; not generated multi-turn workflow performance.",
+  "stopping": "Stop dispatch on operator STOP/SIGINT, deadline, identity/config/telemetry drift, resource pressure, competing residency or technical failure; retain every attempt. Finish current request on soft stop then unload. Unknown completion halts without unsafe force-unload or retry.",
+  "quiet_window": "Operator-confirmed dedicated quiet window in existinginstallation; no agent/scheduler modifications. Empty /api/ps alone is not a workload reservation."
+}

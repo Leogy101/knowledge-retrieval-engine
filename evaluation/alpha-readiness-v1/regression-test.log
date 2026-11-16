@@ -1,0 +1,11 @@
+test_all_cases_execute_and_ordinary_recall_floor (test_holdout.FrozenAlphaHoldout.test_all_cases_execute_and_ordinary_recall_floor) ... ok
+test_checkpoint_retains_then_invalidates_dependency (test_holdout.FrozenAlphaHoldout.test_checkpoint_retains_then_invalidates_dependency) ... ok
+test_declared_references_fit_and_safe_budget_failure (test_holdout.FrozenAlphaHoldout.test_declared_references_fit_and_safe_budget_failure) ... ok
+test_exact_citations_current_snapshots_and_budgets (test_holdout.FrozenAlphaHoldout.test_exact_citations_current_snapshots_and_budgets) ... ok
+test_frozen_fixture_exact_spans (test_holdout.FrozenAlphaHoldout.test_frozen_fixture_exact_spans) ... ok
+test_policy_and_missing_evidence_controls (test_holdout.FrozenAlphaHoldout.test_policy_and_missing_evidence_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.085s
+
+OK

@@ -1,0 +1,52 @@
+{
+  "format": "kre-fixture-authoring-review/1",
+  "retrieval_evaluations_before_correction": 0,
+  "model_calls": 0,
+  "superseded_draft_manifest_hashes": {
+    "corpus.json": "1ee8ef5e1edc545062d546a0b6cfe4aaf40c06176f157bf4ffb104d3a629a3ab",
+    "tasks.json": "e9aa921cbad54475e1c40b7aee1c363fbcbbab62e8b1a59af2a8a61044049b12",
+    "build_fixture.py": "0739329c13609502a206e31ae471aa43bb3f9ab4895551feed65a9ac07c6b74d"
+  },
+  "reason": "Authoring audit identified that resume removes revoked/superseded dependent decision prose. Final gold must not require reproducing information intentionally absent from both arm prompts. LS22-LS24 instead require acknowledgement of the suppressed dependency and unresolved decision, plus current supported instructions. No question, retrieval result or model response was tuned.",
+  "affected_tasks": [
+    "LS22",
+    "LS23",
+    "LS24"
+  ],
+  "final_manifest_hashes": {
+    "corpus.json": "1ee8ef5e1edc545062d546a0b6cfe4aaf40c06176f157bf4ffb104d3a629a3ab",
+    "tasks.json": "c19890f1eada2d47bc847bbe527aec2cc58095f250f4981074c6c1034b28841d",
+    "build_fixture.py": "c7f931d23679a4243f80c4f61cc9e168715524d68f445b547cc8e9c362cc5cba"
+  },
+  "additional_pre_evaluation_corrections": [
+    {
+      "prior_manifest_hashes": {
+        "corpus.json": "1ee8ef5e1edc545062d546a0b6cfe4aaf40c06176f157bf4ffb104d3a629a3ab",
+        "tasks.json": "c47ad12284c646c453826f347a72472e68f51333b996214543c2d524e8ff1e39",
+        "build_fixture.py": "0836faa1412a2d13894bf8c4d5d0e6ee9d6c637b87b47520acc1868ce0d5b1a1"
+      },
+      "tasks": [
+        "LS09",
+        "LS16"
+      ],
+      "reason": "LS09 units corrected from observations to envelopes without assuming a one-to-one mapping. LS16 current-answer scope excludes stale sources, so gold requires abstention without demanding unavailable historical measurements or stale citations. Root preflight failed eligibility validation before Store construction or any retrieval call.",
+      "retrieval_evaluations_before_correction": 0,
+      "model_calls": 0
+    },
+    {
+      "prior_manifest_hashes": {
+        "corpus.json": "1ee8ef5e1edc545062d546a0b6cfe4aaf40c06176f157bf4ffb104d3a629a3ab",
+        "tasks.json": "c703ad6cceba280de9d4fd5ceefa9708799293c7e9d609ae6a6af11a57c39c1e",
+        "build_fixture.py": "bd603ae8432cd1301d146489311bd66812289d1935e34d31e1120df1fa5353b6"
+      },
+      "tasks": [
+        "LS05",
+        "LS15",
+        "LS21"
+      ],
+      "reason": "Record known equivalent evidence alternatives before retrieval evaluation: recall-copy limits occur in both short export policy and long archive manual; parser behavior can be supported by code or worked examples. Canonical spans remain unchanged; each group is any-of alternatives, each alternative all-of exact source spans. No selectors may read these evaluation-only groups.",
+      "retrieval_evaluations_before_correction": 0,
+      "model_calls": 0
+    }
+  ]
+}

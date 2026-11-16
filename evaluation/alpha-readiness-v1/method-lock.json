@@ -1,0 +1,8 @@
+{
+  "decision": "Reject prototype; retain baseline runtime 8318473.",
+  "fixture_sha256": "40e6067515a64cc952746b6fe1375e9b1a1dd050096bf57fd557d0a643d3bb3d",
+  "human_semantic_review": "unknown",
+  "method": "Use the unchanged questions/budgets and exact citation/span scoring; ordinary and caller-required strata stay separate.",
+  "original_algorithm_lock_sha256": "969eeaa8aa298b69cb7f513926fb10a951da037560f328acf3d10f8fd2f3c0f9",
+  "schema": "kre-alpha-public-reproduction/1"
+}

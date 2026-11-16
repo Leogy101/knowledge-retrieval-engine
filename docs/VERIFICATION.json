@@ -1,0 +1,293 @@
+{
+  "status": "offline_candidate_verified",
+  "runtime_unchanged_from": "8318473",
+  "private_original_tests": 306,
+  "new_alpha_tests": 10,
+  "public_tests": 314,
+  "public_expected_skip": 1,
+  "private_archival_methods_excluded_publicly": 2,
+  "workflow_runs": [
+    {
+      "status": "passed",
+      "package_version": "0.3.2a1",
+      "checks": [
+        "installed_version",
+        "initialize_fts5",
+        "demo",
+        "demo-k2",
+        "explicit_root_ingestion",
+        "lexical_search",
+        "bounded_context",
+        "exact_citation",
+        "inspect_revision",
+        "required_evidence",
+        "required_budget_failure",
+        "checkpoint",
+        "resume_current",
+        "mcp_stdio_discovery",
+        "mcp_retrieve",
+        "mcp_validate",
+        "mcp_scope_escalation_denied",
+        "mcp_process_exit",
+        "update_immutable_revision",
+        "inspect_superseded_revision",
+        "resume_excludes_superseded_evidence",
+        "revoke_current_evidence",
+        "historical_cannot_restore_revoked",
+        "resume_excludes_revoked_evidence"
+      ],
+      "check_count": 24,
+      "python": "3.11.15",
+      "os": "Darwin",
+      "os_release": "25.3.0",
+      "architecture": "arm64",
+      "sqlite": "3.53.4",
+      "duration_seconds": 0.97,
+      "model_calls": 0,
+      "runtime_dependencies": [],
+      "temporary_data_removed": true,
+      "live_host_configuration_changed": false
+    },
+    {
+      "status": "passed",
+      "package_version": "0.3.2a1",
+      "checks": [
+        "installed_version",
+        "initialize_fts5",
+        "demo",
+        "demo-k2",
+        "explicit_root_ingestion",
+        "lexical_search",
+        "bounded_context",
+        "exact_citation",
+        "inspect_revision",
+        "required_evidence",
+        "required_budget_failure",
+        "checkpoint",
+        "resume_current",
+        "mcp_stdio_discovery",
+        "mcp_retrieve",
+        "mcp_validate",
+        "mcp_scope_escalation_denied",
+        "mcp_process_exit",
+        "update_immutable_revision",
+        "inspect_superseded_revision",
+        "resume_excludes_superseded_evidence",
+        "revoke_current_evidence",
+        "historical_cannot_restore_revoked",
+        "resume_excludes_revoked_evidence"
+      ],
+      "check_count": 24,
+      "python": "3.13.1",
+      "os": "Darwin",
+      "os_release": "25.3.0",
+      "architecture": "arm64",
+      "sqlite": "3.45.3",
+      "duration_seconds": 1.016,
+      "model_calls": 0,
+      "runtime_dependencies": [],
+      "temporary_data_removed": true,
+      "live_host_configuration_changed": false
+    },
+    {
+      "status": "passed",
+      "package_version": "0.3.2a1",
+      "checks": [
+        "installed_version",
+        "initialize_fts5",
+        "demo",
+        "demo-k2",
+        "explicit_root_ingestion",
+        "lexical_search",
+        "bounded_context",
+        "exact_citation",
+        "inspect_revision",
+        "required_evidence",
+        "required_budget_failure",
+        "checkpoint",
+        "resume_current",
+        "mcp_stdio_discovery",
+        "mcp_retrieve",
+        "mcp_validate",
+        "mcp_scope_escalation_denied",
+        "mcp_process_exit",
+        "update_immutable_revision",
+        "inspect_superseded_revision",
+        "resume_excludes_superseded_evidence",
+        "revoke_current_evidence",
+        "historical_cannot_restore_revoked",
+        "resume_excludes_revoked_evidence"
+      ],
+      "check_count": 24,
+      "python": "3.14.6",
+      "os": "Darwin",
+      "os_release": "25.3.0",
+      "architecture": "arm64",
+      "sqlite": "3.53.4",
+      "duration_seconds": 1.171,
+      "model_calls": 0,
+      "runtime_dependencies": [],
+      "temporary_data_removed": true,
+      "live_host_configuration_changed": false
+    }
+  ],
+  "github_ci": "not_executed",
+  "platforms_unverified": [
+    "Linux",
+    "Windows",
+    "Python3.12"
+  ],
+  "interoperability": {
+    "shared_schema_and_fixtures": "byte_identical_to_companion",
+    "gcb_validator_accepts_generated_context": true,
+    "gcb_validator_rejects_tampering": true
+  },
+  "model_inference_calls": 0,
+  "license": "Apache-2.0 software; designated CC0-1.0 dataset; notices included",
+  "approved_logo": "plain-text KRE wordmark; no graphical asset or font dependency",
+  "archive_header_privacy": "normalized and regression tested",
+  "verification_phase": "Final licensing and text-wordmark verification",
+  "verification_date_utc": "2026-11-16T14:11:55.067252+00:00",
+  "matrix": [
+    {
+      "python": "3.11.15",
+      "sqlite": "3.53.4",
+      "fts5": true,
+      "tests_run": 314,
+      "tests_passed": 313,
+      "tests_skipped": 1,
+      "suite_seconds": 2.175,
+      "workflow_checks_passed": 24,
+      "workflow_seconds": 0.97,
+      "runtime_files_identical": 13,
+      "source_formats": [
+        ".txt",
+        ".md",
+        ".markdown"
+      ],
+      "invalid_sources_rejected": [
+        "unsupported.pdf",
+        "encoding.txt",
+        "binary.md"
+      ],
+      "uninstall": {
+        "status": "passed",
+        "module_removed": true,
+        "cli_removed": true,
+        "owned_database_preserved": true,
+        "duration_seconds": 0.19
+      }
+    },
+    {
+      "python": "3.13.1",
+      "sqlite": "3.45.3",
+      "fts5": true,
+      "tests_run": 314,
+      "tests_passed": 313,
+      "tests_skipped": 1,
+      "suite_seconds": 2.185,
+      "workflow_checks_passed": 24,
+      "workflow_seconds": 1.016,
+      "runtime_files_identical": 13,
+      "source_formats": [
+        ".txt",
+        ".md",
+        ".markdown"
+      ],
+      "invalid_sources_rejected": [
+        "unsupported.pdf",
+        "encoding.txt",
+        "binary.md"
+      ],
+      "uninstall": {
+        "status": "passed",
+        "module_removed": true,
+        "cli_removed": true,
+        "owned_database_preserved": true,
+        "duration_seconds": 0.215
+      }
+    },
+    {
+      "python": "3.14.6",
+      "sqlite": "3.53.4",
+      "fts5": true,
+      "tests_run": 314,
+      "tests_passed": 313,
+      "tests_skipped": 1,
+      "suite_seconds": 2.414,
+      "workflow_checks_passed": 24,
+      "workflow_seconds": 1.171,
+      "runtime_files_identical": 13,
+      "source_formats": [
+        ".txt",
+        ".md",
+        ".markdown"
+      ],
+      "invalid_sources_rejected": [
+        "unsupported.pdf",
+        "encoding.txt",
+        "binary.md"
+      ],
+      "uninstall": {
+        "status": "passed",
+        "module_removed": true,
+        "cli_removed": true,
+        "owned_database_preserved": true,
+        "duration_seconds": 0.201
+      }
+    }
+  ],
+  "skip": {
+    "test": "test_phase4_context.ContextAttributionEvidenceTests.test_optional_public_source_replay_matches_recorded_evidence",
+    "reason": "optional pinned public-source replay; runtime package needs no OpenClaw/Node"
+  },
+  "suite_scope": "The main test process and ordinary CLI/MCP subprocesses use the installed wheel. Six FrozenAlphaHoldout methods use the unchanged evaluator source-checkout worker. All wheel runtime files match the checkout byte for byte.",
+  "source_worker_test_count": 6,
+  "readme_quickstart": {
+    "status": "passed",
+    "exact_readme_commands": [
+      "python3 -m venv .venv",
+      ". .venv/bin/activate",
+      "python -m pip install .",
+      "kre --version",
+      "kre demo",
+      "kre search rollback",
+      "kre context rollback --budget 3000 --max-bytes 3000",
+      "kre demo-k2"
+    ],
+    "readme_sha256": "7fd628f96b18d41428e0d1caaa454d8077d8e4e0f291de20188fbf739db3c30b",
+    "duration_seconds": 3.035,
+    "environment": {
+      "python": "3.11.15",
+      "sqlite": "3.53.4",
+      "package_version": "0.3.2a1",
+      "runtime_dependencies": []
+    },
+    "application_model_calls": 0,
+    "build_dependency_downloads_permitted": true,
+    "database_created_at_documented_path": true
+  },
+  "package_metadata": {
+    "version": "0.3.2a1",
+    "requires_python": ">=3.11",
+    "runtime_dependencies": [],
+    "license_expression": null,
+    "license_files": [
+      "LICENSE",
+      "NOTICE",
+      "LICENSING.md",
+      "THIRD_PARTY_NOTICES.md",
+      "LICENSES/CC0-1.0.txt"
+    ]
+  },
+  "private_original_suite_status": "Previously verified unchanged runtime; not rerun or modified during final public snapshot preparation",
+  "standalone_measurement_helper": {
+    "package_version": "0.3.2a1",
+    "documents": 200,
+    "stored_chunks": 200,
+    "measured_queries": 40,
+    "retained_exact_single_line_hits": 0,
+    "added_covering_source_line_hits": 40,
+    "scope": "Easy identifier-only retrieval diagnostic; frozen evaluation criteria and results unchanged."
+  }
+}

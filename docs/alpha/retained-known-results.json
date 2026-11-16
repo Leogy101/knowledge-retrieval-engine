@@ -1,0 +1,792 @@
+{
+  "store_sha256": "3010c869461a1553172375622e4ceeed57d80f97020e3a922f96a5a44e766700",
+  "known": [
+    {
+      "id": "LS01",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 8443,
+      "native_bytes": 9598
+    },
+    {
+      "id": "LS02",
+      "coverage": 4,
+      "required": 4,
+      "bytes": 14140,
+      "native_bytes": 15793
+    },
+    {
+      "id": "LS03",
+      "coverage": 4,
+      "required": 4,
+      "bytes": 13593,
+      "native_bytes": 15495
+    },
+    {
+      "id": "LS04",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 8443,
+      "native_bytes": 9598
+    },
+    {
+      "id": "LS05",
+      "coverage": 4,
+      "required": 4,
+      "bytes": 13981,
+      "native_bytes": 15891
+    },
+    {
+      "id": "LS06",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 14079,
+      "native_bytes": 15983
+    },
+    {
+      "id": "LS07",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 8443,
+      "native_bytes": 9598
+    },
+    {
+      "id": "LS08",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 13963,
+      "native_bytes": 15378
+    },
+    {
+      "id": "LS09",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 12180,
+      "native_bytes": 14066
+    },
+    {
+      "id": "LS10",
+      "coverage": 2,
+      "required": 2,
+      "bytes": 8443,
+      "native_bytes": 9598
+    },
+    {
+      "id": "LS11",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 12489,
+      "native_bytes": 14386
+    },
+    {
+      "id": "LS12",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 11568,
+      "native_bytes": 13453
+    },
+    {
+      "id": "LS13",
+      "coverage": 1,
+      "required": 1,
+      "bytes": 13023,
+      "native_bytes": 14920
+    },
+    {
+      "id": "LS14",
+      "coverage": 1,
+      "required": 1,
+      "bytes": 12116,
+      "native_bytes": 14011
+    },
+    {
+      "id": "LS15",
+      "coverage": 1,
+      "required": 1,
+      "bytes": 11956,
+      "native_bytes": 13851
+    },
+    {
+      "id": "LS16",
+      "coverage": 0,
+      "required": 0,
+      "bytes": 13736,
+      "native_bytes": 15392
+    },
+    {
+      "id": "LS17",
+      "coverage": 2,
+      "required": 2,
+      "bytes": 11232,
+      "native_bytes": 13144
+    },
+    {
+      "id": "LS18",
+      "coverage": 1,
+      "required": 1,
+      "bytes": 13827,
+      "native_bytes": 15604
+    },
+    {
+      "id": "LS19",
+      "coverage": 2,
+      "required": 2,
+      "bytes": 8443,
+      "native_bytes": 9598
+    },
+    {
+      "id": "LS20",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 11680,
+      "native_bytes": 13584
+    },
+    {
+      "id": "LS21",
+      "coverage": 4,
+      "required": 4,
+      "bytes": 13863,
+      "native_bytes": 15784
+    },
+    {
+      "id": "LS22",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 8443,
+      "native_bytes": 9598
+    },
+    {
+      "id": "LS23",
+      "coverage": 3,
+      "required": 3,
+      "bytes": 14390,
+      "native_bytes": 15806
+    },
+    {
+      "id": "LS24",
+      "coverage": 4,
+      "required": 4,
+      "bytes": 13548,
+      "native_bytes": 15458
+    }
+  ],
+  "fragmented": [
+    {
+      "id": "fragmented-01",
+      "gold": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 3,
+      "required": 4,
+      "bytes": 6801,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "trail-walk-card",
+          {
+            "label": "lines 1-5",
+            "line_start": 1,
+            "line_end": 5
+          },
+          "# Guided walk card \u2014 12 May 2031\n\nThe ordinary entrance-to-Cedar-Overlook walk is 2.6 km one way. The 12 May 2031, 09:00 entrance-board reading is 1.1 m; the ranger signed this as the reading for today's guided walk.\n\nThe group meets at the entrance shelter at 09:15. Distances describe the walking route, not straight-line separation. The guided group uses the same published closure rules as other visitors."
+        ],
+        [
+          "trail-current",
+          {
+            "label": "lines 4-5",
+            "line_start": 4,
+            "line_end": 5
+          },
+          "## A route, not a loop\nDuring the Alder Footbridge closure, walkers reach the Cedar Overlook by following the signed Mill Road bypass from marker M2 to marker M5. The bypass adds 0.8 km to the outward walk."
+        ],
+        [
+          "trail-current",
+          {
+            "label": "lines 21-22",
+            "line_start": 21,
+            "line_end": 22
+          },
+          "## Completing the walk\nReturn from the overlook using the same Mill Road bypass; the old east-bank spur is fenced for nesting birds and is not an alternative return route."
+        ],
+        [
+          "trail-current",
+          {
+            "label": "lines 17-17",
+            "line_start": 17,
+            "line_end": 17
+          },
+          "At 1.4 m or above, the Mill Road ford is closed too: turn back at M2; do not substitute the ford for the footbridge."
+        ],
+        [
+          "trail-current",
+          {
+            "label": "lines 14-15",
+            "line_start": 14,
+            "line_end": 15
+          },
+          "## Water condition attached to the bypass\nThe bypass is open only while the creek gauge is below 1.4 m."
+        ],
+        [
+          "theatre-access",
+          {
+            "label": "lines 4-5",
+            "line_start": 4,
+            "line_end": 5
+          },
+          "## Getting into the foyer\nFor step-free entry to the afternoon performance, use the courtyard door on Birch Lane. The main High Street doors lead to six steps before the foyer; the courtyard route reaches the foyer by a level passage."
+        ],
+        [
+          "archive-publication",
+          {
+            "label": "lines 16-17",
+            "line_start": 16,
+            "line_end": 17
+          },
+          "## Permission condition\nThe image can be included in the public river-history page only after the Rights Register marks R-42 as cleared for web publication."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 4-5",
+            "line_start": 4,
+            "line_end": 5
+          },
+          "## Initial temperature state\nFor an L7 camera running firmware 3.2, start a new dark library after changing the sensor target temperature. Set the target to \u221210 \u00b0C and allow 12 minutes after the displayed temperature first reaches that value."
+        ],
+        [
+          "trail-current",
+          {
+            "label": "lines 9-10",
+            "line_start": 9,
+            "line_end": 10
+          },
+          "## Reading the signs\nTemporary bypass signs have an amber arrow and the word OVERLOOK. Permanent white posts still mark the original path, including its closed sections. A volunteer may be stationed at the entrance on weekends, but the absence of a volunteer does not cancel a closure notice."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 9-9",
+            "line_start": 9,
+            "line_end": 9
+          },
+          "The parser accepts a header row in any column order. Column order is useful for spreadsheet readability and does not change field meaning. Files downloaded from the example station include a comments column for maintenance notes, which the export omits. Comments can contain commas when quoted normally."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-02",
+      "gold": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 3,
+      "required": 4,
+      "bytes": 4194,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "observatory-session",
+          {
+            "label": "lines 1-5",
+            "line_start": 1,
+            "line_end": 5
+          },
+          "# Public session card \u2014 7 February 2032\n\nTonight's science frames use 90 s exposures. Keep this duration for the dark series; do not apply the older 60 s classroom example.\n\nThe camera is an L7 with firmware 3.2. A guide has just changed its target from \u22125 \u00b0C to \u221210 \u00b0C. The red-light room opens at 19:00."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 18-19",
+            "line_start": 18,
+            "line_end": 19
+          },
+          "## File naming and reuse\nStore the combined master under dark/L7_f32_m10_<seconds>s.fit, replacing <seconds> with the exposure duration as an integer. Do not reuse a master made at \u22125 \u00b0C."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 9-9",
+            "line_start": 9,
+            "line_end": 9
+          },
+          "The demonstration target is a bright emission nebula. Its catalogue name appears on the finder chart, but participants do not need to enter that name into calibration software. Calibration records use the instrument, firmware, temperature and duration rather than a target name."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 4-5",
+            "line_start": 4,
+            "line_end": 5
+          },
+          "## Initial temperature state\nFor an L7 camera running firmware 3.2, start a new dark library after changing the sensor target temperature. Set the target to \u221210 \u00b0C and allow 12 minutes after the displayed temperature first reaches that value."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 21-25",
+            "line_start": 21,
+            "line_end": 25
+          },
+          "```text\ninstrument = L7\nfirmware = 3.2\ncalibration_type = dark\n```"
+        ],
+        [
+          "archive-publication",
+          {
+            "label": "lines 23-24",
+            "line_start": 23,
+            "line_end": 24
+          },
+          "## Records retained off the public page\nKeep capture logs and internal handling notes with the accession record according to the archive's retention process. The public page does not need internal scanner identifiers, staff shift notes, or the physical storage shelf code to give a visitor the supported image and its approved credit."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-03",
+      "gold": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "coverage": 2,
+      "required": 4,
+      "bytes": 7129,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "importer-job",
+          {
+            "label": "lines 1-14",
+            "line_start": 1,
+            "line_end": 14
+          },
+          "# DrizzleCSV demonstration job 18\n\nJob configuration:\n```json\n{\"station\":\"RQ2\",\"timezone\":\"UTC+02:00\",\"adapter_version\":4}\n```\nInput rows:\n```csv\nobserved_at,reading\n2031-06-08T10:15:00,-9999\n2031-06-08T10:20:00,0\n```\n\nUTC+02:00 is a fixed offset in this synthetic job; no seasonal-clock rule is needed. The two displayed rows are complete."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 11-12",
+            "line_start": 11,
+            "line_end": 12
+          },
+          "## Reading semantics\nConvert the literal reading value -9999 to JSON null and set quality to \"missing\"."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 1-2",
+            "line_start": 1,
+            "line_end": 2
+          },
+          "# DrizzleCSV adapter contract, version 4\nThis synthetic contract describes a small weather-station exchange format. Version 4 is current for the demonstration dataset."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 14-14",
+            "line_start": 14,
+            "line_end": 14
+          },
+          "The value 0 is a valid measurement and must remain numeric zero; an empty reading cell is a row-validation error, not the -9999 missing-data code."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 27-27",
+            "line_start": 27,
+            "line_end": 27
+          },
+          "The directory also contains flat-field examples from previous lessons. Flat frames correct uneven illumination; their labels should not be copied into the thermal calibration record. The examples remain available to explain the difference between calibration types, not to prescribe this evening's exposure time."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 18-23",
+            "line_start": 18,
+            "line_end": 23
+          },
+          "## Output shape\nThe exported object uses these exact keys:\n```json\n{\"observed_at_utc\":\"ISO-8601 Z time\",\"reading\":0,\"quality\":\"measured\",\"station\":\"site code\"}\n```\nFor a nonmissing numeric reading, quality is \"measured\"."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 25-25",
+            "line_start": 25,
+            "line_end": 25
+          },
+          "There is no additional confidence field and no wrapper named data. A consuming application may place several exported objects inside its own array, but that application's container is not part of the single-row conversion contract. Preserve the distinction when creating test fixtures or explaining one row to an operator."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 7-7",
+            "line_start": 7,
+            "line_end": 7
+          },
+          "Each CSV file belongs to one station, even when an operator has copied the file into a folder named for a regional campaign. Use the station value from the job configuration. Folder names help a person organize uploads but do not become exported station identifiers."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 16-16",
+            "line_start": 16,
+            "line_end": 16
+          },
+          "The unit selected by a station is documented in its registration record. This adapter does not silently rescale units, round the numeric reading, or append a unit suffix to the JSON number. Downstream chart labels may display units separately. A failed row is reported with its physical CSV line number."
+        ],
+        [
+          "importer-contract",
+          {
+            "label": "lines 27-28",
+            "line_start": 27,
+            "line_end": 28
+          },
+          "## Reproducibility\nRecord the adapter version in the batch manifest, not inside each exported measurement. A manifest can also include the filename and a checksum. Those fields establish batch provenance and should not be copied into an individual measurement object merely because they appear beside it in a log."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-04",
+      "gold": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "coverage": 2,
+      "required": 4,
+      "bytes": 4273,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "seed-lot-card",
+          {
+            "label": "lines 1-5",
+            "line_start": 1,
+            "line_end": 5
+          },
+          "# Blue Lantern lot BL-31\n\nLot BL-31 may be offered for lending only if at least 80% of its viability sample germinates. The recorded untreated sample has 15 roots at least 5 mm long on day 10; one additional seed has a 3 mm root.\n\nThe lot was tested with the 20-seed P-6 method. No seeds in this sample were nicked or soaked."
+        ],
+        [
+          "seed-protocol",
+          {
+            "label": "lines 21-21",
+            "line_start": 21,
+            "line_end": 21
+          },
+          "After scoring, place the tested seeds in the compost container. Do not return them to a lending envelope even if a seed has no visible root. The remaining untested lot should stay dry in its labelled jar until the librarian has entered the result and decided whether the lot may be offered."
+        ],
+        [
+          "seed-protocol",
+          {
+            "label": "lines 14-14",
+            "line_start": 14,
+            "line_end": 14
+          },
+          "A swelling seed is not yet a scored germination. The photo guide shows several stages because visitors often want to understand the process. Only the stage stated in this protocol counts toward the recorded viability result; photographs are illustrative and do not change the timing requirement."
+        ],
+        [
+          "seed-protocol",
+          {
+            "label": "lines 7-7",
+            "line_start": 7,
+            "line_end": 7
+          },
+          "Use a pencil to label the box with the variety, lot code, and start date. Ink on a loose paper label can run in the damp chamber. The label helps volunteers keep similar-looking peas apart; the box's shelf position is not an identifier and may change when the room is cleaned."
+        ],
+        [
+          "seed-protocol",
+          {
+            "label": "lines 19-19",
+            "line_start": 19,
+            "line_end": 19
+          },
+          "Nicking and soaking may be appropriate for a separate planting trial, but pretreated seeds cannot be substituted into the untreated viability sample or its recorded percentage."
+        ],
+        [
+          "seed-protocol",
+          {
+            "label": "lines 11-12",
+            "line_start": 11,
+            "line_end": 12
+          },
+          "## Score at a consistent time\nCount a seed as germinated only when its root is at least 5 mm long. Record the final count on day 10, not the first day on which any root appears."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-05",
+      "gold": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "coverage": 1,
+      "required": 4,
+      "bytes": 4165,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "theatre-access",
+          {
+            "label": "lines 14-14",
+            "line_start": 14,
+            "line_end": 14
+          },
+          "The neck loop works with a hearing aid set to its T-coil program; an ordinary Bluetooth pairing mode will not connect to this system. Headphones are available for visitors without a T-coil aid."
+        ],
+        [
+          "theatre-matinee",
+          {
+            "label": "lines 1-5",
+            "line_start": 1,
+            "line_end": 5
+          },
+          "# Dated audience notice: 16 November matinee\n\nFor the 16 November 2031 matinee, curtain is at 14:00 and the courtyard door and access desk open at 13:15. The usual 13:30 opening is replaced for this performance because the access team is offering receiver familiarization.\n\nThe performance uses the standard neck-loop system for rows A\u2013F. The programme running time is 95 minutes including a short interval."
+        ],
+        [
+          "theatre-access",
+          {
+            "label": "lines 11-12",
+            "line_start": 11,
+            "line_end": 12
+          },
+          "## Assisted listening\nBorrow a neck-loop receiver from the access desk for seats in rows A\u2013F."
+        ],
+        [
+          "theatre-access",
+          {
+            "label": "lines 1-2",
+            "line_start": 1,
+            "line_end": 2
+          },
+          "# Willow Room Theatre \u2014 audience access guide\nPublic access edition, November 2031. This fictional theatre has one auditorium and one courtyard entrance."
+        ],
+        [
+          "observatory-camera",
+          {
+            "label": "lines 9-9",
+            "line_start": 9,
+            "line_end": 9
+          },
+          "The demonstration target is a bright emission nebula. Its catalogue name appears on the finder chart, but participants do not need to enter that name into calibration software. Calibration records use the instrument, firmware, temperature and duration rather than a target name."
+        ],
+        [
+          "kitchen-service",
+          {
+            "label": "lines 7-7",
+            "line_start": 7,
+            "line_end": 7
+          },
+          "Breakfast tickets help the volunteers count how many portions to prepare. A ticket is valid for either the standard plate or the listed alternative, subject to availability. Visitors do not need to explain a medical history to exchange a ticket for a sealed cup or ask to see an ingredient label."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-06",
+      "gold": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 3,
+      "required": 4,
+      "bytes": 6782,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "kiln-workshop-sign",
+          {
+            "label": "lines 1-5",
+            "line_start": 1,
+            "line_end": 5
+          },
+          "# Workshop glaze notice \u2014 current\n\nGuest-workshop pieces marked GL-9 must stay out of C17: that glaze batch requires a separate cone-5 firing with no top hold. All other pieces already approved on the C17 load sheet keep the SLOW-6 plan.\n\nGL-9 is an invented studio glaze code. This sign is public so participants can identify the affected workshop work."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 4-5",
+            "line_start": 4,
+            "line_end": 5
+          },
+          "## Selected profile\nFor load C17, select the studio's SLOW-6 profile and program a 20-minute hold at the top temperature. The profile's controlled cooling segment ends at 900 \u00b0C."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 18-19",
+            "line_start": 18,
+            "line_end": 19
+          },
+          "## Identification after firing\nMark each C17 box with the firing date and the literal batch label C17-S6-H20. The label records the profile and top hold, not an artist's name or a glaze recipe."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 21-21",
+            "line_start": 21,
+            "line_end": 21
+          },
+          "Glaze names are recorded on individual test tabs in the load folder. A public workshop sign may add a special rule for a particular glaze batch. Read a glaze exception together with the current load plan before deciding which pieces may be included in a firing; a shared clay body alone does not settle compatibility."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 1-2",
+            "line_start": 1,
+            "line_end": 2
+          },
+          "# Studio firing plan \u2014 C17\nSynthetic private owner notebook. All names, codes, and work described here are invented for this benchmark."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 11-12",
+            "line_start": 11,
+            "line_end": 12
+          },
+          "## Unloading condition\nKeep the kiln closed until its display is below 80 \u00b0C before unloading C17."
+        ],
+        [
+          "seed-protocol",
+          {
+            "label": "lines 7-7",
+            "line_start": 7,
+            "line_end": 7
+          },
+          "Use a pencil to label the box with the variety, lot code, and start date. Ink on a loose paper label can run in the damp chamber. The label helps volunteers keep similar-looking peas apart; the box's shelf position is not an identifier and may change when the room is cleaned."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 14-14",
+            "line_start": 14,
+            "line_end": 14
+          },
+          "The earlier 120 \u00b0C unloading shortcut applies only to unglazed test tiles; C17 contains glazed bowls and does not qualify for that shortcut."
+        ],
+        [
+          "kiln-load-plan",
+          {
+            "label": "lines 7-7",
+            "line_start": 7,
+            "line_end": 7
+          },
+          "The shelves have been brushed and checked for drips. Shelf numbers are maintenance labels; they do not indicate which profile a load should use. The kiln room's wall chart illustrates several firing curves for classes, including profiles that are not appropriate for this particular load."
+        ],
+        [
+          "kitchen-service",
+          {
+            "label": "lines 18-19",
+            "line_start": 18,
+            "line_end": 19
+          },
+          "## Communicating accurately\nStaff should repeat the event's ingredient and handling information without guaranteeing that a meal is safe for a particular person's allergy. The visitor can read the sealed cup's manufacturer label before deciding whether to accept it."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-07",
+      "gold": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "coverage": 3,
+      "required": 4,
+      "bytes": 4037,
+      "validation": "current",
+      "error": null,
+      "selected": [
+        [
+          "kitchen-service",
+          {
+            "label": "lines 4-5",
+            "line_start": 4,
+            "line_end": 5
+          },
+          "## Listed alternative\nAt the 9 June community breakfast, the sealed oat cups labelled O-4 are the listed option made without peanut ingredients. Hand the cup to the visitor unopened, together with a fresh wrapped spoon."
+        ],
+        [
+          "kitchen-service",
+          {
+            "label": "lines 11-12",
+            "line_start": 11,
+            "line_end": 12
+          },
+          "## Shared equipment limitation\nDo not describe any item prepared on the shared toast counter as peanut-free."
+        ],
+        [
+          "kitchen-service",
+          {
+            "label": "lines 18-19",
+            "line_start": 18,
+            "line_end": 19
+          },
+          "## Communicating accurately\nStaff should repeat the event's ingredient and handling information without guaranteeing that a meal is safe for a particular person's allergy. The visitor can read the sealed cup's manufacturer label before deciding whether to accept it."
+        ],
+        [
+          "kitchen-service",
+          {
+            "label": "lines 14-14",
+            "line_start": 14,
+            "line_end": 14
+          },
+          "The toaster, tongs, and spreading board are shared with peanut-butter toast; removing a topping or wiping a visible crumb does not turn that service into the sealed-cup option."
+        ],
+        [
+          "kitchen-service",
+          {
+            "label": "lines 1-2",
+            "line_start": 1,
+            "line_end": 2
+          },
+          "# Juniper Hall breakfast \u2014 public service information\nCurrent event sheet for 9 June 2031. This fictional event and product code are used only as synthetic evaluation content."
+        ],
+        [
+          "kitchen-stock",
+          {
+            "label": "lines 1-5",
+            "line_start": 1,
+            "line_end": 5
+          },
+          "# Public menu availability \u2014 9 June\n\nThe O-4 sealed-cup stock for 9 June is 18 cups, reserved at the serving desk rather than on the toast counter. Service runs from 08:30 to 10:00, or until the relevant item runs out.\n\nThe stock notice describes initial quantities, not a live count. The serving lead can confirm remaining cups during the event."
+        ]
+      ]
+    },
+    {
+      "id": "fragmented-08",
+      "gold": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "coverage": 0,
+      "required": 4,
+      "bytes": 0,
+      "validation": "denied",
+      "error": {
+        "code": "DESTINATION_DENIED",
+        "message": "Request unavailable or outside the supported context contract.",
+        "retryable": false
+      },
+      "selected": []
+    }
+  ]
+}

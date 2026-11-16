@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knowledge-retrieval-engine"
+version = "0.3.2a1"
+description = "Independent local retrieval with exact citations and bounded context"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+# Artifact license scopes differ; explicit license files are authoritative.
+# See LICENSING.md; intentionally no single static License-Expression.
+license-files = ["LICENSE", "NOTICE", "LICENSING.md", "THIRD_PARTY_NOTICES.md", "LICENSES/CC0-1.0.txt"]
+authors = [{name = "Brandon Gordon and KRE contributors"}]
+keywords = ["retrieval", "citations", "sqlite", "fts5", "context", "mcp"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+
+[project.urls]
+"Companion GCB" = "https://github.com/Leogy101/governed-capability-broker"
+
+[project.scripts]
+kre = "kre.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+kre = ["sample_data/*.md", "sample_data/*.txt"]
