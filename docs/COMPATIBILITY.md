@@ -27,8 +27,10 @@ workflow checks and explicit uninstall. SQLite FTS5 was available in 3.53.4
 (Python 3.11/3.14) and 3.45.3 (Python 3.13). See the
 [verification report](VERIFICATION.md) for exact scope and timings.
 
-Linux and additional Python versions may be in the CI matrix, but are verified
-only when the required jobs actually execute successfully. Consult [GitHub Actions](https://github.com/Leogy101/knowledge-retrieval-engine/actions)
+Hosted CI targets macOS 15 ARM64 and Linux across Python 3.11–3.14. This is
+separate from the local macOS 26 verification above; it does not establish an
+equivalent hosted macOS 26 matrix. These environments are verified only when
+the required jobs actually execute successfully. Consult [GitHub Actions](https://github.com/Leogy101/knowledge-retrieval-engine/actions)
 and the published release provenance for actual runner versions and conclusions. Windows file ingestion is
 not currently supported. This candidate makes no unexecuted platform claims.
 

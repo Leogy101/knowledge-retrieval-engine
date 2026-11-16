@@ -96,7 +96,7 @@ missing settings or policy visibility before progressing.
 ## 3. Require all declared CI jobs on the reviewed commit
 
 The workflow runs on `main` and version-tag pushes and declares **13 jobs**: eight full offline suites on
-`ubuntu-latest`/`macos-latest` × Python 3.11–3.14; four Windows portable-core jobs
+`ubuntu-latest`/`macos-15` × Python 3.11–3.14; four Windows portable-core jobs
 on Python 3.11–3.14; one Ubuntu artifact job on Python 3.14. Declarations are not
 execution results. Windows does not support protected file ingestion.
 
@@ -119,7 +119,7 @@ sha, folder = sys.argv[1], pathlib.Path(sys.argv[2])
 run = json.loads((folder / 'ci-run.json').read_text())
 jobs = json.loads((folder / 'ci-jobs.json').read_text())['jobs']
 expected = {f'Full offline suite ({os}, Python {v})'
-            for os in ('ubuntu-latest', 'macos-latest')
+            for os in ('ubuntu-latest', 'macos-15')
             for v in ('3.11', '3.12', '3.13', '3.14')}
 expected |= {f'Portable core only (Windows, Python {v})'
              for v in ('3.11', '3.12', '3.13', '3.14')}
