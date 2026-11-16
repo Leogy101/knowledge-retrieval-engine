@@ -1,6 +1,6 @@
 # Alpha candidate verification
 
-The retained runtime is byte-identical to 8318473. No new model inference or live host configuration change was performed. Verification below is local, not a claim that GitHub Actions has run.
+The retained runtime is byte-identical to 8318473. No new model inference or live host configuration change was performed. The table below records the local prepublication checks. Current public checks are available in [GitHub Actions](https://github.com/Leogy101/knowledge-retrieval-engine/actions). Release publication additionally requires every declared main/tag job, fresh public installation and successful code scanning; release provenance records the qualified runs.
 
 | Environment | Public regression suite | Installed workflow | SQLite / FTS5 |
 |---|---|---|---|
@@ -18,7 +18,7 @@ The eight-command README quickstart passed in a clean Python 3.11.15 environment
 
 The GCB companion's independently retained context0.1 schemas and fixtures match byte for byte. Its existing validator accepts a generated KRE context and rejects tampered text. KRE's tests and installation do not import or require GCB. The wire contract is unchanged.
 
-The CI workflow targets full offline suites on macOS/Linux with Python3.11–3.14, plus a named Windows portable-core subset. These additional environments remain **unverified until the jobs execute**. Windows protected file ingestion is unsupported and must fail closed. CI uses read-only repository permissions, pinned official actions, no inference credentials and no privileged pull-request execution.
+The CI workflow targets full offline suites on macOS/Linux with Python3.11–3.14, plus a named Windows portable-core subset. Platform support is established by the corresponding completed jobs, whose exact runner images and Python versions are recorded with the release. A workflow declaration alone is not evidence. Windows protected file ingestion is unsupported and must fail closed. CI uses read-only repository permissions, pinned official actions, no inference credentials and no privileged pull-request execution.
 
 The public snapshot is allowlisted and has no private Git ancestry. Its source manifest and release checker provide drift/signature checks, not a guarantee against every secret. Wheel, source distribution and complete source archive are inspected separately. An audit caught local owner/group names in generated sdist headers; the reproducible packaging step now removes that metadata without changing payload bytes. Apache-2.0 and attribution are adopted; final artifacts are rebuilt and checked for all five license files. The wheel contains Apache-2.0 software; source artifacts also carry the designated CC0 corpus. See [licensing metadata](../LICENSING.md) for the intentionally omitted single static License-Expression. The initial release uses a plain-text wordmark without graphical logos or font files.
 

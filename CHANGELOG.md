@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.2a1 — first public-alpha candidate
+## 0.3.2a1 — first experimental public alpha
 
 This candidate packages the existing independently useful KRE implementation
 without publishing its private development history. Version 0.3.2a1 preserves
@@ -20,6 +20,8 @@ evidence; runtime behavior remains equal to retained `8318473`.
 
 General answer completeness, semantic retrieval and quality-preserving token/cost
 savings are not established. The historical 96-call result, its negative findings
-and pending independent human review remain unchanged. Publication remains a separate release gate. See release notes for supported scope.
+and pending independent human review remain unchanged. Release publication requires complete main/tag CI, security checks and public-install verification. See release notes for supported scope.
 
 The standalone local measurement helper now reads the installed package version, reports actual stored chunk counts, and distinguishes its retained exact-single-line hit metric from coverage within larger exact excerpts. Frozen benchmark scores are unchanged.
+
+The public release workflow also runs its complete matrix on version-tag pushes; existing tests and PR credential restrictions are unchanged.

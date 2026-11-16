@@ -28,8 +28,8 @@ workflow checks and explicit uninstall. SQLite FTS5 was available in 3.53.4
 [verification report](VERIFICATION.md) for exact scope and timings.
 
 Linux and additional Python versions may be in the CI matrix, but are verified
-only when the required jobs actually execute successfully. No GitHub Actions run
-has occurred merely because a workflow file exists. Windows file ingestion is
+only when the required jobs actually execute successfully. Consult [GitHub Actions](https://github.com/Leogy101/knowledge-retrieval-engine/actions)
+and the published release provenance for actual runner versions and conclusions. Windows file ingestion is
 not currently supported. This candidate makes no unexecuted platform claims.
 
 ## Limits that belong to the host

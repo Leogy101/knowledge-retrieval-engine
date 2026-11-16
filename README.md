@@ -7,7 +7,7 @@ and revalidates evidence when documents or tasks change. It uses Python and SQLi
 FTS5 with **zero runtime dependencies**. No model, embeddings, cloud account,
 background server or companion package is required.
 
-Version **0.3.2a1** is an experimental alpha candidate. KRE is useful for local
+Version **0.3.2a1** is an experimental alpha. KRE is useful for local
 project knowledge and explicit task continuity. Lexical retrieval can miss
 paraphrased or dispersed evidence; a successful search does not prove an answer is
 complete. General quality-preserving token or cost savings have **not** been established.
@@ -182,4 +182,4 @@ Keep changes small, preserve exact citations and authorization boundaries, and
 report coverage and context consumption together. See [CONTRIBUTING.md](CONTRIBUTING.md).
 KRE is licensed under [Apache-2.0](LICENSE), with designated CC0 benchmark data
 and shared-component attribution described in [LICENSING.md](LICENSING.md) and
-[NOTICE](NOTICE). This candidate uses a plain-text wordmark and remains unpublished.
+[NOTICE](NOTICE). This experimental alpha uses a plain-text wordmark.

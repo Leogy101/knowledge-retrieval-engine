@@ -1,4 +1,4 @@
-# KRE 0.3.2a1 — experimental alpha candidate
+# KRE 0.3.2a1 — experimental alpha
 
 KRE retrieves authorized local evidence with exact citations and preserves task
 dependencies across source changes. It runs independently with Python and SQLite,
@@ -26,8 +26,10 @@ cases showed no recall improvement, context growth and one tight-budget
 regression. The accepted runtime remains unchanged from `8318473`; no speculative
 retrieval feature is included.
 
-Version `0.3.2a1` and planned tag `v0.3.2a1` match the existing package metadata.
+Version `0.3.2a1` and release tag `v0.3.2a1` match the existing package metadata.
 Apache-2.0 is adopted with designated CC0 dataset terms and companion attribution.
-The initial release uses a dependency-free text wordmark. Publication remains
-subject to separate approval.
-No GitHub publication or live inference is performed by this candidate.
+The initial release uses a dependency-free text wordmark. Distribution is an
+experimental GitHub prerelease; no PyPI publication is included. The release
+process verifies both main-branch and tag CI before uploading assets.
+See [executed verification](VERIFICATION.md) for platform scope and the remaining
+optional test skip. No new live inference was used for release verification.

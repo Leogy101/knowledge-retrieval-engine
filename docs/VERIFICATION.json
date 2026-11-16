@@ -131,12 +131,7 @@
       "live_host_configuration_changed": false
     }
   ],
-  "github_ci": "not_executed",
-  "platforms_unverified": [
-    "Linux",
-    "Windows",
-    "Python3.12"
-  ],
+  "github_ci": "Local record predates publication; current qualified main/tag runs are recorded in release provenance and GitHub Actions",
   "interoperability": {
     "shared_schema_and_fixtures": "byte_identical_to_companion",
     "gcb_validator_accepts_generated_context": true,
@@ -289,5 +284,10 @@
     "retained_exact_single_line_hits": 0,
     "added_covering_source_line_hits": 40,
     "scope": "Easy identifier-only retrieval diagnostic; frozen evaluation criteria and results unchanged."
-  }
+  },
+  "platforms_unverified_in_this_local_record": [
+    "Linux",
+    "Windows",
+    "Python3.12"
+  ]
 }

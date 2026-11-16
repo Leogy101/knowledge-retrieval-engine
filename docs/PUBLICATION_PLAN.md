@@ -95,7 +95,7 @@ missing settings or policy visibility before progressing.
 
 ## 3. Require all declared CI jobs on the reviewed commit
 
-The workflow declares **13 jobs**: eight full offline suites on
+The workflow runs on `main` and version-tag pushes and declares **13 jobs**: eight full offline suites on
 `ubuntu-latest`/`macos-latest` × Python 3.11–3.14; four Windows portable-core jobs
 on Python 3.11–3.14; one Ubuntu artifact job on Python 3.14. Declarations are not
 execution results. Windows does not support protected file ingestion.
@@ -265,6 +265,10 @@ PY
 git tag -a "$KRE_TAG" "$REVIEWED_SHA" -m "KRE $KRE_VERSION experimental alpha"
 git -c push.followTags=false push origin "refs/tags/$KRE_TAG:refs/tags/$KRE_TAG"
 test "$(git ls-remote origin "refs/tags/$KRE_TAG^{}" | cut -f1)" = "$REVIEWED_SHA"
+# Before running release create, require the version tag's distinct push run:
+# gh run list -R "$KRE_GH_REPO" --workflow ci.yml --branch "$KRE_TAG" --event push --commit "$REVIEWED_SHA"
+# Reuse section 3's 13-job/step checks, expecting headBranch == "$KRE_TAG".
+# Do not publish if tag CI is incomplete or fails.
 gh release create "$KRE_TAG" -R "$KRE_GH_REPO" --verify-tag --prerelease --latest=false \
   --title "KRE $KRE_VERSION — experimental alpha" \
   --notes-file "$KRE_CLONE/docs/RELEASE_NOTES.md" \
