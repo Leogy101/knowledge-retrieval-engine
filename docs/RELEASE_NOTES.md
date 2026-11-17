@@ -28,7 +28,7 @@ retrieval feature is included.
 
 Version `0.3.2a1` and release tag `v0.3.2a1` match the existing package metadata.
 Apache-2.0 is adopted with designated CC0 dataset terms and companion attribution.
-The initial release uses a dependency-free text wordmark. Distribution is an
+The initial release includes the owner-supplied KRE logo without font dependencies. Distribution is an
 experimental GitHub prerelease; no PyPI publication is included. The release
 process verifies both main-branch and tag CI before uploading assets.
 See [executed verification](VERIFICATION.md) for platform scope and the remaining

@@ -32,10 +32,12 @@ There are no installed runtime package dependencies.
 
 ## Branding
 
-The initial release uses the plain-text **KRE · Knowledge Retrieval Engine**
-wordmark. It uses the reader's default font. No graphical logo, proprietary font
-file or font-service dependency is included. This license grants no trademark
-rights beyond those stated in Apache-2.0.
+The release includes the owner-supplied KRE logo in its Apache-2.0 documentation
+distribution. The original PNG and its embedded generated-media provenance are
+preserved; see [asset provenance](docs/assets/README.md). No proprietary font file
+or font-service dependency is included. This license grants no trademark rights
+beyond those stated in Apache-2.0, and makes no ownership claim over third-party
+names or embedded provider certificate material.
 
 Version `0.3.2a1` and planned tag `v0.3.2a1` retain the established package version.
 Licensing is adopted; public repository creation and release publication still

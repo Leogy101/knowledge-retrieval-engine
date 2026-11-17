@@ -14,7 +14,7 @@ The authored documents and task text in `evaluation/large-scale-v1` retain their
 
 The versioned context contract and examples are included for interoperability. Referencing OpenClaw, MCP, GCB, Python or SQLite describes compatibility; it does not imply endorsement or ownership of their names or code.
 
-The initial release uses a plain-text KRE wordmark with the reader's default font. No graphical logo or proprietary font files are included. Generated benchmark charts are project-authored; the SVG uses text rather than embedded font glyphs, and the PNG is a rendered chart.
+The KRE logo was supplied and approved for inclusion by the project owner. Its embedded generated-media provenance is retained; see [asset provenance](docs/assets/README.md). No proprietary font files are included. Generated benchmark charts are project-authored; the SVG uses text rather than embedded font glyphs, and the PNG is a rendered chart.
 
 ## Shared GCB material
 

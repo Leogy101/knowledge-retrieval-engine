@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/kre-logo.png" alt="KRE — Knowledge Retrieval Engine" width="720">
+</p>
+
 # KRE · Knowledge Retrieval Engine
 
 **Local evidence. Exact provenance. Bounded context.**
@@ -182,4 +186,5 @@ Keep changes small, preserve exact citations and authorization boundaries, and
 report coverage and context consumption together. See [CONTRIBUTING.md](CONTRIBUTING.md).
 KRE is licensed under [Apache-2.0](LICENSE), with designated CC0 benchmark data
 and shared-component attribution described in [LICENSING.md](LICENSING.md) and
-[NOTICE](NOTICE). This experimental alpha uses a plain-text wordmark.
+[NOTICE](NOTICE). The [owner-supplied KRE logo](docs/assets/README.md) is included
+without external font or service dependencies.

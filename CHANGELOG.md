@@ -6,7 +6,7 @@ This candidate packages the existing independently useful KRE implementation
 without publishing its private development history. Version 0.3.2a1 preserves
 existing package metadata and planned tag `v0.3.2a1`.
 
-- Apache-2.0 licensing, scoped companion attribution and a plain-text wordmark.
+- Apache-2.0 licensing, scoped companion attribution and the owner-supplied KRE logo.
 - Local SQLite/FTS5 retrieval for explicitly approved UTF-8 text and Markdown.
 - Immutable revisions, exact source-line citations, source lifecycle and egress controls.
 - Bounded context and explicit caller-required evidence.

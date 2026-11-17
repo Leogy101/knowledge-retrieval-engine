@@ -289,5 +289,14 @@
     "Linux",
     "Windows",
     "Python3.12"
-  ]
+  ],
+  "branding_followup": {
+    "asset": "docs/assets/kre-logo.png",
+    "owner_approved": true,
+    "sha256": "331ad997bac123b2a97a95b263ea1a7e661b18eaa59dd3c30aa87915f6e790cc",
+    "original_bytes_preserved": true,
+    "content_credentials_preserved": true,
+    "runtime_change": false,
+    "note": "The earlier approved_logo and verification_phase describe the original text-wordmark checks. Final-commit CI and artifact provenance qualify the subsequent graphical-logo addition."
+  }
 }

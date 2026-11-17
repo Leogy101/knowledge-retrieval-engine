@@ -1,8 +1,8 @@
 # Publication procedure — execution is not authorized
 
 Destination: **`Leogy101/knowledge-retrieval-engine`**. Version: **`0.3.2a1`**.
-Future tag: **`v0.3.2a1`**. The prepared source adopts Apache-2.0 and the KRE text
-wordmark. This document grants no permission to create a repository, change GitHub
+Future tag: **`v0.3.2a1`**. The prepared source adopts Apache-2.0 and the owner-supplied KRE
+logo. This document grants no permission to create a repository, change GitHub
 settings, push, tag or publish. **No PyPI publication is included.**
 
 Prepared repository description:
